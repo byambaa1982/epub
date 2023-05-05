@@ -34,7 +34,7 @@ It will be rendered in a special box when you build your book.
 Here is an inline directive to refer to a document: {doc}`markdown-notebooks`.
 
 
-## Citations
+## Citations test by Byamba
 
 You can also cite references that are stored in a `bibtex` file. For example,
 the following syntax: `` {cite}`holdgraf_evidence_2014` `` will render like
