@@ -1,11 +1,33 @@
-# Welcome to your Jupyter Book
+# Python Courses for beginers
 
-This is a small sample book to give you a feel for how book content is
-structured.
-It shows off a few of the major file types, as well as some sample content.
-It does not go in-depth into any particular topic - check out [the Jupyter Book documentation](https://jupyterbook.org) for more information.
-
-Check out the content pages bundled with this sample book to see more.
+1. Installing Python
+Setting Up the Python Environment
+Your First Python Program
+Python Basics
+2. Variables and Data Types
+Basic Operators and Expressions
+Input and Output Functions
+Comments and Docstrings
+Control Flow
+3. Conditional Statements: if, elif, and else
+Looping: for and while Loops
+Loop Control: break and continue
+List Comprehensions
+Functions and Modules
+4. Defining Functions
+Function Arguments and Return Values
+Variable Scope
+Importing Modules and Libraries
+5. Data Structures
+Lists
+Tuples
+Dictionaries
+Sets
+6. Working with Strings
+String Basics
+String Formatting
+Common String Methods
+Regular Expressionss
 
 ```{tableofcontents}
 ```
