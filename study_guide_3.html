@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Control Flow Exercises by Byamba &#8212; Python Courses for beginners</title>
+    <title>3. Control Flow &#8212; Python Courses for beginners</title>
   
   
   
@@ -64,6 +64,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'study_guide_3';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="4. Python Functions" href="study_guide_4.html" />
+    <link rel="prev" title="Python Data Types" href="study_guide_2.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -154,8 +156,12 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="study_guide_2.html">Python Data Types</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">3. Control Flow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="study_guide_4.html">4. Python Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="study_guide_5.html">5. Python Data Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="study_guide_6.html">6. String</a></li>
 </ul>
 
     </div>
@@ -370,7 +376,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Control Flow Exercises by Byamba</h1>
+    <h1>3. Control Flow</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -380,39 +386,38 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Control Flow Exercises by Byamba</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#write-a-python-program-that-iterates-through-the-numbers-from-1-to-10-and-prints-whether-each-number-is-a-multiple-of-3-or-not">1. Write a Python program that iterates through the numbers from 1 to 10 and prints whether each number is a multiple of 3 or not.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#control-flow-exercises-by-byamba">Control Flow Exercises by Byamba</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#write-a-python-program-that-iterates-through-the-numbers-from-1-to-10-and-prints-whether-each-number-is-a-multiple-of-3-or-not">1. Write a Python program that iterates through the numbers from 1 to 10 and prints whether each number is a multiple of 3 or not.</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#write-a-python-program-that-iterates-through-the-numbers-from-1-to-15-and-prints-whether-each-number-is-divisible-by-4-or-not">2. Write a Python program that iterates through the numbers from 1 to 15 and prints whether each number is divisible by 4 or not.</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions">Instructions:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-output">Example output:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#write-a-python-program-that-iterates-through-the-numbers-from-1-to-15-and-prints-whether-each-number-is-divisible-by-4-or-not">2. Write a Python program that iterates through the numbers from 1 to 15 and prints whether each number is divisible by 4 or not.</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions">Instructions:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-output">Example output:</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#in-statement">‘in’ statement</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#write-a-python-program-that-iterates-through-a-list-of-animals-and-prints-whether-each-animal-is-a-mammal-or-not">3. Write a Python program that iterates through a list of animals and prints whether each animal is a mammal or not.</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Instructions:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-list-of-animals">Example list of animals:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Example output:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hints">Hints:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#in-statement">‘in’ statement</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#write-a-python-program-that-iterates-through-a-list-of-animals-and-prints-whether-each-animal-is-a-mammal-or-not">3. Write a Python program that iterates through a list of animals and prints whether each animal is a mammal or not.</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Instructions:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-list-of-animals">Example list of animals:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Example output:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hints">Hints:</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#write-a-python-program-that-iterates-through-a-list-of-cities-and-prints-whether-each-city-is-a-capital-city-or-not">4. Write a Python program that iterates through a list of cities and prints whether each city is a capital city or not.</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Instructions:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-list-of-cities">Example list of cities:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Example output:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#write-a-python-program-that-iterates-through-a-list-of-cities-and-prints-whether-each-city-is-a-capital-city-or-not">4. Write a Python program that iterates through a list of cities and prints whether each city is a capital city or not.</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Instructions:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-list-of-cities">Example list of cities:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Example output:</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#vehicles">5. Vehicles</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#concept-of-len-and-enumerate">Concept of len() and enumerate()</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#write-a-python-program-that-iterates-through-a-list-of-programming-languages-and-prints-whether-each-language-is-a-compiled-or-interpreted-language-along-with-its-position-in-the-list">6. Write a Python program that iterates through a list of programming languages and prints whether each language is a compiled or interpreted language, along with its position in the list.</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Instructions:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-list-of-programming-languages">Example list of programming languages:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Example output:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vehicles">5. Vehicles</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#concept-of-len-and-enumerate">Concept of len() and enumerate()</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#write-a-python-program-that-iterates-through-a-list-of-programming-languages-and-prints-whether-each-language-is-a-compiled-or-interpreted-language-along-with-its-position-in-the-list">6. Write a Python program that iterates through a list of programming languages and prints whether each language is a compiled or interpreted language, along with its position in the list.</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Instructions:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-list-of-programming-languages">Example list of programming languages:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Example output:</a></li>
 </ul>
 </li>
 </ul>
-
             </nav>
         </div>
     </div>
@@ -424,8 +429,10 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <p><a href="https://colab.research.google.com/github/byambaa1982/python_cources_for_beginers/blob/main/control%20flow/3_control_flow_lab.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a></p>
+<section class="tex2jax_ignore mathjax_ignore" id="control-flow">
+<h1>3. Control Flow<a class="headerlink" href="#control-flow" title="Permalink to this heading">#</a></h1>
 <section id="control-flow-exercises-by-byamba">
-<h1>Control Flow Exercises by Byamba<a class="headerlink" href="#control-flow-exercises-by-byamba" title="Permalink to this heading">#</a></h1>
+<h2>Control Flow Exercises by Byamba<a class="headerlink" href="#control-flow-exercises-by-byamba" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">):</span>
@@ -447,7 +454,7 @@ document.write(`
 </div>
 </div>
 <section id="write-a-python-program-that-iterates-through-the-numbers-from-1-to-10-and-prints-whether-each-number-is-a-multiple-of-3-or-not">
-<h2>1. Write a Python program that iterates through the numbers from 1 to 10 and prints whether each number is a multiple of 3 or not.<a class="headerlink" href="#write-a-python-program-that-iterates-through-the-numbers-from-1-to-10-and-prints-whether-each-number-is-a-multiple-of-3-or-not" title="Permalink to this heading">#</a></h2>
+<h3>1. Write a Python program that iterates through the numbers from 1 to 10 and prints whether each number is a multiple of 3 or not.<a class="headerlink" href="#write-a-python-program-that-iterates-through-the-numbers-from-1-to-10-and-prints-whether-each-number-is-a-multiple-of-3-or-not" title="Permalink to this heading">#</a></h3>
 <p>nstructions:</p>
 <ol class="arabic simple">
 <li><p>Use a for loop to iterate through the numbers from 1 to 10.</p></li>
@@ -484,9 +491,9 @@ document.write(`
 </section>
 </section>
 <section id="write-a-python-program-that-iterates-through-the-numbers-from-1-to-15-and-prints-whether-each-number-is-divisible-by-4-or-not">
-<h1>2. Write a Python program that iterates through the numbers from 1 to 15 and prints whether each number is divisible by 4 or not.<a class="headerlink" href="#write-a-python-program-that-iterates-through-the-numbers-from-1-to-15-and-prints-whether-each-number-is-divisible-by-4-or-not" title="Permalink to this heading">#</a></h1>
+<h2>2. Write a Python program that iterates through the numbers from 1 to 15 and prints whether each number is divisible by 4 or not.<a class="headerlink" href="#write-a-python-program-that-iterates-through-the-numbers-from-1-to-15-and-prints-whether-each-number-is-divisible-by-4-or-not" title="Permalink to this heading">#</a></h2>
 <section id="instructions">
-<h2>Instructions:<a class="headerlink" href="#instructions" title="Permalink to this heading">#</a></h2>
+<h3>Instructions:<a class="headerlink" href="#instructions" title="Permalink to this heading">#</a></h3>
 <ol class="arabic simple">
 <li><p>Use a for loop to iterate through the numbers from 1 to 15.</p></li>
 <li><p>Inside the loop, use an if statement to check if the current number is divisible by 4.</p></li>
@@ -495,7 +502,7 @@ document.write(`
 </ol>
 </section>
 <section id="example-output">
-<h2>Example output:<a class="headerlink" href="#example-output" title="Permalink to this heading">#</a></h2>
+<h3>Example output:<a class="headerlink" href="#example-output" title="Permalink to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">divisible</span> <span class="n">by</span> <span class="mf">4.</span>
 <span class="mi">2</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">divisible</span> <span class="n">by</span> <span class="mf">4.</span>
 <span class="mi">3</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">divisible</span> <span class="n">by</span> <span class="mf">4.</span>
@@ -528,7 +535,7 @@ document.write(`
 </section>
 </section>
 <section id="in-statement">
-<h1>‘in’ statement<a class="headerlink" href="#in-statement" title="Permalink to this heading">#</a></h1>
+<h2>‘in’ statement<a class="headerlink" href="#in-statement" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;apple&quot;</span><span class="p">,</span> <span class="s2">&quot;banana&quot;</span><span class="p">,</span> <span class="s2">&quot;orange&quot;</span><span class="p">,</span> <span class="s2">&quot;grape&quot;</span><span class="p">,</span> <span class="s2">&quot;kiwi&quot;</span><span class="p">]</span>
@@ -552,9 +559,9 @@ Mango is not in the list of fruits.
 </div>
 </section>
 <section id="write-a-python-program-that-iterates-through-a-list-of-animals-and-prints-whether-each-animal-is-a-mammal-or-not">
-<h1>3. Write a Python program that iterates through a list of animals and prints whether each animal is a mammal or not.<a class="headerlink" href="#write-a-python-program-that-iterates-through-a-list-of-animals-and-prints-whether-each-animal-is-a-mammal-or-not" title="Permalink to this heading">#</a></h1>
+<h2>3. Write a Python program that iterates through a list of animals and prints whether each animal is a mammal or not.<a class="headerlink" href="#write-a-python-program-that-iterates-through-a-list-of-animals-and-prints-whether-each-animal-is-a-mammal-or-not" title="Permalink to this heading">#</a></h2>
 <section id="id1">
-<h2>Instructions:<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
+<h3>Instructions:<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
 <ol class="arabic simple">
 <li><p>Create a list of animals including mammals and non-mammals.</p></li>
 <li><p>Use a for loop to iterate through the list of animals.</p></li>
@@ -564,13 +571,13 @@ Mango is not in the list of fruits.
 </ol>
 </section>
 <section id="example-list-of-animals">
-<h2>Example list of animals:<a class="headerlink" href="#example-list-of-animals" title="Permalink to this heading">#</a></h2>
+<h3>Example list of animals:<a class="headerlink" href="#example-list-of-animals" title="Permalink to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">animals</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;dog&quot;</span><span class="p">,</span> <span class="s2">&quot;cat&quot;</span><span class="p">,</span> <span class="s2">&quot;crocodile&quot;</span><span class="p">,</span> <span class="s2">&quot;parrot&quot;</span><span class="p">,</span> <span class="s2">&quot;elephant&quot;</span><span class="p">]</span>
 </pre></div>
 </div>
 </section>
 <section id="id2">
-<h2>Example output:<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
+<h3>Example output:<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">dog</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">mammal</span><span class="o">.</span>
 <span class="n">cat</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">mammal</span><span class="o">.</span>
 <span class="n">crocodile</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">a</span> <span class="n">mammal</span><span class="o">.</span>
@@ -580,7 +587,7 @@ Mango is not in the list of fruits.
 </div>
 </section>
 <section id="hints">
-<h2>Hints:<a class="headerlink" href="#hints" title="Permalink to this heading">#</a></h2>
+<h3>Hints:<a class="headerlink" href="#hints" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Create a list of mammals that you can use to check if an animal is a mammal or not.</p></li>
 <li><p>Use the in keyword to check if an item exists in a list.</p></li>
@@ -596,9 +603,9 @@ Mango is not in the list of fruits.
 </section>
 </section>
 <section id="write-a-python-program-that-iterates-through-a-list-of-cities-and-prints-whether-each-city-is-a-capital-city-or-not">
-<h1>4. Write a Python program that iterates through a list of cities and prints whether each city is a capital city or not.<a class="headerlink" href="#write-a-python-program-that-iterates-through-a-list-of-cities-and-prints-whether-each-city-is-a-capital-city-or-not" title="Permalink to this heading">#</a></h1>
+<h2>4. Write a Python program that iterates through a list of cities and prints whether each city is a capital city or not.<a class="headerlink" href="#write-a-python-program-that-iterates-through-a-list-of-cities-and-prints-whether-each-city-is-a-capital-city-or-not" title="Permalink to this heading">#</a></h2>
 <section id="id3">
-<h2>Instructions:<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h2>
+<h3>Instructions:<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
 <ol class="arabic simple">
 <li><p>Create a list of cities including capital and non-capital cities.
 Use a for loop to iterate through the list of cities.</p></li>
@@ -608,14 +615,14 @@ Use a for loop to iterate through the list of cities.</p></li>
 </ol>
 </section>
 <section id="example-list-of-cities">
-<h2>Example list of cities:<a class="headerlink" href="#example-list-of-cities" title="Permalink to this heading">#</a></h2>
+<h3>Example list of cities:<a class="headerlink" href="#example-list-of-cities" title="Permalink to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cities</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Paris&quot;</span><span class="p">,</span> <span class="s2">&quot;Tokyo&quot;</span><span class="p">,</span> <span class="s2">&quot;New York&quot;</span><span class="p">,</span> <span class="s2">&quot;Berlin&quot;</span><span class="p">,</span> <span class="s2">&quot;Madrid&quot;</span><span class="p">,</span> <span class="s2">&quot;London&quot;</span><span class="p">,</span> <span class="s2">&quot;Sydney&quot;</span><span class="p">]</span>
 
 </pre></div>
 </div>
 </section>
 <section id="id4">
-<h2>Example output:<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h2>
+<h3>Example output:<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Paris</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">capital</span> <span class="n">city</span><span class="o">.</span>
 <span class="n">Tokyo</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">capital</span> <span class="n">city</span><span class="o">.</span>
 <span class="n">New</span> <span class="n">York</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">a</span> <span class="n">capital</span> <span class="n">city</span><span class="o">.</span>
@@ -635,7 +642,7 @@ Use a for loop to iterate through the list of cities.</p></li>
 </section>
 </section>
 <section id="vehicles">
-<h1>5. Vehicles<a class="headerlink" href="#vehicles" title="Permalink to this heading">#</a></h1>
+<h2>5. Vehicles<a class="headerlink" href="#vehicles" title="Permalink to this heading">#</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Tesla</span> <span class="n">Model</span> <span class="mi">3</span> <span class="ow">is</span> <span class="n">an</span> <span class="n">electric</span> <span class="n">vehicle</span><span class="o">.</span>
 <span class="n">Nissan</span> <span class="n">Leaf</span> <span class="ow">is</span> <span class="n">an</span> <span class="n">electric</span> <span class="n">vehicle</span><span class="o">.</span>
 <span class="n">Toyota</span> <span class="n">Corolla</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">an</span> <span class="n">electric</span> <span class="n">vehicle</span><span class="o">.</span>
@@ -653,7 +660,7 @@ Use a for loop to iterate through the list of cities.</p></li>
 </div>
 </section>
 <section id="concept-of-len-and-enumerate">
-<h1>Concept of len() and enumerate()<a class="headerlink" href="#concept-of-len-and-enumerate" title="Permalink to this heading">#</a></h1>
+<h2>Concept of len() and enumerate()<a class="headerlink" href="#concept-of-len-and-enumerate" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a list of fruits</span>
@@ -706,9 +713,9 @@ The last fruit in the list is: kiwi
 </div>
 </section>
 <section id="write-a-python-program-that-iterates-through-a-list-of-programming-languages-and-prints-whether-each-language-is-a-compiled-or-interpreted-language-along-with-its-position-in-the-list">
-<h1>6. Write a Python program that iterates through a list of programming languages and prints whether each language is a compiled or interpreted language, along with its position in the list.<a class="headerlink" href="#write-a-python-program-that-iterates-through-a-list-of-programming-languages-and-prints-whether-each-language-is-a-compiled-or-interpreted-language-along-with-its-position-in-the-list" title="Permalink to this heading">#</a></h1>
+<h2>6. Write a Python program that iterates through a list of programming languages and prints whether each language is a compiled or interpreted language, along with its position in the list.<a class="headerlink" href="#write-a-python-program-that-iterates-through-a-list-of-programming-languages-and-prints-whether-each-language-is-a-compiled-or-interpreted-language-along-with-its-position-in-the-list" title="Permalink to this heading">#</a></h2>
 <section id="id5">
-<h2>Instructions:<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h2>
+<h3>Instructions:<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h3>
 <ol class="arabic simple">
 <li><p>Create a list of programming languages including both compiled and interpreted languages.</p></li>
 <li><p>Use a for loop with the enumerate() function to iterate through the list of programming languages along with their index.</p></li>
@@ -719,13 +726,13 @@ The last fruit in the list is: kiwi
 </ol>
 </section>
 <section id="example-list-of-programming-languages">
-<h2>Example list of programming languages:<a class="headerlink" href="#example-list-of-programming-languages" title="Permalink to this heading">#</a></h2>
+<h3>Example list of programming languages:<a class="headerlink" href="#example-list-of-programming-languages" title="Permalink to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">languages</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;C&quot;</span><span class="p">,</span> <span class="s2">&quot;Java&quot;</span><span class="p">,</span> <span class="s2">&quot;Python&quot;</span><span class="p">,</span> <span class="s2">&quot;Ruby&quot;</span><span class="p">,</span> <span class="s2">&quot;C#&quot;</span><span class="p">,</span> <span class="s2">&quot;JavaScript&quot;</span><span class="p">,</span> <span class="s2">&quot;Swift&quot;</span><span class="p">]</span>
 </pre></div>
 </div>
 </section>
 <section id="id6">
-<h2>Example output:<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h2>
+<h3>Example output:<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="mf">1.</span> <span class="n">C</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">compiled</span> <span class="n">language</span><span class="o">.</span>
 <span class="mf">2.</span> <span class="n">Java</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">compiled</span> <span class="n">language</span><span class="o">.</span>
 <span class="mf">3.</span> <span class="n">Python</span> <span class="ow">is</span> <span class="n">an</span> <span class="n">interpreted</span> <span class="n">language</span><span class="o">.</span>
@@ -743,6 +750,7 @@ The last fruit in the list is: kiwi
 </div>
 </div>
 </div>
+</section>
 </section>
 </section>
 
@@ -777,6 +785,24 @@ The last fruit in the list is: kiwi
   
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="study_guide_2.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Python Data Types</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="study_guide_4.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">4. Python Functions</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div></div>
   
 </div>
@@ -795,39 +821,38 @@ The last fruit in the list is: kiwi
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Control Flow Exercises by Byamba</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#write-a-python-program-that-iterates-through-the-numbers-from-1-to-10-and-prints-whether-each-number-is-a-multiple-of-3-or-not">1. Write a Python program that iterates through the numbers from 1 to 10 and prints whether each number is a multiple of 3 or not.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#control-flow-exercises-by-byamba">Control Flow Exercises by Byamba</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#write-a-python-program-that-iterates-through-the-numbers-from-1-to-10-and-prints-whether-each-number-is-a-multiple-of-3-or-not">1. Write a Python program that iterates through the numbers from 1 to 10 and prints whether each number is a multiple of 3 or not.</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#write-a-python-program-that-iterates-through-the-numbers-from-1-to-15-and-prints-whether-each-number-is-divisible-by-4-or-not">2. Write a Python program that iterates through the numbers from 1 to 15 and prints whether each number is divisible by 4 or not.</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions">Instructions:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-output">Example output:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#write-a-python-program-that-iterates-through-the-numbers-from-1-to-15-and-prints-whether-each-number-is-divisible-by-4-or-not">2. Write a Python program that iterates through the numbers from 1 to 15 and prints whether each number is divisible by 4 or not.</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions">Instructions:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-output">Example output:</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#in-statement">‘in’ statement</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#write-a-python-program-that-iterates-through-a-list-of-animals-and-prints-whether-each-animal-is-a-mammal-or-not">3. Write a Python program that iterates through a list of animals and prints whether each animal is a mammal or not.</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Instructions:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-list-of-animals">Example list of animals:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Example output:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hints">Hints:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#in-statement">‘in’ statement</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#write-a-python-program-that-iterates-through-a-list-of-animals-and-prints-whether-each-animal-is-a-mammal-or-not">3. Write a Python program that iterates through a list of animals and prints whether each animal is a mammal or not.</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Instructions:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-list-of-animals">Example list of animals:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Example output:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hints">Hints:</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#write-a-python-program-that-iterates-through-a-list-of-cities-and-prints-whether-each-city-is-a-capital-city-or-not">4. Write a Python program that iterates through a list of cities and prints whether each city is a capital city or not.</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Instructions:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-list-of-cities">Example list of cities:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Example output:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#write-a-python-program-that-iterates-through-a-list-of-cities-and-prints-whether-each-city-is-a-capital-city-or-not">4. Write a Python program that iterates through a list of cities and prints whether each city is a capital city or not.</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Instructions:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-list-of-cities">Example list of cities:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Example output:</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#vehicles">5. Vehicles</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#concept-of-len-and-enumerate">Concept of len() and enumerate()</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#write-a-python-program-that-iterates-through-a-list-of-programming-languages-and-prints-whether-each-language-is-a-compiled-or-interpreted-language-along-with-its-position-in-the-list">6. Write a Python program that iterates through a list of programming languages and prints whether each language is a compiled or interpreted language, along with its position in the list.</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Instructions:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-list-of-programming-languages">Example list of programming languages:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Example output:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vehicles">5. Vehicles</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#concept-of-len-and-enumerate">Concept of len() and enumerate()</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#write-a-python-program-that-iterates-through-a-list-of-programming-languages-and-prints-whether-each-language-is-a-compiled-or-interpreted-language-along-with-its-position-in-the-list">6. Write a Python program that iterates through a list of programming languages and prints whether each language is a compiled or interpreted language, along with its position in the list.</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Instructions:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-list-of-programming-languages">Example list of programming languages:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Example output:</a></li>
 </ul>
 </li>
 </ul>
-
   </nav></div>
 
 </div></div>
