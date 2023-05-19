@@ -4,9 +4,12 @@ Welcome to `Python Cources For Beginners`, a comprehensive Python guide designed
 
 This book is unique in its ease of accessibility and use. All of the chapters and exercises are compatible with Google Colab, which means you don't have to worry about any downloads or installations. You can start your Python journey instantly, from anywhere, at any time!
 
-![alt text](/images/AnastasiaR_artificial_intelligence_mind_unisex_against_the_blac_e72fb188-03e5-4301-9647-62712157f098.png "robot women")
+```{figure} ../images/robot.png
+:height: 150px
+:name: figure-example
 
-
+AI work!
+```
 ## Why This Repo?
 
 - `Learn Python Interactively`: Every chapter includes an interactive exercise notebook. Practice your new skills immediately with real-world problems, which is the best way to cement your learning.
@@ -29,7 +32,11 @@ This book is unique in its ease of accessibility and use. All of the chapters an
 4. If you're stuck, take a peek at the corresponding solution notebook.
 4. Repeat with the next chapter once you're comfortable with the current one!
 
-![alt text](/images/colab_small.png "colab")
+
+```{figure} ../images/colab_small.png
+:name: Colab
+Colab Notebook Sign
+```
 
 It's as simple as that! It's time to stop thinking and start doing. Dive into the chapters and begin your Python journey right now.
 
