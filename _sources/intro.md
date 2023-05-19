@@ -1,4 +1,4 @@
-# Python Courses for beginers
+# Python Courses for beginners
 
 
 Welcome to `Python Cources For Beginners`, a comprehensive Python guide designed specifically for beginners. If you're looking to learn Python, you've landed in the right place. In this tutorial, you'll find an array of resources, structured across 6 chapters, each containing an interactive exercise notebook and its corresponding solution.
