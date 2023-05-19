@@ -28,7 +28,7 @@ This book is unique in its ease of accessibility and use. All of the chapters an
 4. Repeat with the next chapter once you're comfortable with the current one!
 
 
-```{figure} ../images/colab_small.png
+```{figure} /images/colab_small.png
 :name: Colab
 Colab Notebook Sign
 ```
