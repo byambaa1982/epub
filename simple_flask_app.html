@@ -404,7 +404,19 @@ document.write(`
   <p><a href="https://colab.research.google.com/github/byambaa1982/python_cources_for_beginers/blob/main/Mini%20Project%202/projecsimple_flask_app.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a></p>
 <section class="tex2jax_ignore mathjax_ignore" id="create-a-simple-flask-app">
 <h1>7. Create a Simple Flask App<a class="headerlink" href="#create-a-simple-flask-app" title="Permalink to this heading">#</a></h1>
-<p>Creating a Flask application usually requires two primary files: an <a class="reference external" href="http://app.py">app.py</a> file which will contain your application’s code, and a requirements.txt file to list any dependencies your application might have. In this case, our Flask application will be very basic and will just display a “Hello, World!” message when someone accesses it.</p>
+<p><a class="reference external" href="https://github.com/byambaa1982/python_cources_for_beginers/tree/main/Mini%20Project%202">Source Code</a></p>
+<p><code class="docutils literal notranslate"><span class="pre">Flask</span></code> is a micro web framework written in Python. It’s considered a micro framework because it does not require particular tools or libraries, but it’s expandable and can support complex applications as well. It has a very small and easy-to-understand code base, and provides only a few essential components out of the box, such as routing, request handling, and HTML templating. However, it’s highly extensible and allows you to add more functionality through extensions and libraries, including database integration, form validation, authentication, and more.</p>
+<p>Here’s why you might want to choose Flask for your web development project:</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Simplicity</span> <span class="pre">and</span> <span class="pre">Ease</span> <span class="pre">of</span> <span class="pre">Use</span></code>: Flask is very simple to set up and use. It’s a good choice if you’re new to web development, if you’re a solo developer, or if you’re working on a small project. The Flask documentation is very comprehensive and easy to understand.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Flexibility</span></code>: Flask is very flexible. It doesn’t make many decisions for you, which means you have the freedom to structure your application however you like and use whatever libraries or tools you prefer. This is a contrast to more “batteries-included” frameworks, like Django, which come with more built-in tools but are also more prescriptive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Lightweight</span></code>: Flask is lightweight and has a small footprint, meaning it uses less system resources and can run efficiently on small servers.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Extensibility</span></code>: Even though Flask is lightweight and simple, it can be extended with various extensions to add functionalities such as SQL databases, authentication, form handling, and more. This makes it a good choice for both simple and complex projects.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Community</span> <span class="pre">and</span> <span class="pre">Ecosystem</span></code>: Flask has a large and active community of developers, so it’s easy to find help when you need it. There are many tutorials, guides, and examples available, as well as a large number of libraries and extensions.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Integration</span> <span class="pre">with</span> <span class="pre">Python</span> <span class="pre">ecosystem</span></code>: Since Flask is a Python framework, you have access to the vast Python ecosystem and all its libraries for tasks such as data analysis, machine learning, and more.</p></li>
+</ol>
+<p>Overall, Flask provides a nice balance between simplicity, flexibility, and power, which makes it a popular choice for web development in Python.
+Creating a Flask application usually requires two primary files: an <a class="reference external" href="http://app.py">app.py</a> file which will contain your application’s code, and a requirements.txt file to list any dependencies your application might have. In this case, our Flask application will be very basic and will just display a “Hello, World!” message when someone accesses it.</p>
 <p>Here’s what those files might look like:</p>
 <br />
 <ol class="arabic simple">
@@ -430,13 +442,13 @@ document.write(`
 </pre></div>
 </div>
 <br />
-<p>This file lists Flask as a dependency for our application. This is useful if you’re sharing your code with others or deploying it to a production environment. Someone can use the command <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-r</span> <span class="pre">requirements.txt</span></code> to install all the dependencies listed in this file.</p>
-<p>Please replace <code class="docutils literal notranslate"><span class="pre">Flask==2.0.1</span></code> with the version of Flask you are currently using.</p>
-<p>You can run the application locally by using the terminal and typing <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">app.py</span></code>, assuming you have Python and Flask installed. You should see output telling you that a server is running locally, and you can access it by opening a web browser and navigating to <code class="docutils literal notranslate"><span class="pre">http://127.0.0.1:5000/</span></code> or <code class="docutils literal notranslate"><span class="pre">http://localhost:5000/</span></code>. You should see ‘Hello, World!’ displayed.</p>
+<p>This file lists Flask as a dependency for our application. This is useful if we’re sharing our code with others or deploying it to a production environment. Someone can use the command <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-r</span> <span class="pre">requirements.txt</span></code> to install all the dependencies listed in this file.</p>
+<p>Please replace <code class="docutils literal notranslate"><span class="pre">Flask==2.0.1</span></code> with the version of Flask we are currently using.</p>
+<p>We can run the application locally by using the terminal and typing <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">app.py</span></code>, assuming you have Python and Flask installed. We can see output telling us that a server is running locally, and we can access it by opening a web browser and navigating to <code class="docutils literal notranslate"><span class="pre">http://127.0.0.1:5000/</span></code> or <code class="docutils literal notranslate"><span class="pre">http://localhost:5000/</span></code>. We should see ‘Hello, World!’ displayed.</p>
 <section id="render-html-content-in-flask">
 <h2>Render HTML content in Flask<a class="headerlink" href="#render-html-content-in-flask" title="Permalink to this heading">#</a></h2>
-<p>To render HTML content in Flask, we typically use templates. Flask configures the Jinja2 template engine by default. Let’s add an HTML file to your project:</p>
-<p>First, create a new directory named <code class="docutils literal notranslate"><span class="pre">templates</span></code> in your project’s root directory. Flask looks for templates in this directory by default.</p>
+<p>To render HTML content in Flask, we typically use templates. Flask configures the Jinja2 template engine by default. Let’s add an HTML file to our project:</p>
+<p>First, create a new directory named <code class="docutils literal notranslate"><span class="pre">templates</span></code> in our project’s root directory. Flask looks for templates in this directory by default.</p>
 <p>Then, create a new HTML file in this directory. Let’s call it <code class="docutils literal notranslate"><span class="pre">index.html</span></code>:</p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
@@ -449,10 +461,10 @@ document.write(`
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </pre></div>
 </div>
-<p>In this HTML file, <code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">message</span> <span class="pre">}}</span></code> is a placeholder for a variable that you’ll pass from your Flask application.</p>
+<p>In this HTML file, <code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">message</span> <span class="pre">}}</span></code> is a placeholder for a variable that we’ll pass from your Flask application.</p>
 <br/>
 <ol class="arabic simple" start="3">
-<li><p>Now, you need to update your <code class="docutils literal notranslate"><span class="pre">app.py</span></code> file to use this template:</p></li>
+<li><p>Now, we need to update our <code class="docutils literal notranslate"><span class="pre">app.py</span></code> file to use this template:</p></li>
 </ol>
 <br/>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">render_template</span>
@@ -471,8 +483,8 @@ document.write(`
 <br/>
 <p>In this updated <code class="docutils literal notranslate"><span class="pre">app.py</span> <span class="pre">file</span></code>, <code class="docutils literal notranslate"><span class="pre">render_template('index.html',</span> <span class="pre">message='Hello,</span> <span class="pre">World!')</span></code> tells Flask to find a template called index.html and fill in the <code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">message</span> <span class="pre">}}</span></code> placeholder with ‘Hello, World!’.</p>
 <ol class="arabic simple" start="4">
-<li><p>You don’t need to change your <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code> file, as Flask includes the Jinja2 template engine by default.
-When you run your application and visit <code class="docutils literal notranslate"><span class="pre">http://127.0.0.1:5000/</span></code> or <code class="docutils literal notranslate"><span class="pre">http://localhost:5000/</span></code>, you should now see your message (‘Hello, World!’) displayed as an H1 heading on an HTML page.</p></li>
+<li><p>We don’t need to change our <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code> file, as Flask includes the Jinja2 template engine by default.
+When we run our application and visit <code class="docutils literal notranslate"><span class="pre">http://127.0.0.1:5000/</span></code> or <code class="docutils literal notranslate"><span class="pre">http://localhost:5000/</span></code>, we should now see our message (‘Hello, World!’) displayed as an H1 heading on an HTML page.</p></li>
 </ol>
 </section>
 <section id="flask-form">
@@ -480,7 +492,7 @@ When you run your application and visit <code class="docutils literal notranslat
 <p>We can create a form in a new HTML file, and then we’ll write a Flask route and function to handle form submissions. We’ll convert the submitted text to lowercase, as you’ve requested. Here’s how:</p>
 <br />
 <ol class="arabic simple">
-<li><p>First, create a new HTML file in your <code class="docutils literal notranslate"><span class="pre">templates</span></code> directory. Let’s call it <code class="docutils literal notranslate"><span class="pre">form.html</span></code>:</p></li>
+<li><p>First, create a new HTML file in our <code class="docutils literal notranslate"><span class="pre">templates</span></code> directory. Let’s call it <code class="docutils literal notranslate"><span class="pre">form.html</span></code>:</p></li>
 </ol>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
@@ -606,7 +618,7 @@ When you run your application and visit <code class="docutils literal notranslat
 </pre></div>
 </div>
 <p>In each HTML file, the line <code class="docutils literal notranslate"><span class="pre">&lt;link</span> <span class="pre">rel=&quot;stylesheet&quot;</span> <span class="pre">type=&quot;text/css&quot;</span> <span class="pre">href=&quot;{{</span> <span class="pre">url_for('static',</span> <span class="pre">filename='style.css')</span> <span class="pre">}}&quot;&gt;</span></code> tells Flask to include our CSS file.</p>
-<p>Now, if you run your application and visit <code class="docutils literal notranslate"><span class="pre">http://127.0.0.1:5000/</span></code> or <code class="docutils literal notranslate"><span class="pre">http://localhost:5000/form</span></code>, you should see your pages styled with the CSS you’ve created.</p>
+<p>Now, if we run our application and visit <code class="docutils literal notranslate"><span class="pre">http://127.0.0.1:5000/</span></code> or <code class="docutils literal notranslate"><span class="pre">http://localhost:5000/form</span></code>, we should see our pages styled with the CSS we’ve created.</p>
 <p>We can return the text on the page under the form. We will need to modify the <code class="docutils literal notranslate"><span class="pre">form.html</span></code> and <code class="docutils literal notranslate"><span class="pre">app.py</span></code> files.</p>
 <ol class="arabic simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">form.html</span></code>:</p></li>
@@ -659,7 +671,7 @@ When you run your application and visit <code class="docutils literal notranslat
 </pre></div>
 </div>
 <p>In this updated <code class="docutils literal notranslate"><span class="pre">app.py</span></code> file, we’ve moved the <code class="docutils literal notranslate"><span class="pre">render_template</span></code> function out of the if statement. Now, it runs whether the request method is ‘GET’ or ‘POST’. When the method is ‘POST’, we get the submitted text, convert it to lowercase, and pass it to our <code class="docutils literal notranslate"><span class="pre">form.html</span></code> template as the <code class="docutils literal notranslate"><span class="pre">message</span></code> variable. When the method is ‘GET’, we pass an empty string as the <code class="docutils literal notranslate"><span class="pre">message</span></code> variable.</p>
-<p>Now, when you submit text in the form at <code class="docutils literal notranslate"><span class="pre">http://127.0.0.1:5000/form</span></code> or <code class="docutils literal notranslate"><span class="pre">http://localhost:5000/form</span></code>, you should see your submitted text displayed in lowercase on the same page, below the form.</p>
+<p>Now, when we submit text in the form at <code class="docutils literal notranslate"><span class="pre">http://127.0.0.1:5000/form</span></code> or <code class="docutils literal notranslate"><span class="pre">http://localhost:5000/form</span></code>, we should see our submitted text displayed in lowercase on the same page, below the form.</p>
 </section>
 </section>
 
