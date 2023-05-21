@@ -417,6 +417,13 @@ document.write(`
 </ol>
 <p>Overall, Flask provides a nice balance between simplicity, flexibility, and power, which makes it a popular choice for web development in Python.
 Creating a Flask application usually requires two primary files: an <a class="reference external" href="http://app.py">app.py</a> file which will contain your application’s code, and a requirements.txt file to list any dependencies your application might have. In this case, our Flask application will be very basic and will just display a “Hello, World!” message when someone accesses it.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>python_cources_for_beginners/
+└── Mini Project 2/
+    ├── requirements.txt
+    └── app.py
+
+</pre></div>
+</div>
 <p>Here’s what those files might look like:</p>
 <br />
 <ol class="arabic simple">
@@ -671,7 +678,28 @@ When we run our application and visit <code class="docutils literal notranslate"
 </pre></div>
 </div>
 <p>In this updated <code class="docutils literal notranslate"><span class="pre">app.py</span></code> file, we’ve moved the <code class="docutils literal notranslate"><span class="pre">render_template</span></code> function out of the if statement. Now, it runs whether the request method is ‘GET’ or ‘POST’. When the method is ‘POST’, we get the submitted text, convert it to lowercase, and pass it to our <code class="docutils literal notranslate"><span class="pre">form.html</span></code> template as the <code class="docutils literal notranslate"><span class="pre">message</span></code> variable. When the method is ‘GET’, we pass an empty string as the <code class="docutils literal notranslate"><span class="pre">message</span></code> variable.</p>
-<p>Now, when we submit text in the form at <code class="docutils literal notranslate"><span class="pre">http://127.0.0.1:5000/form</span></code> or <code class="docutils literal notranslate"><span class="pre">http://localhost:5000/form</span></code>, we should see our submitted text displayed in lowercase on the same page, below the form.</p>
+<p>Upon the completion of this project, our Flask application will have the capability to accept user input through a form. This user-submitted text can be processed in three distinct ways, determined by the selection of one of three buttons: transforming the text to all uppercase, converting it to all lowercase, or computing the word count of the input. This interactive functionality will be seamlessly integrated into our application through the use of CSS for styling and HTML for structuring our web pages.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>python_cources_for_beginners/
+├── images/
+│   ├── flask_page.png
+└── Mini Project 2/
+    ├── static/
+    │   ├── images/
+    │   │   ├── flask_page.png
+    │   └── style.css
+    ├── templates/
+    │   ├── form.html
+    │   └── index.html
+    └── app.py
+
+</pre></div>
+</div>
+<figure class="align-default" id="web">
+<img alt="_images/flask_page.png" src="_images/flask_page.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 3 </span><span class="caption-text">web page</span><a class="headerlink" href="#web" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 </section>
 </section>
 
