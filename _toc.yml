@@ -2,10 +2,12 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
-root: intro
+root: introduction
 chapters:
+- file: what_is_it
 - file: study_guide_2
-- file: notebooks
-- file: markdown-notebooks
-- file: python_data_types
-- file: python_automation
+- file: study_guide_3
+- file: study_guide_4
+- file: study_guide_5
+- file: study_guide_6
+- file: simple_flask_app

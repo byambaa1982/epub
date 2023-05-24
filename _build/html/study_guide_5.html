@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Lists: &#8212; Python Courses for beginners</title>
+    <title>5. Lists, Tuples, Dictionary, and Sets &#8212; Python Courses for beginners</title>
   
   
   
@@ -64,6 +64,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'study_guide_5';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="6. String" href="study_guide_6.html" />
+    <link rel="prev" title="4. Python Functions" href="study_guide_4.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -129,7 +131,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="sidebar-primary-item">
   
 
-<a class="navbar-brand logo" href="intro.html">
+<a class="navbar-brand logo" href="introduction.html">
   
   
   
@@ -149,13 +151,19 @@ const thebe_selector_output = ".output, .cell_output"
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
-                <a class="reference internal" href="intro.html">
-                    Python Courses for beginers
+                <a class="reference internal" href="introduction.html">
+                    Python Courses for beginners
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="study_guide_2.html">Python Data Types</a></li>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="what_is_it.html">1. Introduction to Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="study_guide_2.html">2. Python Data Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="study_guide_3.html">3. Control Flow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="study_guide_4.html">4. Python Functions</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">5. Lists, Tuples, Dictionary, and Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="study_guide_6.html">6. String</a></li>
+<li class="toctree-l1"><a class="reference internal" href="simple_flask_app.html">7. Create a Simple Flask App</a></li>
 </ul>
 
     </div>
@@ -370,7 +378,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Lists:</h1>
+    <h1>5. Lists, Tuples, Dictionary, and Sets</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -380,24 +388,23 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Lists:</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-simple-exercise-to-help-you-understand-python-lists-let-s-create-a-program-that-performs-various-operations-on-a-list-of-numbers">A simple exercise to help you understand Python lists. Let’s create a program that performs various operations on a list of numbers.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lists">Lists:</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-simple-exercise-to-help-you-understand-python-lists-let-s-create-a-program-that-performs-various-operations-on-a-list-of-numbers">A simple exercise to help you understand Python lists. Let’s create a program that performs various operations on a list of numbers.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#tuples">Tuples:</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">A simple exercise to help you understand Python lists. Let’s create a program that performs various operations on a list of numbers.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-main-difference-between-lists-and-tuples-in-python-is-their-mutability">The main difference between lists and tuples in Python is their mutability:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tuples">Tuples:</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">A simple exercise to help you understand Python lists. Let’s create a program that performs various operations on a list of numbers.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-main-difference-between-lists-and-tuples-in-python-is-their-mutability">The main difference between lists and tuples in Python is their mutability:</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#dictionary">Dictionary</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1">Exercise 1</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2">Exercise 2</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#set">Set</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-remove-duplicates-from-a-list">Exercise 1: Remove duplicates from a list</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-find-common-elements-between-two-lists">Exercise 2: Find common elements between two lists</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dictionary">Dictionary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1">Exercise 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2">Exercise 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#set">Set</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-remove-duplicates-from-a-list">Exercise 1: Remove duplicates from a list</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-find-common-elements-between-two-lists">Exercise 2: Find common elements between two lists</a></li>
 </ul>
-
             </nav>
         </div>
     </div>
@@ -409,11 +416,13 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <p><a href="https://colab.research.google.com/github/byambaa1982/python_cources_for_beginers/blob/main/5_lists_tuples_dictionaries_sets/Lists_Tuples_Sets.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a></p>
+<section class="tex2jax_ignore mathjax_ignore" id="lists-tuples-dictionary-and-sets">
+<h1>5. Lists, Tuples, Dictionary, and Sets<a class="headerlink" href="#lists-tuples-dictionary-and-sets" title="Permalink to this heading">#</a></h1>
 <section id="lists">
-<h1>Lists:<a class="headerlink" href="#lists" title="Permalink to this heading">#</a></h1>
+<h2>Lists:<a class="headerlink" href="#lists" title="Permalink to this heading">#</a></h2>
 <p>A list is a mutable, ordered collection of items. It allows you to add, remove, or modify elements after the list is created. Lists are dynamic in nature, which means their size can change during runtime. The items in a list can be of any data type, including other lists or tuples. Lists are created using square brackets [], and elements are separated by commas.</p>
 <section id="a-simple-exercise-to-help-you-understand-python-lists-let-s-create-a-program-that-performs-various-operations-on-a-list-of-numbers">
-<h2>A simple exercise to help you understand Python lists. Let’s create a program that performs various operations on a list of numbers.<a class="headerlink" href="#a-simple-exercise-to-help-you-understand-python-lists-let-s-create-a-program-that-performs-various-operations-on-a-list-of-numbers" title="Permalink to this heading">#</a></h2>
+<h3>A simple exercise to help you understand Python lists. Let’s create a program that performs various operations on a list of numbers.<a class="headerlink" href="#a-simple-exercise-to-help-you-understand-python-lists-let-s-create-a-program-that-performs-various-operations-on-a-list-of-numbers" title="Permalink to this heading">#</a></h3>
 <ol class="arabic simple">
 <li><p>Create a list of numbers.</p></li>
 <li><p>Calculate the sum of all the numbers in the list.</p></li>
@@ -522,7 +531,7 @@ Min value: 1
 </div>
 </section>
 <section id="exercises">
-<h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h2>
+<h3>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">Problem</span></code>: Square odd numbers and halve even numbers in a list</p>
 <p>Given a list of integers, create a new list that squares the value of every odd number in the original list and halves the value of every even number.</p>
 <ol class="arabic simple">
@@ -563,10 +572,10 @@ Min value: 1
 </section>
 </section>
 <section id="tuples">
-<h1>Tuples:<a class="headerlink" href="#tuples" title="Permalink to this heading">#</a></h1>
+<h2>Tuples:<a class="headerlink" href="#tuples" title="Permalink to this heading">#</a></h2>
 <p>A tuple is an immutable, ordered collection of items. Once a tuple is created, you cannot change its contents or size. Tuples are fixed-size and often used when you need an immutable sequence of values. Like lists, tuples can store items of any data type, including other lists or tuples. Tuples are created using parentheses () with elements separated by commas, or simply by separating elements with commas (without using parentheses).</p>
 <section id="id1">
-<h2>A simple exercise to help you understand Python lists. Let’s create a program that performs various operations on a list of numbers.<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
+<h3>A simple exercise to help you understand Python lists. Let’s create a program that performs various operations on a list of numbers.<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
 <ol class="arabic simple">
 <li><p>Create a list of numbers.</p></li>
 <li><p>Calculate the sum of all the numbers in the list.</p></li>
@@ -643,7 +652,7 @@ Last element: 42
 </div>
 </section>
 <section id="the-main-difference-between-lists-and-tuples-in-python-is-their-mutability">
-<h2>The main difference between lists and tuples in Python is their mutability:<a class="headerlink" href="#the-main-difference-between-lists-and-tuples-in-python-is-their-mutability" title="Permalink to this heading">#</a></h2>
+<h3>The main difference between lists and tuples in Python is their mutability:<a class="headerlink" href="#the-main-difference-between-lists-and-tuples-in-python-is-their-mutability" title="Permalink to this heading">#</a></h3>
 <ol class="arabic simple">
 <li><p>Mutability:</p></li>
 </ol>
@@ -669,7 +678,7 @@ Last element: 42
 </section>
 </section>
 <section id="dictionary">
-<h1>Dictionary<a class="headerlink" href="#dictionary" title="Permalink to this heading">#</a></h1>
+<h2>Dictionary<a class="headerlink" href="#dictionary" title="Permalink to this heading">#</a></h2>
 <p>A Python dictionary is a mutable, unordered collection of key-value pairs, where each unique key is associated with a value. Dictionaries are implemented as hash tables, which provide fast access, insertion, and deletion of elements. They are a built-in data structure in Python and are commonly used for tasks such as counting, grouping, and organizing data, or for creating lookup tables.</p>
 <p>Here’s an example of a Python dictionary:</p>
 <div class="cell docutils container">
@@ -785,7 +794,7 @@ David is not in the dictionary.
 </div>
 </section>
 <section id="exercise-1">
-<h1>Exercise 1<a class="headerlink" href="#exercise-1" title="Permalink to this heading">#</a></h1>
+<h2>Exercise 1<a class="headerlink" href="#exercise-1" title="Permalink to this heading">#</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">Task</span></code>: Write a Python function called get_grade that takes a dictionary grades and a student’s name as arguments. The function should return the grade of the student if their name is found in the dictionary, or a message indicating that the student’s name is not in the dictionary if it isn’t found.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
 <span class="n">grades</span> <span class="o">=</span> <span class="p">{</span>
@@ -819,7 +828,7 @@ print(get_grade(grades, &quot;David&quot;))     # Output: David is not in the di
 </div>
 </section>
 <section id="exercise-2">
-<h1>Exercise 2<a class="headerlink" href="#exercise-2" title="Permalink to this heading">#</a></h1>
+<h2>Exercise 2<a class="headerlink" href="#exercise-2" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add_student</span><span class="p">(</span><span class="n">students</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">):</span>
@@ -854,7 +863,7 @@ print(get_grade(grades, &quot;David&quot;))     # Output: David is not in the di
 </div>
 </section>
 <section id="set">
-<h1>Set<a class="headerlink" href="#set" title="Permalink to this heading">#</a></h1>
+<h2>Set<a class="headerlink" href="#set" title="Permalink to this heading">#</a></h2>
 <p>A Python set is an unordered collection of unique elements, which means that each element can only appear once in a set. Sets are mutable, meaning that elements can be added or removed after the set is created. They are particularly useful when you need to remove duplicates from a sequence or check membership of elements efficiently.</p>
 <p>Here’s an example of a Python set:</p>
 <div class="cell docutils container">
@@ -904,7 +913,7 @@ print(get_grade(grades, &quot;David&quot;))     # Output: David is not in the di
 </div>
 </section>
 <section id="exercise-1-remove-duplicates-from-a-list">
-<h1>Exercise 1: Remove duplicates from a list<a class="headerlink" href="#exercise-1-remove-duplicates-from-a-list" title="Permalink to this heading">#</a></h1>
+<h2>Exercise 1: Remove duplicates from a list<a class="headerlink" href="#exercise-1-remove-duplicates-from-a-list" title="Permalink to this heading">#</a></h2>
 <p>Given a list of numbers, create a new list with all the unique elements from the original list (i.e., remove all duplicates).</p>
 <p>Example:</p>
 <div class="cell docutils container">
@@ -917,7 +926,7 @@ print(get_grade(grades, &quot;David&quot;))     # Output: David is not in the di
 </div>
 </section>
 <section id="exercise-2-find-common-elements-between-two-lists">
-<h1>Exercise 2: Find common elements between two lists<a class="headerlink" href="#exercise-2-find-common-elements-between-two-lists" title="Permalink to this heading">#</a></h1>
+<h2>Exercise 2: Find common elements between two lists<a class="headerlink" href="#exercise-2-find-common-elements-between-two-lists" title="Permalink to this heading">#</a></h2>
 <p>Given two lists of numbers, create a new list containing the common elements between the two lists (i.e., elements that appear in both lists).</p>
 <p>Example:</p>
 <div class="cell docutils container">
@@ -929,6 +938,7 @@ print(get_grade(grades, &quot;David&quot;))     # Output: David is not in the di
 </div>
 </div>
 </div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -962,6 +972,24 @@ print(get_grade(grades, &quot;David&quot;))     # Output: David is not in the di
   
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="study_guide_4.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">4. Python Functions</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="study_guide_6.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">6. String</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div></div>
   
 </div>
@@ -980,24 +1008,23 @@ print(get_grade(grades, &quot;David&quot;))     # Output: David is not in the di
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Lists:</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-simple-exercise-to-help-you-understand-python-lists-let-s-create-a-program-that-performs-various-operations-on-a-list-of-numbers">A simple exercise to help you understand Python lists. Let’s create a program that performs various operations on a list of numbers.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lists">Lists:</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-simple-exercise-to-help-you-understand-python-lists-let-s-create-a-program-that-performs-various-operations-on-a-list-of-numbers">A simple exercise to help you understand Python lists. Let’s create a program that performs various operations on a list of numbers.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#tuples">Tuples:</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">A simple exercise to help you understand Python lists. Let’s create a program that performs various operations on a list of numbers.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-main-difference-between-lists-and-tuples-in-python-is-their-mutability">The main difference between lists and tuples in Python is their mutability:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tuples">Tuples:</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">A simple exercise to help you understand Python lists. Let’s create a program that performs various operations on a list of numbers.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-main-difference-between-lists-and-tuples-in-python-is-their-mutability">The main difference between lists and tuples in Python is their mutability:</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#dictionary">Dictionary</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1">Exercise 1</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2">Exercise 2</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#set">Set</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-remove-duplicates-from-a-list">Exercise 1: Remove duplicates from a list</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-find-common-elements-between-two-lists">Exercise 2: Find common elements between two lists</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dictionary">Dictionary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1">Exercise 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2">Exercise 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#set">Set</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-remove-duplicates-from-a-list">Exercise 1: Remove duplicates from a list</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-find-common-elements-between-two-lists">Exercise 2: Find common elements between two lists</a></li>
 </ul>
-
   </nav></div>
 
 </div></div>
