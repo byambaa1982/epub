@@ -2,7 +2,7 @@
 
 ## 1. Why Python?
 
-- [Learn and Earn](why_python.md)
+- [Learn and Earn](https://github.com/byambaa1982/python_cources_for_beginers/blob/main/1_introduction/why_python.md)
 
 ## 2. [Variables and Data Types](https://github.com/byambaa1982/python_cources_for_beginers/tree/main/2_variables_and_operations)
 
