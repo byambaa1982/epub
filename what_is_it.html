@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>1. Introduction &#8212; Python Courses for beginners</title>
+    <title>1. Introduction to Python &#8212; Python Courses for beginners</title>
   
   
   
@@ -65,7 +65,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="2. Python Data Types" href="study_guide_2.html" />
-    <link rel="prev" title="Python Courses for beginers" href="intro.html" />
+    <link rel="prev" title="Python Courses for beginners" href="intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -152,17 +152,18 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="intro.html">
-                    Python Courses for beginers
+                    Python Courses for beginners
                 </a>
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">1. Introduction</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">1. Introduction to Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="study_guide_2.html">2. Python Data Types</a></li>
 <li class="toctree-l1"><a class="reference internal" href="study_guide_3.html">3. Control Flow</a></li>
 <li class="toctree-l1"><a class="reference internal" href="study_guide_4.html">4. Python Functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="study_guide_5.html">5. Python Data Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="study_guide_5.html">5. Lists, Tuples, Dictionary, and Sets</a></li>
 <li class="toctree-l1"><a class="reference internal" href="study_guide_6.html">6. String</a></li>
+<li class="toctree-l1"><a class="reference internal" href="simple_flask_app.html">7. Create a Simple Flask App</a></li>
 </ul>
 
     </div>
@@ -346,7 +347,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>1. Introduction</h1>
+    <h1>1. Introduction to Python</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -356,8 +357,12 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-this-repo">Why This Repo?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-use">How to Use</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-python">1. Why Python?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variables-and-data-types">2. Variables and Data Types</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conditional-statements-if-elif-and-else">3. Conditional Statements: if, elif, and else</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#defining-functions">4. Defining Functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-structures">5. Data Structures</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#working-with-strings">6. Working with Strings</a></li>
 </ul>
             </nav>
         </div>
@@ -369,41 +374,56 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="introduction">
-<h1>1. Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h1>
-<p>Welcome to <code class="docutils literal notranslate"><span class="pre">Python</span> <span class="pre">Cources</span> <span class="pre">For</span> <span class="pre">Beginners</span></code>, a comprehensive Python guide designed specifically for beginners. If you’re looking to learn Python, you’ve landed in the right place. In this tutorial, you’ll find an array of resources, structured across 6 chapters, each containing an interactive exercise notebook and its corresponding solution.</p>
-<p>This book is unique in its ease of accessibility and use. All of the chapters and exercises are compatible with Google Colab, which means you don’t have to worry about any downloads or installations. You can start your Python journey instantly, from anywhere, at any time!</p>
-<section id="why-this-repo">
-<h2>Why This Repo?<a class="headerlink" href="#why-this-repo" title="Permalink to this heading">#</a></h2>
+  <section class="tex2jax_ignore mathjax_ignore" id="introduction-to-python">
+<h1>1. Introduction to Python<a class="headerlink" href="#introduction-to-python" title="Permalink to this heading">#</a></h1>
+<section id="why-python">
+<h2>1. Why Python?<a class="headerlink" href="#why-python" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">Learn</span> <span class="pre">Python</span> <span class="pre">Interactively</span></code>: Every chapter includes an interactive exercise notebook. Practice your new skills immediately with real-world problems, which is the best way to cement your learning.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Immediate</span> <span class="pre">Feedback</span></code>: Each exercise notebook is paired with a solution code notebook. You can check your answers immediately and understand where you’ve made mistakes or where there’s room for improvement. No more hunting around on the internet for answers or explanations!</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">No</span> <span class="pre">Installation</span> <span class="pre">Required</span></code>: Forget about cumbersome setup processes or worrying about system requirements. Google Colab provides a cloud-based Python development environment that you can use straight from your browser.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Open</span> <span class="pre">Source</span> <span class="pre">&amp;</span> <span class="pre">Free</span></code>: This repository is 100% free and open-source. You can learn at your own pace and even contribute to improve the resource.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Structured</span> <span class="pre">Learning</span></code>: The material is divided into 6 chapters, allowing you to progress in a systematic, structured manner, building on your skills as you move from chapter to chapter.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Self-Paced</span> <span class="pre">Learning</span></code>: Whether you’re squeezing in lessons in your lunch break, or putting in hours on a lazy Sunday, this repo enables learning at your own pace.</p></li>
+<li><p><span class="xref myst">Learn and Earn</span></p></li>
 </ul>
 </section>
-<section id="how-to-use">
-<h2>How to Use<a class="headerlink" href="#how-to-use" title="Permalink to this heading">#</a></h2>
-<ol class="arabic simple">
-<li><p>Open the desired chapter in this repo.</p></li>
-<li><p>Click on the exercise notebook link. It’ll open up in Google Colab hitting the <code class="docutils literal notranslate"><span class="pre">Open</span> <span class="pre">in</span> <span class="pre">Colab</span></code> sign.</p></li>
-<li><p>After going through the concepts, start working on the exercises.</p></li>
-<li><p>If you’re stuck, take a peek at the corresponding solution notebook.</p></li>
-<li><p>Repeat with the next chapter once you’re comfortable with the current one!</p></li>
-</ol>
-<figure class="align-default" id="colab">
-<img alt="_images/colab_small.png" src="_images/colab_small.png" />
-<figcaption>
-<p><span class="caption-number">Fig. 2 </span><span class="caption-text">Colab Notebook Sign</span><a class="headerlink" href="#colab" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<p>It’s as simple as that! It’s time to stop thinking and start doing. Dive into the chapters and begin your Python journey right now.</p>
-<p>We are excited to see how you progress. Happy Learning!</p>
-<p><code class="docutils literal notranslate"><span class="pre">Note</span></code>: If you want to contribute to this repo or if you find any errors, feel free to open an issue or make a pull request.</p>
-<p><code class="docutils literal notranslate"><span class="pre">Disclaimer</span></code>: This repo is intended for educational purposes only. It’s the learner’s responsibility to use the exercises and solutions ethically.</p>
-<p>Remember - “The journey of a thousand miles begins with one step.” Let’s get started on your Python journey!</p>
+<section id="variables-and-data-types">
+<h2>2. <a class="reference external" href="https://github.com/byambaa1982/python_cources_for_beginers/tree/main/2_variables_and_operations">Variables and Data Types</a><a class="headerlink" href="#variables-and-data-types" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Basic Operators and Expressions</p></li>
+<li><p>Input and Output Functions</p></li>
+<li><p>Comments and Docstrings</p></li>
+</ul>
+</section>
+<section id="conditional-statements-if-elif-and-else">
+<h2>3. <a class="reference external" href="https://github.com/byambaa1982/python_cources_for_beginers/tree/main/3_control%20flow">Conditional Statements: if, elif, and else</a><a class="headerlink" href="#conditional-statements-if-elif-and-else" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Looping: for and while Loops</p></li>
+<li><p>Loop Control: break and continue</p></li>
+<li><p>List Comprehensions</p></li>
+<li><p>Functions and Modules</p></li>
+</ul>
+</section>
+<section id="defining-functions">
+<h2>4. <a class="reference external" href="https://github.com/byambaa1982/python_cources_for_beginers/tree/main/4_functions">Defining Functions</a><a class="headerlink" href="#defining-functions" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Function Arguments and Return Values</p></li>
+<li><p>Variable Scope</p></li>
+<li><p>Importing Modules and Libraries</p></li>
+</ul>
+</section>
+<section id="data-structures">
+<h2>5. <a class="reference external" href="https://github.com/byambaa1982/python_cources_for_beginers/tree/main/5_lists_tuples_dictionaries_sets">Data Structures</a><a class="headerlink" href="#data-structures" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Lists</p></li>
+<li><p>Tuples</p></li>
+<li><p>Dictionaries</p></li>
+<li><p>Sets</p></li>
+</ul>
+</section>
+<section id="working-with-strings">
+<h2>6. <a class="reference external" href="https://github.com/byambaa1982/python_cources_for_beginers/tree/main/6_string_formating">Working with Strings</a><a class="headerlink" href="#working-with-strings" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>String Basics</p></li>
+<li><p>String Formatting</p></li>
+<li><p>Common String Methods</p></li>
+<li><p>Regular Expressionss</p></li>
+</ul>
 </section>
 </section>
 
@@ -444,7 +464,7 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Python Courses for beginers</p>
+        <p class="prev-next-title">Python Courses for beginners</p>
       </div>
     </a>
     <a class="right-next"
@@ -474,8 +494,12 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-this-repo">Why This Repo?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-use">How to Use</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-python">1. Why Python?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variables-and-data-types">2. Variables and Data Types</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conditional-statements-if-elif-and-else">3. Conditional Statements: if, elif, and else</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#defining-functions">4. Defining Functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-structures">5. Data Structures</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#working-with-strings">6. Working with Strings</a></li>
 </ul>
   </nav></div>
 
