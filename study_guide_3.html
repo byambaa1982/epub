@@ -65,7 +65,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="4. Python Functions" href="study_guide_4.html" />
-    <link rel="prev" title="Python Data Types" href="study_guide_2.html" />
+    <link rel="prev" title="2. Python Data Types" href="study_guide_2.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -152,16 +152,17 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="intro.html">
-                    Python Courses for beginers
+                    Python Courses for beginners
                 </a>
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="study_guide_2.html">Python Data Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="study_guide_2.html">2. Python Data Types</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">3. Control Flow</a></li>
 <li class="toctree-l1"><a class="reference internal" href="study_guide_4.html">4. Python Functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="study_guide_5.html">5. Python Data Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="study_guide_5.html">5. Lists, Tuples, Dictionary, and Sets</a></li>
 <li class="toctree-l1"><a class="reference internal" href="study_guide_6.html">6. String</a></li>
+<li class="toctree-l1"><a class="reference internal" href="simple_flask_app.html">7. Create a Simple Flask App</a></li>
 </ul>
 
     </div>
@@ -386,10 +387,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#control-flow-exercises-by-byamba">Control Flow Exercises by Byamba</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#write-a-python-program-that-iterates-through-the-numbers-from-1-to-10-and-prints-whether-each-number-is-a-multiple-of-3-or-not">1. Write a Python program that iterates through the numbers from 1 to 10 and prints whether each number is a multiple of 3 or not.</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#write-a-python-program-that-iterates-through-the-numbers-from-1-to-10-and-prints-whether-each-number-is-a-multiple-of-3-or-not">1. Write a Python program that iterates through the numbers from 1 to 10 and prints whether each number is a multiple of 3 or not.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#write-a-python-program-that-iterates-through-the-numbers-from-1-to-15-and-prints-whether-each-number-is-divisible-by-4-or-not">2. Write a Python program that iterates through the numbers from 1 to 15 and prints whether each number is divisible by 4 or not.</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions">Instructions:</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-output">Example output:</a></li>
@@ -431,8 +429,6 @@ document.write(`
   <p><a href="https://colab.research.google.com/github/byambaa1982/python_cources_for_beginers/blob/main/control%20flow/3_control_flow_lab.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a></p>
 <section class="tex2jax_ignore mathjax_ignore" id="control-flow">
 <h1>3. Control Flow<a class="headerlink" href="#control-flow" title="Permalink to this heading">#</a></h1>
-<section id="control-flow-exercises-by-byamba">
-<h2>Control Flow Exercises by Byamba<a class="headerlink" href="#control-flow-exercises-by-byamba" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">):</span>
@@ -454,8 +450,8 @@ document.write(`
 </div>
 </div>
 <section id="write-a-python-program-that-iterates-through-the-numbers-from-1-to-10-and-prints-whether-each-number-is-a-multiple-of-3-or-not">
-<h3>1. Write a Python program that iterates through the numbers from 1 to 10 and prints whether each number is a multiple of 3 or not.<a class="headerlink" href="#write-a-python-program-that-iterates-through-the-numbers-from-1-to-10-and-prints-whether-each-number-is-a-multiple-of-3-or-not" title="Permalink to this heading">#</a></h3>
-<p>nstructions:</p>
+<h2>1. Write a Python program that iterates through the numbers from 1 to 10 and prints whether each number is a multiple of 3 or not.<a class="headerlink" href="#write-a-python-program-that-iterates-through-the-numbers-from-1-to-10-and-prints-whether-each-number-is-a-multiple-of-3-or-not" title="Permalink to this heading">#</a></h2>
+<p>Instructions:</p>
 <ol class="arabic simple">
 <li><p>Use a for loop to iterate through the numbers from 1 to 10.</p></li>
 <li><p>Inside the loop, use an if statement to check if the current number is a multiple of 3.</p></li>
@@ -488,7 +484,6 @@ document.write(`
 </div>
 </div>
 </div>
-</section>
 </section>
 <section id="write-a-python-program-that-iterates-through-the-numbers-from-1-to-15-and-prints-whether-each-number-is-divisible-by-4-or-not">
 <h2>2. Write a Python program that iterates through the numbers from 1 to 15 and prints whether each number is divisible by 4 or not.<a class="headerlink" href="#write-a-python-program-that-iterates-through-the-numbers-from-1-to-15-and-prints-whether-each-number-is-divisible-by-4-or-not" title="Permalink to this heading">#</a></h2>
@@ -791,7 +786,7 @@ The last fruit in the list is: kiwi
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Python Data Types</p>
+        <p class="prev-next-title">2. Python Data Types</p>
       </div>
     </a>
     <a class="right-next"
@@ -821,10 +816,7 @@ The last fruit in the list is: kiwi
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#control-flow-exercises-by-byamba">Control Flow Exercises by Byamba</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#write-a-python-program-that-iterates-through-the-numbers-from-1-to-10-and-prints-whether-each-number-is-a-multiple-of-3-or-not">1. Write a Python program that iterates through the numbers from 1 to 10 and prints whether each number is a multiple of 3 or not.</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#write-a-python-program-that-iterates-through-the-numbers-from-1-to-10-and-prints-whether-each-number-is-a-multiple-of-3-or-not">1. Write a Python program that iterates through the numbers from 1 to 10 and prints whether each number is a multiple of 3 or not.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#write-a-python-program-that-iterates-through-the-numbers-from-1-to-15-and-prints-whether-each-number-is-divisible-by-4-or-not">2. Write a Python program that iterates through the numbers from 1 to 15 and prints whether each number is divisible by 4 or not.</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions">Instructions:</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-output">Example output:</a></li>
