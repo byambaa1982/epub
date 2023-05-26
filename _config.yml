@@ -5,6 +5,7 @@ title: Python Courses for beginners
 author: Byamba Enkhbat
 logo: logo.png
 
+google_analytics: G-6R7KD1FNMR
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
 execute:
@@ -34,4 +35,10 @@ launch_buttons:
   colab_url: "https://colab.research.google.com"
 
 
-
+# Add some navbar items
+navbar:
+  items:
+    - text: Blogs
+      url: https://byambaa1982.github.io/
+    - text: Tutorials
+      url: https://byambaa1982.github.io/epub
