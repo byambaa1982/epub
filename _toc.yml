@@ -2,15 +2,17 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
-root: introduction
+root: landing
 chapters:
-- file: what_is_it
-- file: study_guide_2
-- file: study_guide_3
-- file: study_guide_4
-- file: study_guide_5
-- file: study_guide_6
-- file: simple_flask_app
+- file: cources
   sections:
+  - file: introduction
+  - file: what_is_it
+  - file: study_guide_2
+  - file: study_guide_3
+  - file: study_guide_4
+  - file: study_guide_5
+  - file: study_guide_6
+  - file: simple_flask_app
   - file: update_simple_flask_app.ipynb
-  
+- file: blogs
