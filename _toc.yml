@@ -4,7 +4,7 @@
 format: jb-book
 root: landing
 chapters:
-- file: cources
+- file: courses
   sections:
   - file: introduction
   - file: what_is_it
@@ -14,5 +14,7 @@ chapters:
   - file: study_guide_5
   - file: study_guide_6
   - file: simple_flask_app
-  - file: update_simple_flask_app.ipynb
+  - file: update_simple_flask_app
 - file: blogs
+  sections: 
+  - file: blogs/wealth
