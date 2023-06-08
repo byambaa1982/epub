@@ -11,3 +11,6 @@ chapters:
 - file: study_guide_5
 - file: study_guide_6
 - file: simple_flask_app
+  sections:
+  - file: update_simple_flask_app.ipynb
+  
