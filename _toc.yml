@@ -7,7 +7,7 @@ chapters:
 - file: courses
   sections:
   - file: introduction
-  - file: what_is_it
+  - file: table_content
   - file: study_guide_2
   - file: study_guide_3
   - file: study_guide_4
@@ -18,3 +18,8 @@ chapters:
 - file: blogs
   sections: 
   - file: blogs/wealth
+- file: ebook/tests
+  sections:
+  - file: ebook/test_1
+  - file: ebook/answers_1
+  - file: ebook/explaination_1
