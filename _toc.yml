@@ -4,18 +4,18 @@
 format: jb-book
 root: landing
 chapters:
-- file: courses
+- file: courses/courses
   sections:
-  - file: introduction
-  - file: table_content
-  - file: study_guide_2
-  - file: study_guide_3
-  - file: study_guide_4
-  - file: study_guide_5
-  - file: study_guide_6
-  - file: simple_flask_app
-  - file: update_simple_flask_app
-- file: blogs
+  - file: courses/introduction
+  - file: courses/table_content
+  - file: courses/study_guide_2
+  - file: courses/study_guide_3
+  - file: courses/study_guide_4
+  - file: courses/study_guide_5
+  - file: courses/study_guide_6
+  - file: courses/simple_flask_app
+  - file: courses/update_simple_flask_app
+- file: blogs/blogs
   sections: 
   - file: blogs/wealth
 - file: ebook/tests
@@ -23,3 +23,6 @@ chapters:
   - file: ebook/test_1
   - file: ebook/answers_1
   - file: ebook/explaination_1
+- file: mongol/main
+  sections: 
+  - file: mongol/blog_1

@@ -1,7 +1,17 @@
 
 
 <!DOCTYPE html>
+{%- include snippets/get-lang.html -%}
+<html lang="{{ __return }}">
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6R7KD1FNMR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-6R7KD1FNMR');
+</script>
 
 <html lang="en" >
 
@@ -64,7 +74,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'landing';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Courses" href="courses.html" />
+    <link rel="next" title="Courses" href="courses/courses.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -156,19 +166,19 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="courses.html">Courses</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="introduction.html">Python Courses for beginners</a></li>
-<li class="toctree-l2"><a class="reference internal" href="table_content.html">1. Introduction to Python</a></li>
-<li class="toctree-l2"><a class="reference internal" href="study_guide_2.html">2. Python Data Types</a></li>
-<li class="toctree-l2"><a class="reference internal" href="study_guide_3.html">3. Control Flow</a></li>
-<li class="toctree-l2"><a class="reference internal" href="study_guide_4.html">4. Python Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="study_guide_5.html">5. Lists, Tuples, Dictionary, and Sets</a></li>
-<li class="toctree-l2"><a class="reference internal" href="study_guide_6.html">6. String</a></li>
-<li class="toctree-l2"><a class="reference internal" href="simple_flask_app.html">7. Create a Simple Flask App</a></li>
-<li class="toctree-l2"><a class="reference internal" href="update_simple_flask_app.html">Update Flask App with more functions</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="courses/courses.html">Courses</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="courses/introduction.html">Python Courses for beginners</a></li>
+<li class="toctree-l2"><a class="reference internal" href="courses/table_content.html">1. Introduction to Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="courses/study_guide_2.html">2. Python Data Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="courses/study_guide_3.html">3. Control Flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="courses/study_guide_4.html">4. Python Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="courses/study_guide_5.html">5. Lists, Tuples, Dictionary, and Sets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="courses/study_guide_6.html">6. String</a></li>
+<li class="toctree-l2"><a class="reference internal" href="courses/simple_flask_app.html">7. Create a Simple Flask App</a></li>
+<li class="toctree-l2"><a class="reference internal" href="courses/update_simple_flask_app.html">Update Flask App with more functions</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="blogs.html">Blogs</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="blogs/blogs.html">Blogs</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="blogs/wealth.html">The Art of Leveraging Specific Knowledge</a></li>
 </ul>
 </li>
@@ -176,6 +186,10 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="ebook/test_1.html">Questions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ebook/answers_1.html">Correct Answers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ebook/explaination_1.html">Explainations</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="mongol/main.html">Монгол Хэл</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="mongol/blog_1.html">Туршилтын блог</a></li>
 </ul>
 </li>
 </ul>
@@ -466,7 +480,7 @@ document.write(`
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="right-next"
-       href="courses.html"
+       href="courses/courses.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
