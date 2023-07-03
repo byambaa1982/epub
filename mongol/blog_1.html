@@ -444,9 +444,14 @@ document.write(`
 </div>
 <p>Дээрх жишээн дээр танай дататай харьцаж байгаа гадны ажилтан танай ажилчидын цалин гэрийн хаягийг харах боломжгүй ч танай датаг загварчилж автоматжуулж чадна. Харин танай хүний нөөц энэ датаг бүтнээр нь харж болдог. Нэмж хэлэхэд яг нэг датаг өөр өөр түвшинд эзэмшиж болдог. Компаний ашиг хэсгийг зөвхөн захирал л харах эрхтэй байдаг ч юм уу.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">Parallel</span> <span class="pre">computing</span></code>: Add more information</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Паралель</span> <span class="pre">тооцоолол</span></code> буюу <code class="docutils literal notranslate"><span class="pre">Parallel</span> <span class="pre">computing</span></code>: Датабриксийн суурь нь хүчирэг <code class="docutils literal notranslate"><span class="pre">Apache</span> <span class="pre">Spark</span></code> хэмээх <code class="docutils literal notranslate"><span class="pre">open-source</span></code> <code class="docutils literal notranslate"><span class="pre">distributed</span> <span class="pre">computing</span></code> engine. Их хэмжээний датаг олон машин дээр тарааж зэрэг асар хурдтай тооцолдог. Датаны хэмжээ хэр зэрэг хүчин чадал шаардахаас хамаараад автоматаар хэвтээ тэлэлт хийдэг онцлогтой. Энэ нь open-source учир сангууд үнэгүй байдаг.</p></li>
 </ul>
-<p>more infromation here …</p>
+<p>Жишээ нь нэг сая гаруй мөртэй датан дээр (excel limit 1 m) python <code class="docutils literal notranslate"><span class="pre">pandas</span></code> сан ашиглан тооцоолол хийх гэвэл машин хичнээн хүчтэй байгаад <code class="docutils literal notranslate"><span class="pre">memory</span></code> нь хүрэхгүй унадаг бол датабрикс дээрх <code class="docutils literal notranslate"><span class="pre">pyspark</span></code> н хувьд энэ нь хэдхэн секундын ажил юм.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Lakehouse</span></code> технологи: Ганцхан энэ л датабриксийг сонгох шалтгаан болж болно. Lakehouse нь Data Lake, Data Warehouse 2 н давуу талуудыг авсан шинэ технологи юм.</p></li>
+</ul>
+<p><img alt="lakehouse" src="../_images/lakehouse.png" /></p>
+<p>Дээрх зурагт тодорхой дүрсэлжээ. Data Warehouse нь зөвхөн анализ хийхэд тохиромжтой боловч machine learning real-time streaming хийж чаддаггүй бол lakehouse нь энэ сул талыг шийдсэн байдаг.</p>
 </section>
 <section id="databricks-architecture">
 <h2>2. Databricks Architecture<a class="headerlink" href="#databricks-architecture" title="Permalink to this heading">#</a></h2>
