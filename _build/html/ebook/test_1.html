@@ -1,7 +1,10 @@
 
 
 <!DOCTYPE html>
-
+<html lang="{{ __return }}">
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6R7KD1FNMR"></script>
+<script>
 
 <html lang="en" >
 
@@ -176,7 +179,11 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="tests.html">Databricks</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Questions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="answers_1.html">Correct Answers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="explaination_1.html">Explainations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="explaination_1.html">Explanations</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../mongol/main.html">Монгол</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../mongol/blog_1.html">Databricks гэж юу?</a></li>
 </ul>
 </li>
 </ul>
@@ -437,6 +444,18 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-30">Question 30</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-31">Question 31</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-32">Question 32</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-33">Question 33</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-34">Question 34</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-35">Question 35</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-36">Question 36</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-37">Question 37</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-38">Question 38</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-39">Question 39</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-40">Question 40</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-42">Question 42</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-43">Question 43</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-44">Question 44</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-45">Question 45</a></li>
 </ul>
             </nav>
         </div>
@@ -1083,6 +1102,232 @@ standard data pipelines that utilize Spark and Delta Lake on Databricks?</p>
 <li><p>E. The ability to perform batch and streaming queries</p></li>
 </ul>
 </section>
+<section id="question-33">
+<h2>Question 33<a class="headerlink" href="#question-33" title="Permalink to this heading">#</a></h2>
+<p>A data engineer has three notebooks in an ELT pipeline. The notebooks need to be executed
+in a specific order for the pipeline to complete successfully. The data engineer would like to
+use Delta Live Tables to manage this process.
+Which of the following steps must the data engineer take as part of implementing this
+pipeline using Delta Live Tables?</p>
+<ul class="simple">
+<li><p>A. They need to create a Delta Live Tables pipeline from the Data page.</p></li>
+<li><p>B. They need to create a Delta Live Tables pipeline from the Jobs page.</p></li>
+<li><p>C. They need to create a Delta Live tables pipeline from the Compute page.</p></li>
+<li><p>D. They need to refactor their notebook to use Python and the dlt library.</p></li>
+<li><p>E. They need to refactor their notebook to use SQL and CREATE LIVE TABLE keyword.</p></li>
+</ul>
+</section>
+<section id="question-34">
+<h2>Question 34<a class="headerlink" href="#question-34" title="Permalink to this heading">#</a></h2>
+<p>A data engineer has written the following query:</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">json</span><span class="p">.</span><span class="o">`/</span><span class="n">path</span><span class="o">/</span><span class="k">to</span><span class="o">/</span><span class="n">json</span><span class="o">/</span><span class="n">file</span><span class="p">.</span><span class="n">json</span><span class="o">`</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>The data engineer asks a colleague for help to convert this query for use in a Delta Live
+Tables (DLT) pipeline. The query should create the first table in the DLT pipeline.
+Which of the following describes the change the colleague needs to make to the query?</p>
+<ul class="simple">
+<li><p>A. They need to add a COMMENT line at the beginning of the query.</p></li>
+<li><p>B. They need to add a CREATE LIVE TABLE table_name AS line at the beginning of
+the query.</p></li>
+<li><p>C. They need to add a live. prefix prior to json. in the FROM line.</p></li>
+<li><p>D. They need to add a CREATE DELTA LIVE TABLE table_name AS line at the
+beginning of the query.</p></li>
+<li><p>E. They need to add the cloud_files(…) wrapper to the JSON file path.</p></li>
+</ul>
+</section>
+<section id="question-35">
+<h2>Question 35<a class="headerlink" href="#question-35" title="Permalink to this heading">#</a></h2>
+<p>A dataset has been defined using Delta Live Tables and includes an expectations clause:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CONSTRAINT</span> <span class="n">valid_timestamp</span> <span class="n">EXPECT</span> <span class="p">(</span><span class="n">timestamp</span> <span class="o">&gt;</span> <span class="s1">&#39;2020-01-01&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>What is the expected behavior when a batch of data containing data that violates these
+constraints is processed?</p>
+<ul class="simple">
+<li><p>A. Records that violate the expectation are added to the target dataset and recorded
+as invalid in the event log.</p></li>
+<li><p>B. Records that violate the expectation are dropped from the target dataset and
+recorded as invalid in the event log.</p></li>
+<li><p>C. Records that violate the expectation cause the job to fail.</p></li>
+<li><p>D. Records that violate the expectation are added to the target dataset and flagged as
+invalid in a field added to the target dataset.</p></li>
+<li><p>E. Records that violate the expectation are dropped from the target dataset and loaded
+into a quarantine table.</p></li>
+</ul>
+</section>
+<section id="question-36">
+<h2>Question 36<a class="headerlink" href="#question-36" title="Permalink to this heading">#</a></h2>
+<p>A Delta Live Table pipeline includes two datasets defined using STREAMING LIVE TABLE.
+Three datasets are defined against Delta Lake table sources using LIVE TABLE.
+The table is configured to run in Development mode using the Triggered Pipeline Mode.
+Assuming previously unprocessed data exists and all definitions are valid, what is the
+expected outcome after clicking Start to update the pipeline?</p>
+<ul class="simple">
+<li><p>A. All datasets will be updated once and the pipeline will shut down. The compute
+resources will be terminated.</p></li>
+<li><p>B. All datasets will be updated at set intervals until the pipeline is shut down. The
+compute resources will be deployed for the update and terminated when the
+pipeline is stopped.</p></li>
+<li><p>C. All datasets will be updated at set intervals until the pipeline is shut down. The
+compute resources will persist after the pipeline is stopped to allow for additional
+testing.</p></li>
+<li><p>D. All datasets will be updated once and the pipeline will shut down. The compute
+resources will persist to allow for additional testing.</p></li>
+<li><p>E. All datasets will be updated continuously and the pipeline will not shut down. The
+compute resources will persist with the pipeline.</p></li>
+</ul>
+</section>
+<section id="question-37">
+<h2>Question 37<a class="headerlink" href="#question-37" title="Permalink to this heading">#</a></h2>
+<p>A data engineer has a Job with multiple tasks that runs nightly. One of the tasks
+unexpectedly fails during 10 percent of the runs.
+Which of the following actions can the data engineer perform to ensure the Job completes
+each night while minimizing compute costs?</p>
+<ul class="simple">
+<li><p>A. They can institute a retry policy for the entire Job</p></li>
+<li><p>B. They can observe the task as it runs to try and determine why it is failing</p></li>
+<li><p>C. They can set up the Job to run multiple times ensuring that at least one will
+complete</p></li>
+<li><p>D. They can institute a retry policy for the task that periodically fail</p></li>
+</ul>
+</section>
+<section id="question-38">
+<h2>Question 38<a class="headerlink" href="#question-38" title="Permalink to this heading">#</a></h2>
+<p>A data engineer has set up two Jobs that each run nightly. The first Job starts at 12:00 AM,
+and it usually completes in about 20 minutes. The second Job depends on the first Job, and
+it starts at 12:30 AM. Sometimes, the second Job fails when the first Job does not complete
+by 12:30 AM.
+Which of the following approaches can the data engineer use to avoid this problem?</p>
+<ul class="simple">
+<li><p>A. They can utilize multiple tasks in a single job with a linear dependency</p></li>
+<li><p>B. They can use cluster pools to help the Jobs run more efficiently</p></li>
+<li><p>C. They can set up a retry policy on the first Job to help it run more quickly</p></li>
+<li><p>D. They can limit the size of the output in the second Job so that it will not fail as easily</p></li>
+<li><p>E. They can set up the data to stream from the first Job to the second Job</p></li>
+</ul>
+</section>
+<section id="question-39">
+<h2>Question 39<a class="headerlink" href="#question-39" title="Permalink to this heading">#</a></h2>
+<p>A data engineer has set up a notebook to automatically process using a Job. The data
+engineer’s manager wants to version control the schedule due to its complexity.
+Which of the following approaches can the data engineer use to obtain a
+version-controllable configuration of the Job’s schedule?</p>
+<ul class="simple">
+<li><p>A. They can link the Job to notebooks that are a part of a Databricks Repo.</p></li>
+<li><p>B. They can submit the Job once on a Job cluster.</p></li>
+<li><p>C. They can download the JSON description of the Job from the Job’s page.</p></li>
+<li><p>D. They can submit the Job once on an all-purpose cluster.</p></li>
+<li><p>E. They can download the XML description of the Job from the Job’s page.</p></li>
+</ul>
+</section>
+<section id="question-40">
+<h2>Question 40<a class="headerlink" href="#question-40" title="Permalink to this heading">#</a></h2>
+<p>A data analyst has noticed that their Databricks SQL queries are running too slowly. They
+claim that this issue is affecting all of their sequentially run queries. They ask the data
+engineering team for help. The data engineering team notices that each of the queries uses
+the same SQL endpoint, but the SQL endpoint is not used by any other user.
+Which of the following approaches can the data engineering team use to improve the
+latency of the data analyst’s queries?</p>
+<ul class="simple">
+<li><p>A. They can turn on the Serverless feature for the SQL endpoint.</p></li>
+<li><p>B. They can increase the maximum bound of the SQL endpoint’s scaling range.</p></li>
+<li><p>C. They can increase the cluster size of the SQL endpoint.</p></li>
+<li><p>D. They can turn on the Auto Stop feature for the SQL endpoint.</p></li>
+<li><p>E. They can turn on the Serverless feature for the SQL endpoint and change the Spot
+Instance Policy to “Reliability Optimized.”</p></li>
+</ul>
+<p>Question 41</p>
+<p>An engineering manager uses a Databricks SQL query to monitor their team’s progress on
+fixes related to customer-reported bugs. The manager checks the results of the query every
+day, but they are manually rerunning the query each day and waiting for the results.
+Which of the following approaches can the manager use to ensure the results of the query
+are updated each day?</p>
+<ul class="simple">
+<li><p>A. They can schedule the query to run every 1 day from the Jobs UI.</p></li>
+<li><p>B. They can schedule the query to refresh every 1 day from the query’s page in
+Databricks SQL.</p></li>
+<li><p>C. They can schedule the query to run every 12 hours from the Jobs UI.</p></li>
+<li><p>D. They can schedule the query to refresh every 1 day from the SQL endpoint’s page in
+Databricks SQL.</p></li>
+<li><p>E. They can schedule the query to refresh every 12 hours from the SQL endpoint’s page
+in Databricks SQL.</p></li>
+</ul>
+</section>
+<section id="question-42">
+<h2>Question 42<a class="headerlink" href="#question-42" title="Permalink to this heading">#</a></h2>
+<p>A data engineering team has been using a Databricks SQL query to monitor the
+performance of an ELT job. The ELT job is triggered by a specific number of input records
+being ready to process. The Databricks SQL query returns the number of minutes since the
+job’s most recent runtime.
+Which of the following approaches can enable the data engineering team to be notified if
+the ELT job has not been run in an hour?</p>
+<ul class="simple">
+<li><p>A. They can set up an Alert for the accompanying dashboard to notify them if the
+returned value is greater than 60.</p></li>
+<li><p>B. They can set up an Alert for the query to notify when the ELT job fails.</p></li>
+<li><p>C. They can set up an Alert for the accompanying dashboard to notify when it has not
+refreshed in 60 minutes.</p></li>
+<li><p>D. They can set up an Alert for the query to notify them if the returned value is greater
+than 60.</p></li>
+<li><p>E. This type of alerting is not possible in Databricks.</p></li>
+</ul>
+</section>
+<section id="question-43">
+<h2>Question 43<a class="headerlink" href="#question-43" title="Permalink to this heading">#</a></h2>
+<p>A data engineering manager has noticed that each of the queries in a Databricks SQL
+dashboard takes a few minutes to update when they manually click the “Refresh” button.
+They are curious why this might be occurring, so a team member provides a variety of
+reasons on why the delay might be occurring.</p>
+<p>Which of the following reasons fails to explain why the dashboard might be taking a few
+minutes to update?</p>
+<ul class="simple">
+<li><p>A. The SQL endpoint being used by each of the queries might need a few minutes to
+start up.</p></li>
+<li><p>B. The queries attached to the dashboard might take a few minutes to run under
+normal circumstances.</p></li>
+<li><p>C. The queries attached to the dashboard might first be checking to determine if new
+data is available.</p></li>
+<li><p>D. The Job associated with updating the dashboard might be using a non-pooled
+endpoint.</p></li>
+<li><p>E. The queries attached to the dashboard might all be connected to their own,
+unstarted Databricks clusters.</p></li>
+</ul>
+</section>
+<section id="question-44">
+<h2>Question 44<a class="headerlink" href="#question-44" title="Permalink to this heading">#</a></h2>
+<p>A new data engineer has started at a company. The data engineer has recently been added
+to the company’s Databricks workspace as <a class="reference external" href="mailto:new&#46;engineer&#37;&#52;&#48;company&#46;com">new<span>&#46;</span>engineer<span>&#64;</span>company<span>&#46;</span>com</a>. The data
+engineer needs to be able to query the table sales in the database retail. The new data
+engineer already has been granted USAGE on the database retail.
+Which of the following commands can be used to grant the appropriate permissions to the
+new data engineer?</p>
+<ul class="simple">
+<li><p>A. GRANT USAGE ON TABLE sales TO <a class="reference external" href="mailto:new&#46;engineer&#37;&#52;&#48;company&#46;com">new<span>&#46;</span>engineer<span>&#64;</span>company<span>&#46;</span>com</a>;</p></li>
+<li><p>B. GRANT CREATE ON TABLE sales TO <a class="reference external" href="mailto:new&#46;engineer&#37;&#52;&#48;company&#46;com">new<span>&#46;</span>engineer<span>&#64;</span>company<span>&#46;</span>com</a>;</p></li>
+<li><p>C. GRANT SELECT ON TABLE sales TO <a class="reference external" href="mailto:new&#46;engineer&#37;&#52;&#48;company&#46;com">new<span>&#46;</span>engineer<span>&#64;</span>company<span>&#46;</span>com</a>;</p></li>
+<li><p>D. GRANT USAGE ON TABLE <a class="reference external" href="mailto:new&#46;engineer&#37;&#52;&#48;company&#46;com">new<span>&#46;</span>engineer<span>&#64;</span>company<span>&#46;</span>com</a> TO sales;</p></li>
+<li><p>E. GRANT SELECT ON TABLE <a class="reference external" href="mailto:new&#46;engineer&#37;&#52;&#48;company&#46;com">new<span>&#46;</span>engineer<span>&#64;</span>company<span>&#46;</span>com</a> TO sales;</p></li>
+</ul>
+</section>
+<section id="question-45">
+<h2>Question 45<a class="headerlink" href="#question-45" title="Permalink to this heading">#</a></h2>
+<p>A new data engineer <a class="reference external" href="mailto:new&#46;engineer&#37;&#52;&#48;company&#46;com">new<span>&#46;</span>engineer<span>&#64;</span>company<span>&#46;</span>com</a> has been assigned to an ELT project.
+The new data engineer will need full privileges on the table sales to fully manage the
+project.
+Which of the following commands can be used to grant full permissions on the table to the
+new data engineer?</p>
+<ul class="simple">
+<li><p>A. GRANT ALL PRIVILEGES ON TABLE sales TO <a class="reference external" href="mailto:new&#46;engineer&#37;&#52;&#48;company&#46;com">new<span>&#46;</span>engineer<span>&#64;</span>company<span>&#46;</span>com</a>;</p></li>
+<li><p>B. GRANT USAGE ON TABLE sales TO <a class="reference external" href="mailto:new&#46;engineer&#37;&#52;&#48;company&#46;com">new<span>&#46;</span>engineer<span>&#64;</span>company<span>&#46;</span>com</a>;</p></li>
+<li><p>C. GRANT ALL PRIVILEGES ON TABLE <a class="reference external" href="mailto:new&#46;engineer&#37;&#52;&#48;company&#46;com">new<span>&#46;</span>engineer<span>&#64;</span>company<span>&#46;</span>com</a> TO
+sales;</p></li>
+<li><p>D. GRANT SELECT ON TABLE sales TO <a class="reference external" href="mailto:new&#46;engineer&#37;&#52;&#48;company&#46;com">new<span>&#46;</span>engineer<span>&#64;</span>company<span>&#46;</span>com</a>;</p></li>
+<li><p>E. GRANT SELECT CREATE MODIFY ON TABLE sales TO
+<a class="reference external" href="mailto:new&#46;engineer&#37;&#52;&#48;company&#46;com">new<span>&#46;</span>engineer<span>&#64;</span>company<span>&#46;</span>com</a></p></li>
+</ul>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -1186,6 +1431,18 @@ standard data pipelines that utilize Spark and Delta Lake on Databricks?</p>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-30">Question 30</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-31">Question 31</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-32">Question 32</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-33">Question 33</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-34">Question 34</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-35">Question 35</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-36">Question 36</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-37">Question 37</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-38">Question 38</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-39">Question 39</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-40">Question 40</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-42">Question 42</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-43">Question 43</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-44">Question 44</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-45">Question 45</a></li>
 </ul>
   </nav></div>
 
