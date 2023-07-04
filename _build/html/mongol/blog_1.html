@@ -1,11 +1,19 @@
 
 
 <!DOCTYPE html>
+
+{%- include snippets/get-lang.html -%}
 <html lang="{{ __return }}">
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-6R7KD1FNMR"></script>
 <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-6R7KD1FNMR');
+</script>
+  
 <html lang="en" >
 
   <head>
@@ -410,9 +418,7 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Ерөнхий ойлголтууд</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">1. Давуу талууд</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#databricks-architecture">2. Databricks Architecture</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#use-case">3. Use case</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Давуу талууд</a></li>
 </ul>
             </nav>
         </div>
@@ -429,13 +435,14 @@ document.write(`
 <section id="id1">
 <h2>Ерөнхий ойлголтууд<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
 <p>Датабрикс бол data engineering, machine learning, analytics гэсэн бүх дататай холбоотой хэрэгцээг нэг дороос хангасан хүчирхэг флатформ юм. Тооцоолох хадгалах цэвэрлэх шэйрлэх загварчлах график хүснэгт гаргахаас авхуулаад маш олон мэргэжлийн хүмүүс олон байгууллагууд датаг аюулгүйгээр шэйрлэж хэрэглэж болдог.</p>
+<p><img alt="databricks" src="../_images/databricks.png" /></p>
 </section>
 <section id="id2">
-<h2>1. Давуу талууд<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
+<h2>Давуу талууд<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">Хамтын</span> <span class="pre">орчин</span></code> буюу <code class="docutils literal notranslate"><span class="pre">Unified</span> <span class="pre">Workspace</span></code>: Databricks нь олон янзын хэрэглэгчид олон төрлийн ажлыг хамтын орчноос гүйцэтгэх боломжийг олгодог.  Дата код зэргийг мэдэх шаардлагагүйгээр удирдлагууд захирлууд өөрсдийн датаг амархан мониторинг хийснээр аюулгүй байдлын асар том боломж олж авдаг.</p></li>
 </ul>
-<p>Энгийн жишээ авая. Танай компани мэргэжлийн компаниас дата инжнерчлэлийн тусламж шаардлагатай болсон гэж төсөөлье. Гэтэл танай дата дотор байгууллага хувь хүний нууцтай холбоотой мэдээлэл бүхий нэг багана байлаа гэхэд зөвхөн тэр баганыг гүйцэтгэгч компани харах боломгүйгээр датаг боловсруулж болдог. Бас болоогүй тухайн датан дээр хэн хэзээ яг ямар үйлдэл хийсэн нь тодорхой харагдаж байдаг. Ингэснээр аль аль талд итгэл үүсдэг. Баахан нууцлалын гэрээ бичиг цаас болохгүй гэсэн үг.</p>
+<p>Энгийн жишээ авая. Танай компани мэргэжлийн компаниас дата инжинерчлэлийн тусламж шаардлагатай болсон гэж төсөөлье. Гэтэл танай дата дотор байгууллага хувь хүний нууцтай холбоотой мэдээлэл бүхий нэг багана байлаа гэхэд зөвхөн тэр баганыг гүйцэтгэгч компани харах боломгүйгээр датаг боловсруулж болдог. Бас болоогүй тухайн датан дээр хэн хэзээ яг ямар үйлдэл хийсэн нь тодорхой харагдаж байдаг. Ингэснээр аль аль талд итгэл үүсдэг. Баахан нууцлалын гэрээ бичиг цаас болохгүй гэсэн үг.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+------------+--------------+--------------------------------+-------------------+</span>
 <span class="o">|</span><span class="n">name</span>        <span class="o">|</span><span class="n">date_of_birth</span> <span class="o">|</span><span class="n">hashed_salary</span>                   <span class="o">|</span><span class="n">anonymized_address</span> <span class="o">|</span>
 <span class="o">+------------+--------------+--------------------------------+-------------------+</span>
@@ -445,19 +452,16 @@ document.write(`
 <span class="o">+------------+--------------+--------------------------------+-------------------+</span>
 </pre></div>
 </div>
-<p>Дээрх жишээн дээр танай дататай харьцаж байгаа гадны ажилтан танай ажилчидын цалин гэрийн хаягийг харах боломжгүй ч танай датаг загварчилж автоматжуулж чадна. Харин танай хүний нөөц энэ датаг бүтнээр нь харж болдог. Нэмж хэлэхэд яг нэг датаг өөр өөр түвшинд эзэмшиж болдог. Компаний ашиг хэсгийг зөвхөн захирал л харах эрхтэй байдаг ч юм уу.</p>
+<p>Дээрх жишээн дээр танай дататай харьцаж байгаа гадны ажилтан танай ажилчидын цалин гэрийн хаягийг харах боломжгүй ч танай датаг загварчилж автоматжуулж чадна. Харин танай хүний нөөц энэ датаг бүтнээр нь харж болдог. Нэмж хэлэхэд яг нэг датаг өөр өөр түвшинд эзэмшиж болдог. Компаний ашиг хэсгийг зөвхөн захирал л харах эрхтэй байдаг ч юм уу. Eр нь out sourcing хийж хүний нөөцөө шийдэхэд маш чухал флатформ.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">Parallel</span> <span class="pre">computing</span></code>: Add more information</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Паралель</span> <span class="pre">тооцоолол</span></code> буюу <code class="docutils literal notranslate"><span class="pre">Parallel</span> <span class="pre">computing</span></code>: Датабриксийн суурь нь хүчирэг <code class="docutils literal notranslate"><span class="pre">Apache</span> <span class="pre">Spark</span></code> хэмээх <code class="docutils literal notranslate"><span class="pre">open-source</span></code> <code class="docutils literal notranslate"><span class="pre">distributed</span> <span class="pre">computing</span></code> engine. Их хэмжээний датаг олон машин дээр тарааж зэрэг асар хурдтай тооцолдог. Датаны хэмжээ хэр зэрэг хүчин чадал шаардахаас хамаараад автоматаар хэвтээ тэлэлт хийдэг онцлогтой. Энэ нь open-source учир сангууд үнэгүй байдаг.</p></li>
 </ul>
-<p>more infromation here …</p>
-</section>
-<section id="databricks-architecture">
-<h2>2. Databricks Architecture<a class="headerlink" href="#databricks-architecture" title="Permalink to this heading">#</a></h2>
-<p>add more infromation here ….</p>
-</section>
-<section id="use-case">
-<h2>3. Use case<a class="headerlink" href="#use-case" title="Permalink to this heading">#</a></h2>
-<p>add more information here …</p>
+<p>Жишээ нь нэг сая гаруй мөртэй датан дээр (excel limit 1 m) python <code class="docutils literal notranslate"><span class="pre">pandas</span></code> сан ашиглан тооцоолол хийх гэвэл машин хичнээн хүчтэй байгаад <code class="docutils literal notranslate"><span class="pre">memory</span></code> нь хүрэхгүй унадаг бол датабрикс дээрх <code class="docutils literal notranslate"><span class="pre">pyspark</span></code> н хувьд энэ нь хэдхэн секундын ажил юм. JP Morgan датабрикс ашиглаж 500 питабайт дата боловсруулалт хийдэг. Хэр их датаны тухай яриад байна вэ гэвэл хэрэв CD д хуулаад өрөх юм бол Эвэристийн орголоос 100 дахин өндөр багана үүснэ гэсэн үг юм.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Lakehouse</span></code> технологи: Ганцхан энэ л датабриксийг сонгох шалтгаан болж болно. Lakehouse нь Data Lake, Data Warehouse 2 н давуу талуудыг авсан шинэ технологи юм.</p></li>
+</ul>
+<p><img alt="lakehouse" src="../_images/lakehouse.png" /></p>
+<p>Дээрх зурагт тодорхой дүрсэлжээ. Data Warehouse нь зөвхөн анализ хийхэд тохиромжтой боловч үнэтэй machine learning real-time streaming хийж чаддаггүй бол Data Lake хямд шууд машин сургалтанд ашиглах боломжтой боловч анализ хийхэд заавал warehouse үүсгэх шаардлагтай болдог дээр нь датаны чанар стандарт муу байдаг. lakehouse нь энэ сул талуудыг шийдсэн байдаг.</p>
 </section>
 </section>
 
@@ -520,9 +524,7 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Ерөнхий ойлголтууд</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">1. Давуу талууд</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#databricks-architecture">2. Databricks Architecture</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#use-case">3. Use case</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Давуу талууд</a></li>
 </ul>
   </nav></div>
 
