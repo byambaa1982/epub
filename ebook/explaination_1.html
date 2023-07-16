@@ -1,10 +1,7 @@
 
 
 <!DOCTYPE html>
-<html lang="{{ __return }}">
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-6R7KD1FNMR"></script>
-<script>
+
 
 <html lang="en" >
 
@@ -416,7 +413,18 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-29">Question 29</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-30">Question 30</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-31">Question 31</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#questionn-32">Questionn 32</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-32">Question 32</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-33">Question 33</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-34">Question 34</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-35">Question 35</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-36">Question 36</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-37">Question 37</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-38">Question 38</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-39">Question 39</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-40">Question 40</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-41">Question 41</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-42">Question 42</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-43">Question 43</a></li>
 </ul>
             </nav>
         </div>
@@ -509,8 +517,8 @@ document.write(`
 <p>The Bronze-Silver-Gold architecture in data management is a tiered framework for data processing and storage. Bronze represents raw, unprocessed data, Silver represents cleansed and enriched data, while Gold represents aggregated and business-ready data.</p>
 <p>The statement under option C takes a stream of data from the “sales” Bronze table, enriches it by calculating the “avgPrice”, and writes it to the “cleanedSales” table, effectively transforming it to a Silver table. The transition from raw data to enriched data is generally considered a transition from a Bronze to a Silver table, which is why this option is the correct answer.</p>
 </section>
-<section id="questionn-32">
-<h2>Questionn 32<a class="headerlink" href="#questionn-32" title="Permalink to this heading">#</a></h2>
+<section id="question-32">
+<h2>Question 32<a class="headerlink" href="#question-32" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>A. The ability to declare and maintain data table dependencies</p></li>
 </ul>
@@ -520,6 +528,106 @@ document.write(`
 <p>Option C, accessing previous versions of data tables, is a feature of Delta Lake (through Delta Time Travel), not specific to Delta Live Tables.</p>
 <p>Option D, the ability to automatically scale compute resources, is a feature of Databricks, not specific to Delta Live Tables.</p>
 <p>Option E, performing batch and streaming queries, is possible with both Spark Structured Streaming and Delta Lake, not specific to Delta Live Tables.</p>
+</section>
+<section id="question-33">
+<h2>Question 33<a class="headerlink" href="#question-33" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>B. They need to create a Delta Live Tables pipeline from the Jobs page.</p></li>
+</ul>
+<p>Explanation:</p>
+<p>Here are the steps on how to create a Delta Live Tables pipeline from the Jobs page in Databricks:</p>
+<ol class="arabic simple">
+<li><p>Go to the Jobs page in Databricks.</p></li>
+<li><p>Click on the “Create Job” button.</p></li>
+<li><p>Select “Delta Live Tables” as the job type.</p></li>
+<li><p>Select the notebooks that you want to include in the pipeline.</p></li>
+<li><p>Specify the order in which you want the notebooks to be executed.</p></li>
+<li><p>Click on the “Create” button.</p></li>
+</ol>
+</section>
+<section id="question-34">
+<h2>Question 34<a class="headerlink" href="#question-34" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>B. They need to add a CREATE LIVE TABLE table_name AS line at the beginning of the query.</p></li>
+</ul>
+<p>Explanation:</p>
+<p>Delta Live Tables (DLT) supports SQL and Python syntax. To define a table in SQL, one has to use the CREATE LIVE TABLE statement before defining the query. Hence, to convert the query into a DLT compatible query, we would add the CREATE LIVE TABLE command at the beginning.</p>
+<p>It’s worth mentioning that as of my knowledge cutoff in September 2021, this is the correct information. Always refer to the most recent Databricks documentation for the most up-to-date processes and procedures.</p>
+</section>
+<section id="question-35">
+<h2>Question 35<a class="headerlink" href="#question-35" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>A. Records that violate the expectation are added to the target dataset and recorded as invalid in the event log.</p></li>
+</ul>
+<p>Explanation:</p>
+<p>The CONSTRAINT clause in Delta Live Tables sets an expectation on the dataset. If the action to be taken upon violation of the expectation is not explicitly specified, the default action, which is ‘warn’, is applied. With the ‘warn’ action, the records that do not meet the expectation are written to the target dataset, and a failure metric for the dataset is recorded in the event log.</p>
+</section>
+<section id="question-36">
+<h2>Question 36<a class="headerlink" href="#question-36" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>A. Records that violate the expectation are added to the target dataset and recorded as invalid in the event log.</p></li>
+</ul>
+<p>Explanation</p>
+<p>In Continuous Pipeline Mode with Production mode enabled, all tables in the pipeline are updated continuously until the pipeline is manually stopped. When ‘Start’ is clicked, the pipeline initiates and continues to run, processing incoming data in real-time. Compute resources are allocated for the entire duration of the pipeline execution, thus ensuring optimal performance.</p>
+</section>
+<section id="question-37">
+<h2>Question 37<a class="headerlink" href="#question-37" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>D. They can institute a retry policy for the task that periodically fails</p></li>
+</ul>
+<p>Explanation</p>
+<p>A retry policy can be instituted at the task level in Databricks. This would allow the specific task that is failing to be retried without having to rerun the entire job, thus minimizing compute costs. The other options, such as retrying the entire job or setting the job to run multiple times, would increase compute costs as more tasks would be run than necessary. Observing the task as it runs might help determine why it is failing, but it won’t ensure the job completes each night. Finally, utilizing a jobs cluster for each of the tasks in the job would not necessarily address the issue of the task failing and could lead to increased compute costs.</p>
+</section>
+<section id="question-38">
+<h2>Question 38<a class="headerlink" href="#question-38" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>A. They can utilize multiple tasks in a single job with a linear dependency</p></li>
+</ul>
+<p>Explanation:</p>
+<p>The most reliable solution to this problem would be to set up multiple tasks within a single job with a linear dependency. This approach ensures that the second task (which was previously the second job) will not start until the first task (previously the first job) has successfully completed. This removes the problem of the second job starting before the first has completed. The other options, like using cluster pools, setting a retry policy on the first job, or limiting the size of the output in the second job, do not directly address the issue of the second job starting before the first job has finished. The option to set up the data to stream from the first job to the second job is not a typical way to ensure job dependencies in Databricks.</p>
+</section>
+<section id="question-39">
+<h2>Question 39<a class="headerlink" href="#question-39" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>C. They can download the JSON description of the Job from the Job’s page.</p></li>
+</ul>
+<p>Explanation:</p>
+<p>Databricks provides the option to download a JSON description of the job configuration from the job’s page. This JSON description can be version controlled, and can also be used to recreate the job programmatically using the Databricks Jobs API. This provides a way to have version-controllable configuration of the Job’s schedule. Other options like linking the job to notebooks that are a part of a Databricks Repo, submitting the job on a job cluster or all-purpose cluster, or downloading an XML description of the job do not offer the same level of version control for a job’s schedule.</p>
+</section>
+<section id="question-40">
+<h2>Question 40<a class="headerlink" href="#question-40" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>C. They can increase the cluster size of the SQL endpoint.</p></li>
+</ul>
+<p>Explanation:</p>
+<p>Databricks SQL Endpoint is the compute that is used to execute SQL queries in Databricks. The performance of the SQL queries can be directly improved by increasing the size of the underlying cluster used by the SQL endpoint. The cluster size in Databricks is defined by the number and type of machines (known as nodes) in the cluster. A larger cluster can handle more data and perform operations faster because the computations are distributed among more machines. Therefore, by increasing the cluster size of the SQL endpoint, the data engineering team can improve the performance of the data analyst’s queries. Other options mentioned might not have a direct impact on the performance of the SQL queries.</p>
+</section>
+<section id="question-41">
+<h2>Question 41<a class="headerlink" href="#question-41" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>B. They can schedule the query to refresh every 1 day from the query’s page in
+Databricks SQL.</p></li>
+</ul>
+<p>Explanation:</p>
+<p>In Databricks SQL, users have the ability to schedule their SQL queries to run at specific intervals. This can be very useful for scenarios where the results of the query need to be updated periodically. In this case, the engineering manager can schedule the query to refresh every 1 day directly from the query’s page in Databricks SQL. This will ensure that the query is executed automatically every day, updating the results without requiring the manager to manually rerun the query each time. Other options such as scheduling from the Jobs UI or from the SQL endpoint’s page may not be applicable as they pertain to different Databricks features.</p>
+</section>
+<section id="question-42">
+<h2>Question 42<a class="headerlink" href="#question-42" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>D. They can set up an Alert for the query to notify them if the returned value is greater
+than 60.</p></li>
+</ul>
+<p>Explanation:</p>
+<p>Databricks SQL allows you to create Alerts on specific queries. In this scenario, the data engineering team can create an Alert on the query that monitors the ELT job runtime. The Alert can be set to trigger a notification when the query result (the number of minutes since the job’s most recent runtime) exceeds 60. This way, the team will be notified if the ELT job has not run in over an hour. Other options such as alerting on dashboard conditions or job failures may not provide the specific information needed in this case.</p>
+</section>
+<section id="question-43">
+<h2>Question 43<a class="headerlink" href="#question-43" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>D. The Job associated with updating the dashboard might be using a non-pooled
+endpoint.</p></li>
+</ul>
+<p>Explanation:</p>
+<p>Databricks SQL dashboards do not directly depend on Jobs. Rather, they execute SQL queries on SQL Endpoints (either serverless or a cluster-backed endpoint). Therefore, the speed at which a dashboard refreshes is independent of whether the Jobs are using pooled or non-pooled endpoints. The other options, such as the SQL endpoint needing time to start up, the inherent complexity of the queries, or the queries checking for new data before executing, could indeed contribute to the delay in updating the dashboard. The fifth option, E, is incorrect because individual queries in a dashboard do not connect to their own, separate Databricks clusters.</p>
 </section>
 </section>
 
@@ -596,7 +704,18 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-29">Question 29</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-30">Question 30</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-31">Question 31</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#questionn-32">Questionn 32</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-32">Question 32</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-33">Question 33</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-34">Question 34</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-35">Question 35</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-36">Question 36</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-37">Question 37</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-38">Question 38</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-39">Question 39</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-40">Question 40</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-41">Question 41</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-42">Question 42</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-43">Question 43</a></li>
 </ul>
   </nav></div>
 
