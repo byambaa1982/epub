@@ -1,10 +1,7 @@
 
 
 <!DOCTYPE html>
-<html lang="{{ __return }}">
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-6R7KD1FNMR"></script>
-<script>
+
 
 <html lang="en" >
 
@@ -452,6 +449,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-38">Question 38</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-39">Question 39</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-40">Question 40</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-41">Question 41</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-42">Question 42</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-43">Question 43</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-44">Question 44</a></li>
@@ -1104,12 +1102,12 @@ standard data pipelines that utilize Spark and Delta Lake on Databricks?</p>
 </section>
 <section id="question-33">
 <h2>Question 33<a class="headerlink" href="#question-33" title="Permalink to this heading">#</a></h2>
-<p>A data engineer has three notebooks in an ELT pipeline. The notebooks need to be executed
+<ul class="simple">
+<li><p>A data engineer has three notebooks in an ELT pipeline. The notebooks need to be executed
 in a specific order for the pipeline to complete successfully. The data engineer would like to
 use Delta Live Tables to manage this process.
 Which of the following steps must the data engineer take as part of implementing this
-pipeline using Delta Live Tables?</p>
-<ul class="simple">
+pipeline using Delta Live Tables?</p></li>
 <li><p>A. They need to create a Delta Live Tables pipeline from the Data page.</p></li>
 <li><p>B. They need to create a Delta Live Tables pipeline from the Jobs page.</p></li>
 <li><p>C. They need to create a Delta Live tables pipeline from the Compute page.</p></li>
@@ -1120,8 +1118,8 @@ pipeline using Delta Live Tables?</p>
 <section id="question-34">
 <h2>Question 34<a class="headerlink" href="#question-34" title="Permalink to this heading">#</a></h2>
 <p>A data engineer has written the following query:</p>
-<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
-<span class="k">FROM</span><span class="w"> </span><span class="n">json</span><span class="p">.</span><span class="o">`/</span><span class="n">path</span><span class="o">/</span><span class="k">to</span><span class="o">/</span><span class="n">json</span><span class="o">/</span><span class="n">file</span><span class="p">.</span><span class="n">json</span><span class="o">`</span><span class="p">;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>SELECT *
+FROM json.`/path/to/json/file.json`;
 </pre></div>
 </div>
 <p>The data engineer asks a colleague for help to convert this query for use in a Delta Live
@@ -1190,7 +1188,8 @@ each night while minimizing compute costs?</p>
 <li><p>B. They can observe the task as it runs to try and determine why it is failing</p></li>
 <li><p>C. They can set up the Job to run multiple times ensuring that at least one will
 complete</p></li>
-<li><p>D. They can institute a retry policy for the task that periodically fail</p></li>
+<li><p>D. They can institute a retry policy for the task that periodically fails</p></li>
+<li><p>E. They can utilize a Jobs cluster for each of the tasks in the Job</p></li>
 </ul>
 </section>
 <section id="question-38">
@@ -1219,7 +1218,7 @@ version-controllable configuration of the Job’s schedule?</p>
 <li><p>B. They can submit the Job once on a Job cluster.</p></li>
 <li><p>C. They can download the JSON description of the Job from the Job’s page.</p></li>
 <li><p>D. They can submit the Job once on an all-purpose cluster.</p></li>
-<li><p>E. They can download the XML description of the Job from the Job’s page.</p></li>
+<li><p>E. They can download the XML description of the Job from the Job’s page</p></li>
 </ul>
 </section>
 <section id="question-40">
@@ -1238,7 +1237,9 @@ latency of the data analyst’s queries?</p>
 <li><p>E. They can turn on the Serverless feature for the SQL endpoint and change the Spot
 Instance Policy to “Reliability Optimized.”</p></li>
 </ul>
-<p>Question 41</p>
+</section>
+<section id="question-41">
+<h2>Question 41<a class="headerlink" href="#question-41" title="Permalink to this heading">#</a></h2>
 <p>An engineering manager uses a Databricks SQL query to monitor their team’s progress on
 fixes related to customer-reported bugs. The manager checks the results of the query every
 day, but they are manually rerunning the query each day and waiting for the results.
@@ -1279,8 +1280,8 @@ than 60.</p></li>
 <p>A data engineering manager has noticed that each of the queries in a Databricks SQL
 dashboard takes a few minutes to update when they manually click the “Refresh” button.
 They are curious why this might be occurring, so a team member provides a variety of
-reasons on why the delay might be occurring.</p>
-<p>Which of the following reasons fails to explain why the dashboard might be taking a few
+reasons on why the delay might be occurring.
+Which of the following reasons fails to explain why the dashboard might be taking a few
 minutes to update?</p>
 <ul class="simple">
 <li><p>A. The SQL endpoint being used by each of the queries might need a few minutes to
@@ -1325,7 +1326,7 @@ new data engineer?</p>
 sales;</p></li>
 <li><p>D. GRANT SELECT ON TABLE sales TO <a class="reference external" href="mailto:new&#46;engineer&#37;&#52;&#48;company&#46;com">new<span>&#46;</span>engineer<span>&#64;</span>company<span>&#46;</span>com</a>;</p></li>
 <li><p>E. GRANT SELECT CREATE MODIFY ON TABLE sales TO
-<a class="reference external" href="mailto:new&#46;engineer&#37;&#52;&#48;company&#46;com">new<span>&#46;</span>engineer<span>&#64;</span>company<span>&#46;</span>com</a></p></li>
+<a class="reference external" href="mailto:new&#46;engineer&#37;&#52;&#48;company&#46;com">new<span>&#46;</span>engineer<span>&#64;</span>company<span>&#46;</span>com</a>:;</p></li>
 </ul>
 </section>
 </section>
@@ -1439,6 +1440,7 @@ sales;</p></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-38">Question 38</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-39">Question 39</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-40">Question 40</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-41">Question 41</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-42">Question 42</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-43">Question 43</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-44">Question 44</a></li>
