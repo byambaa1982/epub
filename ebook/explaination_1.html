@@ -407,13 +407,19 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-5">Question 5</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-27">Question 27</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-28">Question 28</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-29">Question 29</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-30">Question 30</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-31">Question 31</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-32">Question 32</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-1">Question 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-2">Question 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-3">Question 3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-4">Question 4</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-5">Question 5</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-27">Question 27</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-28">Question 28</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-29">Question 29</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-30">Question 30</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-31">Question 31</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-32">Question 32</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-33">Question 33</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-34">Question 34</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-35">Question 35</a></li>
@@ -425,6 +431,8 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-41">Question 41</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-42">Question 42</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-43">Question 43</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-44">Question 44</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-45">Question 45</a></li>
 </ul>
             </nav>
         </div>
@@ -438,8 +446,41 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="explanations">
 <h1>Explanations<a class="headerlink" href="#explanations" title="Permalink to this heading">#</a></h1>
+<section id="question-1">
+<h2>Question 1<a class="headerlink" href="#question-1" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>E. A data lakehouse enables both batch and streaming analytics.</p></li>
+</ul>
+<p>Explanation:</p>
+<p>A significant advantage of a data lakehouse over a traditional data warehouse is its ability to handle both batch and streaming analytics. Traditional data warehouses were primarily designed for batch processing, and they might struggle with real-time data ingestion and streaming analytics. On the other hand, a data lakehouse can accommodate both without any significant performance impact. The other options either are capabilities of both systems or don’t accurately describe the features of a data lakehouse.</p>
+</section>
+<section id="question-2">
+<h2>Question 2<a class="headerlink" href="#question-2" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>A. Data plane</p></li>
+</ul>
+<p>Explanation:</p>
+<p>The Data Plane in Databricks hosts the driver and worker nodes of a Databricks-managed cluster. It is responsible for the execution of jobs and computation tasks. The Control Plane, on the other hand, is where the user interface, REST API, job launching, and cluster management operations take place. The Databricks Filesystem, JDBC data source, and Databricks web application are not physical locations, so they don’t host driver or worker nodes.</p>
+</section>
+<section id="question-3">
+<h2>Question 3<a class="headerlink" href="#question-3" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>D. A data lakehouse stores unstructured data and is ACID-compliant.</p></li>
+</ul>
+<p>Explanation:</p>
+<p>A data lakehouse, such as Delta Lake, can meet the needs of both workloads because it can handle unstructured data (like video files for machine learning workloads) and is ACID-compliant (which is a key requirement for highly audited batch ETL/ELT workloads). ACID compliance ensures transactional reliability, which is essential for ETL/ELT processes.</p>
+<p>The other options do not fully capture the dual functionality that a data lakehouse can provide for both types of workloads. Option B and C are incorrect because even though they are features of a data lakehouse, they do not directly address the needs of both machine learning and ETL/ELT workloads. Option A is incorrect because data lakehouses do require data modeling. Lastly, option E is also incorrect because a data lakehouse does not have to fully exist in the cloud - it can be implemented on-premises or in a hybrid environment as well.</p>
+</section>
+<section id="question-4">
+<h2>Question 4<a class="headerlink" href="#question-4" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>C. An automated workflow needs to be run every 30 minutes.</p></li>
+</ul>
+<p>Explanation:</p>
+<p>Job clusters are specifically designed for running scheduled or automated tasks, like an automated workflow that needs to run every 30 minutes (option C). They are spun up when the job starts and are terminated when the job finishes, thus providing efficient use of resources for tasks that do not require a constantly running cluster.</p>
+<p>On the other hand, all-purpose clusters are meant for interactive analysis and collaboration - they are not the best choice for running scheduled jobs, as they are not automatically terminated when a task finishes and therefore could incur unnecessary costs if not manually shut down. This is why options A, B, D, and E are not the best use cases for job clusters.</p>
 <section id="question-5">
-<h2>Question 5<a class="headerlink" href="#question-5" title="Permalink to this heading">#</a></h2>
+<h3>Question 5<a class="headerlink" href="#question-5" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>C. Data Explorer</p></li>
 </ul>
@@ -454,7 +495,7 @@ document.write(`
 </ul>
 </section>
 <section id="question-27">
-<h2>Question 27<a class="headerlink" href="#question-27" title="Permalink to this heading">#</a></h2>
+<h3>Question 27<a class="headerlink" href="#question-27" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>E. Auto Loader</p></li>
 </ul>
@@ -462,7 +503,7 @@ document.write(`
 <p>Please note, while <code class="docutils literal notranslate"><span class="pre">Delta</span> <span class="pre">Lake</span> <span class="pre">(B)</span></code> is a technology that can provide features like ACID transactions, versioning, and schema enforcement on data lakes, it doesn’t directly address the problem of identifying and processing only new files since the last pipeline run. Similarly, <code class="docutils literal notranslate"><span class="pre">Databricks</span> <span class="pre">SQL</span> <span class="pre">(A)</span></code>, <code class="docutils literal notranslate"><span class="pre">Unity</span> <span class="pre">Catalog</span> <span class="pre">(C)</span></code>, and <code class="docutils literal notranslate"><span class="pre">Data</span> <span class="pre">Explorer</span> <span class="pre">(D</span></code>) are not directly targeted at this specific problem.</p>
 </section>
 <section id="question-28">
-<h2>Question 28<a class="headerlink" href="#question-28" title="Permalink to this heading">#</a></h2>
+<h3>Question 28<a class="headerlink" href="#question-28" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>C. There is no change required. The inclusion of <code class="docutils literal notranslate"><span class="pre">format(&quot;cloudFiles&quot;)</span></code> enables the use of Auto Loader.</p></li>
 </ul>
@@ -476,7 +517,7 @@ document.write(`
 </ul>
 </section>
 <section id="question-29">
-<h2>Question 29<a class="headerlink" href="#question-29" title="Permalink to this heading">#</a></h2>
+<h3>Question 29<a class="headerlink" href="#question-29" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>E. A job that enriches data by parsing its timestamps into a human-readable format.</p></li>
 </ul>
@@ -491,7 +532,7 @@ document.write(`
 </ul>
 </section>
 <section id="question-30">
-<h2>Question 30<a class="headerlink" href="#question-30" title="Permalink to this heading">#</a></h2>
+<h3>Question 30<a class="headerlink" href="#question-30" title="Permalink to this heading">#</a></h3>
 <p>D. A job that aggregates cleaned data to create standard summary statistics</p>
 <p>Explanation:</p>
 <p>In the Databricks Lakehouse paradigm, a Silver table is typically used to store clean and processed data that can be used for various types of transformations, including the calculation of aggregated statistics. Therefore, a job that aggregates cleaned data to create standard summary statistics would utilize a Silver table as its source.</p>
@@ -502,7 +543,7 @@ document.write(`
 <p>E. A job that cleans data by removing malformatted records: While this could potentially occur at the Silver level, the initial round of data cleaning often happens at the Bronze level before the data is loaded into a Silver table.</p>
 </section>
 <section id="question-31">
-<h2>Question 31<a class="headerlink" href="#question-31" title="Permalink to this heading">#</a></h2>
+<h3>Question 31<a class="headerlink" href="#question-31" title="Permalink to this heading">#</a></h3>
 <p>C.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">spark</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s2">&quot;sales&quot;</span><span class="p">)</span>
 <span class="o">.</span><span class="n">withColumn</span><span class="p">(</span><span class="s2">&quot;avgPrice&quot;</span><span class="p">,</span> <span class="n">col</span><span class="p">(</span><span class="s2">&quot;sales&quot;</span><span class="p">)</span> <span class="o">/</span> <span class="n">col</span><span class="p">(</span><span class="s2">&quot;units&quot;</span><span class="p">))</span>
@@ -518,7 +559,7 @@ document.write(`
 <p>The statement under option C takes a stream of data from the “sales” Bronze table, enriches it by calculating the “avgPrice”, and writes it to the “cleanedSales” table, effectively transforming it to a Silver table. The transition from raw data to enriched data is generally considered a transition from a Bronze to a Silver table, which is why this option is the correct answer.</p>
 </section>
 <section id="question-32">
-<h2>Question 32<a class="headerlink" href="#question-32" title="Permalink to this heading">#</a></h2>
+<h3>Question 32<a class="headerlink" href="#question-32" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>A. The ability to declare and maintain data table dependencies</p></li>
 </ul>
@@ -528,6 +569,7 @@ document.write(`
 <p>Option C, accessing previous versions of data tables, is a feature of Delta Lake (through Delta Time Travel), not specific to Delta Live Tables.</p>
 <p>Option D, the ability to automatically scale compute resources, is a feature of Databricks, not specific to Delta Live Tables.</p>
 <p>Option E, performing batch and streaming queries, is possible with both Spark Structured Streaming and Delta Lake, not specific to Delta Live Tables.</p>
+</section>
 </section>
 <section id="question-33">
 <h2>Question 33<a class="headerlink" href="#question-33" title="Permalink to this heading">#</a></h2>
@@ -567,7 +609,7 @@ document.write(`
 <ul class="simple">
 <li><p>A. Records that violate the expectation are added to the target dataset and recorded as invalid in the event log.</p></li>
 </ul>
-<p>Explanation</p>
+<p>Explanation:</p>
 <p>In Continuous Pipeline Mode with Production mode enabled, all tables in the pipeline are updated continuously until the pipeline is manually stopped. When ‘Start’ is clicked, the pipeline initiates and continues to run, processing incoming data in real-time. Compute resources are allocated for the entire duration of the pipeline execution, thus ensuring optimal performance.</p>
 </section>
 <section id="question-37">
@@ -575,7 +617,7 @@ document.write(`
 <ul class="simple">
 <li><p>D. They can institute a retry policy for the task that periodically fails</p></li>
 </ul>
-<p>Explanation</p>
+<p>Explanation:</p>
 <p>A retry policy can be instituted at the task level in Databricks. This would allow the specific task that is failing to be retried without having to rerun the entire job, thus minimizing compute costs. The other options, such as retrying the entire job or setting the job to run multiple times, would increase compute costs as more tasks would be run than necessary. Observing the task as it runs might help determine why it is failing, but it won’t ensure the job completes each night. Finally, utilizing a jobs cluster for each of the tasks in the job would not necessarily address the issue of the task failing and could lead to increased compute costs.</p>
 </section>
 <section id="question-38">
@@ -628,6 +670,22 @@ endpoint.</p></li>
 </ul>
 <p>Explanation:</p>
 <p>Databricks SQL dashboards do not directly depend on Jobs. Rather, they execute SQL queries on SQL Endpoints (either serverless or a cluster-backed endpoint). Therefore, the speed at which a dashboard refreshes is independent of whether the Jobs are using pooled or non-pooled endpoints. The other options, such as the SQL endpoint needing time to start up, the inherent complexity of the queries, or the queries checking for new data before executing, could indeed contribute to the delay in updating the dashboard. The fifth option, E, is incorrect because individual queries in a dashboard do not connect to their own, separate Databricks clusters.</p>
+</section>
+<section id="question-44">
+<h2>Question 44<a class="headerlink" href="#question-44" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>C. GRANT SELECT ON TABLE sales TO <a class="reference external" href="mailto:new&#46;engineer&#37;&#52;&#48;company&#46;com">new<span>&#46;</span>engineer<span>&#64;</span>company<span>&#46;</span>com</a>;</p></li>
+</ul>
+<p>Explanation:</p>
+<p>The GRANT SELECT command is used to give a user permission to read a database table. Therefore, the command GRANT SELECT ON TABLE sales TO <a class="reference external" href="mailto:new&#46;engineer&#37;&#52;&#48;company&#46;com">new<span>&#46;</span>engineer<span>&#64;</span>company<span>&#46;</span>com</a>; would grant the new data engineer the permissions needed to query the ‘sales’ table. The USAGE privilege doesn’t allow data access, it only allows the user to access objects in the database. CREATE privilege would allow the user to create objects in the database, but not necessarily read data from existing tables. Options D and E are incorrectly formulated, as they try to grant privileges on a table named “<a class="reference external" href="mailto:new&#46;engineer&#37;&#52;&#48;company&#46;com">new<span>&#46;</span>engineer<span>&#64;</span>company<span>&#46;</span>com</a>” to a user or role called ‘sales’.</p>
+</section>
+<section id="question-45">
+<h2>Question 45<a class="headerlink" href="#question-45" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>A. GRANT ALL PRIVILEGES ON TABLE sales TO <a class="reference external" href="mailto:new&#46;engineer&#37;&#52;&#48;company&#46;com">new<span>&#46;</span>engineer<span>&#64;</span>company<span>&#46;</span>com</a>;</p></li>
+</ul>
+<p>Explanation:</p>
+<p>The GRANT ALL PRIVILEGES command is used to give a user full permissions to an object, such as a table. In this case, the command GRANT ALL PRIVILEGES ON TABLE sales TO <a class="reference external" href="mailto:new&#46;engineer&#37;&#52;&#48;company&#46;com">new<span>&#46;</span>engineer<span>&#64;</span>company<span>&#46;</span>com</a>; would grant the new data engineer all necessary permissions to fully manage the ‘sales’ table. The other options either grant insufficient privileges (e.g., USAGE or SELECT only) or are not correctly formatted SQL commands.</p>
 </section>
 </section>
 
@@ -698,13 +756,19 @@ endpoint.</p></li>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-5">Question 5</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-27">Question 27</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-28">Question 28</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-29">Question 29</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-30">Question 30</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-31">Question 31</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-32">Question 32</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-1">Question 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-2">Question 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-3">Question 3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-4">Question 4</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-5">Question 5</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-27">Question 27</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-28">Question 28</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-29">Question 29</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-30">Question 30</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-31">Question 31</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-32">Question 32</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-33">Question 33</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-34">Question 34</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-35">Question 35</a></li>
@@ -716,6 +780,8 @@ endpoint.</p></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-41">Question 41</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-42">Question 42</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-43">Question 43</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-44">Question 44</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-45">Question 45</a></li>
 </ul>
   </nav></div>
 
