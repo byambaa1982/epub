@@ -18,6 +18,7 @@ chapters:
 - file: blogs/blogs
   sections: 
   - file: blogs/wealth
+  - file: blogs/delta_table.md
 - file: ebook/tests
   sections:
   - file: ebook/test_1
@@ -26,3 +27,4 @@ chapters:
 - file: mongol/main
   sections: 
   - file: mongol/blog_1
+  - file: mongol/blog_2

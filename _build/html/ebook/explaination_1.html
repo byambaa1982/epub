@@ -171,6 +171,7 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../blogs/blogs.html">Blogs</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../blogs/wealth.html">The Art of Leveraging Specific Knowledge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blogs/delta_table.html">Exploring Delta Lake’s Powerful Features</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="tests.html">Databricks</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
@@ -181,6 +182,7 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../mongol/main.html">Монгол</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../mongol/blog_1.html">Databricks гэж юу?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mongol/blog_2.html">Дата дата л гэнэ яг юу юм бэ?</a></li>
 </ul>
 </li>
 </ul>
@@ -410,16 +412,35 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-1">Question 1</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-2">Question 2</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-3">Question 3</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-4">Question 4</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-5">Question 5</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-27">Question 27</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-28">Question 28</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-29">Question 29</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-30">Question 30</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-31">Question 31</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-32">Question 32</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-4">Question 4</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-5">Question 5</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-6">Question 6</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-7">Question 7</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-8">Question 8</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-9">Question 9</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-10">Question 10</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-11">Question 11</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-12">Question 12</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-13">Question 13</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-14">Question 14</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-15">Question 15</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-16">Question 16</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-17">Question 17</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-18">Question 18</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-19">Question 19</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-20">Question 20</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-21">Question 21</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-22">Question 22</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-23">Question 23</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-24">Question 24</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-25">Question 25</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-26">Question 26</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-27">Question 27</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-28">Question 28</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-29">Question 29</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-30">Question 30</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-31">Question 31</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-32">Question 32</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-33">Question 33</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-34">Question 34</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-35">Question 35</a></li>
@@ -479,8 +500,9 @@ document.write(`
 <p>Explanation:</p>
 <p>Job clusters are specifically designed for running scheduled or automated tasks, like an automated workflow that needs to run every 30 minutes (option C). They are spun up when the job starts and are terminated when the job finishes, thus providing efficient use of resources for tasks that do not require a constantly running cluster.</p>
 <p>On the other hand, all-purpose clusters are meant for interactive analysis and collaboration - they are not the best choice for running scheduled jobs, as they are not automatically terminated when a task finishes and therefore could incur unnecessary costs if not manually shut down. This is why options A, B, D, and E are not the best use cases for job clusters.</p>
+</section>
 <section id="question-5">
-<h3>Question 5<a class="headerlink" href="#question-5" title="Permalink to this heading">#</a></h3>
+<h2>Question 5<a class="headerlink" href="#question-5" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>C. Data Explorer</p></li>
 </ul>
@@ -494,8 +516,232 @@ document.write(`
 <li><p>E. Dashboards: Dashboards in Databricks are used for visualizing and sharing results, not for managing permissions on Delta tables.</p></li>
 </ul>
 </section>
+<section id="question-6">
+<h2>Question 6<a class="headerlink" href="#question-6" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>B. Databricks Notebooks support real-time coauthoring on a single notebook</p></li>
+</ul>
+<p>Explanation:</p>
+<p>Databricks Notebooks support real-time coauthoring, which allows multiple users to simultaneously work on the same notebook, thus enhancing collaboration. Each user can see the other’s updates in real time. This feature makes it more efficient for the two junior data engineers to collaborate on the same notebook compared to working on separate Git branches and subsequently merging changes. Options A, C, D, and E, while true capabilities of Databricks Notebooks, do not directly address the specific collaboration scenario in question.</p>
+</section>
+<section id="question-7">
+<h2>Question 7<a class="headerlink" href="#question-7" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>E. Databricks Repos can commit or push code changes to trigger a CI/CD process.</p></li>
+</ul>
+<p>Explanation:</p>
+<p>Databricks Repos can be used to connect a notebook to a Git repository, which facilitates version control and continuous integration/continuous delivery (CI/CD) workflows. When changes are committed or pushed to the Git repository, this can trigger a CI/CD process, such as automated testing or deployment. While Databricks Repos does interact with Git branches (Option B) and serves as a link between Databricks and your Git repositories (Option D), it doesn’t facilitate the pull request, review, and approval process (Option A), merge changes (Option B), or trigger Git automation pipelines (Option C).</p>
+</section>
+<section id="question-8">
+<h2>Question 8<a class="headerlink" href="#question-8" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>B. Delta Lake is an open format storage layer that delivers reliability, security, and
+performance.</p></li>
+</ul>
+<p>Explanation:</p>
+<p>Delta Lake is an open-source storage layer that brings ACID (Atomicity, Consistency, Isolation, Durability) transactional capabilities to Apache Spark and big data workloads. It provides capabilities such as schema enforcement and evolution, data reliability, and high performance, allowing for more reliable and performant big data processing and analytics. While it does store data (Option D), it is not just a data storage format, it enhances data reliability and performance. It is not an analytics engine (Option A), a platform for managing machine learning lifecycles (Option C), nor does it directly process data (Option E).</p>
+</section>
+<section id="question-9">
+<h2>Question 9<a class="headerlink" href="#question-9" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>B. CREATE OR REPLACE TABLE table_name (
+id STRING,
+birthDate DATE,
+avgRating FLOAT
+)</p></li>
+</ul>
+<p>Explanation:</p>
+<p>In this case, the correct answer is B because it correctly uses the CREATE OR REPLACE TABLE command and includes the column names and data types within parentheses. The other options either use the wrong keywords or incorrect syntax. Note that the USING DELTA keyword is not required here because the question doesn’t specify that a Delta table is needed. However, if a Delta table was required, the USING DELTA keyword could be added to the end of the command.</p>
+</section>
+<section id="question-10">
+<h2>Question 10<a class="headerlink" href="#question-10" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>C. INSERT INTO</p></li>
+</ul>
+<p>Explanation:</p>
+<p>The “INSERT INTO” statement is used in SQL to insert new records in a table. This is true for both traditional SQL databases and Delta Lake tables in Databricks.</p>
+<p>The other options are not used for appending new rows to a table:</p>
+<ul class="simple">
+<li><p>UPDATE: This is used to modify existing records in a table.</p></li>
+<li><p>COPY: This is not a standard SQL command to insert new records into a table.</p></li>
+<li><p>DELETE: This is used to remove records from a table.</p></li>
+<li><p>UNION: This is used to combine rows from two or more tables based on a related column between them, not to append new records into a single table.</p></li>
+</ul>
+</section>
+<section id="question-11">
+<h2>Question 11<a class="headerlink" href="#question-11" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>B. Z-Ordering</p></li>
+</ul>
+<p>Explanation:</p>
+<p>Z-ordering is a technique in Delta Lake that co-locates related information in the same set of files. Z-ordering maps multidimensional data to one dimension while preserving the locality of the data points. A primary use-case for Z-ordering is for queries that contain a filter on the dimension columns. In such cases, reading the table causes only a minimum amount of data to be read thus improving the query’s performance.</p>
+<ul class="simple">
+<li><p>Data skipping is an optimization where a query skips over files whose metadata indicate they don’t match a query’s predicate.</p></li>
+<li><p>Bin-packing is an optimization that combines small files into larger ones for more efficient reads.</p></li>
+<li><p>Writing as a Parquet file is not an optimization technique, it is a file format.</p></li>
+<li><p>Tuning the file size, while it can improve the query performance, it would not help in this case as the data that meets the condition is scattered throughout the data files.
+So, considering all options, Z-Ordering is the most suitable answer.</p></li>
+</ul>
+</section>
+<section id="question-12">
+<h2>Question 12<a class="headerlink" href="#question-12" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>C. CREATE DATABASE IF NOT EXISTS customer360 LOCATION ‘/customer/customer360’;</p></li>
+</ul>
+<p>Explanation:</p>
+<p>In Databricks, databases are used to organize tables into logical groups. The statement CREATE DATABASE IF NOT EXISTS creates a database with a specified name if it doesn’t already exist. The LOCATION clause is used to specify the DBFS path where the database is stored. Here, the requirement is to create a database named customer360 at the location /customer/customer360, and to avoid an error if the database already exists. Thus, the SQL command that fulfills this requirement is CREATE DATABASE IF NOT EXISTS customer360 LOCATION ‘/customer/customer360’;.</p>
+<p>The other options do not satisfy all of these conditions. Specifically, options A and E will cause an error if the database already exists, and options B and D don’t specify the correct location. The DELTA keyword in options D and E is not used in the CREATE DATABASE statement in Databricks.</p>
+</section>
+<section id="question-13">
+<h2>Question 13<a class="headerlink" href="#question-13" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>E. CREATE TABLE my_table (id STRING, value STRING);</p></li>
+</ul>
+<p>Explanation:</p>
+<p>In Databricks, if you don’t specify a LOCATION when you’re creating a table, it becomes a managed table by default and its data and metadata are stored in the Databricks Filesystem (DBFS). This is true even if you don’t explicitly use the term “MANAGED” in your CREATE TABLE command.</p>
+<p>So, the command CREATE TABLE my_table (id STRING, value STRING); will create a managed table with the data and metadata stored in DBFS, satisfying the requirements.</p>
+</section>
+<section id="question-14">
+<h2>Question 14<a class="headerlink" href="#question-14" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>A. View</p></li>
+</ul>
+<p>Explanation:</p>
+<p>A View in SQL is a virtual table based on the result-set of an SQL statement. A view contains rows and columns, just like a real table. The fields in a view are fields from one or more real tables in the database. It does not store physical data and is used to simplify complex queries, secure data, and present exactly the data that users are authorized to see.</p>
+<p>On the other hand, a Temporary View is a view that is visible only to the current session, so it won’t be available to other data engineers in other sessions. Delta Tables, Databases, and Spark SQL Tables involve storing physical data.</p>
+</section>
+<section id="question-15">
+<h2>Question 15<a class="headerlink" href="#question-15" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>A. The tables should be converted to the Delta format</p></li>
+</ul>
+<p>Explanation:</p>
+<p>Delta Lake, a storage layer that brings ACID transactions to Apache Spark and big data workloads, would indeed help in this situation.</p>
+<p>When using Delta Lake, you can leverage features such as upserts and deletes to modify data, schema evolution to easily add/remove/change a column’s type, and a history of operations performed on a table for auditability.</p>
+<p>Furthermore, Delta Lake supports automatic statistics collection which helps with data skipping and improves the performance of queries. Delta Lake also maintains a transaction log that efficiently tracks changes to a dataset. This allows queries to always have a consistent view of the data, even while it is being modified. So, converting the tables to Delta format would ensure up-to-date data in the scenario given.</p>
+</section>
+<section id="question-16">
+<h2>Question 16<a class="headerlink" href="#question-16" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>A. CREATE TABLE AS SELECT statements adopt schema details from the source
+table and query.</p></li>
+</ul>
+<p>Explanation:</p>
+<p>CREATE TABLE AS SELECT statements adopt schema details from the source table and query. In this SQL command, the new table’s schema is automatically determined based on the result of the SELECT statement. The types and number of columns in the new table will be derived from the SELECT statement used to populate it. In this case, the new table will have two columns: “country” and “customers”. The “country” column type would be the same as the corresponding column in the original table, and “customers” would be of type INT, as it’s a result of the COUNT function.</p>
+</section>
+<section id="question-17">
+<h2>Question 17<a class="headerlink" href="#question-17" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>B. Overwriting a table results in a clean table history for logging and audit purposes.</p></li>
+</ul>
+<p>Explanation:</p>
+<p>Overwriting a table does not result in a clean table history for logging and audit purposes. In fact, Delta Lake’s versioning capabilities (known as “Time Travel”) keep a record of every transaction made to the table. This includes overwrites, which can be queried and examined at any point in time. Therefore, overwriting a table does not remove prior versions or create a fresh history. It rather adds a new version to the existing history, enabling users to “travel back in time” and access previous versions of the data. The other statements correctly describe some of the advantages of overwriting a table instead of deleting and recreating it.</p>
+</section>
+<section id="question-18">
+<h2>Question 18<a class="headerlink" href="#question-18" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>C. SELECT DISTINCT * FROM my_table;</p></li>
+</ul>
+<p>Explanation:</p>
+<p>The SQL command SELECT DISTINCT * FROM my_table; is used to return unique records from a table, effectively removing duplicates. DISTINCT is a clause in SQL that allows you to eliminate duplicates from the result set of a query. It can work on a single column or multiple columns to find unique tuples (rows) in your table. The other options either do not use valid SQL commands (A, B) or don’t inherently remove duplicates from a result set (D, E).</p>
+</section>
+<section id="question-19">
+<h2>Question 19<a class="headerlink" href="#question-19" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>A. INNER JOIN</p></li>
+</ul>
+<p>Explanation:</p>
+<p>The SQL command INNER JOIN is used to combine rows from two or more tables based on a related column between them, which meets the requirement of only including rows whose value in the key column is present in both tables.</p>
+<p>OUTER JOIN would include records from both tables, even if there is no match in the key column in one of the tables. LEFT JOIN would return all records from the left table, and the matched records from the right table. MERGE is used to combine rows from two tables based on a related column between them, especially when you want to update or insert data in bulk. UNION is used to combine the result-set of two or more SELECT statements.</p>
+</section>
+<section id="question-20">
+<h2>Question 20<a class="headerlink" href="#question-20" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>D. SELECT cart_id, explode(items) AS item_id FROM raw_table;</p></li>
+</ul>
+<p>Explanation:</p>
+<p>In Apache Spark SQL, the explode function is used to create a new row for each element in the given array or map column. Here, the explode function will create a new row for each item_id in the items array for each cart_id, which results in the desired schema with cart_id and item_id as separate columns.</p>
+<p>The other options (filter, flatten, reduce, slice) are not suitable for this task. They perform different functions and would not result in the desired schema.</p>
+</section>
+<section id="question-21">
+<h2>Question 21<a class="headerlink" href="#question-21" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>B. SELECT transaction_id, payload.date FROM raw_table;</p></li>
+</ul>
+<p>Explanation:</p>
+<p>In this case, the payload is an array of structures (each structure contains customer_id, date, and store_id). To access individual fields in the structure, the “.” (dot) notation is used. So, payload.date will extract the date of each transaction from the payload array.</p>
+<p>The SELECT statement in option B retrieves the transaction_id and the date from each record in the raw_table, which results in the desired schema.</p>
+<p>The other options would not result in the correct schema because they either attempt to use functions or notations incorrectly (e.g., explode, array index notation), or they don’t attempt to extract the date from the payload structure at all.</p>
+</section>
+<section id="question-22">
+<h2>Question 22<a class="headerlink" href="#question-22" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>A. They could wrap the query using PySpark and use Python’s string variable system to
+automatically update the table name.</p></li>
+</ul>
+<p>Explanation:</p>
+<p>The best way to automate this process would be to use PySpark and Python’s string variable system to update the table name dynamically. By using Python’s date and time functionality, the team could automate the insertion of the current date into the query.</p>
+<p>The other options either involve manual intervention (Option B), are unlikely to meet the data analyst’s needs (Option C), or don’t address the requirement of updating the table name with the current date (Options D and E).</p>
+</section>
+<section id="question-23">
+<h2>Question 23<a class="headerlink" href="#question-23" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>A. raw_df.createOrReplaceTempView(“raw_df”)</p></li>
+</ul>
+<p>Explanation:</p>
+<p>The method createOrReplaceTempView creates (or replaces if that view name already exists) a lazily evaluated “view” that can be used like a table in Spark SQL. It does not persist to memory and is only available in this Spark session. This makes it ideal for temporary data sharing or examination. The other options don’t create a temporary view or are not valid methods for a DataFrame. Option E is incorrect as Spark SQL and PySpark can share data through views or tables.</p>
+</section>
+<section id="question-24">
+<h2>Question 24<a class="headerlink" href="#question-24" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>D. f”{region}{store}<em>sales</em>{year}”</p></li>
+</ul>
+<p>Explanation:</p>
+<p>In Python, f-strings are a method of string interpolation. They allow expressions to be embedded inside string literals, using curly braces {}. The expressions will be replaced with their values when the string is created. The f-string syntax f”{region}{store}<em>sales</em>{year}” will replace {region}, {store}, and {year} with the values of those variables, resulting in a string like nyc100_sales_2021. The other options will not correctly format the string. For instance, option A, C and E will not replace the variables with their values, and option B will include unnecessary ‘+’ characters in the output string.</p>
+</section>
+<section id="question-25">
+<h2>Question 25<a class="headerlink" href="#question-25" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>A. The .read line should be replaced with .readStream</p></li>
+</ul>
+<p>Explanation:</p>
+<p>Spark offers two kinds of data processing operations: batch and streaming. The .read operation is used for batch processing, where data is read from a static source. The .readStream operation, on the other hand, is used for real-time processing, where data is continuously read from a streaming source.</p>
+<p>Therefore, if a data engineer wants to perform a streaming read from a data source, they should use the .readStream operation instead of the .read operation. The corrected code block would look like this:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<span class="p">(</span><span class="n">spark</span>
+<span class="o">.</span><span class="n">readStream</span>
+<span class="o">.</span><span class="n">schema</span><span class="p">(</span><span class="n">schema</span><span class="p">)</span>
+<span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&quot;cloudFiles&quot;</span><span class="p">)</span>
+<span class="o">.</span><span class="n">option</span><span class="p">(</span><span class="s2">&quot;cloudFiles.format&quot;</span><span class="p">,</span> <span class="s2">&quot;json&quot;</span><span class="p">)</span>
+<span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">dataSource</span><span class="p">)</span>
+<span class="p">)</span>
+
+</pre></div>
+</div>
+<p>This correction should resolve the error, and the data engineer will be able to perform a streaming read from the data source successfully.</p>
+</section>
+<section id="question-26">
+<h2>Question 26<a class="headerlink" href="#question-26" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>A. trigger(once=True)</p></li>
+</ul>
+<p>Explanation:</p>
+<p>Structured Streaming in Spark provides a high-level API for stream processing. To specify how often the streaming computation should be run, we use the trigger setting.</p>
+<p>If we want the query to execute only a single batch of data, we can use trigger(once=True). This will process all available data as a single batch and then terminate the operation. This is known as a one-time trigger.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">spark</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s2">&quot;sales&quot;</span><span class="p">)</span>
+<span class="o">.</span><span class="n">withColumn</span><span class="p">(</span><span class="s2">&quot;avg_price&quot;</span><span class="p">,</span> <span class="n">col</span><span class="p">(</span><span class="s2">&quot;sales&quot;</span><span class="p">)</span> <span class="o">/</span> <span class="n">col</span><span class="p">(</span><span class="s2">&quot;units&quot;</span><span class="p">))</span>
+<span class="o">.</span><span class="n">writeStream</span>
+<span class="o">.</span><span class="n">option</span><span class="p">(</span><span class="s2">&quot;checkpointLocation&quot;</span><span class="p">,</span> <span class="n">checkpointPath</span><span class="p">)</span>
+<span class="o">.</span><span class="n">outputMode</span><span class="p">(</span><span class="s2">&quot;complete&quot;</span><span class="p">)</span>
+<span class="o">.</span><span class="n">trigger</span><span class="p">(</span><span class="n">once</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s2">&quot;new_sales&quot;</span><span class="p">)</span>
+<span class="p">)</span>
+
+</pre></div>
+</div>
+</section>
 <section id="question-27">
-<h3>Question 27<a class="headerlink" href="#question-27" title="Permalink to this heading">#</a></h3>
+<h2>Question 27<a class="headerlink" href="#question-27" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>E. Auto Loader</p></li>
 </ul>
@@ -503,7 +749,7 @@ document.write(`
 <p>Please note, while <code class="docutils literal notranslate"><span class="pre">Delta</span> <span class="pre">Lake</span> <span class="pre">(B)</span></code> is a technology that can provide features like ACID transactions, versioning, and schema enforcement on data lakes, it doesn’t directly address the problem of identifying and processing only new files since the last pipeline run. Similarly, <code class="docutils literal notranslate"><span class="pre">Databricks</span> <span class="pre">SQL</span> <span class="pre">(A)</span></code>, <code class="docutils literal notranslate"><span class="pre">Unity</span> <span class="pre">Catalog</span> <span class="pre">(C)</span></code>, and <code class="docutils literal notranslate"><span class="pre">Data</span> <span class="pre">Explorer</span> <span class="pre">(D</span></code>) are not directly targeted at this specific problem.</p>
 </section>
 <section id="question-28">
-<h3>Question 28<a class="headerlink" href="#question-28" title="Permalink to this heading">#</a></h3>
+<h2>Question 28<a class="headerlink" href="#question-28" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>C. There is no change required. The inclusion of <code class="docutils literal notranslate"><span class="pre">format(&quot;cloudFiles&quot;)</span></code> enables the use of Auto Loader.</p></li>
 </ul>
@@ -517,7 +763,7 @@ document.write(`
 </ul>
 </section>
 <section id="question-29">
-<h3>Question 29<a class="headerlink" href="#question-29" title="Permalink to this heading">#</a></h3>
+<h2>Question 29<a class="headerlink" href="#question-29" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>E. A job that enriches data by parsing its timestamps into a human-readable format.</p></li>
 </ul>
@@ -532,7 +778,7 @@ document.write(`
 </ul>
 </section>
 <section id="question-30">
-<h3>Question 30<a class="headerlink" href="#question-30" title="Permalink to this heading">#</a></h3>
+<h2>Question 30<a class="headerlink" href="#question-30" title="Permalink to this heading">#</a></h2>
 <p>D. A job that aggregates cleaned data to create standard summary statistics</p>
 <p>Explanation:</p>
 <p>In the Databricks Lakehouse paradigm, a Silver table is typically used to store clean and processed data that can be used for various types of transformations, including the calculation of aggregated statistics. Therefore, a job that aggregates cleaned data to create standard summary statistics would utilize a Silver table as its source.</p>
@@ -543,7 +789,7 @@ document.write(`
 <p>E. A job that cleans data by removing malformatted records: While this could potentially occur at the Silver level, the initial round of data cleaning often happens at the Bronze level before the data is loaded into a Silver table.</p>
 </section>
 <section id="question-31">
-<h3>Question 31<a class="headerlink" href="#question-31" title="Permalink to this heading">#</a></h3>
+<h2>Question 31<a class="headerlink" href="#question-31" title="Permalink to this heading">#</a></h2>
 <p>C.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">spark</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s2">&quot;sales&quot;</span><span class="p">)</span>
 <span class="o">.</span><span class="n">withColumn</span><span class="p">(</span><span class="s2">&quot;avgPrice&quot;</span><span class="p">,</span> <span class="n">col</span><span class="p">(</span><span class="s2">&quot;sales&quot;</span><span class="p">)</span> <span class="o">/</span> <span class="n">col</span><span class="p">(</span><span class="s2">&quot;units&quot;</span><span class="p">))</span>
@@ -559,7 +805,7 @@ document.write(`
 <p>The statement under option C takes a stream of data from the “sales” Bronze table, enriches it by calculating the “avgPrice”, and writes it to the “cleanedSales” table, effectively transforming it to a Silver table. The transition from raw data to enriched data is generally considered a transition from a Bronze to a Silver table, which is why this option is the correct answer.</p>
 </section>
 <section id="question-32">
-<h3>Question 32<a class="headerlink" href="#question-32" title="Permalink to this heading">#</a></h3>
+<h2>Question 32<a class="headerlink" href="#question-32" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>A. The ability to declare and maintain data table dependencies</p></li>
 </ul>
@@ -569,7 +815,6 @@ document.write(`
 <p>Option C, accessing previous versions of data tables, is a feature of Delta Lake (through Delta Time Travel), not specific to Delta Live Tables.</p>
 <p>Option D, the ability to automatically scale compute resources, is a feature of Databricks, not specific to Delta Live Tables.</p>
 <p>Option E, performing batch and streaming queries, is possible with both Spark Structured Streaming and Delta Lake, not specific to Delta Live Tables.</p>
-</section>
 </section>
 <section id="question-33">
 <h2>Question 33<a class="headerlink" href="#question-33" title="Permalink to this heading">#</a></h2>
@@ -759,16 +1004,35 @@ endpoint.</p></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-1">Question 1</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-2">Question 2</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-3">Question 3</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-4">Question 4</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-5">Question 5</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-27">Question 27</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-28">Question 28</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-29">Question 29</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-30">Question 30</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-31">Question 31</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-32">Question 32</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-4">Question 4</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-5">Question 5</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-6">Question 6</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-7">Question 7</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-8">Question 8</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-9">Question 9</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-10">Question 10</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-11">Question 11</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-12">Question 12</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-13">Question 13</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-14">Question 14</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-15">Question 15</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-16">Question 16</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-17">Question 17</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-18">Question 18</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-19">Question 19</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-20">Question 20</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-21">Question 21</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-22">Question 22</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-23">Question 23</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-24">Question 24</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-25">Question 25</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-26">Question 26</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-27">Question 27</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-28">Question 28</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-29">Question 29</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-30">Question 30</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-31">Question 31</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-32">Question 32</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-33">Question 33</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-34">Question 34</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-35">Question 35</a></li>
