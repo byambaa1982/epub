@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 from bs4 import Comment
 
 # Define the Google Tag Manager script as a string
-gtm_script = """
+gtm_script_line = """
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-6R7KD1FNMR"></script>
 <script>
