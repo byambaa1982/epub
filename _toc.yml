@@ -19,6 +19,7 @@ chapters:
   sections: 
   - file: blogs/wealth
   - file: blogs/delta_table.md
+  - file: blogs/big_data.md
 - file: ebook/tests
   sections:
   - file: ebook/test_1
