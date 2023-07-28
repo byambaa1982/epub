@@ -21,6 +21,7 @@ chapters:
   - file: blogs/delta_table.md
   - file: blogs/big_data.md
   - file: blogs/cloud_services.ipynb
+  - file: blogs/memory_trick
 - file: ebook/tests
   sections:
   - file: ebook/test_1
