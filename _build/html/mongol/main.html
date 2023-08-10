@@ -11,15 +11,6 @@
   gtag('config', 'G-6R7KD1FNMR');
 </script>
 
-<!-- Google tag (gtag.js) -->
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-6R7KD1FNMR"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-6R7KD1FNMR');
-</script>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="Docutils 0.18.1: http://docutils.sourceforge.net/" name="generator"/>
 <title>Монгол — Byambalogy</title>
@@ -128,7 +119,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../blogs/delta_table.html">Exploring Delta Lake’s Powerful Features</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../blogs/big_data.html">Harnessing the Power of Big Data: A Modern Marvel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../blogs/cloud_services.html">A Overview of Azure, Google Cloud, and AWS</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../blogs/memory_trick.html">An Imaginative Guide to Memorize Numbers with Famous Personalities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blogs/memory_trick.html">Artful Memory Hacks</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../ebook/tests.html">Databricks</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -242,9 +233,6 @@ document.write(`
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" data-bs-placement="bottom" data-bs-toggle="tooltip" for="__secondary" title="Toggle secondary sidebar">
-<span class="fa-solid fa-list"></span>
-</label>
 </div></div>
 </div>
 </div>
@@ -254,14 +242,6 @@ document.write(`
 <!-- Table of contents -->
 <div id="print-main-content">
 <div id="jb-print-toc">
-<div>
-<h2> Contents </h2>
-</div>
-<nav aria-label="Page">
-<ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Туршилтын хуудас</a></li>
-</ul>
-</nav>
 </div>
 </div>
 </div>
@@ -269,131 +249,7 @@ document.write(`
 <article class="bd-article" role="main">
 <section class="tex2jax_ignore mathjax_ignore" id="id1">
 <h1>Монгол<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
-<section id="id2">
-<h2>Туршилтын хуудас<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip3<span class="w"> </span>install<span class="w"> </span>snscrape
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: snscrape in c:\python311\lib\site-packages (0.7.0.20230622)
-Requirement already satisfied: requests[socks] in c:\python311\lib\site-packages (from snscrape) (2.30.0)
-Requirement already satisfied: lxml in c:\python311\lib\site-packages (from snscrape) (4.9.3)
-Requirement already satisfied: beautifulsoup4 in c:\python311\lib\site-packages (from snscrape) (4.12.2)
-Requirement already satisfied: filelock in c:\python311\lib\site-packages (from snscrape) (3.12.2)
-Requirement already satisfied: soupsieve&gt;1.2 in c:\python311\lib\site-packages (from beautifulsoup4-&gt;snscrape) (2.4.1)
-Requirement already satisfied: charset-normalizer&lt;4,&gt;=2 in c:\python311\lib\site-packages (from requests[socks]-&gt;snscrape) (3.1.0)
-Requirement already satisfied: idna&lt;4,&gt;=2.5 in c:\python311\lib\site-packages (from requests[socks]-&gt;snscrape) (3.4)
-Requirement already satisfied: urllib3&lt;3,&gt;=1.21.1 in c:\python311\lib\site-packages (from requests[socks]-&gt;snscrape) (1.26.15)
-Requirement already satisfied: certifi&gt;=2017.4.17 in c:\python311\lib\site-packages (from requests[socks]-&gt;snscrape) (2022.12.7)
-Requirement already satisfied: PySocks!=1.5.7,&gt;=1.5.6 in c:\python311\lib\site-packages (from requests[socks]-&gt;snscrape) (1.7.1)
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="c1"># import tqdm.notebook import tqdm</span>
-<span class="kn">import</span> <span class="nn">snscrape.modules.twitter</span> <span class="k">as</span> <span class="nn">sntwitter</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">scraper</span> <span class="o">=</span> <span class="n">sntwitter</span><span class="o">.</span><span class="n">TwitterSearchScraper</span><span class="p">(</span><span class="s2">"#python"</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">scraper</span><span class="o">.</span><span class="n">get_items</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;generator object TwitterSearchScraper.get_items at 0x000001FB5E181F20&gt;
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">snscrape.modules.twitter</span> <span class="k">as</span> <span class="nn">sntwitter</span>
-<span class="kn">import</span> <span class="nn">pandas</span>
-
-<span class="c1"># Creating list to append tweet data </span>
-<span class="n">tweets_list1</span> <span class="o">=</span> <span class="p">[]</span>
-
-<span class="c1"># Using TwitterSearchScraper to scrape data and append tweets to list</span>
-<span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">tweet</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">sntwitter</span><span class="o">.</span><span class="n">TwitterSearchScraper</span><span class="p">(</span><span class="s1">'from:coderjs'</span><span class="p">)</span><span class="o">.</span><span class="n">get_items</span><span class="p">()):</span> <span class="c1">#declare a username </span>
-    <span class="k">if</span> <span class="n">i</span><span class="o">&gt;</span><span class="mi">10</span><span class="p">:</span> <span class="c1">#number of tweets you want to scrape</span>
-        <span class="k">break</span>
-    <span class="n">tweets_list1</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">tweet</span><span class="o">.</span><span class="n">date</span><span class="p">,</span> <span class="n">tweet</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">tweet</span><span class="o">.</span><span class="n">content</span><span class="p">,</span> <span class="n">tweet</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">username</span><span class="p">])</span> <span class="c1">#declare the attributes to be returned</span>
-    
-<span class="c1"># Creating a dataframe from the tweets list above </span>
-<span class="n">tweets_df1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">tweets_list1</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">'Datetime'</span><span class="p">,</span> <span class="s1">'Tweet Id'</span><span class="p">,</span> <span class="s1">'Text'</span><span class="p">,</span> <span class="s1">'Username'</span><span class="p">])</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Error retrieving https://twitter.com/i/api/graphql/7jT5GT59P8IFjgxwqnEdQw/SearchTimeline?variables=%7B%22rawQuery%22%3A%22from%3Acoderjs%22%2C%22count%22%3A20%2C%22product%22%3A%22Latest%22%2C%22withDownvotePerspective%22%3Afalse%2C%22withReactionsMetadata%22%3Afalse%2C%22withReactionsPerspective%22%3Afalse%7D&amp;features=%7B%22rweb_lists_timeline_redesign_enabled%22%3Afalse%2C%22blue_business_profile_image_shape_enabled%22%3Afalse%2C%22responsive_web_graphql_exclude_directive_enabled%22%3Atrue%2C%22verified_phone_label_enabled%22%3Afalse%2C%22creator_subscriptions_tweet_preview_api_enabled%22%3Afalse%2C%22responsive_web_graphql_timeline_navigation_enabled%22%3Atrue%2C%22responsive_web_graphql_skip_user_profile_image_extensions_enabled%22%3Afalse%2C%22tweetypie_unmention_optimization_enabled%22%3Atrue%2C%22vibe_api_enabled%22%3Atrue%2C%22responsive_web_edit_tweet_api_enabled%22%3Atrue%2C%22graphql_is_translatable_rweb_tweet_is_translatable_enabled%22%3Atrue%2C%22view_counts_everywhere_api_enabled%22%3Atrue%2C%22longform_notetweets_consumption_enabled%22%3Atrue%2C%22tweet_awards_web_tipping_enabled%22%3Afalse%2C%22freedom_of_speech_not_reach_fetch_enabled%22%3Afalse%2C%22standardized_nudges_misinfo%22%3Atrue%2C%22tweet_with_visibility_results_prefer_gql_limited_actions_policy_enabled%22%3Afalse%2C%22interactive_text_enabled%22%3Atrue%2C%22responsive_web_text_conversations_enabled%22%3Afalse%2C%22longform_notetweets_rich_text_read_enabled%22%3Afalse%2C%22longform_notetweets_inline_media_enabled%22%3Afalse%2C%22responsive_web_enhance_cards_enabled%22%3Afalse%2C%22responsive_web_twitter_blue_verified_badge_is_enabled%22%3Atrue%7D: blocked (404)
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4 requests to https://twitter.com/i/api/graphql/7jT5GT59P8IFjgxwqnEdQw/SearchTimeline?variables=%7B%22rawQuery%22%3A%22from%3Acoderjs%22%2C%22count%22%3A20%2C%22product%22%3A%22Latest%22%2C%22withDownvotePerspective%22%3Afalse%2C%22withReactionsMetadata%22%3Afalse%2C%22withReactionsPerspective%22%3Afalse%7D&amp;features=%7B%22rweb_lists_timeline_redesign_enabled%22%3Afalse%2C%22blue_business_profile_image_shape_enabled%22%3Afalse%2C%22responsive_web_graphql_exclude_directive_enabled%22%3Atrue%2C%22verified_phone_label_enabled%22%3Afalse%2C%22creator_subscriptions_tweet_preview_api_enabled%22%3Afalse%2C%22responsive_web_graphql_timeline_navigation_enabled%22%3Atrue%2C%22responsive_web_graphql_skip_user_profile_image_extensions_enabled%22%3Afalse%2C%22tweetypie_unmention_optimization_enabled%22%3Atrue%2C%22vibe_api_enabled%22%3Atrue%2C%22responsive_web_edit_tweet_api_enabled%22%3Atrue%2C%22graphql_is_translatable_rweb_tweet_is_translatable_enabled%22%3Atrue%2C%22view_counts_everywhere_api_enabled%22%3Atrue%2C%22longform_notetweets_consumption_enabled%22%3Atrue%2C%22tweet_awards_web_tipping_enabled%22%3Afalse%2C%22freedom_of_speech_not_reach_fetch_enabled%22%3Afalse%2C%22standardized_nudges_misinfo%22%3Atrue%2C%22tweet_with_visibility_results_prefer_gql_limited_actions_policy_enabled%22%3Afalse%2C%22interactive_text_enabled%22%3Atrue%2C%22responsive_web_text_conversations_enabled%22%3Afalse%2C%22longform_notetweets_rich_text_read_enabled%22%3Afalse%2C%22longform_notetweets_inline_media_enabled%22%3Afalse%2C%22responsive_web_enhance_cards_enabled%22%3Afalse%2C%22responsive_web_twitter_blue_verified_badge_is_enabled%22%3Atrue%7D failed, giving up.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Errors: blocked (404), blocked (404), blocked (404), blocked (404)
-</pre></div>
-</div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ScraperException</span><span class="g g-Whitespace">                          </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="n">line</span> <span class="mi">8</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">tweets_list1</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="c1"># Using TwitterSearchScraper to scrape data and append tweets to list</span>
-<span class="ne">----&gt; </span><span class="mi">8</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">tweet</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">sntwitter</span><span class="o">.</span><span class="n">TwitterSearchScraper</span><span class="p">(</span><span class="s1">'from:coderjs'</span><span class="p">)</span><span class="o">.</span><span class="n">get_items</span><span class="p">()):</span> <span class="c1">#declare a username </span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span>     <span class="k">if</span> <span class="n">i</span><span class="o">&gt;</span><span class="mi">10</span><span class="p">:</span> <span class="c1">#number of tweets you want to scrape</span>
-<span class="g g-Whitespace">     </span><span class="mi">10</span>         <span class="k">break</span>
-
-<span class="nn">File C:\Python311\Lib\site-packages\snscrape\modules\twitter.py:1763,</span> in <span class="ni">TwitterSearchScraper.get_items</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1760</span> <span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'variables'</span><span class="p">:</span> <span class="n">variables</span><span class="p">,</span> <span class="s1">'features'</span><span class="p">:</span> <span class="n">features</span><span class="p">}</span>
-<span class="g g-Whitespace">   </span><span class="mi">1761</span> <span class="n">paginationParams</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'variables'</span><span class="p">:</span> <span class="n">paginationVariables</span><span class="p">,</span> <span class="s1">'features'</span><span class="p">:</span> <span class="n">features</span><span class="p">}</span>
-<span class="ne">-&gt; </span><span class="mi">1763</span> <span class="k">for</span> <span class="n">obj</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_iter_api_data</span><span class="p">(</span><span class="s1">'https://twitter.com/i/api/graphql/7jT5GT59P8IFjgxwqnEdQw/SearchTimeline'</span><span class="p">,</span> <span class="n">_TwitterAPIType</span><span class="o">.</span><span class="n">GRAPHQL</span><span class="p">,</span> <span class="n">params</span><span class="p">,</span> <span class="n">paginationParams</span><span class="p">,</span> <span class="n">cursor</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cursor</span><span class="p">,</span> <span class="n">instructionsPath</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'data'</span><span class="p">,</span> <span class="s1">'search_by_raw_query'</span><span class="p">,</span> <span class="s1">'search_timeline'</span><span class="p">,</span> <span class="s1">'timeline'</span><span class="p">,</span> <span class="s1">'instructions'</span><span class="p">]):</span>
-<span class="g g-Whitespace">   </span><span class="mi">1764</span> 	<span class="k">yield from</span> <span class="bp">self</span><span class="o">.</span><span class="n">_graphql_timeline_instructions_to_tweets</span><span class="p">(</span><span class="n">obj</span><span class="p">[</span><span class="s1">'data'</span><span class="p">][</span><span class="s1">'search_by_raw_query'</span><span class="p">][</span><span class="s1">'search_timeline'</span><span class="p">][</span><span class="s1">'timeline'</span><span class="p">][</span><span class="s1">'instructions'</span><span class="p">])</span>
-
-<span class="nn">File C:\Python311\Lib\site-packages\snscrape\modules\twitter.py:915,</span> in <span class="ni">_TwitterAPIScraper._iter_api_data</span><span class="nt">(self, endpoint, apiType, params, paginationParams, cursor, direction, instructionsPath)</span>
-<span class="g g-Whitespace">    </span><span class="mi">913</span> <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">914</span> 	<span class="n">_logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Retrieving scroll page </span><span class="si">{</span><span class="n">cursor</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">915</span> 	<span class="n">obj</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_api_data</span><span class="p">(</span><span class="n">endpoint</span><span class="p">,</span> <span class="n">apiType</span><span class="p">,</span> <span class="n">reqParams</span><span class="p">,</span> <span class="n">instructionsPath</span> <span class="o">=</span> <span class="n">instructionsPath</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">916</span> 	<span class="k">yield</span> <span class="n">obj</span>
-<span class="g g-Whitespace">    </span><span class="mi">918</span> 	<span class="c1"># No data format test, just a hard and loud crash if anything's wrong :-)</span>
-
-<span class="nn">File C:\Python311\Lib\site-packages\snscrape\modules\twitter.py:886,</span> in <span class="ni">_TwitterAPIScraper._get_api_data</span><span class="nt">(self, endpoint, apiType, params, instructionsPath)</span>
-<span class="g g-Whitespace">    </span><span class="mi">884</span> <span class="k">if</span> <span class="n">apiType</span> <span class="ow">is</span> <span class="n">_TwitterAPIType</span><span class="o">.</span><span class="n">GRAPHQL</span><span class="p">:</span>
-<span class="nn">    885 	params = urllib.parse.urlencode({k: json.dumps(v, separators = (',', ':')) for k, v</span> in <span class="ni">params.items</span><span class="nt">()}, quote_via = urllib.parse.quote)</span>
-<span class="ne">--&gt; </span><span class="mi">886</span> <span class="n">r</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get</span><span class="p">(</span><span class="n">endpoint</span><span class="p">,</span> <span class="n">params</span> <span class="o">=</span> <span class="n">params</span><span class="p">,</span> <span class="n">headers</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_apiHeaders</span><span class="p">,</span> <span class="n">responseOkCallback</span> <span class="o">=</span> <span class="n">functools</span><span class="o">.</span><span class="n">partial</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_check_api_response</span><span class="p">,</span> <span class="n">apiType</span> <span class="o">=</span> <span class="n">apiType</span><span class="p">,</span> <span class="n">instructionsPath</span> <span class="o">=</span> <span class="n">instructionsPath</span><span class="p">))</span>
-<span class="g g-Whitespace">    </span><span class="mi">887</span> <span class="k">return</span> <span class="n">r</span><span class="o">.</span><span class="n">_snscrapeObj</span>
-
-<span class="nn">File C:\Python311\Lib\site-packages\snscrape\base.py:275,</span> in <span class="ni">Scraper._get</span><span class="nt">(self, *args, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">274</span> <span class="k">def</span> <span class="nf">_get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">275</span> 	<span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_request</span><span class="p">(</span><span class="s1">'GET'</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-
-<span class="nn">File C:\Python311\Lib\site-packages\snscrape\base.py:271,</span> in <span class="ni">Scraper._request</span><span class="nt">(self, method, url, params, data, headers, timeout, responseOkCallback, allowRedirects, proxies)</span>
-<span class="g g-Whitespace">    </span><span class="mi">269</span> 	<span class="n">_logger</span><span class="o">.</span><span class="n">fatal</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">270</span> 	<span class="n">_logger</span><span class="o">.</span><span class="n">fatal</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Errors: </span><span class="si">{</span><span class="s2">", "</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">errors</span><span class="p">)</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">271</span> 	<span class="k">raise</span> <span class="n">ScraperException</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">272</span> <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s1">'Reached unreachable code'</span><span class="p">)</span>
-
-<span class="ne">ScraperException</span>: 4 requests to https://twitter.com/i/api/graphql/7jT5GT59P8IFjgxwqnEdQw/SearchTimeline?variables=%7B%22rawQuery%22%3A%22from%3Acoderjs%22%2C%22count%22%3A20%2C%22product%22%3A%22Latest%22%2C%22withDownvotePerspective%22%3Afalse%2C%22withReactionsMetadata%22%3Afalse%2C%22withReactionsPerspective%22%3Afalse%7D&amp;features=%7B%22rweb_lists_timeline_redesign_enabled%22%3Afalse%2C%22blue_business_profile_image_shape_enabled%22%3Afalse%2C%22responsive_web_graphql_exclude_directive_enabled%22%3Atrue%2C%22verified_phone_label_enabled%22%3Afalse%2C%22creator_subscriptions_tweet_preview_api_enabled%22%3Afalse%2C%22responsive_web_graphql_timeline_navigation_enabled%22%3Atrue%2C%22responsive_web_graphql_skip_user_profile_image_extensions_enabled%22%3Afalse%2C%22tweetypie_unmention_optimization_enabled%22%3Atrue%2C%22vibe_api_enabled%22%3Atrue%2C%22responsive_web_edit_tweet_api_enabled%22%3Atrue%2C%22graphql_is_translatable_rweb_tweet_is_translatable_enabled%22%3Atrue%2C%22view_counts_everywhere_api_enabled%22%3Atrue%2C%22longform_notetweets_consumption_enabled%22%3Atrue%2C%22tweet_awards_web_tipping_enabled%22%3Afalse%2C%22freedom_of_speech_not_reach_fetch_enabled%22%3Afalse%2C%22standardized_nudges_misinfo%22%3Atrue%2C%22tweet_with_visibility_results_prefer_gql_limited_actions_policy_enabled%22%3Afalse%2C%22interactive_text_enabled%22%3Atrue%2C%22responsive_web_text_conversations_enabled%22%3Afalse%2C%22longform_notetweets_rich_text_read_enabled%22%3Afalse%2C%22longform_notetweets_inline_media_enabled%22%3Afalse%2C%22responsive_web_enhance_cards_enabled%22%3Afalse%2C%22responsive_web_twitter_blue_verified_badge_is_enabled%22%3Atrue%7D failed, giving up.
-</pre></div>
-</div>
-</div>
-</div>
-</section>
+<p>Энэ хэсэгт би өөрийн олж авсан мэдлэгийг бусадтай хуваалцана.</p>
 <div class="toctree-wrapper compound">
 </div>
 </section>
@@ -439,17 +295,6 @@ Requirement already satisfied: PySocks!=1.5.7,&gt;=1.5.6 in c:\python311\lib\sit
 </div>
 </footer>
 </div>
-<div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-<div class="sidebar-secondary-item">
-<div class="page-toc tocsection onthispage">
-<i class="fa-solid fa-list"></i> Contents
-  </div>
-<nav class="bd-toc-nav page-toc">
-<ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Туршилтын хуудас</a></li>
-</ul>
-</nav></div>
-</div></div>
 </div>
 <footer class="bd-footer-content">
 <div class="bd-footer-content__inner container">
