@@ -22,6 +22,7 @@ chapters:
   - file: blogs/big_data.md
   - file: blogs/cloud_services.ipynb
   - file: blogs/memory_trick
+  - file: blogs/managed_unmanaged
 - file: ebook/tests
   sections:
   - file: ebook/test_1

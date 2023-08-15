@@ -13,7 +13,7 @@
 
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="Docutils 0.18.1: http://docutils.sourceforge.net/" name="generator"/>
-<title>Blogs — Byambalogy</title>
+<title>Memorizing Complex Documentation: A Tale of Databricks Tables and Storytelling — Byambalogy</title>
 <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
@@ -56,11 +56,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
 <script async="async" src="../_static/sphinx-thebe.js"></script>
-<script>DOCUMENTATION_OPTIONS.pagename = 'blogs/blogs';</script>
+<script>DOCUMENTATION_OPTIONS.pagename = 'blogs/managed_unmanaged';</script>
 <link href="../genindex.html" rel="index" title="Index"/>
 <link href="../search.html" rel="search" title="Search"/>
-<link href="wealth.html" rel="next" title="The Art of Leveraging Specific Knowledge"/>
-<link href="../courses/update_simple_flask_app.html" rel="prev" title="Update Flask App with more functions"/>
+<link href="../ebook/tests.html" rel="next" title="Databricks"/>
+<link href="memory_trick.html" rel="prev" title="Artful Memory Hacks"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="en" name="docsearch:language"/>
 </head>
@@ -114,13 +114,13 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../courses/update_simple_flask_app.html">Update Flask App with more functions</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Blogs</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="blogs.html">Blogs</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="wealth.html">The Art of Leveraging Specific Knowledge</a></li>
 <li class="toctree-l2"><a class="reference internal" href="delta_table.html">Exploring Delta Lake’s Powerful Features</a></li>
 <li class="toctree-l2"><a class="reference internal" href="big_data.html">Harnessing the Power of Big Data: A Modern Marvel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cloud_services.html">A Overview of Azure, Google Cloud, and AWS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="memory_trick.html">Artful Memory Hacks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="managed_unmanaged.html">Memorizing Complex Documentation: A Tale of Databricks Tables and Storytelling</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Memorizing Complex Documentation: A Tale of Databricks Tables and Storytelling</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../ebook/tests.html">Databricks</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -161,7 +161,7 @@ const thebe_selector_output = ".output, .cell_output"
 <i class="fas fa-rocket"></i>
 </button>
 <ul class="dropdown-menu">
-<li><a class="btn btn-sm dropdown-item" data-bs-placement="left" data-bs-toggle="tooltip" href="https://colab.research.google.com/github/byambaa1982/python_cources_for_beginers/blob/main/blogs/blogs.ipynb" target="_blank" title="Launch onColab">
+<li><a class="btn btn-sm dropdown-item" data-bs-placement="left" data-bs-toggle="tooltip" href="https://colab.research.google.com/github/byambaa1982/python_cources_for_beginers/blob/main/blogs/managed_unmanaged.ipynb" target="_blank" title="Launch onColab">
 <span class="btn__icon-container">
 <img src="../_static/images/logo_colab.png"/>
 </span>
@@ -182,7 +182,7 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="btn__text-container">Repository</span>
 </a>
 </li>
-<li><a class="btn btn-sm btn-source-issues-button dropdown-item" data-bs-placement="left" data-bs-toggle="tooltip" href="https://github.com/byambaa1982/python_cources_for_beginers/issues/new?title=Issue%20on%20page%20%2Fblogs/blogs.html&amp;body=Your%20issue%20content%20here." target="_blank" title="Open an issue">
+<li><a class="btn btn-sm btn-source-issues-button dropdown-item" data-bs-placement="left" data-bs-toggle="tooltip" href="https://github.com/byambaa1982/python_cources_for_beginers/issues/new?title=Issue%20on%20page%20%2Fblogs/managed_unmanaged.html&amp;body=Your%20issue%20content%20here." target="_blank" title="Open an issue">
 <span class="btn__icon-container">
 <i class="fas fa-lightbulb"></i>
 </span>
@@ -196,7 +196,7 @@ const thebe_selector_output = ".output, .cell_output"
 <i class="fas fa-download"></i>
 </button>
 <ul class="dropdown-menu">
-<li><a class="btn btn-sm btn-download-source-button dropdown-item" data-bs-placement="left" data-bs-toggle="tooltip" href="../_sources/blogs/blogs.ipynb" target="_blank" title="Download source file">
+<li><a class="btn btn-sm btn-download-source-button dropdown-item" data-bs-placement="left" data-bs-toggle="tooltip" href="../_sources/blogs/managed_unmanaged.ipynb" target="_blank" title="Download source file">
 <span class="btn__icon-container">
 <i class="fas fa-file"></i>
 </span>
@@ -234,29 +234,93 @@ document.write(`
   </button>
 `);
 </script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" data-bs-placement="bottom" data-bs-toggle="tooltip" for="__secondary" title="Toggle secondary sidebar">
+<span class="fa-solid fa-list"></span>
+</label>
 </div></div>
 </div>
 </div>
 </div>
 <div class="onlyprint" id="jb-print-docs-body">
-<h1>Blogs</h1>
+<h1>Memorizing Complex Documentation: A Tale of Databricks Tables and Storytelling</h1>
 <!-- Table of contents -->
 <div id="print-main-content">
 <div id="jb-print-toc">
+<div>
+<h2> Contents </h2>
+</div>
+<nav aria-label="Page">
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-need-to-memorize-complex-content">The Need to Memorize Complex Content</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-power-of-storytelling">The Power of Storytelling</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#databricks-tables-the-technicals">Databricks Tables: The Technicals</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#meet-maddy-liam-mdlm">Meet Maddy &amp; Liam (MDLM)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-this-works">Why this Works</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
+</ul>
+</nav>
 </div>
 </div>
 </div>
 <div id="searchbox"></div>
 <article class="bd-article" role="main">
-<section class="tex2jax_ignore mathjax_ignore" id="blogs">
-<h1>Blogs<a class="headerlink" href="#blogs" title="Permalink to this heading">#</a></h1>
-<p>Welcome to my digital sanctuary, the place where technology, knowledge, and passion intersect. I’m thrilled to take you on a journey through the fascinating world of coding and data engineering, sharing my personal experience, insights, and passion along the way.</p>
-<p>As a seasoned professional in the tech industry, I’ve extensively worked with Python and Scala – two of the most powerful programming languages. Through my blog, I aim to demystify these coding languages, sharing practical tutorials, problem-solving techniques, and the art of efficient, clean coding. Whether you’re a newbie just getting started or an experienced programmer seeking to diversify your skills, you’ll find value in my comprehensive guides and insightful tips.</p>
-<p>But that’s not all. In this modern era where data is the new gold, being a data engineer means delving deep into the realms of data structures, databases, and algorithms. I’ll explore these topics, sharing my hands-on experiences and guiding you to transform raw data into meaningful insights.</p>
-<p>Last, but definitely not least, let’s navigate the cloud together. The realm of cloud computing is vast, complex, and transformative. It’s where scalability meets flexibility, powering much of the digital world we interact with daily. I’ll be sharing my expertise in AWS, GCP, and Azure, ensuring you get a grasp of the best practices in cloud architecture, data storage, and management.</p>
-<p>Welcome again to my blog – a vibrant community for learning, sharing, and growing in the tech world. I invite you to join me on this exciting journey, as we decode the language of the future, piece by piece. Let’s code, let’s learn, and let’s transform the world of data together. Enjoy the ride!</p>
-<div class="toctree-wrapper compound">
-</div>
+<section class="tex2jax_ignore mathjax_ignore" id="memorizing-complex-documentation-a-tale-of-databricks-tables-and-storytelling">
+<h1>Memorizing Complex Documentation: A Tale of Databricks Tables and Storytelling<a class="headerlink" href="#memorizing-complex-documentation-a-tale-of-databricks-tables-and-storytelling" title="Permalink to this heading">#</a></h1>
+<p>Documentation, especially in tech, can be dense and intricate. Memorizing such content can be a daunting task. Yet, there’s a timeless technique that can help simplify even the most complicated of subjects: storytelling. In this blog, we will demonstrate how to transform technical documentation into memorable stories, using Databricks’ managed and unmanaged tables as an example, told through the tale of “Maddy &amp; Liam.”</p>
+<section id="the-need-to-memorize-complex-content">
+<h2>The Need to Memorize Complex Content<a class="headerlink" href="#the-need-to-memorize-complex-content" title="Permalink to this heading">#</a></h2>
+<p>In today’s fast-paced digital world, professionals across industries often encounter vast and detailed documentation. For tech professionals, understanding these details is crucial. But how can one possibly remember all those details?</p>
+<p>Let’s consider Databricks’ managed and unmanaged tables. At first glance, the distinctions between these tables can seem quite technical and abstract. Enter storytelling, our cognitive shortcut.</p>
+</section>
+<section id="the-power-of-storytelling">
+<h2>The Power of Storytelling<a class="headerlink" href="#the-power-of-storytelling" title="Permalink to this heading">#</a></h2>
+<p>Humans are hardwired to remember stories. Tales filled with characters, emotions, and vivid images leave an indelible mark on our minds. This isn’t just artistry; it’s neuroscience. When we read or hear stories, our brains release oxytocin, a hormone associated with empathy and emotion. This not only makes the content relatable but also makes it more memorable.</p>
+</section>
+<section id="databricks-tables-the-technicals">
+<h2>Databricks Tables: The Technicals<a class="headerlink" href="#databricks-tables-the-technicals" title="Permalink to this heading">#</a></h2>
+<p>Managed tables in Databricks are where the platform manages both metadata and data. Deleting the table also gets rid of the underlying data. On the flip side, unmanaged tables have Databricks managing only the metadata. Deleting an unmanaged table doesn’t touch the underlying data. There are other nuanced differences related to data locations and the renaming process.</p>
+<p>Seems complex? Let’s break it down with a story.</p>
+</section>
+<section id="meet-maddy-liam-mdlm">
+<h2>Meet Maddy &amp; Liam (MDLM)<a class="headerlink" href="#meet-maddy-liam-mdlm" title="Permalink to this heading">#</a></h2>
+<p>Imagine a vast digital library in a city filled with data. Here, we have two librarians: Maddy and Liam.</p>
+<ol class="arabic simple">
+<li><p>Managed By Databricks (M):</p></li>
+</ol>
+<ul class="simple">
+<li><p>Maddy: Like managed tables, she handles both the title (metadata) and content (data).</p></li>
+<li><p>Liam: Mirroring unmanaged tables, he only notes down the title (metadata).</p></li>
+</ul>
+<ol class="arabic simple" start="2">
+<li><p>Deletion (D):</p></li>
+</ol>
+<ul class="simple">
+<li><p>Maddy: If a book needs to be removed, she eliminates its title and erases its contents, mirroring the behavior of managed tables.</p></li>
+<li><p>Liam: He simply crosses off the title but leaves the content intact, much like unmanaged tables.</p></li>
+</ul>
+<ol class="arabic simple" start="3">
+<li><p>Location (L):</p></li>
+</ol>
+<ul class="simple">
+<li><p>Maddy: She organizes her books in specific rooms based on their category, similar to how managed tables have data in a defined location.</p></li>
+<li><p>Liam: He places markers on books, pointing to categories located elsewhere, akin to unmanaged tables specifying a location.</p></li>
+</ul>
+<ol class="arabic simple" start="4">
+<li><p>Move/Rename (M):</p></li>
+</ol>
+<ul class="simple">
+<li><p>Maddy: If a book’s category alters, she physically relocates it to a new room. This mirrors managed tables where moving means rewriting data.</p></li>
+<li><p>Liam: He simply updates his markers, leaving the book where it is, representing the flexibility of unmanaged tables.</p></li>
+</ul>
+</section>
+<section id="why-this-works">
+<h2>Why this Works<a class="headerlink" href="#why-this-works" title="Permalink to this heading">#</a></h2>
+<p>By transposing complex details onto relatable characters, the intricacies of Databricks’ managed and unmanaged tables become simple and memorable. Each time one thinks of these tables, the narrative of Maddy and Liam serves as an easy recall mechanism.</p>
+</section>
+<section id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this heading">#</a></h2>
+<p>Memorizing dense documentation doesn’t have to be tedious. By leveraging the age-old art of storytelling, we can transform intricate technicalities into engaging narratives. The next time you’re faced with a thick manual or a long list of specifications, think of how you can craft your own “Maddy &amp; Liam.” Not only will it make your learning process enjoyable, but those details will also stick with you for a long time. Happy storytelling!</p>
+</section>
 </section>
 <script type="text/x-thebe-config">
     {
@@ -282,17 +346,17 @@ document.write(`
 <div class="footer-article-items footer-article__inner">
 <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
-<a class="left-prev" href="../courses/update_simple_flask_app.html" title="previous page">
+<a class="left-prev" href="memory_trick.html" title="previous page">
 <i class="fa-solid fa-angle-left"></i>
 <div class="prev-next-info">
 <p class="prev-next-subtitle">previous</p>
-<p class="prev-next-title">Update Flask App with more functions</p>
+<p class="prev-next-title">Artful Memory Hacks</p>
 </div>
 </a>
-<a class="right-next" href="wealth.html" title="next page">
+<a class="right-next" href="../ebook/tests.html" title="next page">
 <div class="prev-next-info">
 <p class="prev-next-subtitle">next</p>
-<p class="prev-next-title">The Art of Leveraging Specific Knowledge</p>
+<p class="prev-next-title">Databricks</p>
 </div>
 <i class="fa-solid fa-angle-right"></i>
 </a>
@@ -300,6 +364,22 @@ document.write(`
 </div>
 </footer>
 </div>
+<div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+<div class="sidebar-secondary-item">
+<div class="page-toc tocsection onthispage">
+<i class="fa-solid fa-list"></i> Contents
+  </div>
+<nav class="bd-toc-nav page-toc">
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-need-to-memorize-complex-content">The Need to Memorize Complex Content</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-power-of-storytelling">The Power of Storytelling</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#databricks-tables-the-technicals">Databricks Tables: The Technicals</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#meet-maddy-liam-mdlm">Meet Maddy &amp; Liam (MDLM)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-this-works">Why this Works</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
+</ul>
+</nav></div>
+</div></div>
 </div>
 <footer class="bd-footer-content">
 <div class="bd-footer-content__inner container">
