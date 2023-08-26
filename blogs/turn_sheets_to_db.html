@@ -13,7 +13,7 @@
 
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="Docutils 0.18.1: http://docutils.sourceforge.net/" name="generator"/>
-<title>Blogs — Byambalogy</title>
+<title>Mastering Data Flow: Google Sheets to SQLite via Python — Byambalogy</title>
 <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
@@ -56,11 +56,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
 <script async="async" src="../_static/sphinx-thebe.js"></script>
-<script>DOCUMENTATION_OPTIONS.pagename = 'blogs/blogs';</script>
+<script>DOCUMENTATION_OPTIONS.pagename = 'blogs/turn_sheets_to_db';</script>
 <link href="../genindex.html" rel="index" title="Index"/>
 <link href="../search.html" rel="search" title="Search"/>
-<link href="turn_sheets_to_db.html" rel="next" title="Mastering Data Flow: Google Sheets to SQLite via Python"/>
-<link href="../courses/update_simple_flask_app.html" rel="prev" title="Update Flask App with more functions"/>
+<link href="wealth.html" rel="next" title="The Art of Leveraging Specific Knowledge"/>
+<link href="blogs.html" rel="prev" title="Blogs"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="en" name="docsearch:language"/>
 </head>
@@ -114,8 +114,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../courses/update_simple_flask_app.html">Update Flask App with more functions</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Blogs</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="turn_sheets_to_db.html">Mastering Data Flow: Google Sheets to SQLite via Python</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="blogs.html">Blogs</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Mastering Data Flow: Google Sheets to SQLite via Python</a></li>
 <li class="toctree-l2"><a class="reference internal" href="wealth.html">The Art of Leveraging Specific Knowledge</a></li>
 <li class="toctree-l2"><a class="reference internal" href="delta_table.html">Exploring Delta Lake’s Powerful Features</a></li>
 <li class="toctree-l2"><a class="reference internal" href="big_data.html">Harnessing the Power of Big Data: A Modern Marvel</a></li>
@@ -162,7 +162,7 @@ const thebe_selector_output = ".output, .cell_output"
 <i class="fas fa-rocket"></i>
 </button>
 <ul class="dropdown-menu">
-<li><a class="btn btn-sm dropdown-item" data-bs-placement="left" data-bs-toggle="tooltip" href="https://colab.research.google.com/github/byambaa1982/python_cources_for_beginers/blob/main/blogs/blogs.ipynb" target="_blank" title="Launch onColab">
+<li><a class="btn btn-sm dropdown-item" data-bs-placement="left" data-bs-toggle="tooltip" href="https://colab.research.google.com/github/byambaa1982/python_cources_for_beginers/blob/main/blogs/turn_sheets_to_db.ipynb" target="_blank" title="Launch onColab">
 <span class="btn__icon-container">
 <img src="../_static/images/logo_colab.png"/>
 </span>
@@ -183,7 +183,7 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="btn__text-container">Repository</span>
 </a>
 </li>
-<li><a class="btn btn-sm btn-source-issues-button dropdown-item" data-bs-placement="left" data-bs-toggle="tooltip" href="https://github.com/byambaa1982/python_cources_for_beginers/issues/new?title=Issue%20on%20page%20%2Fblogs/blogs.html&amp;body=Your%20issue%20content%20here." target="_blank" title="Open an issue">
+<li><a class="btn btn-sm btn-source-issues-button dropdown-item" data-bs-placement="left" data-bs-toggle="tooltip" href="https://github.com/byambaa1982/python_cources_for_beginers/issues/new?title=Issue%20on%20page%20%2Fblogs/turn_sheets_to_db.html&amp;body=Your%20issue%20content%20here." target="_blank" title="Open an issue">
 <span class="btn__icon-container">
 <i class="fas fa-lightbulb"></i>
 </span>
@@ -197,7 +197,7 @@ const thebe_selector_output = ".output, .cell_output"
 <i class="fas fa-download"></i>
 </button>
 <ul class="dropdown-menu">
-<li><a class="btn btn-sm btn-download-source-button dropdown-item" data-bs-placement="left" data-bs-toggle="tooltip" href="../_sources/blogs/blogs.ipynb" target="_blank" title="Download source file">
+<li><a class="btn btn-sm btn-download-source-button dropdown-item" data-bs-placement="left" data-bs-toggle="tooltip" href="../_sources/blogs/turn_sheets_to_db.ipynb" target="_blank" title="Download source file">
 <span class="btn__icon-container">
 <i class="fas fa-file"></i>
 </span>
@@ -235,29 +235,189 @@ document.write(`
   </button>
 `);
 </script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" data-bs-placement="bottom" data-bs-toggle="tooltip" for="__secondary" title="Toggle secondary sidebar">
+<span class="fa-solid fa-list"></span>
+</label>
 </div></div>
 </div>
 </div>
 </div>
 <div class="onlyprint" id="jb-print-docs-body">
-<h1>Blogs</h1>
+<h1>Mastering Data Flow: Google Sheets to SQLite via Python</h1>
 <!-- Table of contents -->
 <div id="print-main-content">
 <div id="jb-print-toc">
+<div>
+<h2> Contents </h2>
+</div>
+<nav aria-label="Page">
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deep-dive-the-data-extraction-function">Deep Dive: The Data Extraction Function</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-transformation-steps">Data Transformation Steps:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
+</ul>
+</nav>
 </div>
 </div>
 </div>
 <div id="searchbox"></div>
 <article class="bd-article" role="main">
-<section class="tex2jax_ignore mathjax_ignore" id="blogs">
-<h1>Blogs<a class="headerlink" href="#blogs" title="Permalink to this heading">#</a></h1>
-<p>Welcome to my digital sanctuary, the place where technology, knowledge, and passion intersect. I’m thrilled to take you on a journey through the fascinating world of coding and data engineering, sharing my personal experience, insights, and passion along the way.</p>
-<p>As a seasoned professional in the tech industry, I’ve extensively worked with Python and Scala – two of the most powerful programming languages. Through my blog, I aim to demystify these coding languages, sharing practical tutorials, problem-solving techniques, and the art of efficient, clean coding. Whether you’re a newbie just getting started or an experienced programmer seeking to diversify your skills, you’ll find value in my comprehensive guides and insightful tips.</p>
-<p>But that’s not all. In this modern era where data is the new gold, being a data engineer means delving deep into the realms of data structures, databases, and algorithms. I’ll explore these topics, sharing my hands-on experiences and guiding you to transform raw data into meaningful insights.</p>
-<p>Last, but definitely not least, let’s navigate the cloud together. The realm of cloud computing is vast, complex, and transformative. It’s where scalability meets flexibility, powering much of the digital world we interact with daily. I’ll be sharing my expertise in AWS, GCP, and Azure, ensuring you get a grasp of the best practices in cloud architecture, data storage, and management.</p>
-<p>Welcome again to my blog – a vibrant community for learning, sharing, and growing in the tech world. I invite you to join me on this exciting journey, as we decode the language of the future, piece by piece. Let’s code, let’s learn, and let’s transform the world of data together. Enjoy the ride!</p>
-<div class="toctree-wrapper compound">
+<section class="tex2jax_ignore mathjax_ignore" id="mastering-data-flow-google-sheets-to-sqlite-via-python">
+<h1>Mastering Data Flow: Google Sheets to SQLite via Python<a class="headerlink" href="#mastering-data-flow-google-sheets-to-sqlite-via-python" title="Permalink to this heading">#</a></h1>
+<p>Navigating the realms of data often means diving deep into different tools. Today, we’ll bridge the worlds of Google Sheets, Pandas, and SQLite to create a seamless data pipeline. Before we dive in, let’s understand the tools in our toolkit and the magic behind our data extraction function:</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pandas</span> <span class="pre">(imported</span> <span class="pre">as</span> <span class="pre">pd)</span></code>: Our data manipulation champion! With pd, we can reshape, analyze, and transform our tabular data with ease.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">json</span></code>: It’s how we’ll talk to Google Sheets. Most authentication credentials for Sheets come in JSON format, and this module helps us handle that.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">oauth2client</span> <span class="pre">&amp;</span> <span class="pre">gspread</span></code>: Our gateways to Google Sheets. The former authenticates us, and the latter lets us read, write, and navigate our sheets like a pro.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sqlite3</span></code>: Where our processed data finds a home! SQLite offers a lightweight database solution, perfect for storing and querying our data.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">datetime</span> <span class="pre">&amp;</span> <span class="pre">timedelta</span></code>: Timekeepers of our script. From calculating durations to stamping records, these modules are essential for any time-related operations.</p></li>
+</ol>
+<p>With our tools at the ready, let’s dive into creating a robust data flow, turning Google Sheets insights into actionable SQLite data!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">from</span> <span class="nn">oauth2client.service_account</span> <span class="kn">import</span> <span class="n">ServiceAccountCredentials</span>
+<span class="kn">import</span> <span class="nn">gspread</span>
+<span class="kn">import</span> <span class="nn">sqlite3</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span><span class="p">,</span> <span class="n">timedelta</span>
+</pre></div>
 </div>
+</div>
+</div>
+<section id="deep-dive-the-data-extraction-function">
+<h2>Deep Dive: The Data Extraction Function<a class="headerlink" href="#deep-dive-the-data-extraction-function" title="Permalink to this heading">#</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">get_user_information(sheet_name)</span></code>: This function is our bridge to Google Sheets. It authenticates, selects a specific worksheet, and fetches its data, returning it as a Pandas DataFrame. It’s a simple yet powerful utility that turns your Google Sheet “quizs” into actionable Python data.</p>
+<p>With our toolkit and extraction method ready, it’s time to dive into creating a robust data flow, transforming Google Sheets insights into actionable SQLite data!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_user_information</span><span class="p">(</span><span class="n">sheet_name</span><span class="p">):</span>
+  <span class="n">scope</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'https://spreadsheets.google.com/feeds'</span><span class="p">,</span><span class="s1">'https://www.googleapis.com/auth/drive'</span><span class="p">]</span>
+
+  <span class="n">creds</span> <span class="o">=</span> <span class="n">ServiceAccountCredentials</span><span class="o">.</span><span class="n">from_json_keyfile_name</span><span class="p">(</span><span class="s1">'creds.json'</span><span class="p">,</span><span class="n">scope</span><span class="p">)</span>
+
+  <span class="n">client</span> <span class="o">=</span> <span class="n">gspread</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="n">creds</span><span class="p">)</span>
+
+  <span class="n">industries</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">"quizs"</span><span class="p">)</span><span class="o">.</span><span class="n">worksheet</span><span class="p">(</span><span class="n">sheet_name</span><span class="p">)</span>
+  <span class="n">users</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">industries</span><span class="o">.</span><span class="n">get_all_values</span><span class="p">())</span>
+
+  <span class="k">return</span> <span class="n">users</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="data-transformation-steps">
+<h2>Data Transformation Steps:<a class="headerlink" href="#data-transformation-steps" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Fetching</span> <span class="pre">Data</span></code>: We retrieve data from the worksheet titled “questions” using our function.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Cleaning</span> <span class="pre">and</span> <span class="pre">Formatting</span></code>: The DataFrame’s first row becomes our column headers, which we then drop, ensuring a clean data structure.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Timestamping</span></code>: A new ‘question_created’ column gets added, marking each entry with the current date and time.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Database</span> <span class="pre">Initialization</span></code>: We prepare to inject our data into an SQLite database named ‘quiz.sqlite3’, ensuring our insights find a structured home.</p></li>
+</ol>
+<p>With our toolkit and methods detailed, let’s dive deep, transforming Google Sheets’ insights into structured SQLite datasets. Let the data flow commence!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">questions</span> <span class="o">=</span> <span class="n">get_user_information</span><span class="p">(</span><span class="s2">"questions"</span><span class="p">)</span>
+<span class="n">questions</span> <span class="o">=</span> <span class="n">questions</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="n">questions</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">questions</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">questions</span><span class="p">[</span><span class="s1">'question_created'</span><span class="p">]</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">questions</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>id</th>
+<th>question_text</th>
+<th>question_type</th>
+<th>question_created</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>1</th>
+<td>1</td>
+<td>Which of the following features distinguishes ...</td>
+<td>lakehouse</td>
+<td>2023-08-26 09:59:50.727422</td>
+</tr>
+<tr>
+<th>2</th>
+<td>2</td>
+<td>Which of the following locations hosts the dri...</td>
+<td>lakehouse</td>
+<td>2023-08-26 09:59:50.727422</td>
+</tr>
+<tr>
+<th>3</th>
+<td>3</td>
+<td>A data architect is designing a data model tha...</td>
+<td>lakehouse</td>
+<td>2023-08-26 09:59:50.727422</td>
+</tr>
+<tr>
+<th>4</th>
+<td>4</td>
+<td>Which of the following describes a scenario in...</td>
+<td>lakehouse</td>
+<td>2023-08-26 09:59:50.727422</td>
+</tr>
+<tr>
+<th>5</th>
+<td>5</td>
+<td>A data engineer has created a Delta table as p...</td>
+<td>lakehouse</td>
+<td>2023-08-26 09:59:50.727422</td>
+</tr>
+<tr>
+<th>6</th>
+<td>6</td>
+<td>Two junior data engineers are authoring separa...</td>
+<td>lakehouse</td>
+<td>2023-08-26 09:59:50.727422</td>
+</tr>
+</tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">db_path</span> <span class="o">=</span> <span class="s1">'quiz.sqlite3'</span>  
+<span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">db_path</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>db_path = ‘quiz.sqlite3’<br/>
+conn = sqlite3.connect(db_path)</p>
+</section>
+<section id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this heading">#</a></h2>
+<p>The digital landscape offers a myriad of tools to harness and analyze data. In our journey, we’ve explored how the synergy between Google Sheets, Pandas, and SQLite provides a formidable arsenal for data enthusiasts and professionals alike. By crafting a seamless pipeline, we’ve unlocked the potential to transform simple spreadsheet records into structured database entries, ensuring scalability, ease of access, and advanced analytics. Whether you’re just starting out or are a seasoned data veteran, integrating these tools into your workflow can usher in a new era of efficiency and insights. As we always say in the data world, the right tools and the right processes make all the difference. Happy data wrangling!</p>
+</section>
 </section>
 <script type="text/x-thebe-config">
     {
@@ -283,17 +443,17 @@ document.write(`
 <div class="footer-article-items footer-article__inner">
 <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
-<a class="left-prev" href="../courses/update_simple_flask_app.html" title="previous page">
+<a class="left-prev" href="blogs.html" title="previous page">
 <i class="fa-solid fa-angle-left"></i>
 <div class="prev-next-info">
 <p class="prev-next-subtitle">previous</p>
-<p class="prev-next-title">Update Flask App with more functions</p>
+<p class="prev-next-title">Blogs</p>
 </div>
 </a>
-<a class="right-next" href="turn_sheets_to_db.html" title="next page">
+<a class="right-next" href="wealth.html" title="next page">
 <div class="prev-next-info">
 <p class="prev-next-subtitle">next</p>
-<p class="prev-next-title">Mastering Data Flow: Google Sheets to SQLite via Python</p>
+<p class="prev-next-title">The Art of Leveraging Specific Knowledge</p>
 </div>
 <i class="fa-solid fa-angle-right"></i>
 </a>
@@ -301,6 +461,19 @@ document.write(`
 </div>
 </footer>
 </div>
+<div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+<div class="sidebar-secondary-item">
+<div class="page-toc tocsection onthispage">
+<i class="fa-solid fa-list"></i> Contents
+  </div>
+<nav class="bd-toc-nav page-toc">
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deep-dive-the-data-extraction-function">Deep Dive: The Data Extraction Function</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-transformation-steps">Data Transformation Steps:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
+</ul>
+</nav></div>
+</div></div>
 </div>
 <footer class="bd-footer-content">
 <div class="bd-footer-content__inner container">
