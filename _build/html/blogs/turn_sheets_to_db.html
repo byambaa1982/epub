@@ -11,15 +11,6 @@
   gtag('config', 'G-6R7KD1FNMR');
 </script>
 
-<!-- Google tag (gtag.js) -->
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-6R7KD1FNMR"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-6R7KD1FNMR');
-</script>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="Docutils 0.18.1: http://docutils.sourceforge.net/" name="generator"/>
 <title>Mastering Data Flow: Google Sheets to SQLite via Python — Byambalogy</title>
@@ -273,6 +264,7 @@ document.write(`
 <article class="bd-article" role="main">
 <section class="tex2jax_ignore mathjax_ignore" id="mastering-data-flow-google-sheets-to-sqlite-via-python">
 <h1>Mastering Data Flow: Google Sheets to SQLite via Python<a class="headerlink" href="#mastering-data-flow-google-sheets-to-sqlite-via-python" title="Permalink to this heading">#</a></h1>
+<p><img alt="summit" src="../_images/automation_400_200.png"/></p>
 <p>Navigating the realms of data often means diving deep into different tools. Today, we’ll bridge the worlds of Google Sheets, Pandas, and SQLite to create a seamless data pipeline. Before we dive in, let’s understand the tools in our toolkit and the magic behind our data extraction function:</p>
 <ol class="arabic simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">pandas</span> <span class="pre">(imported</span> <span class="pre">as</span> <span class="pre">pd)</span></code>: Our data manipulation champion! With pd, we can reshape, analyze, and transform our tabular data with ease.</p></li>
@@ -296,8 +288,7 @@ document.write(`
 </div>
 <section id="deep-dive-the-data-extraction-function">
 <h2>Deep Dive: The Data Extraction Function<a class="headerlink" href="#deep-dive-the-data-extraction-function" title="Permalink to this heading">#</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">get_user_information(sheet_name)</span></code>: This function is our bridge to Google Sheets. It authenticates, selects a specific worksheet, and fetches its data, returning it as a Pandas DataFrame. It’s a simple yet powerful utility that turns your Google Sheet “quizs” into actionable Python data.</p>
-<p>With our toolkit and extraction method ready, it’s time to dive into creating a robust data flow, transforming Google Sheets insights into actionable SQLite data!</p>
+<p><code class="docutils literal notranslate"><span class="pre">get_user_information(sheet_name)</span></code>: This utility function serves as our bridge to Google Sheets. Before diving into its mechanics, it’s pivotal to have the creds.json file in place. To obtain this file, head to your Google Cloud Console, navigate to the ‘Credentials’ page within the <code class="docutils literal notranslate"><span class="pre">APIs</span> <span class="pre">&amp;</span> <span class="pre">Services</span></code> section, and create a service account; once done, you can download its corresponding JSON key. Ensure your Google Sheet is shared with the service account email tied to your creds.json to facilitate seamless authentication and data retrieval. With these preparations, the function selects your desired worksheet, retrieves the data, and elegantly transforms it into a Pandas DataFrame, setting the stage for deeper data operations.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_user_information</span><span class="p">(</span><span class="n">sheet_name</span><span class="p">):</span>
@@ -314,6 +305,24 @@ document.write(`
 </pre></div>
 </div>
 </div>
+</div>
+<ul class="simple">
+<li><p>creds.json</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>   
+<span class="s2">"type"</span><span class="p">:</span> <span class="s2">"service_account"</span><span class="p">,</span>   
+<span class="s2">"project_id"</span><span class="p">:</span> <span class="s2">"YOUR-PROJECT-ID"</span><span class="p">,</span>   
+<span class="s2">"private_key_id"</span><span class="p">:</span> <span class="s2">"YOUR-PRIVATE-KEY-ID"</span><span class="p">,</span>  
+<span class="s2">"private_key"</span><span class="p">:</span> <span class="s2">"YOUR-PRIVATE-KEY"</span><span class="p">,</span>  
+<span class="s2">"client_email"</span><span class="p">:</span> <span class="s2">"YOUR-SERVICE-ACCOUNT@appspot.gserviceaccount.com"</span><span class="p">,</span>   
+<span class="s2">"client_id"</span><span class="p">:</span> <span class="s2">"CLIENT-ID"</span><span class="p">,</span>  
+<span class="s2">"auth_uri"</span><span class="p">:</span> <span class="s2">"https://accounts.google.com/o/oauth2/auth"</span><span class="p">,</span>  
+<span class="s2">"token_uri"</span><span class="p">:</span> <span class="s2">"https://oauth2.googleapis.com/token"</span><span class="p">,</span>   
+<span class="s2">"auth_provider_x509_cert_url"</span><span class="p">:</span> <span class="s2">"https://www.googleapis.com/oauth2/v1/certs"</span><span class="p">,</span>   
+<span class="s2">"client_x509_cert_url"</span><span class="p">:</span> <span class="s2">"https://www.googleapis.com/robot/v1/metadata/x509/twittersheet-275317</span><span class="si">%40a</span><span class="s2">ppspot.gserviceaccount.com"</span> 
+<span class="p">}</span>
+
+</pre></div>
 </div>
 </section>
 <section id="data-transformation-steps">
@@ -371,42 +380,42 @@ document.write(`
 <td>1</td>
 <td>Which of the following features distinguishes ...</td>
 <td>lakehouse</td>
-<td>2023-08-26 09:59:50.727422</td>
+<td>2023-08-27 10:22:23.277967</td>
 </tr>
 <tr>
 <th>2</th>
 <td>2</td>
 <td>Which of the following locations hosts the dri...</td>
 <td>lakehouse</td>
-<td>2023-08-26 09:59:50.727422</td>
+<td>2023-08-27 10:22:23.277967</td>
 </tr>
 <tr>
 <th>3</th>
 <td>3</td>
 <td>A data architect is designing a data model tha...</td>
 <td>lakehouse</td>
-<td>2023-08-26 09:59:50.727422</td>
+<td>2023-08-27 10:22:23.277967</td>
 </tr>
 <tr>
 <th>4</th>
 <td>4</td>
 <td>Which of the following describes a scenario in...</td>
 <td>lakehouse</td>
-<td>2023-08-26 09:59:50.727422</td>
+<td>2023-08-27 10:22:23.277967</td>
 </tr>
 <tr>
 <th>5</th>
 <td>5</td>
 <td>A data engineer has created a Delta table as p...</td>
 <td>lakehouse</td>
-<td>2023-08-26 09:59:50.727422</td>
+<td>2023-08-27 10:22:23.277967</td>
 </tr>
 <tr>
 <th>6</th>
 <td>6</td>
 <td>Two junior data engineers are authoring separa...</td>
 <td>lakehouse</td>
-<td>2023-08-26 09:59:50.727422</td>
+<td>2023-08-27 10:22:23.277967</td>
 </tr>
 </tbody>
 </table>
