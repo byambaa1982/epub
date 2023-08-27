@@ -17,6 +17,7 @@ chapters:
   - file: courses/update_simple_flask_app
 - file: blogs/blogs
   sections: 
+  - file: blogs/turn_sheets_to_db.ipynb
   - file: blogs/wealth
   - file: blogs/delta_table.md
   - file: blogs/big_data.md

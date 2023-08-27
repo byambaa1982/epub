@@ -20,18 +20,9 @@
 
   gtag('config', 'G-6R7KD1FNMR');
 </script>
-<!-- Google tag (gtag.js) -->
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-6R7KD1FNMR"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-6R7KD1FNMR');
-</script>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="Docutils 0.18.1: http://docutils.sourceforge.net/" name="generator"/>
-<title>The Art of Leveraging Specific Knowledge — Byambalogy</title>
+<title>Mastering Data Flow: Google Sheets to SQLite via Python — Byambalogy</title>
 <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
@@ -74,10 +65,10 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
 <script async="async" src="../_static/sphinx-thebe.js"></script>
-<script>DOCUMENTATION_OPTIONS.pagename = 'blogs/wealth';</script>
+<script>DOCUMENTATION_OPTIONS.pagename = 'blogs/turn_sheets_to_db';</script>
 <link href="../genindex.html" rel="index" title="Index"/>
 <link href="../search.html" rel="search" title="Search"/>
-<link href="delta_table.html" rel="next" title="Exploring Delta Lake’s Powerful Features"/>
+<link href="wealth.html" rel="next" title="The Art of Leveraging Specific Knowledge"/>
 <link href="blogs.html" rel="prev" title="Blogs"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="en" name="docsearch:language"/>
@@ -133,7 +124,8 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="blogs.html">Blogs</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">The Art of Leveraging Specific Knowledge</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Mastering Data Flow: Google Sheets to SQLite via Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wealth.html">The Art of Leveraging Specific Knowledge</a></li>
 <li class="toctree-l2"><a class="reference internal" href="delta_table.html">Exploring Delta Lake’s Powerful Features</a></li>
 <li class="toctree-l2"><a class="reference internal" href="big_data.html">Harnessing the Power of Big Data: A Modern Marvel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cloud_services.html">A Overview of Azure, Google Cloud, and AWS</a></li>
@@ -179,7 +171,7 @@ const thebe_selector_output = ".output, .cell_output"
 <i class="fas fa-rocket"></i>
 </button>
 <ul class="dropdown-menu">
-<li><a class="btn btn-sm dropdown-item" data-bs-placement="left" data-bs-toggle="tooltip" href="https://colab.research.google.com/github/byambaa1982/python_cources_for_beginers/blob/main/blogs/wealth.ipynb" target="_blank" title="Launch onColab">
+<li><a class="btn btn-sm dropdown-item" data-bs-placement="left" data-bs-toggle="tooltip" href="https://colab.research.google.com/github/byambaa1982/python_cources_for_beginers/blob/main/blogs/turn_sheets_to_db.ipynb" target="_blank" title="Launch onColab">
 <span class="btn__icon-container">
 <img src="../_static/images/logo_colab.png"/>
 </span>
@@ -200,7 +192,7 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="btn__text-container">Repository</span>
 </a>
 </li>
-<li><a class="btn btn-sm btn-source-issues-button dropdown-item" data-bs-placement="left" data-bs-toggle="tooltip" href="https://github.com/byambaa1982/python_cources_for_beginers/issues/new?title=Issue%20on%20page%20%2Fblogs/wealth.html&amp;body=Your%20issue%20content%20here." target="_blank" title="Open an issue">
+<li><a class="btn btn-sm btn-source-issues-button dropdown-item" data-bs-placement="left" data-bs-toggle="tooltip" href="https://github.com/byambaa1982/python_cources_for_beginers/issues/new?title=Issue%20on%20page%20%2Fblogs/turn_sheets_to_db.html&amp;body=Your%20issue%20content%20here." target="_blank" title="Open an issue">
 <span class="btn__icon-container">
 <i class="fas fa-lightbulb"></i>
 </span>
@@ -214,7 +206,7 @@ const thebe_selector_output = ".output, .cell_output"
 <i class="fas fa-download"></i>
 </button>
 <ul class="dropdown-menu">
-<li><a class="btn btn-sm btn-download-source-button dropdown-item" data-bs-placement="left" data-bs-toggle="tooltip" href="../_sources/blogs/wealth.ipynb" target="_blank" title="Download source file">
+<li><a class="btn btn-sm btn-download-source-button dropdown-item" data-bs-placement="left" data-bs-toggle="tooltip" href="../_sources/blogs/turn_sheets_to_db.ipynb" target="_blank" title="Download source file">
 <span class="btn__icon-container">
 <i class="fas fa-file"></i>
 </span>
@@ -260,7 +252,7 @@ document.write(`
 </div>
 </div>
 <div class="onlyprint" id="jb-print-docs-body">
-<h1>The Art of Leveraging Specific Knowledge</h1>
+<h1>Mastering Data Flow: Google Sheets to SQLite via Python</h1>
 <!-- Table of contents -->
 <div id="print-main-content">
 <div id="jb-print-toc">
@@ -269,13 +261,9 @@ document.write(`
 </div>
 <nav aria-label="Page">
 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-power-of-specific-knowledge">The Power of Specific Knowledge:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#unlocking-the-power-of-self-learning">2. Unlocking the Power of Self-Learning:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-best-teachers-on-the-internet">3. The Best Teachers on the Internet:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#accessing-the-best-books-and-learning-materials">4. Accessing the Best Books and Learning Materials:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-limitless-potential-of-internet-schools">5. The Limitless Potential of Internet Schools:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deep-dive-the-data-extraction-function">Deep Dive: The Data Extraction Function</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-transformation-steps">Data Transformation Steps:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
 </ul>
 </nav>
 </div>
@@ -283,36 +271,161 @@ document.write(`
 </div>
 <div id="searchbox"></div>
 <article class="bd-article" role="main">
-<section class="tex2jax_ignore mathjax_ignore" id="the-art-of-leveraging-specific-knowledge">
-<h1>The Art of Leveraging Specific Knowledge<a class="headerlink" href="#the-art-of-leveraging-specific-knowledge" title="Permalink to this heading">#</a></h1>
-<section id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
-<p>In today’s digital age, the ability to leverage specific knowledge has become a valuable asset. This unique expertise, born out of genuine curiosity and passion, sets individuals apart in various fields. While traditional education plays a significant role, the real magic happens when we embrace self-learning and harness the power of the internet. As a data engineer who taught myself Python and learned data engineering using free resources provided by Google Cloud, I can confidently say that anyone with a computer and internet connection can unlock immense potential and achieve professional success, even without a formal degree.</p>
+<section class="tex2jax_ignore mathjax_ignore" id="mastering-data-flow-google-sheets-to-sqlite-via-python">
+<h1>Mastering Data Flow: Google Sheets to SQLite via Python<a class="headerlink" href="#mastering-data-flow-google-sheets-to-sqlite-via-python" title="Permalink to this heading">#</a></h1>
+<p>Navigating the realms of data often means diving deep into different tools. Today, we’ll bridge the worlds of Google Sheets, Pandas, and SQLite to create a seamless data pipeline. Before we dive in, let’s understand the tools in our toolkit and the magic behind our data extraction function:</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pandas</span> <span class="pre">(imported</span> <span class="pre">as</span> <span class="pre">pd)</span></code>: Our data manipulation champion! With pd, we can reshape, analyze, and transform our tabular data with ease.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">json</span></code>: It’s how we’ll talk to Google Sheets. Most authentication credentials for Sheets come in JSON format, and this module helps us handle that.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">oauth2client</span> <span class="pre">&amp;</span> <span class="pre">gspread</span></code>: Our gateways to Google Sheets. The former authenticates us, and the latter lets us read, write, and navigate our sheets like a pro.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sqlite3</span></code>: Where our processed data finds a home! SQLite offers a lightweight database solution, perfect for storing and querying our data.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">datetime</span> <span class="pre">&amp;</span> <span class="pre">timedelta</span></code>: Timekeepers of our script. From calculating durations to stamping records, these modules are essential for any time-related operations.</p></li>
+</ol>
+<p>With our tools at the ready, let’s dive into creating a robust data flow, turning Google Sheets insights into actionable SQLite data!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">from</span> <span class="nn">oauth2client.service_account</span> <span class="kn">import</span> <span class="n">ServiceAccountCredentials</span>
+<span class="kn">import</span> <span class="nn">gspread</span>
+<span class="kn">import</span> <span class="nn">sqlite3</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span><span class="p">,</span> <span class="n">timedelta</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="deep-dive-the-data-extraction-function">
+<h2>Deep Dive: The Data Extraction Function<a class="headerlink" href="#deep-dive-the-data-extraction-function" title="Permalink to this heading">#</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">get_user_information(sheet_name)</span></code>: This function is our bridge to Google Sheets. It authenticates, selects a specific worksheet, and fetches its data, returning it as a Pandas DataFrame. It’s a simple yet powerful utility that turns your Google Sheet “quizs” into actionable Python data.</p>
+<p>With our toolkit and extraction method ready, it’s time to dive into creating a robust data flow, transforming Google Sheets insights into actionable SQLite data!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_user_information</span><span class="p">(</span><span class="n">sheet_name</span><span class="p">):</span>
+  <span class="n">scope</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'https://spreadsheets.google.com/feeds'</span><span class="p">,</span><span class="s1">'https://www.googleapis.com/auth/drive'</span><span class="p">]</span>
+
+  <span class="n">creds</span> <span class="o">=</span> <span class="n">ServiceAccountCredentials</span><span class="o">.</span><span class="n">from_json_keyfile_name</span><span class="p">(</span><span class="s1">'creds.json'</span><span class="p">,</span><span class="n">scope</span><span class="p">)</span>
+
+  <span class="n">client</span> <span class="o">=</span> <span class="n">gspread</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="n">creds</span><span class="p">)</span>
+
+  <span class="n">industries</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">"quizs"</span><span class="p">)</span><span class="o">.</span><span class="n">worksheet</span><span class="p">(</span><span class="n">sheet_name</span><span class="p">)</span>
+  <span class="n">users</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">industries</span><span class="o">.</span><span class="n">get_all_values</span><span class="p">())</span>
+
+  <span class="k">return</span> <span class="n">users</span>
+</pre></div>
+</div>
+</div>
+</div>
 </section>
-<section id="the-power-of-specific-knowledge">
-<h2>The Power of Specific Knowledge:<a class="headerlink" href="#the-power-of-specific-knowledge" title="Permalink to this heading">#</a></h2>
-<p>Specific knowledge refers to the specialized expertise that cannot be easily replicated or outsourced. It stems from a deep curiosity and passion for a particular subject or field. Unlike traditional education, which often focuses on general knowledge, specific knowledge is acquired through apprenticeships, hands-on experience, and self-guided learning.</p>
-<p><img alt="TeXt Theme" src="https://storage.googleapis.com/twittersheet-275317/cdc_dataset_de_interview/monkey_with_crown.png"/></p>
-</section>
-<section id="unlocking-the-power-of-self-learning">
-<h2>2. Unlocking the Power of Self-Learning:<a class="headerlink" href="#unlocking-the-power-of-self-learning" title="Permalink to this heading">#</a></h2>
-<p>The digital revolution has transformed the way we learn. With a computer and internet connection, the world becomes your classroom. The internet hosts a plethora of resources, including online courses, tutorials, forums, and communities, making knowledge accessible to anyone willing to put in the effort. No longer bound by the limitations of physical schools or geographical constraints, individuals can now learn at their own pace, tailor their education to their specific interests, and embark on a journey of continuous growth.</p>
-</section>
-<section id="the-best-teachers-on-the-internet">
-<h2>3. The Best Teachers on the Internet:<a class="headerlink" href="#the-best-teachers-on-the-internet" title="Permalink to this heading">#</a></h2>
-<p>The internet is home to some of the most exceptional teachers in every domain imaginable. Expert programmers, data scientists, engineers, writers, and artists willingly share their knowledge through blogs, videos, and online platforms. They provide insights, practical tips, and guidance, helping aspiring learners navigate their chosen fields. By actively seeking out these resources and immersing ourselves in the wealth of knowledge available, we can accelerate our learning curve and stay ahead of the curve.</p>
-</section>
-<section id="accessing-the-best-books-and-learning-materials">
-<h2>4. Accessing the Best Books and Learning Materials:<a class="headerlink" href="#accessing-the-best-books-and-learning-materials" title="Permalink to this heading">#</a></h2>
-<p>Gone are the days when physical libraries were the sole repositories of knowledge. Today, the internet serves as an endless digital library, housing an extensive collection of books, research papers, articles, and learning materials. E-books, audiobooks, and digital formats have made it easier than ever to access these resources at our fingertips. By leveraging these digital resources, we can dive deep into our chosen subjects, gain profound insights, and expand our understanding of specific knowledge areas.</p>
-</section>
-<section id="the-limitless-potential-of-internet-schools">
-<h2>5. The Limitless Potential of Internet Schools:<a class="headerlink" href="#the-limitless-potential-of-internet-schools" title="Permalink to this heading">#</a></h2>
-<p>Formal education institutions have undoubtedly played a pivotal role in shaping society. However, the internet has revolutionized the concept of education, blurring the lines between traditional and online learning. Online schools and platforms offer comprehensive courses and degree programs, often taught by industry experts and renowned professionals. These digital academies provide flexible schedules, affordable options, and the ability to earn certifications and degrees from the comfort of our homes, irrespective of our geographical location.</p>
+<section id="data-transformation-steps">
+<h2>Data Transformation Steps:<a class="headerlink" href="#data-transformation-steps" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Fetching</span> <span class="pre">Data</span></code>: We retrieve data from the worksheet titled “questions” using our function.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Cleaning</span> <span class="pre">and</span> <span class="pre">Formatting</span></code>: The DataFrame’s first row becomes our column headers, which we then drop, ensuring a clean data structure.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Timestamping</span></code>: A new ‘question_created’ column gets added, marking each entry with the current date and time.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Database</span> <span class="pre">Initialization</span></code>: We prepare to inject our data into an SQLite database named ‘quiz.sqlite3’, ensuring our insights find a structured home.</p></li>
+</ol>
+<p>With our toolkit and methods detailed, let’s dive deep, transforming Google Sheets’ insights into structured SQLite datasets. Let the data flow commence!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">questions</span> <span class="o">=</span> <span class="n">get_user_information</span><span class="p">(</span><span class="s2">"questions"</span><span class="p">)</span>
+<span class="n">questions</span> <span class="o">=</span> <span class="n">questions</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="n">questions</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">questions</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">questions</span><span class="p">[</span><span class="s1">'question_created'</span><span class="p">]</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">questions</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>id</th>
+<th>question_text</th>
+<th>question_type</th>
+<th>question_created</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>1</th>
+<td>1</td>
+<td>Which of the following features distinguishes ...</td>
+<td>lakehouse</td>
+<td>2023-08-26 09:59:50.727422</td>
+</tr>
+<tr>
+<th>2</th>
+<td>2</td>
+<td>Which of the following locations hosts the dri...</td>
+<td>lakehouse</td>
+<td>2023-08-26 09:59:50.727422</td>
+</tr>
+<tr>
+<th>3</th>
+<td>3</td>
+<td>A data architect is designing a data model tha...</td>
+<td>lakehouse</td>
+<td>2023-08-26 09:59:50.727422</td>
+</tr>
+<tr>
+<th>4</th>
+<td>4</td>
+<td>Which of the following describes a scenario in...</td>
+<td>lakehouse</td>
+<td>2023-08-26 09:59:50.727422</td>
+</tr>
+<tr>
+<th>5</th>
+<td>5</td>
+<td>A data engineer has created a Delta table as p...</td>
+<td>lakehouse</td>
+<td>2023-08-26 09:59:50.727422</td>
+</tr>
+<tr>
+<th>6</th>
+<td>6</td>
+<td>Two junior data engineers are authoring separa...</td>
+<td>lakehouse</td>
+<td>2023-08-26 09:59:50.727422</td>
+</tr>
+</tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">db_path</span> <span class="o">=</span> <span class="s1">'quiz.sqlite3'</span>  
+<span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">db_path</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>db_path = ‘quiz.sqlite3’<br/>
+conn = sqlite3.connect(db_path)</p>
 </section>
 <section id="conclusion">
-<h2>Conclusion:<a class="headerlink" href="#conclusion" title="Permalink to this heading">#</a></h2>
-<p>The art of leveraging specific knowledge has emerged as a powerful means to forge a successful career path in the digital era. By embracing self-learning and harnessing the vast resources available on the internet, individuals can acquire unique expertise that sets them apart from the crowd. Regardless of your educational background or geographic location, a computer and an internet connection provide the gateway to a world of endless possibilities. So, embark on your journey of self-discovery, immerse yourself in the best teachers, books, and schools the internet has to offer, and unlock your full potential in the pursuit of specific knowledge.</p>
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this heading">#</a></h2>
+<p>The digital landscape offers a myriad of tools to harness and analyze data. In our journey, we’ve explored how the synergy between Google Sheets, Pandas, and SQLite provides a formidable arsenal for data enthusiasts and professionals alike. By crafting a seamless pipeline, we’ve unlocked the potential to transform simple spreadsheet records into structured database entries, ensuring scalability, ease of access, and advanced analytics. Whether you’re just starting out or are a seasoned data veteran, integrating these tools into your workflow can usher in a new era of efficiency and insights. As we always say in the data world, the right tools and the right processes make all the difference. Happy data wrangling!</p>
 </section>
 </section>
 <script type="text/x-thebe-config">
@@ -346,10 +459,10 @@ document.write(`
 <p class="prev-next-title">Blogs</p>
 </div>
 </a>
-<a class="right-next" href="delta_table.html" title="next page">
+<a class="right-next" href="wealth.html" title="next page">
 <div class="prev-next-info">
 <p class="prev-next-subtitle">next</p>
-<p class="prev-next-title">Exploring Delta Lake’s Powerful Features</p>
+<p class="prev-next-title">The Art of Leveraging Specific Knowledge</p>
 </div>
 <i class="fa-solid fa-angle-right"></i>
 </a>
@@ -364,13 +477,9 @@ document.write(`
   </div>
 <nav class="bd-toc-nav page-toc">
 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-power-of-specific-knowledge">The Power of Specific Knowledge:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#unlocking-the-power-of-self-learning">2. Unlocking the Power of Self-Learning:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-best-teachers-on-the-internet">3. The Best Teachers on the Internet:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#accessing-the-best-books-and-learning-materials">4. Accessing the Best Books and Learning Materials:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-limitless-potential-of-internet-schools">5. The Limitless Potential of Internet Schools:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deep-dive-the-data-extraction-function">Deep Dive: The Data Extraction Function</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-transformation-steps">Data Transformation Steps:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
 </ul>
 </nav></div>
 </div></div>
