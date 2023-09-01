@@ -11,36 +11,9 @@
   gtag('config', 'G-6R7KD1FNMR');
 </script>
 
-<!-- Google tag (gtag.js) -->
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-6R7KD1FNMR"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-6R7KD1FNMR');
-</script>
-<!-- Google tag (gtag.js) -->
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-6R7KD1FNMR"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-6R7KD1FNMR');
-</script>
-<!-- Google tag (gtag.js) -->
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-6R7KD1FNMR"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-6R7KD1FNMR');
-</script>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="Docutils 0.18.1: http://docutils.sourceforge.net/" name="generator"/>
-<title>The Art of Leveraging Specific Knowledge — Byambalogy</title>
+<title>Creating Dynamic Bar Charts with Python’s Matplotlib — Byambalogy</title>
 <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
@@ -83,11 +56,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
 <script async="async" src="../_static/sphinx-thebe.js"></script>
-<script>DOCUMENTATION_OPTIONS.pagename = 'blogs/wealth';</script>
+<script>DOCUMENTATION_OPTIONS.pagename = 'blogs/Chart';</script>
 <link href="../genindex.html" rel="index" title="Index"/>
 <link href="../search.html" rel="search" title="Search"/>
-<link href="delta_table.html" rel="next" title="Exploring Delta Lake’s Powerful Features"/>
-<link href="turn_sheets_to_db.html" rel="prev" title="Mastering Data Flow: Google Sheets to SQLite via Python"/>
+<link href="turn_sheets_to_db.html" rel="next" title="Mastering Data Flow: Google Sheets to SQLite via Python"/>
+<link href="blogs.html" rel="prev" title="Blogs"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="en" name="docsearch:language"/>
 </head>
@@ -142,8 +115,9 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="blogs.html">Blogs</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Creating Dynamic Bar Charts with Python’s Matplotlib</a></li>
 <li class="toctree-l2"><a class="reference internal" href="turn_sheets_to_db.html">Mastering Data Flow: Google Sheets to SQLite via Python</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">The Art of Leveraging Specific Knowledge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wealth.html">The Art of Leveraging Specific Knowledge</a></li>
 <li class="toctree-l2"><a class="reference internal" href="delta_table.html">Exploring Delta Lake’s Powerful Features</a></li>
 <li class="toctree-l2"><a class="reference internal" href="big_data.html">Harnessing the Power of Big Data: A Modern Marvel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cloud_services.html">A Overview of Azure, Google Cloud, and AWS</a></li>
@@ -189,7 +163,7 @@ const thebe_selector_output = ".output, .cell_output"
 <i class="fas fa-rocket"></i>
 </button>
 <ul class="dropdown-menu">
-<li><a class="btn btn-sm dropdown-item" data-bs-placement="left" data-bs-toggle="tooltip" href="https://colab.research.google.com/github/byambaa1982/python_cources_for_beginers/blob/main/blogs/wealth.ipynb" target="_blank" title="Launch onColab">
+<li><a class="btn btn-sm dropdown-item" data-bs-placement="left" data-bs-toggle="tooltip" href="https://colab.research.google.com/github/byambaa1982/python_cources_for_beginers/blob/main/blogs/Chart.ipynb" target="_blank" title="Launch onColab">
 <span class="btn__icon-container">
 <img src="../_static/images/logo_colab.png"/>
 </span>
@@ -210,7 +184,7 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="btn__text-container">Repository</span>
 </a>
 </li>
-<li><a class="btn btn-sm btn-source-issues-button dropdown-item" data-bs-placement="left" data-bs-toggle="tooltip" href="https://github.com/byambaa1982/python_cources_for_beginers/issues/new?title=Issue%20on%20page%20%2Fblogs/wealth.html&amp;body=Your%20issue%20content%20here." target="_blank" title="Open an issue">
+<li><a class="btn btn-sm btn-source-issues-button dropdown-item" data-bs-placement="left" data-bs-toggle="tooltip" href="https://github.com/byambaa1982/python_cources_for_beginers/issues/new?title=Issue%20on%20page%20%2Fblogs/Chart.html&amp;body=Your%20issue%20content%20here." target="_blank" title="Open an issue">
 <span class="btn__icon-container">
 <i class="fas fa-lightbulb"></i>
 </span>
@@ -224,7 +198,7 @@ const thebe_selector_output = ".output, .cell_output"
 <i class="fas fa-download"></i>
 </button>
 <ul class="dropdown-menu">
-<li><a class="btn btn-sm btn-download-source-button dropdown-item" data-bs-placement="left" data-bs-toggle="tooltip" href="../_sources/blogs/wealth.ipynb" target="_blank" title="Download source file">
+<li><a class="btn btn-sm btn-download-source-button dropdown-item" data-bs-placement="left" data-bs-toggle="tooltip" href="../_sources/blogs/Chart.ipynb" target="_blank" title="Download source file">
 <span class="btn__icon-container">
 <i class="fas fa-file"></i>
 </span>
@@ -270,7 +244,7 @@ document.write(`
 </div>
 </div>
 <div class="onlyprint" id="jb-print-docs-body">
-<h1>The Art of Leveraging Specific Knowledge</h1>
+<h1>Creating Dynamic Bar Charts with Python’s Matplotlib</h1>
 <!-- Table of contents -->
 <div id="print-main-content">
 <div id="jb-print-toc">
@@ -279,12 +253,12 @@ document.write(`
 </div>
 <nav aria-label="Page">
 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-power-of-specific-knowledge">The Power of Specific Knowledge:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#unlocking-the-power-of-self-learning">2. Unlocking the Power of Self-Learning:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-best-teachers-on-the-internet">3. The Best Teachers on the Internet:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#accessing-the-best-books-and-learning-materials">4. Accessing the Best Books and Learning Materials:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-limitless-potential-of-internet-schools">5. The Limitless Potential of Internet Schools:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">Prerequisites:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-importing-the-required-libraries">Step 1: Importing the Required Libraries</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-data-preparation">Step 2: Data Preparation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-creating-the-bar-chart-function">Step 3: Creating the Bar Chart Function</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-customizing-and-creating-the-bar-chart">Step 4: Customizing and Creating the Bar Chart</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion:</a></li>
 </ul>
 </nav>
@@ -293,36 +267,168 @@ document.write(`
 </div>
 <div id="searchbox"></div>
 <article class="bd-article" role="main">
-<section class="tex2jax_ignore mathjax_ignore" id="the-art-of-leveraging-specific-knowledge">
-<h1>The Art of Leveraging Specific Knowledge<a class="headerlink" href="#the-art-of-leveraging-specific-knowledge" title="Permalink to this heading">#</a></h1>
+<section class="tex2jax_ignore mathjax_ignore" id="creating-dynamic-bar-charts-with-python-s-matplotlib">
+<h1>Creating Dynamic Bar Charts with Python’s Matplotlib<a class="headerlink" href="#creating-dynamic-bar-charts-with-python-s-matplotlib" title="Permalink to this heading">#</a></h1>
 <section id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
-<p>In today’s digital age, the ability to leverage specific knowledge has become a valuable asset. This unique expertise, born out of genuine curiosity and passion, sets individuals apart in various fields. While traditional education plays a significant role, the real magic happens when we embrace self-learning and harness the power of the internet. As a data engineer who taught myself Python and learned data engineering using free resources provided by Google Cloud, I can confidently say that anyone with a computer and internet connection can unlock immense potential and achieve professional success, even without a formal degree.</p>
+<h2>Introduction:<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
+<p>Visualizing data is an essential aspect of data analysis and presentation. One effective way to represent data is through bar charts, which display data values as rectangular bars. In this tutorial, we’ll explore how to create dynamic bar charts using Python’s Matplotlib library. We’ll create a bar chart to visualize the stock price changes of various companies in the year 2023.</p>
 </section>
-<section id="the-power-of-specific-knowledge">
-<h2>The Power of Specific Knowledge:<a class="headerlink" href="#the-power-of-specific-knowledge" title="Permalink to this heading">#</a></h2>
-<p>Specific knowledge refers to the specialized expertise that cannot be easily replicated or outsourced. It stems from a deep curiosity and passion for a particular subject or field. Unlike traditional education, which often focuses on general knowledge, specific knowledge is acquired through apprenticeships, hands-on experience, and self-guided learning.</p>
-<p><img alt="TeXt Theme" src="https://storage.googleapis.com/twittersheet-275317/cdc_dataset_de_interview/monkey_with_crown.png"/></p>
+<section id="prerequisites">
+<h2>Prerequisites:<a class="headerlink" href="#prerequisites" title="Permalink to this heading">#</a></h2>
+<p>Before we begin, make sure you have Python and Matplotlib installed. You can install Matplotlib using the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>matplotlib
+</pre></div>
+</div>
 </section>
-<section id="unlocking-the-power-of-self-learning">
-<h2>2. Unlocking the Power of Self-Learning:<a class="headerlink" href="#unlocking-the-power-of-self-learning" title="Permalink to this heading">#</a></h2>
-<p>The digital revolution has transformed the way we learn. With a computer and internet connection, the world becomes your classroom. The internet hosts a plethora of resources, including online courses, tutorials, forums, and communities, making knowledge accessible to anyone willing to put in the effort. No longer bound by the limitations of physical schools or geographical constraints, individuals can now learn at their own pace, tailor their education to their specific interests, and embark on a journey of continuous growth.</p>
+<section id="step-1-importing-the-required-libraries">
+<h2>Step 1: Importing the Required Libraries<a class="headerlink" href="#step-1-importing-the-required-libraries" title="Permalink to this heading">#</a></h2>
+<p>To get started, we need to import the Matplotlib library that provides tools to create various types of plots, including bar charts. Open your favorite code editor or Jupyter Notebook and follow along.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
+</div>
+</div>
+</div>
 </section>
-<section id="the-best-teachers-on-the-internet">
-<h2>3. The Best Teachers on the Internet:<a class="headerlink" href="#the-best-teachers-on-the-internet" title="Permalink to this heading">#</a></h2>
-<p>The internet is home to some of the most exceptional teachers in every domain imaginable. Expert programmers, data scientists, engineers, writers, and artists willingly share their knowledge through blogs, videos, and online platforms. They provide insights, practical tips, and guidance, helping aspiring learners navigate their chosen fields. By actively seeking out these resources and immersing ourselves in the wealth of knowledge available, we can accelerate our learning curve and stay ahead of the curve.</p>
+<section id="step-2-data-preparation">
+<h2>Step 2: Data Preparation<a class="headerlink" href="#step-2-data-preparation" title="Permalink to this heading">#</a></h2>
+<p>For this example, we’ll use a sample dataset containing information about the stock price changes of different companies. You can replace this dataset with your own data.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read the CSV file using pandas</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'stock_data.csv'</span><span class="p">)</span>
+<span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>Company</th>
+<th>Country</th>
+<th>Change</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>Carvana Co</td>
+<td>USA</td>
+<td>962</td>
+</tr>
+<tr>
+<th>1</th>
+<td>Nvidia</td>
+<td>USA</td>
+<td>237</td>
+</tr>
+<tr>
+<th>2</th>
+<td>Meta</td>
+<td>USA</td>
+<td>145</td>
+</tr>
+<tr>
+<th>3</th>
+<td>Palantir</td>
+<td>USA</td>
+<td>133</td>
+</tr>
+<tr>
+<th>4</th>
+<td>Coinbase</td>
+<td>USA</td>
+<td>124</td>
+</tr>
+</tbody>
+</table>
+</div></div></div>
+</div>
 </section>
-<section id="accessing-the-best-books-and-learning-materials">
-<h2>4. Accessing the Best Books and Learning Materials:<a class="headerlink" href="#accessing-the-best-books-and-learning-materials" title="Permalink to this heading">#</a></h2>
-<p>Gone are the days when physical libraries were the sole repositories of knowledge. Today, the internet serves as an endless digital library, housing an extensive collection of books, research papers, articles, and learning materials. E-books, audiobooks, and digital formats have made it easier than ever to access these resources at our fingertips. By leveraging these digital resources, we can dive deep into our chosen subjects, gain profound insights, and expand our understanding of specific knowledge areas.</p>
+<section id="step-3-creating-the-bar-chart-function">
+<h2>Step 3: Creating the Bar Chart Function<a class="headerlink" href="#step-3-creating-the-bar-chart-function" title="Permalink to this heading">#</a></h2>
+<p>Let’s create a function named create_bar_chart that takes the necessary parameters to customize the appearance of the bar chart.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">create_bar_chart</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">x_column</span><span class="p">,</span> <span class="n">y_column</span><span class="p">,</span> <span class="n">title</span><span class="p">,</span> <span class="n">bg_color</span><span class="p">,</span> <span class="n">x_label</span><span class="p">,</span> <span class="n">y_label</span><span class="p">):</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">'dark_background'</span><span class="p">)</span>  <span class="c1"># Use dark background style</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+    
+    <span class="c1"># Set background color</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">'axes.facecolor'</span><span class="p">]</span> <span class="o">=</span> <span class="n">bg_color</span>
+    
+    <span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'green'</span> <span class="k">if</span> <span class="n">value</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="s1">'red'</span> <span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="n">y_column</span><span class="p">]]</span>
+    <span class="n">bars</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">barh</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">x_column</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="n">y_column</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="n">x_label</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'white'</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="n">y_label</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'white'</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="n">title</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'white'</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">invert_yaxis</span><span class="p">()</span>  <span class="c1"># Invert y-axis to have the highest value at the top</span>
+    
+    <span class="c1"># Set tick labels color to white</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">'white'</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">'white'</span><span class="p">)</span>
+    
+    <span class="c1"># Add grid lines with custom color</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">'x'</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">'--'</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'gray'</span><span class="p">)</span>
+    
+    <span class="c1"># Change the color of the bars</span>
+    <span class="k">for</span> <span class="n">bar</span> <span class="ow">in</span> <span class="n">bars</span><span class="p">:</span>
+        <span class="n">bar</span><span class="o">.</span><span class="n">set_edgecolor</span><span class="p">(</span><span class="s1">'black'</span><span class="p">)</span>
+
+    <span class="c1"># Add author name to the chart</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.08</span><span class="p">,</span> <span class="s1">'Author: TechTonic'</span><span class="p">,</span> <span class="n">transform</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">transAxes</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'white'</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">'center'</span><span class="p">)</span>
+    
+    <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
 </section>
-<section id="the-limitless-potential-of-internet-schools">
-<h2>5. The Limitless Potential of Internet Schools:<a class="headerlink" href="#the-limitless-potential-of-internet-schools" title="Permalink to this heading">#</a></h2>
-<p>Formal education institutions have undoubtedly played a pivotal role in shaping society. However, the internet has revolutionized the concept of education, blurring the lines between traditional and online learning. Online schools and platforms offer comprehensive courses and degree programs, often taught by industry experts and renowned professionals. These digital academies provide flexible schedules, affordable options, and the ability to earn certifications and degrees from the comfort of our homes, irrespective of our geographical location.</p>
+<section id="step-4-customizing-and-creating-the-bar-chart">
+<h2>Step 4: Customizing and Creating the Bar Chart<a class="headerlink" href="#step-4-customizing-and-creating-the-bar-chart" title="Permalink to this heading">#</a></h2>
+<p>Now, let’s specify the column names and other parameters to create the bar chart.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Specify column names and other parameters</span>
+<span class="n">x_column</span> <span class="o">=</span> <span class="s1">'Company'</span>
+<span class="n">y_column</span> <span class="o">=</span> <span class="s1">'Change'</span>
+<span class="n">title</span> <span class="o">=</span> <span class="s1">'Stock Price Change of Companies in 2023'</span>
+<span class="n">bg_color</span> <span class="o">=</span> <span class="s1">'lightblue'</span>
+<span class="n">x_label</span> <span class="o">=</span> <span class="s1">'Change'</span>
+<span class="n">y_label</span> <span class="o">=</span> <span class="s1">'Top Company Names'</span>
+
+<span class="c1"># Call the function to create the bar chart</span>
+<span class="n">create_bar_chart</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">x_column</span><span class="p">,</span> <span class="n">y_column</span><span class="p">,</span> <span class="n">title</span><span class="p">,</span> <span class="n">bg_color</span><span class="p">,</span> <span class="n">x_label</span><span class="p">,</span> <span class="n">y_label</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/d3e1fc3aada7f1c623febf27d8db90b7692304b25aac265c8bf8cec1bcbdd178.png" src="../_images/d3e1fc3aada7f1c623febf27d8db90b7692304b25aac265c8bf8cec1bcbdd178.png"/>
+</div>
+</div>
 </section>
 <section id="conclusion">
 <h2>Conclusion:<a class="headerlink" href="#conclusion" title="Permalink to this heading">#</a></h2>
-<p>The art of leveraging specific knowledge has emerged as a powerful means to forge a successful career path in the digital era. By embracing self-learning and harnessing the vast resources available on the internet, individuals can acquire unique expertise that sets them apart from the crowd. Regardless of your educational background or geographic location, a computer and an internet connection provide the gateway to a world of endless possibilities. So, embark on your journey of self-discovery, immerse yourself in the best teachers, books, and schools the internet has to offer, and unlock your full potential in the pursuit of specific knowledge.</p>
+<p>In this tutorial, we’ve learned how to create dynamic bar charts using Python’s Matplotlib library. By customizing various parameters, such as background color, labels, and grid lines, we can create visually appealing and informative bar charts to visualize data effectively. Experiment with different datasets and customization options to create engaging visualizations for your data analysis projects.</p>
 </section>
 </section>
 <script type="text/x-thebe-config">
@@ -349,17 +455,17 @@ document.write(`
 <div class="footer-article-items footer-article__inner">
 <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
-<a class="left-prev" href="turn_sheets_to_db.html" title="previous page">
+<a class="left-prev" href="blogs.html" title="previous page">
 <i class="fa-solid fa-angle-left"></i>
 <div class="prev-next-info">
 <p class="prev-next-subtitle">previous</p>
-<p class="prev-next-title">Mastering Data Flow: Google Sheets to SQLite via Python</p>
+<p class="prev-next-title">Blogs</p>
 </div>
 </a>
-<a class="right-next" href="delta_table.html" title="next page">
+<a class="right-next" href="turn_sheets_to_db.html" title="next page">
 <div class="prev-next-info">
 <p class="prev-next-subtitle">next</p>
-<p class="prev-next-title">Exploring Delta Lake’s Powerful Features</p>
+<p class="prev-next-title">Mastering Data Flow: Google Sheets to SQLite via Python</p>
 </div>
 <i class="fa-solid fa-angle-right"></i>
 </a>
@@ -374,12 +480,12 @@ document.write(`
   </div>
 <nav class="bd-toc-nav page-toc">
 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-power-of-specific-knowledge">The Power of Specific Knowledge:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#unlocking-the-power-of-self-learning">2. Unlocking the Power of Self-Learning:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-best-teachers-on-the-internet">3. The Best Teachers on the Internet:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#accessing-the-best-books-and-learning-materials">4. Accessing the Best Books and Learning Materials:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-limitless-potential-of-internet-schools">5. The Limitless Potential of Internet Schools:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">Prerequisites:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-importing-the-required-libraries">Step 1: Importing the Required Libraries</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-data-preparation">Step 2: Data Preparation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-creating-the-bar-chart-function">Step 3: Creating the Bar Chart Function</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-customizing-and-creating-the-bar-chart">Step 4: Customizing and Creating the Bar Chart</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion:</a></li>
 </ul>
 </nav></div>
