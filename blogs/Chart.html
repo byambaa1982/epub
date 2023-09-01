@@ -11,27 +11,9 @@
   gtag('config', 'G-6R7KD1FNMR');
 </script>
 
-<!-- Google tag (gtag.js) -->
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-6R7KD1FNMR"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-6R7KD1FNMR');
-</script>
-<!-- Google tag (gtag.js) -->
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-6R7KD1FNMR"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-6R7KD1FNMR');
-</script>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="Docutils 0.18.1: http://docutils.sourceforge.net/" name="generator"/>
-<title>Mastering Data Flow: Google Sheets to SQLite via Python — Byambalogy</title>
+<title>Creating Dynamic Bar Charts with Python’s Matplotlib — Byambalogy</title>
 <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
@@ -74,10 +56,10 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
 <script async="async" src="../_static/sphinx-thebe.js"></script>
-<script>DOCUMENTATION_OPTIONS.pagename = 'blogs/turn_sheets_to_db';</script>
+<script>DOCUMENTATION_OPTIONS.pagename = 'blogs/Chart';</script>
 <link href="../genindex.html" rel="index" title="Index"/>
 <link href="../search.html" rel="search" title="Search"/>
-<link href="wealth.html" rel="next" title="The Art of Leveraging Specific Knowledge"/>
+<link href="turn_sheets_to_db.html" rel="next" title="Mastering Data Flow: Google Sheets to SQLite via Python"/>
 <link href="blogs.html" rel="prev" title="Blogs"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="en" name="docsearch:language"/>
@@ -133,7 +115,8 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="blogs.html">Blogs</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Mastering Data Flow: Google Sheets to SQLite via Python</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Creating Dynamic Bar Charts with Python’s Matplotlib</a></li>
+<li class="toctree-l2"><a class="reference internal" href="turn_sheets_to_db.html">Mastering Data Flow: Google Sheets to SQLite via Python</a></li>
 <li class="toctree-l2"><a class="reference internal" href="wealth.html">The Art of Leveraging Specific Knowledge</a></li>
 <li class="toctree-l2"><a class="reference internal" href="delta_table.html">Exploring Delta Lake’s Powerful Features</a></li>
 <li class="toctree-l2"><a class="reference internal" href="big_data.html">Harnessing the Power of Big Data: A Modern Marvel</a></li>
@@ -180,7 +163,7 @@ const thebe_selector_output = ".output, .cell_output"
 <i class="fas fa-rocket"></i>
 </button>
 <ul class="dropdown-menu">
-<li><a class="btn btn-sm dropdown-item" data-bs-placement="left" data-bs-toggle="tooltip" href="https://colab.research.google.com/github/byambaa1982/python_cources_for_beginers/blob/main/blogs/turn_sheets_to_db.ipynb" target="_blank" title="Launch onColab">
+<li><a class="btn btn-sm dropdown-item" data-bs-placement="left" data-bs-toggle="tooltip" href="https://colab.research.google.com/github/byambaa1982/python_cources_for_beginers/blob/main/blogs/Chart.ipynb" target="_blank" title="Launch onColab">
 <span class="btn__icon-container">
 <img src="../_static/images/logo_colab.png"/>
 </span>
@@ -201,7 +184,7 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="btn__text-container">Repository</span>
 </a>
 </li>
-<li><a class="btn btn-sm btn-source-issues-button dropdown-item" data-bs-placement="left" data-bs-toggle="tooltip" href="https://github.com/byambaa1982/python_cources_for_beginers/issues/new?title=Issue%20on%20page%20%2Fblogs/turn_sheets_to_db.html&amp;body=Your%20issue%20content%20here." target="_blank" title="Open an issue">
+<li><a class="btn btn-sm btn-source-issues-button dropdown-item" data-bs-placement="left" data-bs-toggle="tooltip" href="https://github.com/byambaa1982/python_cources_for_beginers/issues/new?title=Issue%20on%20page%20%2Fblogs/Chart.html&amp;body=Your%20issue%20content%20here." target="_blank" title="Open an issue">
 <span class="btn__icon-container">
 <i class="fas fa-lightbulb"></i>
 </span>
@@ -215,7 +198,7 @@ const thebe_selector_output = ".output, .cell_output"
 <i class="fas fa-download"></i>
 </button>
 <ul class="dropdown-menu">
-<li><a class="btn btn-sm btn-download-source-button dropdown-item" data-bs-placement="left" data-bs-toggle="tooltip" href="../_sources/blogs/turn_sheets_to_db.ipynb" target="_blank" title="Download source file">
+<li><a class="btn btn-sm btn-download-source-button dropdown-item" data-bs-placement="left" data-bs-toggle="tooltip" href="../_sources/blogs/Chart.ipynb" target="_blank" title="Download source file">
 <span class="btn__icon-container">
 <i class="fas fa-file"></i>
 </span>
@@ -261,7 +244,7 @@ document.write(`
 </div>
 </div>
 <div class="onlyprint" id="jb-print-docs-body">
-<h1>Mastering Data Flow: Google Sheets to SQLite via Python</h1>
+<h1>Creating Dynamic Bar Charts with Python’s Matplotlib</h1>
 <!-- Table of contents -->
 <div id="print-main-content">
 <div id="jb-print-toc">
@@ -270,9 +253,13 @@ document.write(`
 </div>
 <nav aria-label="Page">
 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deep-dive-the-data-extraction-function">Deep Dive: The Data Extraction Function</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-transformation-steps">Data Transformation Steps:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">Prerequisites:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-importing-the-required-libraries">Step 1: Importing the Required Libraries</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-data-preparation">Step 2: Data Preparation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-creating-the-bar-chart-function">Step 3: Creating the Bar Chart Function</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-customizing-and-creating-the-bar-chart">Step 4: Customizing and Creating the Bar Chart</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion:</a></li>
 </ul>
 </nav>
 </div>
@@ -280,91 +267,39 @@ document.write(`
 </div>
 <div id="searchbox"></div>
 <article class="bd-article" role="main">
-<section class="tex2jax_ignore mathjax_ignore" id="mastering-data-flow-google-sheets-to-sqlite-via-python">
-<h1>Mastering Data Flow: Google Sheets to SQLite via Python<a class="headerlink" href="#mastering-data-flow-google-sheets-to-sqlite-via-python" title="Permalink to this heading">#</a></h1>
-<p>Google Sheets, while being an exceptional tool for the non-tech savvy, isn’t particularly efficient for complex querying. In this guide, I’ll demonstrate how just a few lines of Python can harness your Google Sheet as a valuable input for your SQL database. The beauty of this approach is its adaptability; whether it’s SQLite, PostgreSQL, MongoDB, or any other database you prefer, you can seamlessly transform and integrate your Google Sheet data with ease.</p>
-<p><img alt="summit" src="../_images/automation_400_200.png"/></p>
-<p>Here, we’ll bridge the worlds of Google Sheets, Pandas, and SQLite to create a seamless data pipeline. Before we dive in, let’s understand the tools in our toolkit and the magic behind our data extraction function:</p>
-<ol class="arabic simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">pandas</span> <span class="pre">(imported</span> <span class="pre">as</span> <span class="pre">pd)</span></code>: Our data manipulation champion! With pd, we can reshape, analyze, and transform our tabular data with ease.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">json</span></code>: It’s how we’ll talk to Google Sheets. Most authentication credentials for Sheets come in JSON format, and this module helps us handle that.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">oauth2client</span> <span class="pre">&amp;</span> <span class="pre">gspread</span></code>: Our gateways to Google Sheets. The former authenticates us, and the latter lets us read, write, and navigate our sheets like a pro.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sqlite3</span></code>: Where our processed data finds a home! SQLite offers a lightweight database solution, perfect for storing and querying our data.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">datetime</span> <span class="pre">&amp;</span> <span class="pre">timedelta</span></code>: Timekeepers of our script. From calculating durations to stamping records, these modules are essential for any time-related operations.</p></li>
-</ol>
-<p>With our tools at the ready, let’s dive into creating a robust data flow, turning Google Sheets insights into actionable SQLite data!</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">json</span>
-<span class="kn">from</span> <span class="nn">oauth2client.service_account</span> <span class="kn">import</span> <span class="n">ServiceAccountCredentials</span>
-<span class="kn">import</span> <span class="nn">gspread</span>
-<span class="kn">import</span> <span class="nn">sqlite3</span>
-<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span><span class="p">,</span> <span class="n">timedelta</span>
-</pre></div>
-</div>
-</div>
-</div>
-<section id="deep-dive-the-data-extraction-function">
-<h2>Deep Dive: The Data Extraction Function<a class="headerlink" href="#deep-dive-the-data-extraction-function" title="Permalink to this heading">#</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">get_user_information(sheet_name)</span></code>: This utility function serves as our bridge to Google Sheets. Before diving into its mechanics, it’s pivotal to have the creds.json file in place. To obtain this file, head to your Google Cloud Console, navigate to the ‘Credentials’ page within the <code class="docutils literal notranslate"><span class="pre">APIs</span> <span class="pre">&amp;</span> <span class="pre">Services</span></code> section, and create a service account; once done, you can download its corresponding JSON key. Ensure your Google Sheet is shared with the service account email tied to your creds.json to facilitate seamless authentication and data retrieval. With these preparations, the function selects your desired worksheet, retrieves the data, and elegantly transforms it into a Pandas DataFrame, setting the stage for deeper data operations.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_user_information</span><span class="p">(</span><span class="n">sheet_name</span><span class="p">):</span>
-  <span class="n">scope</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'https://spreadsheets.google.com/feeds'</span><span class="p">,</span><span class="s1">'https://www.googleapis.com/auth/drive'</span><span class="p">]</span>
-
-  <span class="n">creds</span> <span class="o">=</span> <span class="n">ServiceAccountCredentials</span><span class="o">.</span><span class="n">from_json_keyfile_name</span><span class="p">(</span><span class="s1">'creds.json'</span><span class="p">,</span><span class="n">scope</span><span class="p">)</span>
-
-  <span class="n">client</span> <span class="o">=</span> <span class="n">gspread</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="n">creds</span><span class="p">)</span>
-
-  <span class="n">industries</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">"quizs"</span><span class="p">)</span><span class="o">.</span><span class="n">worksheet</span><span class="p">(</span><span class="n">sheet_name</span><span class="p">)</span>
-  <span class="n">users</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">industries</span><span class="o">.</span><span class="n">get_all_values</span><span class="p">())</span>
-
-  <span class="k">return</span> <span class="n">users</span>
-</pre></div>
-</div>
-</div>
-</div>
-<ul class="simple">
-<li><p>creds.json</p></li>
-</ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>   
-<span class="s2">"type"</span><span class="p">:</span> <span class="s2">"service_account"</span><span class="p">,</span>   
-<span class="s2">"project_id"</span><span class="p">:</span> <span class="s2">"YOUR-PROJECT-ID"</span><span class="p">,</span>   
-<span class="s2">"private_key_id"</span><span class="p">:</span> <span class="s2">"YOUR-PRIVATE-KEY-ID"</span><span class="p">,</span>  
-<span class="s2">"private_key"</span><span class="p">:</span> <span class="s2">"YOUR-PRIVATE-KEY"</span><span class="p">,</span>  
-<span class="s2">"client_email"</span><span class="p">:</span> <span class="s2">"YOUR-SERVICE-ACCOUNT@appspot.gserviceaccount.com"</span><span class="p">,</span>   
-<span class="s2">"client_id"</span><span class="p">:</span> <span class="s2">"CLIENT-ID"</span><span class="p">,</span>  
-<span class="s2">"auth_uri"</span><span class="p">:</span> <span class="s2">"https://accounts.google.com/o/oauth2/auth"</span><span class="p">,</span>  
-<span class="s2">"token_uri"</span><span class="p">:</span> <span class="s2">"https://oauth2.googleapis.com/token"</span><span class="p">,</span>   
-<span class="s2">"auth_provider_x509_cert_url"</span><span class="p">:</span> <span class="s2">"https://www.googleapis.com/oauth2/v1/certs"</span><span class="p">,</span>   
-<span class="s2">"client_x509_cert_url"</span><span class="p">:</span> <span class="s2">"https://www.googleapis.com/robot/v1/metadata/x509/twittersheet-275317</span><span class="si">%40a</span><span class="s2">ppspot.gserviceaccount.com"</span> 
-<span class="p">}</span>
-
+<section class="tex2jax_ignore mathjax_ignore" id="creating-dynamic-bar-charts-with-python-s-matplotlib">
+<h1>Creating Dynamic Bar Charts with Python’s Matplotlib<a class="headerlink" href="#creating-dynamic-bar-charts-with-python-s-matplotlib" title="Permalink to this heading">#</a></h1>
+<section id="introduction">
+<h2>Introduction:<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
+<p>Visualizing data is an essential aspect of data analysis and presentation. One effective way to represent data is through bar charts, which display data values as rectangular bars. In this tutorial, we’ll explore how to create dynamic bar charts using Python’s Matplotlib library. We’ll create a bar chart to visualize the stock price changes of various companies in the year 2023.</p>
+</section>
+<section id="prerequisites">
+<h2>Prerequisites:<a class="headerlink" href="#prerequisites" title="Permalink to this heading">#</a></h2>
+<p>Before we begin, make sure you have Python and Matplotlib installed. You can install Matplotlib using the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>matplotlib
 </pre></div>
 </div>
 </section>
-<section id="data-transformation-steps">
-<h2>Data Transformation Steps:<a class="headerlink" href="#data-transformation-steps" title="Permalink to this heading">#</a></h2>
-<ol class="arabic simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">Fetching</span> <span class="pre">Data</span></code>: We retrieve data from the worksheet titled “questions” using our function.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Cleaning</span> <span class="pre">and</span> <span class="pre">Formatting</span></code>: The DataFrame’s first row becomes our column headers, which we then drop, ensuring a clean data structure.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Timestamping</span></code>: A new ‘question_created’ column gets added, marking each entry with the current date and time.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Database</span> <span class="pre">Initialization</span></code>: We prepare to inject our data into an SQLite database named ‘quiz.sqlite3’, ensuring our insights find a structured home.</p></li>
-</ol>
-<p>With our toolkit and methods detailed, let’s dive deep, transforming Google Sheets’ insights into structured SQLite datasets. Let the data flow commence!</p>
+<section id="step-1-importing-the-required-libraries">
+<h2>Step 1: Importing the Required Libraries<a class="headerlink" href="#step-1-importing-the-required-libraries" title="Permalink to this heading">#</a></h2>
+<p>To get started, we need to import the Matplotlib library that provides tools to create various types of plots, including bar charts. Open your favorite code editor or Jupyter Notebook and follow along.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">questions</span> <span class="o">=</span> <span class="n">get_user_information</span><span class="p">(</span><span class="s2">"questions"</span><span class="p">)</span>
-<span class="n">questions</span> <span class="o">=</span> <span class="n">questions</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="n">questions</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">questions</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-<span class="n">questions</span><span class="p">[</span><span class="s1">'question_created'</span><span class="p">]</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 </pre></div>
 </div>
 </div>
 </div>
+</section>
+<section id="step-2-data-preparation">
+<h2>Step 2: Data Preparation<a class="headerlink" href="#step-2-data-preparation" title="Permalink to this heading">#</a></h2>
+<p>For this example, we’ll use a sample dataset containing information about the stock price changes of different companies. You can replace this dataset with your own data.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">questions</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read the CSV file using pandas</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'stock_data.csv'</span><span class="p">)</span>
+<span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -387,73 +322,113 @@ document.write(`
 <thead>
 <tr style="text-align: right;">
 <th></th>
-<th>id</th>
-<th>question_text</th>
-<th>question_type</th>
-<th>question_created</th>
+<th>Company</th>
+<th>Country</th>
+<th>Change</th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<th>0</th>
+<td>Carvana Co</td>
+<td>USA</td>
+<td>962</td>
+</tr>
+<tr>
 <th>1</th>
-<td>1</td>
-<td>Which of the following features distinguishes ...</td>
-<td>lakehouse</td>
-<td>2023-08-27 10:45:59.200958</td>
+<td>Nvidia</td>
+<td>USA</td>
+<td>237</td>
 </tr>
 <tr>
 <th>2</th>
-<td>2</td>
-<td>Which of the following locations hosts the dri...</td>
-<td>lakehouse</td>
-<td>2023-08-27 10:45:59.200958</td>
+<td>Meta</td>
+<td>USA</td>
+<td>145</td>
 </tr>
 <tr>
 <th>3</th>
-<td>3</td>
-<td>A data architect is designing a data model tha...</td>
-<td>lakehouse</td>
-<td>2023-08-27 10:45:59.200958</td>
+<td>Palantir</td>
+<td>USA</td>
+<td>133</td>
 </tr>
 <tr>
 <th>4</th>
-<td>4</td>
-<td>Which of the following describes a scenario in...</td>
-<td>lakehouse</td>
-<td>2023-08-27 10:45:59.200958</td>
-</tr>
-<tr>
-<th>5</th>
-<td>5</td>
-<td>A data engineer has created a Delta table as p...</td>
-<td>lakehouse</td>
-<td>2023-08-27 10:45:59.200958</td>
-</tr>
-<tr>
-<th>6</th>
-<td>6</td>
-<td>Two junior data engineers are authoring separa...</td>
-<td>lakehouse</td>
-<td>2023-08-27 10:45:59.200958</td>
+<td>Coinbase</td>
+<td>USA</td>
+<td>124</td>
 </tr>
 </tbody>
 </table>
 </div></div></div>
 </div>
+</section>
+<section id="step-3-creating-the-bar-chart-function">
+<h2>Step 3: Creating the Bar Chart Function<a class="headerlink" href="#step-3-creating-the-bar-chart-function" title="Permalink to this heading">#</a></h2>
+<p>Let’s create a function named create_bar_chart that takes the necessary parameters to customize the appearance of the bar chart.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">db_path</span> <span class="o">=</span> <span class="s1">'quiz.sqlite3'</span>  
-<span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">db_path</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">create_bar_chart</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">x_column</span><span class="p">,</span> <span class="n">y_column</span><span class="p">,</span> <span class="n">title</span><span class="p">,</span> <span class="n">bg_color</span><span class="p">,</span> <span class="n">x_label</span><span class="p">,</span> <span class="n">y_label</span><span class="p">):</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">'dark_background'</span><span class="p">)</span>  <span class="c1"># Use dark background style</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+    
+    <span class="c1"># Set background color</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">'axes.facecolor'</span><span class="p">]</span> <span class="o">=</span> <span class="n">bg_color</span>
+    
+    <span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'green'</span> <span class="k">if</span> <span class="n">value</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="s1">'red'</span> <span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="n">y_column</span><span class="p">]]</span>
+    <span class="n">bars</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">barh</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">x_column</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="n">y_column</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="n">x_label</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'white'</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="n">y_label</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'white'</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="n">title</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'white'</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">invert_yaxis</span><span class="p">()</span>  <span class="c1"># Invert y-axis to have the highest value at the top</span>
+    
+    <span class="c1"># Set tick labels color to white</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">'white'</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">'white'</span><span class="p">)</span>
+    
+    <span class="c1"># Add grid lines with custom color</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">'x'</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">'--'</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'gray'</span><span class="p">)</span>
+    
+    <span class="c1"># Change the color of the bars</span>
+    <span class="k">for</span> <span class="n">bar</span> <span class="ow">in</span> <span class="n">bars</span><span class="p">:</span>
+        <span class="n">bar</span><span class="o">.</span><span class="n">set_edgecolor</span><span class="p">(</span><span class="s1">'black'</span><span class="p">)</span>
+
+    <span class="c1"># Add author name to the chart</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.08</span><span class="p">,</span> <span class="s1">'Author: TechTonic'</span><span class="p">,</span> <span class="n">transform</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">transAxes</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'white'</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">'center'</span><span class="p">)</span>
+    
+    <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>db_path = ‘quiz.sqlite3’<br/>
-conn = sqlite3.connect(db_path)</p>
+</section>
+<section id="step-4-customizing-and-creating-the-bar-chart">
+<h2>Step 4: Customizing and Creating the Bar Chart<a class="headerlink" href="#step-4-customizing-and-creating-the-bar-chart" title="Permalink to this heading">#</a></h2>
+<p>Now, let’s specify the column names and other parameters to create the bar chart.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Specify column names and other parameters</span>
+<span class="n">x_column</span> <span class="o">=</span> <span class="s1">'Company'</span>
+<span class="n">y_column</span> <span class="o">=</span> <span class="s1">'Change'</span>
+<span class="n">title</span> <span class="o">=</span> <span class="s1">'Stock Price Change of Companies in 2023'</span>
+<span class="n">bg_color</span> <span class="o">=</span> <span class="s1">'lightblue'</span>
+<span class="n">x_label</span> <span class="o">=</span> <span class="s1">'Change'</span>
+<span class="n">y_label</span> <span class="o">=</span> <span class="s1">'Top Company Names'</span>
+
+<span class="c1"># Call the function to create the bar chart</span>
+<span class="n">create_bar_chart</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">x_column</span><span class="p">,</span> <span class="n">y_column</span><span class="p">,</span> <span class="n">title</span><span class="p">,</span> <span class="n">bg_color</span><span class="p">,</span> <span class="n">x_label</span><span class="p">,</span> <span class="n">y_label</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/d3e1fc3aada7f1c623febf27d8db90b7692304b25aac265c8bf8cec1bcbdd178.png" src="../_images/d3e1fc3aada7f1c623febf27d8db90b7692304b25aac265c8bf8cec1bcbdd178.png"/>
+</div>
+</div>
 </section>
 <section id="conclusion">
-<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this heading">#</a></h2>
-<p>The digital landscape offers a myriad of tools to harness and analyze data. In our journey, we’ve explored how the synergy between Google Sheets, Pandas, and SQLite provides a formidable arsenal for data enthusiasts and professionals alike. By crafting a seamless pipeline, we’ve unlocked the potential to transform simple spreadsheet records into structured database entries, ensuring scalability, ease of access, and advanced analytics. Whether you’re just starting out or are a seasoned data veteran, integrating these tools into your workflow can usher in a new era of efficiency and insights. As we always say in the data world, the right tools and the right processes make all the difference. Happy data wrangling!</p>
+<h2>Conclusion:<a class="headerlink" href="#conclusion" title="Permalink to this heading">#</a></h2>
+<p>In this tutorial, we’ve learned how to create dynamic bar charts using Python’s Matplotlib library. By customizing various parameters, such as background color, labels, and grid lines, we can create visually appealing and informative bar charts to visualize data effectively. Experiment with different datasets and customization options to create engaging visualizations for your data analysis projects.</p>
 </section>
 </section>
 <script type="text/x-thebe-config">
@@ -487,10 +462,10 @@ conn = sqlite3.connect(db_path)</p>
 <p class="prev-next-title">Blogs</p>
 </div>
 </a>
-<a class="right-next" href="wealth.html" title="next page">
+<a class="right-next" href="turn_sheets_to_db.html" title="next page">
 <div class="prev-next-info">
 <p class="prev-next-subtitle">next</p>
-<p class="prev-next-title">The Art of Leveraging Specific Knowledge</p>
+<p class="prev-next-title">Mastering Data Flow: Google Sheets to SQLite via Python</p>
 </div>
 <i class="fa-solid fa-angle-right"></i>
 </a>
@@ -505,9 +480,13 @@ conn = sqlite3.connect(db_path)</p>
   </div>
 <nav class="bd-toc-nav page-toc">
 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deep-dive-the-data-extraction-function">Deep Dive: The Data Extraction Function</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-transformation-steps">Data Transformation Steps:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">Prerequisites:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-importing-the-required-libraries">Step 1: Importing the Required Libraries</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-data-preparation">Step 2: Data Preparation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-creating-the-bar-chart-function">Step 3: Creating the Bar Chart Function</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-customizing-and-creating-the-bar-chart">Step 4: Customizing and Creating the Bar Chart</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion:</a></li>
 </ul>
 </nav></div>
 </div></div>
