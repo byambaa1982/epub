@@ -17,6 +17,7 @@ chapters:
   - file: courses/update_simple_flask_app
 - file: blogs/blogs
   sections: 
+  - file: blogs/azure_synapse_bq.ipynb
   - file: blogs/file_and_dir_path.ipynb
   - file: blogs/Chart.ipynb
   - file: blogs/turn_sheets_to_db.ipynb
