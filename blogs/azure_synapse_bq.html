@@ -13,7 +13,7 @@
 
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="Docutils 0.18.1: http://docutils.sourceforge.net/" name="generator"/>
-<title>Harnessing the Power of Big Data: A Modern Marvel — Byambalogy</title>
+<title>Azure Synapse vs Google Big Query — Byambalogy</title>
 <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
@@ -56,11 +56,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
 <script async="async" src="../_static/sphinx-thebe.js"></script>
-<script>DOCUMENTATION_OPTIONS.pagename = 'blogs/big_data';</script>
+<script>DOCUMENTATION_OPTIONS.pagename = 'blogs/azure_synapse_bq';</script>
 <link href="../genindex.html" rel="index" title="Index"/>
 <link href="../search.html" rel="search" title="Search"/>
-<link href="cloud_services.html" rel="next" title="A Overview of Azure, Google Cloud, and AWS"/>
-<link href="delta_table.html" rel="prev" title="Exploring Delta Lake’s Powerful Features"/>
+<link href="file_and_dir_path.html" rel="next" title="Understanding File and Directory Paths in Python"/>
+<link href="blogs.html" rel="prev" title="Blogs"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="en" name="docsearch:language"/>
 </head>
@@ -115,13 +115,13 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="blogs.html">Blogs</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="azure_synapse_bq.html">Azure Synapse vs Google Big Query</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Azure Synapse vs Google Big Query</a></li>
 <li class="toctree-l2"><a class="reference internal" href="file_and_dir_path.html">Understanding File and Directory Paths in Python</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Chart.html">Creating Dynamic Bar Charts with Python’s Matplotlib</a></li>
 <li class="toctree-l2"><a class="reference internal" href="turn_sheets_to_db.html">Mastering Data Flow: Google Sheets to SQLite via Python</a></li>
 <li class="toctree-l2"><a class="reference internal" href="wealth.html">The Art of Leveraging Specific Knowledge</a></li>
 <li class="toctree-l2"><a class="reference internal" href="delta_table.html">Exploring Delta Lake’s Powerful Features</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Harnessing the Power of Big Data: A Modern Marvel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="big_data.html">Harnessing the Power of Big Data: A Modern Marvel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cloud_services.html">A Overview of Azure, Google Cloud, and AWS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="memory_trick.html">Artful Memory Hacks</a></li>
 <li class="toctree-l2"><a class="reference internal" href="managed_unmanaged.html">Memorizing Complex Documentation: A Tale of Databricks Tables and Storytelling</a></li>
@@ -161,6 +161,20 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="header-article-items__end">
 <div class="header-article-item">
 <div class="article-header-buttons">
+<div class="dropdown dropdown-launch-buttons">
+<button aria-expanded="false" aria-label="Launch interactive content" class="btn dropdown-toggle" data-bs-toggle="dropdown" type="button">
+<i class="fas fa-rocket"></i>
+</button>
+<ul class="dropdown-menu">
+<li><a class="btn btn-sm dropdown-item" data-bs-placement="left" data-bs-toggle="tooltip" href="https://colab.research.google.com/github/byambaa1982/python_cources_for_beginers/blob/main/blogs/azure_synapse_bq.ipynb" target="_blank" title="Launch onColab">
+<span class="btn__icon-container">
+<img src="../_static/images/logo_colab.png"/>
+</span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+</ul>
+</div>
 <div class="dropdown dropdown-source-buttons">
 <button aria-expanded="false" aria-label="Source repositories" class="btn dropdown-toggle" data-bs-toggle="dropdown" type="button">
 <i class="fab fa-github"></i>
@@ -173,7 +187,7 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="btn__text-container">Repository</span>
 </a>
 </li>
-<li><a class="btn btn-sm btn-source-issues-button dropdown-item" data-bs-placement="left" data-bs-toggle="tooltip" href="https://github.com/byambaa1982/python_cources_for_beginers/issues/new?title=Issue%20on%20page%20%2Fblogs/big_data.html&amp;body=Your%20issue%20content%20here." target="_blank" title="Open an issue">
+<li><a class="btn btn-sm btn-source-issues-button dropdown-item" data-bs-placement="left" data-bs-toggle="tooltip" href="https://github.com/byambaa1982/python_cources_for_beginers/issues/new?title=Issue%20on%20page%20%2Fblogs/azure_synapse_bq.html&amp;body=Your%20issue%20content%20here." target="_blank" title="Open an issue">
 <span class="btn__icon-container">
 <i class="fas fa-lightbulb"></i>
 </span>
@@ -187,11 +201,11 @@ const thebe_selector_output = ".output, .cell_output"
 <i class="fas fa-download"></i>
 </button>
 <ul class="dropdown-menu">
-<li><a class="btn btn-sm btn-download-source-button dropdown-item" data-bs-placement="left" data-bs-toggle="tooltip" href="../_sources/blogs/big_data.md" target="_blank" title="Download source file">
+<li><a class="btn btn-sm btn-download-source-button dropdown-item" data-bs-placement="left" data-bs-toggle="tooltip" href="../_sources/blogs/azure_synapse_bq.ipynb" target="_blank" title="Download source file">
 <span class="btn__icon-container">
 <i class="fas fa-file"></i>
 </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
 <li>
@@ -225,38 +239,62 @@ document.write(`
   </button>
 `);
 </script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" data-bs-placement="bottom" data-bs-toggle="tooltip" for="__secondary" title="Toggle secondary sidebar">
+<span class="fa-solid fa-list"></span>
+</label>
 </div></div>
 </div>
 </div>
 </div>
 <div class="onlyprint" id="jb-print-docs-body">
-<h1>Harnessing the Power of Big Data: A Modern Marvel</h1>
+<h1>Azure Synapse vs Google Big Query</h1>
 <!-- Table of contents -->
 <div id="print-main-content">
 <div id="jb-print-toc">
+<div>
+<h2> Contents </h2>
+</div>
+<nav aria-label="Page">
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#similarities">Similarities:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ecosystem">Ecosystem:</a></li>
+</ul>
+</nav>
 </div>
 </div>
 </div>
 <div id="searchbox"></div>
 <article class="bd-article" role="main">
-<section class="tex2jax_ignore mathjax_ignore" id="harnessing-the-power-of-big-data-a-modern-marvel">
-<h1>Harnessing the Power of Big Data: A Modern Marvel<a class="headerlink" href="#harnessing-the-power-of-big-data-a-modern-marvel" title="Permalink to this heading">#</a></h1>
-<p>Have you ever wondered, “What is big data?” Let’s dive into a real-world example that vividly paints the picture of this phenomenon. Target, one of the largest retail networks in America, has had an intriguing experience demonstrating the power of big data.</p>
-<p>A confused father walked into one of their stores, frustrated and baffled. His complaint? His 15-year-old daughter had been receiving mail advertising baby products. Upon hearing this, the manager assured the man that it was likely a system error and promised to look into the matter.</p>
-<p>However, to everyone’s surprise, the same man returned a few days later, now visibly embarrassed. He confessed that he was unaware of his daughter’s pregnancy, raising an astounding question: “How did Target know?”</p>
-<p>The response to this question reveals the power and precision of data science. Target’s data scientists explained that their system detected a change in the young woman’s buying patterns. Seven months ago, she purchased a pregnancy test from Target, but since then, she hadn’t bought any sanitary products. These patterns alerted the system, increasing the likelihood of her being pregnant.</p>
-<p>Target’s ability to predict customer needs and preferences is awe-inspiring. If you’ve been a regular customer for years, Target can predict major life events, such as pregnancy, and cater its marketing and product suggestions accordingly. The system will send super discount coupons for new clothes just when you’re beginning to realize you might need them.</p>
-<p>Target’s ability extends beyond anticipating customer needs. It can also infer personal circumstances. For instance, suppose you’re a long-time customer who’s been purchasing baby breakfast items. If you suddenly start buying beer, Target’s system would infer a potential shift in your life situation, perhaps a separation, and adjust its product suggestions accordingly.</p>
-<p>This uncanny predictive power isn’t magic; it’s the power of data.</p>
-<p>In just a few years, the companies that can effectively harness the power of the data they collect can overtake their market rivals. Indeed, the game has shifted. It’s no longer just about oil, it’s about data.</p>
-<p>Every company, irrespective of size, needs to equip itself with data engineers and invest in affordable cloud platforms. Small businesses, too, must recognize this reality. If they underestimate the power of data, they could potentially lag.</p>
-<p>Take, for instance, the recent Data+AI Summit held in San Francisco. With around 70,000 data professionals attending both online and offline, the event underscored the industry’s emphasis on data science. Major companies, including Amazon, Microsoft, and JP Morgan, demonstrated their high-value approach towards data science, indicating the exponential growth in the field.</p>
-<p>Technological developments are happening at a breakneck pace. Not long ago, data lakes and data warehouses were the latest breakthroughs. Today, these technologies are already making way for lakehouses, demonstrating the relentless evolution in the field. Scripts are now being written in Python and SQL, turning raw data into engaging visualizations and useful insights.</p>
-<p>Just to emphasize the vastness of data we’re discussing here - JP Morgan processes 500 PB of data per day. The magnitude is such that if you tried to copy this data onto CDs, the stack would tower to a height 100 times that of Mount Everest!</p>
-<p>Without the assistance of cloud technology like Databricks, managing such vast volumes of data would be unfeasible. This underscores the reality we are living in - the era of big data.</p>
-<p>In conclusion, we’re not merely living in the information age. We’re living in the age of data-driven insights and predictions. Welcome to the century of dataizm!</p>
-<p><img alt="summit" src="../_images/summit_1.JPEG"/></p>
-<p><img alt="summit" src="../_images/summit_crowds.JPEG"/></p>
+<section class="tex2jax_ignore mathjax_ignore" id="azure-synapse-vs-google-big-query">
+<h1>Azure Synapse vs Google Big Query<a class="headerlink" href="#azure-synapse-vs-google-big-query" title="Permalink to this heading">#</a></h1>
+<p>Azure Synapse Analytics and Google BigQuery are both cloud-based big data analytics services provided by Microsoft and Google, respectively. They share a common purpose in offering data warehouse solutions that are scalable, serverless, and capable of handling large datasets for analytics and business intelligence. However, they are different in terms of the technology they use, their features, and their integration with other cloud services within their respective ecosystems. Here are some of the differences and similarities:</p>
+<p align="center">
+<img src="../images/synapse_vs_bq.png"/>
+</p>
+<section id="similarities">
+<h2>Similarities:<a class="headerlink" href="#similarities" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Serverless Options: Both provide options for serverless data warehousing, which means that users don’t have to manage the underlying infrastructure.</p></li>
+<li><p>Scalability: They can both automatically scale resources to meet query performance demands without the need for manual intervention.</p></li>
+<li><p>SQL Interface: Both services allow users to query data using SQL, making it accessible to users familiar with traditional relational database systems.</p></li>
+<li><p>Data Analysis and BI Integration: They both integrate with various business intelligence tools and support data analysis tasks.
+Support for Structured and Semi-Structured Data: Both platforms handle structured data (like SQL tables) and semi-structured data (like JSON).</p></li>
+<li><p>Machine Learning Capabilities: Both services offer machine learning and AI capabilities to some extent, allowing advanced analytics on the stored data.
+Differences:</p></li>
+</ul>
+</section>
+<section id="ecosystem">
+<h2>Ecosystem:<a class="headerlink" href="#ecosystem" title="Permalink to this heading">#</a></h2>
+<p>Azure Synapse Analytics is deeply integrated with other Azure services like Azure Machine Learning, Azure Data Lake Storage, and Power BI. In contrast, Google BigQuery integrates seamlessly with Google Cloud’s AI and machine learning services, as well as with Google’s data storage and data transfer services.</p>
+<ul class="simple">
+<li><p>Technology Stack: Synapse Analytics brings together big data and data warehousing, which can handle both analytics workloads (formerly SQL Data Warehouse) and big data workloads (via Synapse Spark). BigQuery is primarily a columnar database service, and its big data processing capabilities are a core part of the service.</p></li>
+<li><p>Development Environment: Synapse provides an integrated development environment with Synapse Studio, which supports code development, data exploration, pipeline creation, and data management all in one place. BigQuery does not have a native integrated development environment of this scope, although it does provide a web UI for queries and Google Cloud Console for management.</p></li>
+<li><p>Additional Tools: Synapse Analytics offers additional tools like Synapse Pipelines (formerly Azure Data Factory) for data integration and ETL processes. Google Cloud offers these capabilities through separate services like Cloud Dataflow and Cloud Dataprep.</p></li>
+<li><p>Pricing Models: Their pricing models differ. Azure Synapse Analytics charges for query processing and data storage, with the option for on-demand or provisioned resources. BigQuery’s pricing is mainly based on the amount of data scanned by queries and the amount of data stored.</p></li>
+<li><p>Language Support: BigQuery uniquely supports queries in standard SQL with some extensions for Google’s flavor of SQL, while Azure Synapse Analytics supports T-SQL, which is the SQL Server flavor of SQL, and also integrates with Spark for big data processing, which means it can support languages like Python, Scala, and Spark SQL.</p></li>
+</ul>
+<p>In summary, while they both target the same problem space—big data analytics in the cloud—they do so with different approaches and integrations. Users typically choose one over the other based on the specifics of their use case, their existing technology stack, and their familiarity with the respective cloud providers’ ecosystems.</p>
+</section>
 </section>
 <script type="text/x-thebe-config">
     {
@@ -282,17 +320,17 @@ document.write(`
 <div class="footer-article-items footer-article__inner">
 <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
-<a class="left-prev" href="delta_table.html" title="previous page">
+<a class="left-prev" href="blogs.html" title="previous page">
 <i class="fa-solid fa-angle-left"></i>
 <div class="prev-next-info">
 <p class="prev-next-subtitle">previous</p>
-<p class="prev-next-title">Exploring Delta Lake’s Powerful Features</p>
+<p class="prev-next-title">Blogs</p>
 </div>
 </a>
-<a class="right-next" href="cloud_services.html" title="next page">
+<a class="right-next" href="file_and_dir_path.html" title="next page">
 <div class="prev-next-info">
 <p class="prev-next-subtitle">next</p>
-<p class="prev-next-title">A Overview of Azure, Google Cloud, and AWS</p>
+<p class="prev-next-title">Understanding File and Directory Paths in Python</p>
 </div>
 <i class="fa-solid fa-angle-right"></i>
 </a>
@@ -300,6 +338,18 @@ document.write(`
 </div>
 </footer>
 </div>
+<div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+<div class="sidebar-secondary-item">
+<div class="page-toc tocsection onthispage">
+<i class="fa-solid fa-list"></i> Contents
+  </div>
+<nav class="bd-toc-nav page-toc">
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#similarities">Similarities:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ecosystem">Ecosystem:</a></li>
+</ul>
+</nav></div>
+</div></div>
 </div>
 <footer class="bd-footer-content">
 <div class="bd-footer-content__inner container">
