@@ -29,6 +29,7 @@ chapters:
   - file: blogs/managed_unmanaged
 - file: ebook/tests
   sections:
+  - file: ebook/test_3.md
   - file: ebook/test_1
   - file: ebook/answers_1
   - file: ebook/explaination_1

@@ -11,24 +11,6 @@
   gtag('config', 'G-6R7KD1FNMR');
 </script>
 
-<!-- Google tag (gtag.js) -->
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-6R7KD1FNMR"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-6R7KD1FNMR');
-</script>
-<!-- Google tag (gtag.js) -->
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-6R7KD1FNMR"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-6R7KD1FNMR');
-</script>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="Docutils 0.18.1: http://docutils.sourceforge.net/" name="generator"/>
 <title>Mastering Data Flow: Google Sheets to SQLite via Python — Byambalogy</title>
@@ -78,7 +60,7 @@ const thebe_selector_output = ".output, .cell_output"
 <link href="../genindex.html" rel="index" title="Index"/>
 <link href="../search.html" rel="search" title="Search"/>
 <link href="wealth.html" rel="next" title="The Art of Leveraging Specific Knowledge"/>
-<link href="blogs.html" rel="prev" title="Blogs"/>
+<link href="Chart.html" rel="prev" title="Creating Dynamic Bar Charts with Python’s Matplotlib"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="en" name="docsearch:language"/>
 </head>
@@ -133,6 +115,9 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="blogs.html">Blogs</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="azure_synapse_bq.html">Azure Synapse vs Google Big Query</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_and_dir_path.html">Understanding File and Directory Paths in Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Chart.html">Creating Dynamic Bar Charts with Python’s Matplotlib</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Mastering Data Flow: Google Sheets to SQLite via Python</a></li>
 <li class="toctree-l2"><a class="reference internal" href="wealth.html">The Art of Leveraging Specific Knowledge</a></li>
 <li class="toctree-l2"><a class="reference internal" href="delta_table.html">Exploring Delta Lake’s Powerful Features</a></li>
@@ -143,6 +128,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../ebook/tests.html">Databricks</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ebook/test_3.html">Questions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ebook/test_1.html">Questions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ebook/answers_1.html">Correct Answers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ebook/explaination_1.html">Explanations</a></li>
@@ -361,6 +347,41 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">questions</span> <span class="o">=</span> <span class="n">get_user_information</span><span class="p">(</span><span class="s2">"questions"</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">questions</span> <span class="o">=</span> <span class="n">questions</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="n">questions</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">questions</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">questions</span><span class="p">[</span><span class="s1">'question_created'</span><span class="p">]</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+
+<span class="nn">Cell In[2], line 4,</span> in <span class="ni">get_user_information</span><span class="nt">(sheet_name)</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="k">def</span> <span class="nf">get_user_information</span><span class="p">(</span><span class="n">sheet_name</span><span class="p">):</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span>   <span class="n">scope</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'https://spreadsheets.google.com/feeds'</span><span class="p">,</span><span class="s1">'https://www.googleapis.com/auth/drive'</span><span class="p">]</span>
+<span class="ne">----&gt; </span><span class="mi">4</span>   <span class="n">creds</span> <span class="o">=</span> <span class="n">ServiceAccountCredentials</span><span class="o">.</span><span class="n">from_json_keyfile_name</span><span class="p">(</span><span class="s1">'creds.json'</span><span class="p">,</span><span class="n">scope</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span>   <span class="n">client</span> <span class="o">=</span> <span class="n">gspread</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="n">creds</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span>   <span class="n">industries</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">"quizs"</span><span class="p">)</span><span class="o">.</span><span class="n">worksheet</span><span class="p">(</span><span class="n">sheet_name</span><span class="p">)</span>
+
+<span class="nn">File C:\Python311\Lib\site-packages\oauth2client\service_account.py:219,</span> in <span class="ni">ServiceAccountCredentials.from_json_keyfile_name</span><span class="nt">(cls, filename, scopes, token_uri, revoke_uri)</span>
+<span class="g g-Whitespace">    </span><span class="mi">193</span> <span class="nd">@classmethod</span>
+<span class="g g-Whitespace">    </span><span class="mi">194</span> <span class="k">def</span> <span class="nf">from_json_keyfile_name</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">scopes</span><span class="o">=</span><span class="s1">''</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">195</span>                            <span class="n">token_uri</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">revoke_uri</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">197</span><span class="w">     </span><span class="sd">"""Factory constructor from JSON keyfile by name.</span>
+<span class="g g-Whitespace">    </span><span class="mi">198</span><span class="sd"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">199</span><span class="sd">     Args:</span>
+<span class="sd">   (...)</span>
+<span class="g g-Whitespace">    </span><span class="mi">217</span><span class="sd">             the keyfile.</span>
+<span class="g g-Whitespace">    </span><span class="mi">218</span><span class="sd">     """</span>
+<span class="ne">--&gt; </span><span class="mi">219</span>     <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">'r'</span><span class="p">)</span> <span class="k">as</span> <span class="n">file_obj</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">220</span>         <span class="n">client_credentials</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">file_obj</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">221</span>     <span class="k">return</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_from_parsed_json_keyfile</span><span class="p">(</span><span class="n">client_credentials</span><span class="p">,</span> <span class="n">scopes</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">222</span>                                          <span class="n">token_uri</span><span class="o">=</span><span class="n">token_uri</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">223</span>                                          <span class="n">revoke_uri</span><span class="o">=</span><span class="n">revoke_uri</span><span class="p">)</span>
+
+<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: 'creds.json'
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -399,42 +420,42 @@ document.write(`
 <td>1</td>
 <td>Which of the following features distinguishes ...</td>
 <td>lakehouse</td>
-<td>2023-08-27 10:45:59.200958</td>
+<td>2023-08-26 09:32:30.461600</td>
 </tr>
 <tr>
 <th>2</th>
 <td>2</td>
 <td>Which of the following locations hosts the dri...</td>
 <td>lakehouse</td>
-<td>2023-08-27 10:45:59.200958</td>
+<td>2023-08-26 09:32:30.461600</td>
 </tr>
 <tr>
 <th>3</th>
 <td>3</td>
 <td>A data architect is designing a data model tha...</td>
 <td>lakehouse</td>
-<td>2023-08-27 10:45:59.200958</td>
+<td>2023-08-26 09:32:30.461600</td>
 </tr>
 <tr>
 <th>4</th>
 <td>4</td>
 <td>Which of the following describes a scenario in...</td>
 <td>lakehouse</td>
-<td>2023-08-27 10:45:59.200958</td>
+<td>2023-08-26 09:32:30.461600</td>
 </tr>
 <tr>
 <th>5</th>
 <td>5</td>
 <td>A data engineer has created a Delta table as p...</td>
 <td>lakehouse</td>
-<td>2023-08-27 10:45:59.200958</td>
+<td>2023-08-26 09:32:30.461600</td>
 </tr>
 <tr>
 <th>6</th>
 <td>6</td>
 <td>Two junior data engineers are authoring separa...</td>
 <td>lakehouse</td>
-<td>2023-08-27 10:45:59.200958</td>
+<td>2023-08-26 09:32:30.461600</td>
 </tr>
 </tbody>
 </table>
@@ -480,11 +501,11 @@ conn = sqlite3.connect(db_path)</p>
 <div class="footer-article-items footer-article__inner">
 <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
-<a class="left-prev" href="blogs.html" title="previous page">
+<a class="left-prev" href="Chart.html" title="previous page">
 <i class="fa-solid fa-angle-left"></i>
 <div class="prev-next-info">
 <p class="prev-next-subtitle">previous</p>
-<p class="prev-next-title">Blogs</p>
+<p class="prev-next-title">Creating Dynamic Bar Charts with Python’s Matplotlib</p>
 </div>
 </a>
 <a class="right-next" href="wealth.html" title="next page">
