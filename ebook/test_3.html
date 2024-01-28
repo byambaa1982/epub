@@ -13,7 +13,7 @@
 
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="Docutils 0.18.1: http://docutils.sourceforge.net/" name="generator"/>
-<title>Questions — Byambalogy</title>
+<title>Test 1 — Byambalogy</title>
 <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
@@ -59,7 +59,7 @@ const thebe_selector_output = ".output, .cell_output"
 <script>DOCUMENTATION_OPTIONS.pagename = 'ebook/test_3';</script>
 <link href="../genindex.html" rel="index" title="Index"/>
 <link href="../search.html" rel="search" title="Search"/>
-<link href="test_1.html" rel="next" title="Questions"/>
+<link href="test_1.html" rel="next" title="Test 2"/>
 <link href="tests.html" rel="prev" title="Databricks"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="en" name="docsearch:language"/>
@@ -121,15 +121,15 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../blogs/turn_sheets_to_db.html">Mastering Data Flow: Google Sheets to SQLite via Python</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../blogs/wealth.html">The Art of Leveraging Specific Knowledge</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../blogs/delta_table.html">Exploring Delta Lake’s Powerful Features</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../blogs/big_data.html">Harnessing the Power of Big Data: A Modern Marvel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blogs/big_data.html">Big Data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../blogs/cloud_services.html">A Overview of Azure, Google Cloud, and AWS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../blogs/memory_trick.html">Artful Memory Hacks</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../blogs/managed_unmanaged.html">Memorizing Complex Documentation: A Tale of Databricks Tables and Storytelling</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="tests.html">Databricks</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Questions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="test_1.html">Questions</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Test 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="test_1.html">Test 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="answers_1.html">Correct Answers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="explaination_1.html">Explanations</a></li>
 </ul>
@@ -137,6 +137,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 has-children"><a class="reference internal" href="../mongol/main.html">Монгол</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../mongol/blog_1.html">Databricks гэж юу?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../mongol/blog_2.html">Дата дата л гэнэ яг юу юм бэ?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mongol/sentiment.html">ChatGPT API ашиглан жиргээнд хэрхэн sentiment анализ хийх вэ?</a></li>
 </ul>
 </li>
 </ul>
@@ -233,7 +234,7 @@ document.write(`
 </div>
 </div>
 <div class="onlyprint" id="jb-print-docs-body">
-<h1>Questions</h1>
+<h1>Test 1</h1>
 <!-- Table of contents -->
 <div id="print-main-content">
 <div id="jb-print-toc">
@@ -294,8 +295,8 @@ document.write(`
 </div>
 <div id="searchbox"></div>
 <article class="bd-article" role="main">
-<section class="tex2jax_ignore mathjax_ignore" id="questions">
-<h1>Questions<a class="headerlink" href="#questions" title="Permalink to this heading">#</a></h1>
+<section class="tex2jax_ignore mathjax_ignore" id="test-1">
+<h1>Test 1<a class="headerlink" href="#test-1" title="Permalink to this heading">#</a></h1>
 <section id="question-1">
 <h2>Question 1<a class="headerlink" href="#question-1" title="Permalink to this heading">#</a></h2>
 <p>Which of the following is a key feature of a data lakehouse that distinguishes it from traditional data warehouses?</p>
@@ -680,9 +681,9 @@ Explanation: The <code class="docutils literal notranslate"><span class="pre">IN
 <li><p>E. SELECT cart_id, inline(items) AS (item_id, quantity) FROM shopping_carts;</p></li>
 </ul>
 <div class="toggle docutils container">
-<p>Correct Answer: E. SELECT cart_id, inline(items) AS (item_id, quantity) FROM shopping_carts;</p>
+<p>Correct Answer: B. SELECT cart_id, explode(items) AS (item_id, quantity) FROM shopping_carts;</p>
 <p>Exam Topic: ELT with Spark SQL and Python</p>
-<p>Explanation: The <code class="docutils literal notranslate"><span class="pre">inline</span></code> function is used to explode an array of structs into a table with multiple rows, with each field of the struct becoming a separate column in the output.</p>
+<p>Explanation: The <code class="docutils literal notranslate"><span class="pre">explode</span></code> function is used to explode an array of structs into a table with multiple rows, with each field of the struct becoming a separate column in the output.</p>
 </div>
 </section>
 <section id="question-21">
@@ -1226,7 +1227,7 @@ The correct SQL command to grant a user full permissions on a table is <code cla
 <a class="right-next" href="test_1.html" title="next page">
 <div class="prev-next-info">
 <p class="prev-next-subtitle">next</p>
-<p class="prev-next-title">Questions</p>
+<p class="prev-next-title">Test 2</p>
 </div>
 <i class="fa-solid fa-angle-right"></i>
 </a>

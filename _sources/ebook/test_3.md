@@ -1,5 +1,5 @@
 
-# Questions 
+# Test 1
 
 ## Question 1
 
@@ -438,11 +438,11 @@ Which command should they use to achieve this?
 - E. SELECT cart_id, inline(items) AS (item_id, quantity) FROM shopping_carts;
 
 ```{toggle}
-Correct Answer: E. SELECT cart_id, inline(items) AS (item_id, quantity) FROM shopping_carts;
+Correct Answer: B. SELECT cart_id, explode(items) AS (item_id, quantity) FROM shopping_carts;
 
 Exam Topic: ELT with Spark SQL and Python
 
-Explanation: The `inline` function is used to explode an array of structs into a table with multiple rows, with each field of the struct becoming a separate column in the output.
+Explanation: The `explode` function is used to explode an array of structs into a table with multiple rows, with each field of the struct becoming a separate column in the output.
 
 ```
 
