@@ -18,14 +18,38 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
+import pandas as pd
+import matplotlib.pyplot as plt
+
+def plot_sentiment_bar_chart(df, sentiment_column):
+    """
+    Plots a bar chart of sentiment distribution.
+
+    Parameters:
+    df (pandas.DataFrame): DataFrame containing the sentiment data.
+    sentiment_column (str): The name of the column in df that contains sentiment values.
+    """
+    # Count the occurrences of each sentiment
+    sentiment_counts = df[sentiment_column].value_counts()
+
+    # Plotting
+    sentiment_counts.plot(kind='bar', color=['red', 'green', 'blue'])
+    plt.title(f'Sentiment Distribution for Keyword: {keyword}')
+    plt.xlabel('Sentiment')
+    plt.ylabel('Counts')
+    plt.xticks(rotation=0)  # Rotate x-labels for better readability
+    plt.show()
+keyword = 'Нямбаатар'
 plot_sentiment_bar_chart(df, 'sentiment')
 ------------------
 
 [1;31m---------------------------------------------------------------------------[0m
 [1;31mNameError[0m                                 Traceback (most recent call last)
-Cell [1;32mIn[1], line 1[0m
-[1;32m----> 1[0m [43mplot_sentiment_bar_chart[49m(df, [38;5;124m'[39m[38;5;124msentiment[39m[38;5;124m'[39m)
+Cell [1;32mIn[1], line 23[0m
+[0;32m     21[0m     plt[38;5;241m.[39mshow()
+[0;32m     22[0m keyword [38;5;241m=[39m [38;5;124m'[39m[38;5;124mНямбаатар[39m[38;5;124m'[39m
+[1;32m---> 23[0m plot_sentiment_bar_chart([43mdf[49m, [38;5;124m'[39m[38;5;124msentiment[39m[38;5;124m'[39m)
 
-[1;31mNameError[0m: name 'plot_sentiment_bar_chart' is not defined
-NameError: name 'plot_sentiment_bar_chart' is not defined
+[1;31mNameError[0m: name 'df' is not defined
+NameError: name 'df' is not defined
 

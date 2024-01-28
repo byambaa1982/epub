@@ -284,17 +284,41 @@ Twitter API нь үнэгүй байсан бол одоо үнэгүй хэрэ
 <p>Графикийн доор ашигласан пайтон кодыг хавсаргав.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plot_sentiment_bar_chart</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="s1">'sentiment'</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="k">def</span> <span class="nf">plot_sentiment_bar_chart</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">sentiment_column</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""</span>
+<span class="sd">    Plots a bar chart of sentiment distribution.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    df (pandas.DataFrame): DataFrame containing the sentiment data.</span>
+<span class="sd">    sentiment_column (str): The name of the column in df that contains sentiment values.</span>
+<span class="sd">    """</span>
+    <span class="c1"># Count the occurrences of each sentiment</span>
+    <span class="n">sentiment_counts</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">sentiment_column</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+
+    <span class="c1"># Plotting</span>
+    <span class="n">sentiment_counts</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">'bar'</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="p">[</span><span class="s1">'red'</span><span class="p">,</span> <span class="s1">'green'</span><span class="p">,</span> <span class="s1">'blue'</span><span class="p">])</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Sentiment Distribution for Keyword: </span><span class="si">{</span><span class="n">keyword</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">'Sentiment'</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">'Counts'</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>  <span class="c1"># Rotate x-labels for better readability</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="n">keyword</span> <span class="o">=</span> <span class="s1">'Нямбаатар'</span>
+<span class="n">plot_sentiment_bar_chart</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="s1">'sentiment'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">plot_sentiment_bar_chart</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="s1">'sentiment'</span><span class="p">)</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">23</span>
+<span class="g g-Whitespace">     </span><span class="mi">21</span>     <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">22</span> <span class="n">keyword</span> <span class="o">=</span> <span class="s1">'Нямбаатар'</span>
+<span class="ne">---&gt; </span><span class="mi">23</span> <span class="n">plot_sentiment_bar_chart</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="s1">'sentiment'</span><span class="p">)</span>
 
-<span class="ne">NameError</span>: name 'plot_sentiment_bar_chart' is not defined
+<span class="ne">NameError</span>: name 'df' is not defined
 </pre></div>
 </div>
 </div>
