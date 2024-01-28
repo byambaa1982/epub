@@ -282,49 +282,10 @@ Twitter API нь үнэгүй байсан бол одоо үнэгүй хэрэ
 <li><p>Sentiment: positive</p></li>
 </ul>
 <p>Графикийн доор ашигласан пайтон кодыг хавсаргав.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-
-<span class="k">def</span> <span class="nf">plot_sentiment_bar_chart</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">sentiment_column</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">"""</span>
-<span class="sd">    Plots a bar chart of sentiment distribution.</span>
-
-<span class="sd">    Parameters:</span>
-<span class="sd">    df (pandas.DataFrame): DataFrame containing the sentiment data.</span>
-<span class="sd">    sentiment_column (str): The name of the column in df that contains sentiment values.</span>
-<span class="sd">    """</span>
-    <span class="c1"># Count the occurrences of each sentiment</span>
-    <span class="n">sentiment_counts</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">sentiment_column</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
-
-    <span class="c1"># Plotting</span>
-    <span class="n">sentiment_counts</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">'bar'</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="p">[</span><span class="s1">'red'</span><span class="p">,</span> <span class="s1">'green'</span><span class="p">,</span> <span class="s1">'blue'</span><span class="p">])</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Sentiment Distribution for Keyword: </span><span class="si">{</span><span class="n">keyword</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">'Sentiment'</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">'Counts'</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>  <span class="c1"># Rotate x-labels for better readability</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-<span class="n">keyword</span> <span class="o">=</span> <span class="s1">'Нямбаатар'</span>
-<span class="n">plot_sentiment_bar_chart</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="s1">'sentiment'</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">23</span>
-<span class="g g-Whitespace">     </span><span class="mi">21</span>     <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-<span class="g g-Whitespace">     </span><span class="mi">22</span> <span class="n">keyword</span> <span class="o">=</span> <span class="s1">'Нямбаатар'</span>
-<span class="ne">---&gt; </span><span class="mi">23</span> <span class="n">plot_sentiment_bar_chart</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="s1">'sentiment'</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name 'df' is not defined
-</pre></div>
-</div>
-</div>
-</div>
 <section id="id1">
 <h2>Код болон жиргээ тус бүр дээр хэрхан таамаг хийснийг харна уу?<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
+<hr class="docutils"/>
+<p><img alt="lakehouse" src="../_images/sentiment.png"/></p>
 <ul class="simple">
 <li><p>Author: sh_buya</p></li>
 <li><p>Tweet: Сүүлийн 34 жил Төр засгийн томчуудаас авхуулаад орон нутгийн дарганцаруудын ганц хийдэг ажил нь “гадны туршлага судлах” нэрийн дор ард түмний татварын мөнгөөр гадаадад зугаалах.
@@ -907,6 +868,425 @@ Twitter API нь үнэгүй байсан бол одоо үнэгүй хэрэ
 <li><p>Sentiment: neutral</p></li>
 </ul>
 <hr class="docutils"/>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">requests_oauthlib</span> <span class="kn">import</span> <span class="n">OAuth1Session</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">datetime</span>
+<span class="kn">import</span> <span class="nn">sqlite3</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="kn">import</span> <span class="n">create_engine</span>
+<span class="kn">import</span> <span class="nn">openai</span>
+<span class="kn">import</span> <span class="nn">os</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">current_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>
+<span class="n">chatgpt_cred</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">current_dir</span><span class="p">,</span> <span class="s2">"config.json"</span><span class="p">)</span>
+<span class="n">log_file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">current_dir</span><span class="p">,</span> <span class="s2">"script_log.txt"</span><span class="p">)</span>
+<span class="n">cred_file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">current_dir</span><span class="p">,</span> <span class="s2">"twitter_credentials.json"</span><span class="p">)</span>
+<span class="n">db_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">current_dir</span><span class="p">,</span> <span class="s2">"tweets.sqlite"</span><span class="p">)</span>
+<span class="n">output_file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">current_dir</span><span class="p">,</span> <span class="s2">"new.csv"</span><span class="p">)</span>
+<span class="n">daily</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">current_dir</span><span class="p">,</span> <span class="s2">"daily_tweets_from_ai.csv"</span><span class="p">)</span>
+<span class="n">image_input_file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">current_dir</span><span class="p">,</span> <span class="s2">"canva.png"</span><span class="p">)</span>
+<span class="n">image_output_file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">current_dir</span><span class="p">,</span> <span class="s2">"post.jpg"</span><span class="p">)</span>
+
+
+<span class="n">engine</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="sa">f</span><span class="s1">'sqlite:///</span><span class="si">{</span><span class="n">db_path</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
+<span class="n">now</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+<span class="n">now</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">'%Y-%m-</span><span class="si">%d</span><span class="s1">-%H-%M'</span><span class="p">)</span>
+
+
+<span class="c1"># Load the API key from a JSON file</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">chatgpt_cred</span> <span class="p">,</span> <span class="s1">'r'</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+    <span class="n">config</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+    <span class="n">api_key</span> <span class="o">=</span> <span class="n">config</span><span class="p">[</span><span class="s1">'openai_api_key'</span><span class="p">]</span>
+
+<span class="n">openai</span><span class="o">.</span><span class="n">api_key</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">api_key</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="functions">
+<h1>Functions<a class="headerlink" href="#functions" title="Permalink to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">search_tweets_to_csv_with_media</span><span class="p">(</span><span class="n">key_word</span><span class="p">,</span> <span class="n">output_file</span><span class="o">=</span><span class="n">output_file</span><span class="p">):</span>
+    <span class="c1"># Load credentials</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">cred_file</span><span class="p">,</span> <span class="s1">'r'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">creds</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+
+    <span class="n">consumer_key</span> <span class="o">=</span> <span class="n">creds</span><span class="p">[</span><span class="s1">'consumer_key'</span><span class="p">]</span>
+    <span class="n">consumer_secret</span> <span class="o">=</span> <span class="n">creds</span><span class="p">[</span><span class="s1">'consumer_secret'</span><span class="p">]</span>
+    <span class="n">access_token</span> <span class="o">=</span> <span class="n">creds</span><span class="p">[</span><span class="s1">'access_token'</span><span class="p">]</span>
+    <span class="n">access_token_secret</span> <span class="o">=</span> <span class="n">creds</span><span class="p">[</span><span class="s1">'access_token_secret'</span><span class="p">]</span>
+
+    <span class="c1"># Create an OAuth1Session instance with your credentials</span>
+    <span class="n">oauth</span> <span class="o">=</span> <span class="n">OAuth1Session</span><span class="p">(</span>
+        <span class="n">consumer_key</span><span class="p">,</span>
+        <span class="n">client_secret</span><span class="o">=</span><span class="n">consumer_secret</span><span class="p">,</span>
+        <span class="n">resource_owner_key</span><span class="o">=</span><span class="n">access_token</span><span class="p">,</span>
+        <span class="n">resource_owner_secret</span><span class="o">=</span><span class="n">access_token_secret</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="c1"># The endpoint for searching tweets</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="s2">"https://api.twitter.com/2/tweets/search/recent"</span>
+    
+    <span class="c1"># Parameters for the request</span>
+    <span class="n">params</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">"query"</span><span class="p">:</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">key_word</span><span class="si">}</span><span class="s2"> -is:retweet"</span><span class="p">,</span>
+        <span class="s2">"tweet.fields"</span><span class="p">:</span> <span class="s2">"attachments,created_at"</span><span class="p">,</span>
+        <span class="s2">"expansions"</span><span class="p">:</span> <span class="s2">"attachments.media_keys,author_id"</span><span class="p">,</span>
+        <span class="s2">"user.fields"</span><span class="p">:</span> <span class="s2">"username"</span><span class="p">,</span>  <span class="c1"># Add this line</span>
+        <span class="s2">"media.fields"</span><span class="p">:</span> <span class="s2">"url"</span><span class="p">,</span>
+        <span class="s2">"max_results"</span><span class="p">:</span> <span class="mi">100</span>
+    <span class="p">}</span>
+
+    <span class="c1"># Making the request to search tweets</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">oauth</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">status_code</span><span class="p">)</span>
+    <span class="c1"># Check if the request was successful</span>
+    <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">!=</span> <span class="mi">200</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span>
+            <span class="s2">"Request returned an error: </span><span class="si">{}</span><span class="s2"> </span><span class="si">{}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">status_code</span><span class="p">,</span> <span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+        <span class="p">)</span>
+
+    <span class="c1"># Process the response</span>
+    <span class="n">json_response</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+    <span class="n">tweets</span> <span class="o">=</span> <span class="n">json_response</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'data'</span><span class="p">,</span> <span class="p">[])</span>
+    <span class="n">users</span> <span class="o">=</span> <span class="p">{</span><span class="n">u</span><span class="p">[</span><span class="s1">'id'</span><span class="p">]:</span> <span class="n">u</span> <span class="k">for</span> <span class="n">u</span> <span class="ow">in</span> <span class="n">json_response</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'includes'</span><span class="p">,</span> <span class="p">{})</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'users'</span><span class="p">,</span> <span class="p">[])}</span>
+    <span class="n">media</span> <span class="o">=</span> <span class="p">{</span><span class="n">m</span><span class="p">[</span><span class="s1">'media_key'</span><span class="p">]:</span> <span class="n">m</span> <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">json_response</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'includes'</span><span class="p">,</span> <span class="p">{})</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'media'</span><span class="p">,</span> <span class="p">[])}</span>
+
+    <span class="c1"># Enhance each tweet with user and media information</span>
+    <span class="n">enhanced_tweets</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">tweet</span> <span class="ow">in</span> <span class="n">tweets</span><span class="p">:</span>
+        <span class="c1"># Get user info for the tweet</span>
+        <span class="n">user_info</span> <span class="o">=</span> <span class="n">users</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">tweet</span><span class="p">[</span><span class="s1">'author_id'</span><span class="p">],</span> <span class="p">{})</span>
+        <span class="n">tweet</span><span class="p">[</span><span class="s1">'username'</span><span class="p">]</span> <span class="o">=</span> <span class="n">user_info</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'username'</span><span class="p">,</span> <span class="s1">''</span><span class="p">)</span>
+        <span class="n">tweet</span><span class="p">[</span><span class="s1">'sentiment'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">''</span>
+
+        <span class="c1"># Get media info if available</span>
+        <span class="k">if</span> <span class="s1">'attachments'</span> <span class="ow">in</span> <span class="n">tweet</span> <span class="ow">and</span> <span class="s1">'media_keys'</span> <span class="ow">in</span> <span class="n">tweet</span><span class="p">[</span><span class="s1">'attachments'</span><span class="p">]:</span>
+            <span class="n">media_keys</span> <span class="o">=</span> <span class="n">tweet</span><span class="p">[</span><span class="s1">'attachments'</span><span class="p">][</span><span class="s1">'media_keys'</span><span class="p">]</span>
+            <span class="n">tweet_media</span> <span class="o">=</span> <span class="p">[</span><span class="n">media</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">media_keys</span> <span class="k">if</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">media</span><span class="p">]</span>
+            <span class="n">tweet</span><span class="p">[</span><span class="s1">'media'</span><span class="p">]</span> <span class="o">=</span> <span class="n">tweet_media</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">tweet</span><span class="p">[</span><span class="s1">'media'</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="c1"># Append the enhanced tweet to the list</span>
+        <span class="n">enhanced_tweets</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">tweet</span><span class="p">)</span>
+    <span class="n">enhanced_tweets</span>
+    <span class="n">tweets_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">enhanced_tweets</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">tweets_df</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="sentiment-analysis">
+<h1>Sentiment Analysis<a class="headerlink" href="#sentiment-analysis" title="Permalink to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_completion</span><span class="p">(</span><span class="n">prompt</span><span class="p">,</span> <span class="n">model</span><span class="o">=</span><span class="s2">"gpt-4-1106-preview"</span><span class="p">):</span>
+    <span class="n">messages</span> <span class="o">=</span> <span class="p">[{</span><span class="s2">"role"</span><span class="p">:</span> <span class="s2">"user"</span><span class="p">,</span> <span class="s2">"content"</span><span class="p">:</span> <span class="n">prompt</span><span class="p">}]</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">openai</span><span class="o">.</span><span class="n">ChatCompletion</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+        <span class="n">model</span><span class="o">=</span><span class="n">model</span><span class="p">,</span>
+        <span class="n">messages</span><span class="o">=</span><span class="n">messages</span><span class="p">,</span>
+        <span class="n">temperature</span><span class="o">=</span><span class="mf">0.9</span><span class="p">,</span>
+        <span class="n">frequency_penalty</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span>
+        <span class="n">max_tokens</span> <span class="o">=</span> <span class="mi">200</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="n">choices</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">message</span><span class="p">[</span><span class="s2">"content"</span><span class="p">]</span>
+
+<span class="k">def</span> <span class="nf">get_sent_from_chatgpt</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="n">prompt</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">'''</span>
+<span class="s1">    read this mongolian tweet sentence and</span>
+<span class="s1">    Send me one word. If it is positive, then "positive".</span>
+<span class="s1">    If it is negative, then send me "negative"</span>
+<span class="s1">    if It is neutral, then send me "neutral".</span>
+<span class="s1">    Input tweet: </span><span class="si">{</span><span class="n">x</span><span class="si">}</span>
+<span class="s1">    output must be one word. nothing else.</span>
+<span class="s1">    '''</span>
+    <span class="n">completion</span> <span class="o">=</span> <span class="n">get_completion</span><span class="p">(</span><span class="n">prompt</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">completion</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">keyword</span> <span class="o">=</span> <span class="s2">"Нямбаатар"</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">search_tweets_to_csv_with_media</span><span class="p">(</span><span class="n">keyword</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">keyword</span> <span class="o">=</span> <span class="s2">"Нямбаатар"</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">df</span> <span class="o">=</span> <span class="n">search_tweets_to_csv_with_media</span><span class="p">(</span><span class="n">keyword</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+
+<span class="nn">Cell In[3], line 3,</span> in <span class="ni">search_tweets_to_csv_with_media</span><span class="nt">(key_word, output_file)</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="k">def</span> <span class="nf">search_tweets_to_csv_with_media</span><span class="p">(</span><span class="n">key_word</span><span class="p">,</span> <span class="n">output_file</span><span class="o">=</span><span class="n">output_file</span><span class="p">):</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span>     <span class="c1"># Load credentials</span>
+<span class="ne">----&gt; </span><span class="mi">3</span>     <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">cred_file</span><span class="p">,</span> <span class="s1">'r'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span>         <span class="n">creds</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span>     <span class="n">consumer_key</span> <span class="o">=</span> <span class="n">creds</span><span class="p">[</span><span class="s1">'consumer_key'</span><span class="p">]</span>
+
+<span class="nn">File C:\Python311\Lib\site-packages\IPython\core\interactiveshell.py:284,</span> in <span class="ni">_modified_open</span><span class="nt">(file, *args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">277</span> <span class="k">if</span> <span class="n">file</span> <span class="ow">in</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">}:</span>
+<span class="g g-Whitespace">    </span><span class="mi">278</span>     <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">279</span>         <span class="sa">f</span><span class="s2">"IPython won't let you open fd=</span><span class="si">{</span><span class="n">file</span><span class="si">}</span><span class="s2"> by default "</span>
+<span class="g g-Whitespace">    </span><span class="mi">280</span>         <span class="s2">"as it is likely to crash IPython. If you know what you are doing, "</span>
+<span class="g g-Whitespace">    </span><span class="mi">281</span>         <span class="s2">"you can use builtins' open."</span>
+<span class="g g-Whitespace">    </span><span class="mi">282</span>     <span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">284</span> <span class="k">return</span> <span class="n">io_open</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: 'C:\\Users\\byamb\\projects\\epub\\mongol\\twitter_credentials.json'
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">'sentiment'</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">get_sent_from_chatgpt</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s1">'author_id'</span><span class="p">,</span> <span class="s1">'id'</span><span class="p">,</span> <span class="s1">'created_at'</span><span class="p">,</span> <span class="s1">'text'</span><span class="p">,</span><span class="s1">'username'</span><span class="p">,</span> <span class="s1">'sentiment'</span><span class="p">]]</span>
+<span class="n">df</span><span class="o">.</span><span class="n">to_sql</span><span class="p">(</span><span class="s1">'mongol'</span><span class="p">,</span> <span class="n">con</span><span class="o">=</span><span class="n">engine</span><span class="p">,</span> <span class="n">if_exists</span><span class="o">=</span><span class="s1">'append'</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sql_query</span> <span class="o">=</span> <span class="s1">'''</span>
+<span class="s1">WITH RankedTweets AS (</span>
+<span class="s1">    SELECT</span>
+<span class="s1">        author_id,</span>
+<span class="s1">        id,</span>
+<span class="s1">        text,</span>
+<span class="s1">        created_at,</span>
+<span class="s1">        username,</span>
+<span class="s1">        sentiment,</span>
+<span class="s1">        ROW_NUMBER() OVER (PARTITION BY author_id ORDER BY created_at) as rank</span>
+<span class="s1">    FROM mongol</span>
+<span class="s1">)</span>
+<span class="s1">SELECT</span>
+<span class="s1">        author_id,</span>
+<span class="s1">        id,</span>
+<span class="s1">        text,</span>
+<span class="s1">        created_at,</span>
+<span class="s1">        username,</span>
+<span class="s1">        sentiment</span>
+<span class="s1">FROM RankedTweets</span>
+<span class="s1">WHERE rank = 1</span>
+<span class="s1">'''</span>
+
+<span class="n">df</span><span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span><span class="n">sql_query</span><span class="p">,</span> <span class="n">engine</span><span class="p">)</span>
+<span class="c1"># Assuming df is your DataFrame</span>
+<span class="n">end</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Total tweets: </span><span class="si">{</span><span class="n">end</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total tweets: 93
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>author_id</th>
+<th>id</th>
+<th>text</th>
+<th>created_at</th>
+<th>username</th>
+<th>sentiment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>1056867002</td>
+<td>1750466580629360841</td>
+<td>Сүүлийн 34 жил Төр засгийн томчуудаас авхуулаа...</td>
+<td>2024-01-25T10:32:09.000Z</td>
+<td>sh_buya</td>
+<td>negative</td>
+</tr>
+<tr>
+<th>1</th>
+<td>1080742505967017984</td>
+<td>1750784400240050527</td>
+<td>Газрын наймаа хэмээх том зөрчилтэй МУ-ын ЕС Л....</td>
+<td>2024-01-26T07:35:03.000Z</td>
+<td>Hgl8WE</td>
+<td>negative</td>
+</tr>
+<tr>
+<th>2</th>
+<td>1111224885110427648</td>
+<td>1750750297759318511</td>
+<td>Томчуудын автобусаа мэдэхгүй төөрөх ч дүүрч гэ...</td>
+<td>2024-01-26T05:19:33.000Z</td>
+<td>Gerlee_smile</td>
+<td>negative</td>
+</tr>
+<tr>
+<th>3</th>
+<td>1116204101098860544</td>
+<td>1750478590494539804</td>
+<td>Х.Нямбаатар Хотын дарга тэгсэн мөртлөө иргэдэд...</td>
+<td>2024-01-25T11:19:52.000Z</td>
+<td>ShinebayarTny</td>
+<td>negative</td>
+</tr>
+<tr>
+<th>4</th>
+<td>1151344579058130948</td>
+<td>1751635238202273911</td>
+<td>Циркийн барилгыг буулгахгүй ч хажууд нь сүр ба...</td>
+<td>2024-01-28T15:55:59.000Z</td>
+<td>ochbayarg</td>
+<td>negative</td>
+</tr>
+<tr>
+<th>...</th>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr>
+<th>88</th>
+<td>886918789811458050</td>
+<td>1750901616470090106</td>
+<td>@Chuluunbat201 Эрхэмлэж, хайрлаж, нандигнах мэ...</td>
+<td>2024-01-26T15:20:50.000Z</td>
+<td>ganganorov</td>
+<td>negative</td>
+</tr>
+<tr>
+<th>89</th>
+<td>90815409</td>
+<td>1750725531241431211</td>
+<td>@z_erdenesaikhan Оюун-Эрдэнэ, Нямбаатар, Амарс...</td>
+<td>2024-01-26T03:41:08.000Z</td>
+<td>iimgai</td>
+<td>neutral</td>
+</tr>
+<tr>
+<th>90</th>
+<td>91315901</td>
+<td>1750712201080352821</td>
+<td>@Undram Нямбаатар Оюулзгана</td>
+<td>2024-01-26T02:48:10.000Z</td>
+<td>Tsa_tsaa</td>
+<td>neutral</td>
+</tr>
+<tr>
+<th>91</th>
+<td>945945792</td>
+<td>1750485537612525802</td>
+<td>Оюун-Эрдэнэ, Нямбаатар нарыг одоо огцруулах гэ...</td>
+<td>2024-01-25T11:47:29.000Z</td>
+<td>tayar_bayar</td>
+<td>negative</td>
+</tr>
+<tr>
+<th>92</th>
+<td>97402990</td>
+<td>1751126397135749384</td>
+<td>Х.Нямбаатар зорьсон ажлаа дуусгаад Монголд ирн...</td>
+<td>2024-01-27T06:14:02.000Z</td>
+<td>sonin_mn</td>
+<td>neutral</td>
+</tr>
+</tbody>
+</table>
+<p>93 rows × 6 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="k">def</span> <span class="nf">plot_sentiment_bar_chart</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">sentiment_column</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""</span>
+<span class="sd">    Plots a bar chart of sentiment distribution.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    df (pandas.DataFrame): DataFrame containing the sentiment data.</span>
+<span class="sd">    sentiment_column (str): The name of the column in df that contains sentiment values.</span>
+<span class="sd">    """</span>
+    <span class="c1"># Count the occurrences of each sentiment</span>
+    <span class="n">sentiment_counts</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">sentiment_column</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+
+    <span class="c1"># Plotting</span>
+    <span class="n">sentiment_counts</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">'bar'</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="p">[</span><span class="s1">'red'</span><span class="p">,</span> <span class="s1">'green'</span><span class="p">,</span> <span class="s1">'blue'</span><span class="p">])</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Sentiment Distribution for Keyword: </span><span class="si">{</span><span class="n">keyword</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">'Sentiment'</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">'Counts'</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>  <span class="c1"># Rotate x-labels for better readability</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+    
+<span class="n">plot_sentiment_bar_chart</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="s1">'sentiment'</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/30ecff73244412531baaf383e3327726afbfb8f76ee327280dad713aed14236b.png" src="../_images/30ecff73244412531baaf383e3327726afbfb8f76ee327280dad713aed14236b.png"/>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">printInColor</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
+    <span class="c1"># ANSI escape codes for some colors</span>
+        <span class="n">RED</span> <span class="o">=</span> <span class="s1">'</span><span class="se">\033</span><span class="s1">[31m'</span>   <span class="c1"># Red Text</span>
+        <span class="n">GREEN</span> <span class="o">=</span> <span class="s1">'</span><span class="se">\033</span><span class="s1">[32m'</span> <span class="c1"># Green Text</span>
+        <span class="n">BLUE</span> <span class="o">=</span> <span class="s1">'</span><span class="se">\033</span><span class="s1">[34m'</span>  <span class="c1"># Blue Text</span>
+        <span class="n">RESET</span> <span class="o">=</span> <span class="s1">'</span><span class="se">\033</span><span class="s1">[0m'</span>  <span class="c1"># Reset to default color</span>
+
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'''</span>
+<span class="s1">            - </span><span class="si">{</span><span class="n">GREEN</span><span class="si">}</span><span class="s1">Author</span><span class="si">{</span><span class="n">RESET</span><span class="si">}</span><span class="s1">: </span><span class="si">{</span><span class="n">df</span><span class="o">.</span><span class="n">username</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">}</span><span class="s1"> </span>
+<span class="s1">            - </span><span class="si">{</span><span class="n">BLUE</span><span class="si">}</span><span class="s1">Tweet</span><span class="si">{</span><span class="n">RESET</span><span class="si">}</span><span class="s1">: </span><span class="si">{</span><span class="n">df</span><span class="o">.</span><span class="n">text</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">}</span><span class="s1">  </span>
+<span class="s1">            - </span><span class="si">{</span><span class="n">RED</span><span class="si">}</span><span class="s1">Sentiment</span><span class="si">{</span><span class="n">RESET</span><span class="si">}</span><span class="s1">: </span><span class="si">{</span><span class="n">df</span><span class="o">.</span><span class="n">sentiment</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">}</span>
+<span class="s1">            </span>
+<span class="s1">            ---</span>
+<span class="s1">            </span>
+<span class="s1">            '''</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">printInColor</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
@@ -1698,397 +2078,6 @@ https://t.co/RqzkXellTR
             ---
             
             
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">requests_oauthlib</span> <span class="kn">import</span> <span class="n">OAuth1Session</span>
-<span class="kn">import</span> <span class="nn">json</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">datetime</span>
-<span class="kn">import</span> <span class="nn">sqlite3</span>
-<span class="kn">import</span> <span class="nn">time</span>
-<span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="kn">import</span> <span class="n">create_engine</span>
-<span class="kn">import</span> <span class="nn">openai</span>
-<span class="kn">import</span> <span class="nn">os</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">current_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>
-<span class="n">chatgpt_cred</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">current_dir</span><span class="p">,</span> <span class="s2">"config.json"</span><span class="p">)</span>
-<span class="n">log_file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">current_dir</span><span class="p">,</span> <span class="s2">"script_log.txt"</span><span class="p">)</span>
-<span class="n">cred_file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">current_dir</span><span class="p">,</span> <span class="s2">"twitter_credentials.json"</span><span class="p">)</span>
-<span class="n">db_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">current_dir</span><span class="p">,</span> <span class="s2">"tweets.sqlite"</span><span class="p">)</span>
-<span class="n">output_file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">current_dir</span><span class="p">,</span> <span class="s2">"new.csv"</span><span class="p">)</span>
-<span class="n">daily</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">current_dir</span><span class="p">,</span> <span class="s2">"daily_tweets_from_ai.csv"</span><span class="p">)</span>
-<span class="n">image_input_file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">current_dir</span><span class="p">,</span> <span class="s2">"canva.png"</span><span class="p">)</span>
-<span class="n">image_output_file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">current_dir</span><span class="p">,</span> <span class="s2">"post.jpg"</span><span class="p">)</span>
-
-
-<span class="n">engine</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="sa">f</span><span class="s1">'sqlite:///</span><span class="si">{</span><span class="n">db_path</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
-<span class="n">now</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
-<span class="n">now</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">'%Y-%m-</span><span class="si">%d</span><span class="s1">-%H-%M'</span><span class="p">)</span>
-
-
-<span class="c1"># Load the API key from a JSON file</span>
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">chatgpt_cred</span> <span class="p">,</span> <span class="s1">'r'</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
-    <span class="n">config</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
-    <span class="n">api_key</span> <span class="o">=</span> <span class="n">config</span><span class="p">[</span><span class="s1">'openai_api_key'</span><span class="p">]</span>
-
-<span class="n">openai</span><span class="o">.</span><span class="n">api_key</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">api_key</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="functions">
-<h1>Functions<a class="headerlink" href="#functions" title="Permalink to this heading">#</a></h1>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">search_tweets_to_csv_with_media</span><span class="p">(</span><span class="n">key_word</span><span class="p">,</span> <span class="n">output_file</span><span class="o">=</span><span class="n">output_file</span><span class="p">):</span>
-    <span class="c1"># Load credentials</span>
-    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">cred_file</span><span class="p">,</span> <span class="s1">'r'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-        <span class="n">creds</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
-
-    <span class="n">consumer_key</span> <span class="o">=</span> <span class="n">creds</span><span class="p">[</span><span class="s1">'consumer_key'</span><span class="p">]</span>
-    <span class="n">consumer_secret</span> <span class="o">=</span> <span class="n">creds</span><span class="p">[</span><span class="s1">'consumer_secret'</span><span class="p">]</span>
-    <span class="n">access_token</span> <span class="o">=</span> <span class="n">creds</span><span class="p">[</span><span class="s1">'access_token'</span><span class="p">]</span>
-    <span class="n">access_token_secret</span> <span class="o">=</span> <span class="n">creds</span><span class="p">[</span><span class="s1">'access_token_secret'</span><span class="p">]</span>
-
-    <span class="c1"># Create an OAuth1Session instance with your credentials</span>
-    <span class="n">oauth</span> <span class="o">=</span> <span class="n">OAuth1Session</span><span class="p">(</span>
-        <span class="n">consumer_key</span><span class="p">,</span>
-        <span class="n">client_secret</span><span class="o">=</span><span class="n">consumer_secret</span><span class="p">,</span>
-        <span class="n">resource_owner_key</span><span class="o">=</span><span class="n">access_token</span><span class="p">,</span>
-        <span class="n">resource_owner_secret</span><span class="o">=</span><span class="n">access_token_secret</span><span class="p">,</span>
-    <span class="p">)</span>
-
-    <span class="c1"># The endpoint for searching tweets</span>
-    <span class="n">url</span> <span class="o">=</span> <span class="s2">"https://api.twitter.com/2/tweets/search/recent"</span>
-    
-    <span class="c1"># Parameters for the request</span>
-    <span class="n">params</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="s2">"query"</span><span class="p">:</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">key_word</span><span class="si">}</span><span class="s2"> -is:retweet"</span><span class="p">,</span>
-        <span class="s2">"tweet.fields"</span><span class="p">:</span> <span class="s2">"attachments,created_at"</span><span class="p">,</span>
-        <span class="s2">"expansions"</span><span class="p">:</span> <span class="s2">"attachments.media_keys,author_id"</span><span class="p">,</span>
-        <span class="s2">"user.fields"</span><span class="p">:</span> <span class="s2">"username"</span><span class="p">,</span>  <span class="c1"># Add this line</span>
-        <span class="s2">"media.fields"</span><span class="p">:</span> <span class="s2">"url"</span><span class="p">,</span>
-        <span class="s2">"max_results"</span><span class="p">:</span> <span class="mi">100</span>
-    <span class="p">}</span>
-
-    <span class="c1"># Making the request to search tweets</span>
-    <span class="n">response</span> <span class="o">=</span> <span class="n">oauth</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">status_code</span><span class="p">)</span>
-    <span class="c1"># Check if the request was successful</span>
-    <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">!=</span> <span class="mi">200</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span>
-            <span class="s2">"Request returned an error: </span><span class="si">{}</span><span class="s2"> </span><span class="si">{}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">status_code</span><span class="p">,</span> <span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
-        <span class="p">)</span>
-
-    <span class="c1"># Process the response</span>
-    <span class="n">json_response</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
-    <span class="n">tweets</span> <span class="o">=</span> <span class="n">json_response</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'data'</span><span class="p">,</span> <span class="p">[])</span>
-    <span class="n">users</span> <span class="o">=</span> <span class="p">{</span><span class="n">u</span><span class="p">[</span><span class="s1">'id'</span><span class="p">]:</span> <span class="n">u</span> <span class="k">for</span> <span class="n">u</span> <span class="ow">in</span> <span class="n">json_response</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'includes'</span><span class="p">,</span> <span class="p">{})</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'users'</span><span class="p">,</span> <span class="p">[])}</span>
-    <span class="n">media</span> <span class="o">=</span> <span class="p">{</span><span class="n">m</span><span class="p">[</span><span class="s1">'media_key'</span><span class="p">]:</span> <span class="n">m</span> <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">json_response</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'includes'</span><span class="p">,</span> <span class="p">{})</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'media'</span><span class="p">,</span> <span class="p">[])}</span>
-
-    <span class="c1"># Enhance each tweet with user and media information</span>
-    <span class="n">enhanced_tweets</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="k">for</span> <span class="n">tweet</span> <span class="ow">in</span> <span class="n">tweets</span><span class="p">:</span>
-        <span class="c1"># Get user info for the tweet</span>
-        <span class="n">user_info</span> <span class="o">=</span> <span class="n">users</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">tweet</span><span class="p">[</span><span class="s1">'author_id'</span><span class="p">],</span> <span class="p">{})</span>
-        <span class="n">tweet</span><span class="p">[</span><span class="s1">'username'</span><span class="p">]</span> <span class="o">=</span> <span class="n">user_info</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'username'</span><span class="p">,</span> <span class="s1">''</span><span class="p">)</span>
-        <span class="n">tweet</span><span class="p">[</span><span class="s1">'sentiment'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">''</span>
-
-        <span class="c1"># Get media info if available</span>
-        <span class="k">if</span> <span class="s1">'attachments'</span> <span class="ow">in</span> <span class="n">tweet</span> <span class="ow">and</span> <span class="s1">'media_keys'</span> <span class="ow">in</span> <span class="n">tweet</span><span class="p">[</span><span class="s1">'attachments'</span><span class="p">]:</span>
-            <span class="n">media_keys</span> <span class="o">=</span> <span class="n">tweet</span><span class="p">[</span><span class="s1">'attachments'</span><span class="p">][</span><span class="s1">'media_keys'</span><span class="p">]</span>
-            <span class="n">tweet_media</span> <span class="o">=</span> <span class="p">[</span><span class="n">media</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">media_keys</span> <span class="k">if</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">media</span><span class="p">]</span>
-            <span class="n">tweet</span><span class="p">[</span><span class="s1">'media'</span><span class="p">]</span> <span class="o">=</span> <span class="n">tweet_media</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">tweet</span><span class="p">[</span><span class="s1">'media'</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
-
-        <span class="c1"># Append the enhanced tweet to the list</span>
-        <span class="n">enhanced_tweets</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">tweet</span><span class="p">)</span>
-    <span class="n">enhanced_tweets</span>
-    <span class="n">tweets_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">enhanced_tweets</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">tweets_df</span>
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="sentiment-analysis">
-<h1>Sentiment Analysis<a class="headerlink" href="#sentiment-analysis" title="Permalink to this heading">#</a></h1>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_completion</span><span class="p">(</span><span class="n">prompt</span><span class="p">,</span> <span class="n">model</span><span class="o">=</span><span class="s2">"gpt-4-1106-preview"</span><span class="p">):</span>
-    <span class="n">messages</span> <span class="o">=</span> <span class="p">[{</span><span class="s2">"role"</span><span class="p">:</span> <span class="s2">"user"</span><span class="p">,</span> <span class="s2">"content"</span><span class="p">:</span> <span class="n">prompt</span><span class="p">}]</span>
-    <span class="n">response</span> <span class="o">=</span> <span class="n">openai</span><span class="o">.</span><span class="n">ChatCompletion</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
-        <span class="n">model</span><span class="o">=</span><span class="n">model</span><span class="p">,</span>
-        <span class="n">messages</span><span class="o">=</span><span class="n">messages</span><span class="p">,</span>
-        <span class="n">temperature</span><span class="o">=</span><span class="mf">0.9</span><span class="p">,</span>
-        <span class="n">frequency_penalty</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span>
-        <span class="n">max_tokens</span> <span class="o">=</span> <span class="mi">200</span><span class="p">,</span>
-    <span class="p">)</span>
-    <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="n">choices</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">message</span><span class="p">[</span><span class="s2">"content"</span><span class="p">]</span>
-
-<span class="k">def</span> <span class="nf">get_sent_from_chatgpt</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="n">prompt</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">'''</span>
-<span class="s1">    read this mongolian tweet sentence and</span>
-<span class="s1">    Send me one word. If it is positive, then "positive".</span>
-<span class="s1">    If it is negative, then send me "negative"</span>
-<span class="s1">    if It is neutral, then send me "neutral".</span>
-<span class="s1">    Input tweet: </span><span class="si">{</span><span class="n">x</span><span class="si">}</span>
-<span class="s1">    output must be one word. nothing else.</span>
-<span class="s1">    '''</span>
-    <span class="n">completion</span> <span class="o">=</span> <span class="n">get_completion</span><span class="p">(</span><span class="n">prompt</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">completion</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">keyword</span> <span class="o">=</span> <span class="s2">"Нямбаатар"</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">search_tweets_to_csv_with_media</span><span class="p">(</span><span class="n">keyword</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">'sentiment'</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">get_sent_from_chatgpt</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s1">'author_id'</span><span class="p">,</span> <span class="s1">'id'</span><span class="p">,</span> <span class="s1">'created_at'</span><span class="p">,</span> <span class="s1">'text'</span><span class="p">,</span><span class="s1">'username'</span><span class="p">,</span> <span class="s1">'sentiment'</span><span class="p">]]</span>
-<span class="n">df</span><span class="o">.</span><span class="n">to_sql</span><span class="p">(</span><span class="s1">'mongol'</span><span class="p">,</span> <span class="n">con</span><span class="o">=</span><span class="n">engine</span><span class="p">,</span> <span class="n">if_exists</span><span class="o">=</span><span class="s1">'append'</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sql_query</span> <span class="o">=</span> <span class="s1">'''</span>
-<span class="s1">WITH RankedTweets AS (</span>
-<span class="s1">    SELECT</span>
-<span class="s1">        author_id,</span>
-<span class="s1">        id,</span>
-<span class="s1">        text,</span>
-<span class="s1">        created_at,</span>
-<span class="s1">        username,</span>
-<span class="s1">        sentiment,</span>
-<span class="s1">        ROW_NUMBER() OVER (PARTITION BY author_id ORDER BY created_at) as rank</span>
-<span class="s1">    FROM mongol</span>
-<span class="s1">)</span>
-<span class="s1">SELECT</span>
-<span class="s1">        author_id,</span>
-<span class="s1">        id,</span>
-<span class="s1">        text,</span>
-<span class="s1">        created_at,</span>
-<span class="s1">        username,</span>
-<span class="s1">        sentiment</span>
-<span class="s1">FROM RankedTweets</span>
-<span class="s1">WHERE rank = 1</span>
-<span class="s1">'''</span>
-
-<span class="n">df</span><span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span><span class="n">sql_query</span><span class="p">,</span> <span class="n">engine</span><span class="p">)</span>
-<span class="c1"># Assuming df is your DataFrame</span>
-<span class="n">end</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Total tweets: </span><span class="si">{</span><span class="n">end</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-<span class="n">df</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total tweets: 93
-</pre></div>
-</div>
-<div class="output text_html"><div>
-<style scoped="">
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-<thead>
-<tr style="text-align: right;">
-<th></th>
-<th>author_id</th>
-<th>id</th>
-<th>text</th>
-<th>created_at</th>
-<th>username</th>
-<th>sentiment</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th>0</th>
-<td>1056867002</td>
-<td>1750466580629360841</td>
-<td>Сүүлийн 34 жил Төр засгийн томчуудаас авхуулаа...</td>
-<td>2024-01-25T10:32:09.000Z</td>
-<td>sh_buya</td>
-<td>negative</td>
-</tr>
-<tr>
-<th>1</th>
-<td>1080742505967017984</td>
-<td>1750784400240050527</td>
-<td>Газрын наймаа хэмээх том зөрчилтэй МУ-ын ЕС Л....</td>
-<td>2024-01-26T07:35:03.000Z</td>
-<td>Hgl8WE</td>
-<td>negative</td>
-</tr>
-<tr>
-<th>2</th>
-<td>1111224885110427648</td>
-<td>1750750297759318511</td>
-<td>Томчуудын автобусаа мэдэхгүй төөрөх ч дүүрч гэ...</td>
-<td>2024-01-26T05:19:33.000Z</td>
-<td>Gerlee_smile</td>
-<td>negative</td>
-</tr>
-<tr>
-<th>3</th>
-<td>1116204101098860544</td>
-<td>1750478590494539804</td>
-<td>Х.Нямбаатар Хотын дарга тэгсэн мөртлөө иргэдэд...</td>
-<td>2024-01-25T11:19:52.000Z</td>
-<td>ShinebayarTny</td>
-<td>negative</td>
-</tr>
-<tr>
-<th>4</th>
-<td>1151344579058130948</td>
-<td>1751635238202273911</td>
-<td>Циркийн барилгыг буулгахгүй ч хажууд нь сүр ба...</td>
-<td>2024-01-28T15:55:59.000Z</td>
-<td>ochbayarg</td>
-<td>negative</td>
-</tr>
-<tr>
-<th>...</th>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-</tr>
-<tr>
-<th>88</th>
-<td>886918789811458050</td>
-<td>1750901616470090106</td>
-<td>@Chuluunbat201 Эрхэмлэж, хайрлаж, нандигнах мэ...</td>
-<td>2024-01-26T15:20:50.000Z</td>
-<td>ganganorov</td>
-<td>negative</td>
-</tr>
-<tr>
-<th>89</th>
-<td>90815409</td>
-<td>1750725531241431211</td>
-<td>@z_erdenesaikhan Оюун-Эрдэнэ, Нямбаатар, Амарс...</td>
-<td>2024-01-26T03:41:08.000Z</td>
-<td>iimgai</td>
-<td>neutral</td>
-</tr>
-<tr>
-<th>90</th>
-<td>91315901</td>
-<td>1750712201080352821</td>
-<td>@Undram Нямбаатар Оюулзгана</td>
-<td>2024-01-26T02:48:10.000Z</td>
-<td>Tsa_tsaa</td>
-<td>neutral</td>
-</tr>
-<tr>
-<th>91</th>
-<td>945945792</td>
-<td>1750485537612525802</td>
-<td>Оюун-Эрдэнэ, Нямбаатар нарыг одоо огцруулах гэ...</td>
-<td>2024-01-25T11:47:29.000Z</td>
-<td>tayar_bayar</td>
-<td>negative</td>
-</tr>
-<tr>
-<th>92</th>
-<td>97402990</td>
-<td>1751126397135749384</td>
-<td>Х.Нямбаатар зорьсон ажлаа дуусгаад Монголд ирн...</td>
-<td>2024-01-27T06:14:02.000Z</td>
-<td>sonin_mn</td>
-<td>neutral</td>
-</tr>
-</tbody>
-</table>
-<p>93 rows × 6 columns</p>
-</div></div></div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-
-<span class="k">def</span> <span class="nf">plot_sentiment_bar_chart</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">sentiment_column</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">"""</span>
-<span class="sd">    Plots a bar chart of sentiment distribution.</span>
-
-<span class="sd">    Parameters:</span>
-<span class="sd">    df (pandas.DataFrame): DataFrame containing the sentiment data.</span>
-<span class="sd">    sentiment_column (str): The name of the column in df that contains sentiment values.</span>
-<span class="sd">    """</span>
-    <span class="c1"># Count the occurrences of each sentiment</span>
-    <span class="n">sentiment_counts</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">sentiment_column</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
-
-    <span class="c1"># Plotting</span>
-    <span class="n">sentiment_counts</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">'bar'</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="p">[</span><span class="s1">'red'</span><span class="p">,</span> <span class="s1">'green'</span><span class="p">,</span> <span class="s1">'blue'</span><span class="p">])</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Sentiment Distribution for Keyword: </span><span class="si">{</span><span class="n">keyword</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">'Sentiment'</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">'Counts'</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>  <span class="c1"># Rotate x-labels for better readability</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">printInColor</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
-    <span class="c1"># ANSI escape codes for some colors</span>
-        <span class="n">RED</span> <span class="o">=</span> <span class="s1">'</span><span class="se">\033</span><span class="s1">[31m'</span>   <span class="c1"># Red Text</span>
-        <span class="n">GREEN</span> <span class="o">=</span> <span class="s1">'</span><span class="se">\033</span><span class="s1">[32m'</span> <span class="c1"># Green Text</span>
-        <span class="n">BLUE</span> <span class="o">=</span> <span class="s1">'</span><span class="se">\033</span><span class="s1">[34m'</span>  <span class="c1"># Blue Text</span>
-        <span class="n">RESET</span> <span class="o">=</span> <span class="s1">'</span><span class="se">\033</span><span class="s1">[0m'</span>  <span class="c1"># Reset to default color</span>
-
-        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
-            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'''</span>
-<span class="s1">            - </span><span class="si">{</span><span class="n">GREEN</span><span class="si">}</span><span class="s1">Author</span><span class="si">{</span><span class="n">RESET</span><span class="si">}</span><span class="s1">: </span><span class="si">{</span><span class="n">df</span><span class="o">.</span><span class="n">username</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">}</span><span class="s1"> </span>
-<span class="s1">            - </span><span class="si">{</span><span class="n">BLUE</span><span class="si">}</span><span class="s1">Tweet</span><span class="si">{</span><span class="n">RESET</span><span class="si">}</span><span class="s1">: </span><span class="si">{</span><span class="n">df</span><span class="o">.</span><span class="n">text</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">}</span><span class="s1">  </span>
-<span class="s1">            - </span><span class="si">{</span><span class="n">RED</span><span class="si">}</span><span class="s1">Sentiment</span><span class="si">{</span><span class="n">RESET</span><span class="si">}</span><span class="s1">: </span><span class="si">{</span><span class="n">df</span><span class="o">.</span><span class="n">sentiment</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">}</span>
-<span class="s1">            </span>
-<span class="s1">            ---</span>
-<span class="s1">            </span>
-<span class="s1">            '''</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>

@@ -18,38 +18,34 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-import pandas as pd
-import matplotlib.pyplot as plt
-
-def plot_sentiment_bar_chart(df, sentiment_column):
-    """
-    Plots a bar chart of sentiment distribution.
-
-    Parameters:
-    df (pandas.DataFrame): DataFrame containing the sentiment data.
-    sentiment_column (str): The name of the column in df that contains sentiment values.
-    """
-    # Count the occurrences of each sentiment
-    sentiment_counts = df[sentiment_column].value_counts()
-
-    # Plotting
-    sentiment_counts.plot(kind='bar', color=['red', 'green', 'blue'])
-    plt.title(f'Sentiment Distribution for Keyword: {keyword}')
-    plt.xlabel('Sentiment')
-    plt.ylabel('Counts')
-    plt.xticks(rotation=0)  # Rotate x-labels for better readability
-    plt.show()
-keyword = 'Нямбаатар'
-plot_sentiment_bar_chart(df, 'sentiment')
+keyword = "Нямбаатар"
+df = search_tweets_to_csv_with_media(keyword)
+print(df.shape[0])
 ------------------
 
 [1;31m---------------------------------------------------------------------------[0m
-[1;31mNameError[0m                                 Traceback (most recent call last)
-Cell [1;32mIn[1], line 23[0m
-[0;32m     21[0m     plt[38;5;241m.[39mshow()
-[0;32m     22[0m keyword [38;5;241m=[39m [38;5;124m'[39m[38;5;124mНямбаатар[39m[38;5;124m'[39m
-[1;32m---> 23[0m plot_sentiment_bar_chart([43mdf[49m, [38;5;124m'[39m[38;5;124msentiment[39m[38;5;124m'[39m)
+[1;31mFileNotFoundError[0m                         Traceback (most recent call last)
+Cell [1;32mIn[5], line 2[0m
+[0;32m      1[0m keyword [38;5;241m=[39m [38;5;124m"[39m[38;5;124mНямбаатар[39m[38;5;124m"[39m
+[1;32m----> 2[0m df [38;5;241m=[39m [43msearch_tweets_to_csv_with_media[49m[43m([49m[43mkeyword[49m[43m)[49m
+[0;32m      3[0m [38;5;28mprint[39m(df[38;5;241m.[39mshape[[38;5;241m0[39m])
 
-[1;31mNameError[0m: name 'df' is not defined
-NameError: name 'df' is not defined
+Cell [1;32mIn[3], line 3[0m, in [0;36msearch_tweets_to_csv_with_media[1;34m(key_word, output_file)[0m
+[0;32m      1[0m [38;5;28;01mdef[39;00m [38;5;21msearch_tweets_to_csv_with_media[39m(key_word, output_file[38;5;241m=[39moutput_file):
+[0;32m      2[0m     [38;5;66;03m# Load credentials[39;00m
+[1;32m----> 3[0m     [38;5;28;01mwith[39;00m [38;5;28;43mopen[39;49m[43m([49m[43mcred_file[49m[43m,[49m[43m [49m[38;5;124;43m'[39;49m[38;5;124;43mr[39;49m[38;5;124;43m'[39;49m[43m)[49m [38;5;28;01mas[39;00m f:
+[0;32m      4[0m         creds [38;5;241m=[39m json[38;5;241m.[39mload(f)
+[0;32m      6[0m     consumer_key [38;5;241m=[39m creds[[38;5;124m'[39m[38;5;124mconsumer_key[39m[38;5;124m'[39m]
+
+File [1;32mC:\Python311\Lib\site-packages\IPython\core\interactiveshell.py:284[0m, in [0;36m_modified_open[1;34m(file, *args, **kwargs)[0m
+[0;32m    277[0m [38;5;28;01mif[39;00m file [38;5;129;01min[39;00m {[38;5;241m0[39m, [38;5;241m1[39m, [38;5;241m2[39m}:
+[0;32m    278[0m     [38;5;28;01mraise[39;00m [38;5;167;01mValueError[39;00m(
+[0;32m    279[0m         [38;5;124mf[39m[38;5;124m"[39m[38;5;124mIPython won[39m[38;5;124m'[39m[38;5;124mt let you open fd=[39m[38;5;132;01m{[39;00mfile[38;5;132;01m}[39;00m[38;5;124m by default [39m[38;5;124m"[39m
+[0;32m    280[0m         [38;5;124m"[39m[38;5;124mas it is likely to crash IPython. If you know what you are doing, [39m[38;5;124m"[39m
+[0;32m    281[0m         [38;5;124m"[39m[38;5;124myou can use builtins[39m[38;5;124m'[39m[38;5;124m open.[39m[38;5;124m"[39m
+[0;32m    282[0m     )
+[1;32m--> 284[0m [38;5;28;01mreturn[39;00m [43mio_open[49m[43m([49m[43mfile[49m[43m,[49m[43m [49m[38;5;241;43m*[39;49m[43margs[49m[43m,[49m[43m [49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[43mkwargs[49m[43m)[49m
+
+[1;31mFileNotFoundError[0m: [Errno 2] No such file or directory: 'C:\\Users\\byamb\\projects\\epub\\mongol\\twitter_credentials.json'
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\byamb\\projects\\epub\\mongol\\twitter_credentials.json'
 
