@@ -753,20 +753,20 @@ It ensures that all data modifications are complete and consistent, which is cru
 
 A data engineer wants to prioritize certain transformations over others in a Delta Live Tables pipeline due to resource constraints. How can this be achieved?
 
-- A. Use the `@dlt.expectation` decorator to define priority levels.
-- B. Manually execute each transformation in the desired order.
-- C. Define priority levels in the DLT pipeline's configuration file.
-- D. Use the `@dlt.table` decorator to specify priorities between transformations.
-- E. Create separate DLT pipelines for each transformation with different priorities.
+- A. Specify dependencies between transformations to implicitly prioritize them.
+- B. Use pipeline orchestration tools to manage resource allocation and prioritization.
+- C. Segment the transformations into different clusters based on priority levels.
+- D. Utilize resource tags to allocate more resources to higher priority transformations.
+- E. Schedule transformations at different times based on their priority.
 
 ```{toggle}
-Correct Answer: C
+Correct Answer: A
 
 Exam Topic: Production Pipelines
 
 Explanation:
 
-Defining priority levels in the DLT pipeline's configuration file allows the data engineer to control the order in which transformations are executed based on resource constraints and dependencies, ensuring that critical transformations are processed first.
+The correct approach would depend on the specific capabilities of Delta Live Tables and the broader data platform. However, a common method in data pipeline management is to specify dependencies between transformations. This allows higher-priority tasks to be processed first if they are dependencies for other tasks, thereby implicitly setting a priority order. So, the correct answer could be A. Specify dependencies between transformations to implicitly prioritize them, assuming this is aligned with the capabilities of the specific DLT setup.
 ```
 
 ## Question 34
