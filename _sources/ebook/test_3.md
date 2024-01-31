@@ -739,13 +739,14 @@ What feature does Delta Lake provide to ensure data quality and reliability in E
 - E. Automatic handling of schema evolution
 
 ```{toggle}
-Correct Answer: D
+Correct Answer: A
 
-Exam Topic: Data Governance
+Exam Topic: Incremental Data Processing
 
 Explanation:
 
-Delta Lake provides built-in data quality constraints, which is a feature for ensuring data quality and reliability in ELT pipelines. These constraints can be used to enforce data quality rules, such as ensuring that certain columns are not null or that the values in a column meet specific criteria.
+Support for ACID transactions is the primary feature that Delta Lake provides to ensure data quality and reliability in ELT pipelines. 
+It ensures that all data modifications are complete and consistent, which is crucial for maintaining the integrity and reliability of data in the pipeline.
 ```
 
 ## Question 33
