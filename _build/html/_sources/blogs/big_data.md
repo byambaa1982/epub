@@ -1,4 +1,4 @@
-# Harnessing the Power of Big Data: A Modern Marvel
+# Big Data
 
 Have you ever wondered, "What is big data?" Let's dive into a real-world example that vividly paints the picture of this phenomenon. Target, one of the largest retail networks in America, has had an intriguing experience demonstrating the power of big data.
 
