@@ -550,25 +550,25 @@ Explanation: The <code class="docutils literal notranslate"><span class="pre">IN
 <li><p>E. CREATE TABLE employee_data (id INT, name STRING);</p></li>
 </ul>
 <div class="toggle docutils container">
-<p>Correct Answer: C. CREATE MANAGED TABLE employee_data (id INT, name STRING);</p>
+<p>Correct Answer: E</p>
 <p>Exam Topic: ELT with Spark SQL and Python</p>
-<p>Explanation: The <code class="docutils literal notranslate"><span class="pre">CREATE</span> <span class="pre">MANAGED</span> <span class="pre">TABLE</span></code> command creates a table where Spark manages both the data and metadata. There is no need to specify the storage path as Spark will handle it internally.</p>
+<p>Explanation: The <code class="docutils literal notranslate"><span class="pre">CREATE</span> <span class="pre">TABLE</span></code> command creates a table where Spark manages both the data and metadata. There is no need to specify the storage path as Spark will handle it internally.</p>
 </div>
 </section>
 <section id="question-14">
 <h2>Question 14<a class="headerlink" href="#question-14" title="Permalink to this heading">#</a></h2>
 <p>A data engineer needs to define a logical structure that can be used to query data from multiple tables without physically storing the combined data. This structure should be accessible across different sessions. What should the data engineer create?</p>
 <ul class="simple">
-<li><p>A. Global temporary view</p></li>
+<li><p>A. View</p></li>
 <li><p>B. Temporary view</p></li>
 <li><p>C. Delta Table</p></li>
 <li><p>D. Database</p></li>
 <li><p>E. Spark SQL Table</p></li>
 </ul>
 <div class="toggle docutils container">
-<p>Correct Answer: A. Global temporary view</p>
-<p>Exam Topic: Production Pipelines</p>
-<p>Explanation: A global temporary view is a logical structure that can be used to query data across multiple sessions without physically storing the data. It is session-scoped and will be dropped when the session ends.</p>
+<p>Correct Answer: A. view</p>
+<p>Exam Topic: ELT with Spark SQL and Python</p>
+<p>Explanation: A view is a logical structure that can be used to query data across multiple sessions without physically storing the data. It is session-scoped and will be dropped when the session ends.</p>
 </div>
 </section>
 <section id="question-15">
@@ -961,28 +961,27 @@ Option A is the correct answer because it reads from a stream (<code class="docu
 <li><p>E. Automatic handling of schema evolution</p></li>
 </ul>
 <div class="toggle docutils container">
-<p>Correct Answer: A</p>
-<p>Exam Topic: Incremental Data Processing</p>
+<p>Correct Answer: D</p>
+<p>Exam Topic: Data Governance</p>
 <p>Explanation:</p>
-<p>Support for ACID transactions is the primary feature that Delta Lake provides to ensure data quality and reliability in ELT pipelines.
-It ensures that all data modifications are complete and consistent, which is crucial for maintaining the integrity and reliability of data in the pipeline.</p>
+<p>Delta Lake provides built-in data quality constraints, which is a feature for ensuring data quality and reliability in ELT pipelines. These constraints can be used to enforce data quality rules, such as ensuring that certain columns are not null or that the values in a column meet specific criteria.</p>
 </div>
 </section>
 <section id="question-33">
 <h2>Question 33<a class="headerlink" href="#question-33" title="Permalink to this heading">#</a></h2>
 <p>A data engineer wants to prioritize certain transformations over others in a Delta Live Tables pipeline due to resource constraints. How can this be achieved?</p>
 <ul class="simple">
-<li><p>A. Specify dependencies between transformations to implicitly prioritize them.</p></li>
-<li><p>B. Use pipeline orchestration tools to manage resource allocation and prioritization.</p></li>
-<li><p>C. Segment the transformations into different clusters based on priority levels.</p></li>
-<li><p>D. Utilize resource tags to allocate more resources to higher priority transformations.</p></li>
-<li><p>E. Schedule transformations at different times based on their priority.</p></li>
+<li><p>A. Use the <code class="docutils literal notranslate"><span class="pre">@dlt.expectation</span></code> decorator to define priority levels.</p></li>
+<li><p>B. Manually execute each transformation in the desired order.</p></li>
+<li><p>C. Define priority levels in the DLT pipeline’s configuration file.</p></li>
+<li><p>D. Use the <code class="docutils literal notranslate"><span class="pre">@dlt.table</span></code> decorator to specify priorities between transformations.</p></li>
+<li><p>E. Create separate DLT pipelines for each transformation with different priorities.</p></li>
 </ul>
 <div class="toggle docutils container">
-<p>Correct Answer: A</p>
+<p>Correct Answer: C</p>
 <p>Exam Topic: Production Pipelines</p>
 <p>Explanation:</p>
-<p>The correct approach would depend on the specific capabilities of Delta Live Tables and the broader data platform. However, a common method in data pipeline management is to specify dependencies between transformations. This allows higher-priority tasks to be processed first if they are dependencies for other tasks, thereby implicitly setting a priority order. So, the correct answer could be A. Specify dependencies between transformations to implicitly prioritize them, assuming this is aligned with the capabilities of the specific DLT setup.</p>
+<p>Defining priority levels in the DLT pipeline’s configuration file allows the data engineer to control the order in which transformations are executed based on resource constraints and dependencies, ensuring that critical transformations are processed first.</p>
 </div>
 </section>
 <section id="question-34">

@@ -280,11 +280,11 @@ A junior data engineer is tasked with creating a managed table named `employee_d
 - E. CREATE TABLE employee_data (id INT, name STRING);
 
 ```{toggle}
-Correct Answer: C. CREATE MANAGED TABLE employee_data (id INT, name STRING);
+Correct Answer: E
 
 Exam Topic: ELT with Spark SQL and Python
 
-Explanation: The `CREATE MANAGED TABLE` command creates a table where Spark manages both the data and metadata. There is no need to specify the storage path as Spark will handle it internally.
+Explanation: The `CREATE TABLE` command creates a table where Spark manages both the data and metadata. There is no need to specify the storage path as Spark will handle it internally.
 
 ```
 
@@ -292,18 +292,18 @@ Explanation: The `CREATE MANAGED TABLE` command creates a table where Spark mana
 
 A data engineer needs to define a logical structure that can be used to query data from multiple tables without physically storing the combined data. This structure should be accessible across different sessions. What should the data engineer create?
 
-- A. Global temporary view
+- A. View
 - B. Temporary view
 - C. Delta Table
 - D. Database
 - E. Spark SQL Table
 
 ```{toggle}
-Correct Answer: A. Global temporary view
+Correct Answer: A. view
 
-Exam Topic: Production Pipelines
+Exam Topic: ELT with Spark SQL and Python
 
-Explanation: A global temporary view is a logical structure that can be used to query data across multiple sessions without physically storing the data. It is session-scoped and will be dropped when the session ends.
+Explanation: A view is a logical structure that can be used to query data across multiple sessions without physically storing the data. It is session-scoped and will be dropped when the session ends.
 
 ```
 
@@ -739,34 +739,33 @@ What feature does Delta Lake provide to ensure data quality and reliability in E
 - E. Automatic handling of schema evolution
 
 ```{toggle}
-Correct Answer: A
+Correct Answer: D
 
-Exam Topic: Incremental Data Processing
+Exam Topic: Data Governance
 
 Explanation:
 
-Support for ACID transactions is the primary feature that Delta Lake provides to ensure data quality and reliability in ELT pipelines. 
-It ensures that all data modifications are complete and consistent, which is crucial for maintaining the integrity and reliability of data in the pipeline.
+Delta Lake provides built-in data quality constraints, which is a feature for ensuring data quality and reliability in ELT pipelines. These constraints can be used to enforce data quality rules, such as ensuring that certain columns are not null or that the values in a column meet specific criteria.
 ```
 
 ## Question 33
 
 A data engineer wants to prioritize certain transformations over others in a Delta Live Tables pipeline due to resource constraints. How can this be achieved?
 
-- A. Specify dependencies between transformations to implicitly prioritize them.
-- B. Use pipeline orchestration tools to manage resource allocation and prioritization.
-- C. Segment the transformations into different clusters based on priority levels.
-- D. Utilize resource tags to allocate more resources to higher priority transformations.
-- E. Schedule transformations at different times based on their priority.
+- A. Use the `@dlt.expectation` decorator to define priority levels.
+- B. Manually execute each transformation in the desired order.
+- C. Define priority levels in the DLT pipeline's configuration file.
+- D. Use the `@dlt.table` decorator to specify priorities between transformations.
+- E. Create separate DLT pipelines for each transformation with different priorities.
 
 ```{toggle}
-Correct Answer: A
+Correct Answer: C
 
 Exam Topic: Production Pipelines
 
 Explanation:
 
-The correct approach would depend on the specific capabilities of Delta Live Tables and the broader data platform. However, a common method in data pipeline management is to specify dependencies between transformations. This allows higher-priority tasks to be processed first if they are dependencies for other tasks, thereby implicitly setting a priority order. So, the correct answer could be A. Specify dependencies between transformations to implicitly prioritize them, assuming this is aligned with the capabilities of the specific DLT setup.
+Defining priority levels in the DLT pipeline's configuration file allows the data engineer to control the order in which transformations are executed based on resource constraints and dependencies, ensuring that critical transformations are processed first.
 ```
 
 ## Question 34
