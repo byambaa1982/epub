@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-6R7KD1FNMR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6R7KD1FNMR');
+</script>
+
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="Docutils 0.18.1: http://docutils.sourceforge.net/" name="generator"/>
+<title>6. String — Byambalogy</title>
+<script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+<!-- Loaded before other Sphinx assets -->
+<link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet"/>
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet"/>
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet"/>
+<link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet"/>
+<link as="font" crossorigin="" href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" rel="preload" type="font/woff2"/>
+<link as="font" crossorigin="" href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" rel="preload" type="font/woff2"/>
+<link as="font" crossorigin="" href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" rel="preload" type="font/woff2"/>
+<link href="../../_static/pygments.css" rel="stylesheet" type="text/css"/>
+<link href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" rel="stylesheet" type="text/css"/>
+<link href="../../_static/togglebutton.css" rel="stylesheet" type="text/css"/>
+<link href="../../_static/copybutton.css" rel="stylesheet" type="text/css"/>
+<link href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" rel="stylesheet" type="text/css"/>
+<link href="../../_static/sphinx-thebe.css" rel="stylesheet" type="text/css"/>
+<link href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" rel="stylesheet" type="text/css"/>
+<!-- Pre-loaded scripts that we'll load fully later -->
+<link as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" rel="preload"/>
+<link as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" rel="preload"/>
+<script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+<script src="../../_static/jquery.js"></script>
+<script src="../../_static/underscore.js"></script>
+<script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+<script src="../../_static/doctools.js"></script>
+<script src="../../_static/clipboard.min.js"></script>
+<script src="../../_static/copybutton.js"></script>
+<script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+<script>let toggleHintShow = 'Click to show';</script>
+<script>let toggleHintHide = 'Click to hide';</script>
+<script>let toggleOpenOnPrint = 'true';</script>
+<script src="../../_static/togglebutton.js"></script>
+<script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+<script src="../../_static/design-tabs.js"></script>
+<script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+<script async="async" src="../../_static/sphinx-thebe.js"></script>
+<script>DOCUMENTATION_OPTIONS.pagename = 'courses/python/study_guide_6';</script>
+<link href="../../genindex.html" rel="index" title="Index"/>
+<link href="../../search.html" rel="search" title="Search"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="en" name="docsearch:language"/>
+</head>
+<body data-bs-root-margin="0px 0px -60%" data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-default-mode="" data-offset="180">
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<input class="sidebar-toggle" id="__primary" name="__primary" type="checkbox"/>
+<label class="overlay overlay-primary" for="__primary"></label>
+<input class="sidebar-toggle" id="__secondary" name="__secondary" type="checkbox"/>
+<label class="overlay overlay-secondary" for="__secondary"></label>
+<div class="search-button__wrapper">
+<div class="search-button__overlay"></div>
+<div class="search-button__search-container">
+<form action="../../search.html" class="bd-search d-flex align-items-center" method="get">
+<i class="fa-solid fa-magnifying-glass"></i>
+<input aria-label="Search this book..." autocapitalize="off" autocomplete="off" autocorrect="off" class="form-control" id="search-input" name="q" placeholder="Search this book..." spellcheck="false" type="search"/>
+<span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+</div>
+<nav class="bd-header navbar navbar-expand-lg bd-navbar">
+</nav>
+<div class="bd-container">
+<div class="bd-container__inner bd-page-width">
+<div class="bd-sidebar-primary bd-sidebar">
+<div class="sidebar-header-items sidebar-primary__section">
+</div>
+<div class="sidebar-primary-items__start sidebar-primary__section">
+<div class="sidebar-primary-item">
+<a class="navbar-brand logo" href="../../landing.html">
+<img alt="Logo image" class="logo__image only-light" src="../../_static/logo.png"/>
+<script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+</a></div>
+<div class="sidebar-primary-item"><nav aria-label="Main" class="bd-links" id="bd-docs-nav">
+<div class="bd-toc-item navbar-nav active">
+<ul class="nav bd-sidenav bd-sidenav__home-link">
+<li class="toctree-l1">
+<a class="reference internal" href="../../landing.html">
+                    About this web
+                </a>
+</li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../courses.html">Courses</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Python Courses for beginners</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../table_content.html">1. Introduction to Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../study_guide_2.html">2. Python Data Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../study_guide_3.html">3. Control Flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../study_guide_4.html">4. Python Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../study_guide_5.html">5. Lists, Tuples, Dictionary, and Sets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../study_guide_6.html">6. String</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../simple_flask_app.html">7. Create a Simple Flask App</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../update_simple_flask_app.html">Update Flask App with more functions</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../blogs/blogs.html">Blogs</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../blogs/azure_synapse_bq.html">Azure Synapse vs Google Big Query</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../blogs/file_and_dir_path.html">Understanding File and Directory Paths in Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../blogs/Chart.html">Creating Dynamic Bar Charts with Python’s Matplotlib</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../blogs/turn_sheets_to_db.html">Mastering Data Flow: Google Sheets to SQLite via Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../blogs/wealth.html">The Art of Leveraging Specific Knowledge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../blogs/delta_table.html">Exploring Delta Lake’s Powerful Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../blogs/big_data.html">Big Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../blogs/cloud_services.html">A Overview of Azure, Google Cloud, and AWS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../blogs/memory_trick.html">Artful Memory Hacks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../blogs/managed_unmanaged.html">Memorizing Complex Documentation: A Tale of Databricks Tables and Storytelling</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../ebook/tests.html">Databricks</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../ebook/test_3.html">Test 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ebook/test_1.html">Test 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ebook/answers_1.html">Correct Answers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ebook/explaination_1.html">Explanations</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../mongol/main.html">Монгол</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../mongol/blog_1.html">Databricks гэж юу?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../mongol/blog_2.html">Дата дата л гэнэ яг юу юм бэ?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../mongol/sentiment.html">ChatGPT API ашиглан жиргээнд хэрхэн sentiment анализ хийх вэ?</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav></div>
+</div>
+<div class="sidebar-primary-items__end sidebar-primary__section">
+</div>
+<div id="rtd-footer-container"></div>
+</div>
+<main class="bd-main" id="main-content">
+<div class="sbt-scroll-pixel-helper"></div>
+<div class="bd-content">
+<div class="bd-article-container">
+<div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+<div class="header-article-items__start">
+<div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" data-bs-placement="bottom" data-bs-toggle="tooltip" for="__primary" title="Toggle primary sidebar">
+<span class="fa-solid fa-bars"></span>
+</label></div>
+</div>
+<div class="header-article-items__end">
+<div class="header-article-item">
+<div class="article-header-buttons">
+<div class="dropdown dropdown-launch-buttons">
+<button aria-expanded="false" aria-label="Launch interactive content" class="btn dropdown-toggle" data-bs-toggle="dropdown" type="button">
+<i class="fas fa-rocket"></i>
+</button>
+<ul class="dropdown-menu">
+<li><a class="btn btn-sm dropdown-item" data-bs-placement="left" data-bs-toggle="tooltip" href="https://colab.research.google.com/github/byambaa1982/python_cources_for_beginers/blob/main/courses/python/study_guide_6.ipynb" target="_blank" title="Launch onColab">
+<span class="btn__icon-container">
+<img src="../../_static/images/logo_colab.png"/>
+</span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+</ul>
+</div>
+<div class="dropdown dropdown-source-buttons">
+<button aria-expanded="false" aria-label="Source repositories" class="btn dropdown-toggle" data-bs-toggle="dropdown" type="button">
+<i class="fab fa-github"></i>
+</button>
+<ul class="dropdown-menu">
+<li><a class="btn btn-sm btn-source-repository-button dropdown-item" data-bs-placement="left" data-bs-toggle="tooltip" href="https://github.com/byambaa1982/python_cources_for_beginers" target="_blank" title="Source repository">
+<span class="btn__icon-container">
+<i class="fab fa-github"></i>
+</span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+<li><a class="btn btn-sm btn-source-issues-button dropdown-item" data-bs-placement="left" data-bs-toggle="tooltip" href="https://github.com/byambaa1982/python_cources_for_beginers/issues/new?title=Issue%20on%20page%20%2Fcourses/python/study_guide_6.html&amp;body=Your%20issue%20content%20here." target="_blank" title="Open an issue">
+<span class="btn__icon-container">
+<i class="fas fa-lightbulb"></i>
+</span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+</ul>
+</div>
+<div class="dropdown dropdown-download-buttons">
+<button aria-expanded="false" aria-label="Download this page" class="btn dropdown-toggle" data-bs-toggle="dropdown" type="button">
+<i class="fas fa-download"></i>
+</button>
+<ul class="dropdown-menu">
+<li><a class="btn btn-sm btn-download-source-button dropdown-item" data-bs-placement="left" data-bs-toggle="tooltip" href="../../_sources/courses/python/study_guide_6.ipynb" target="_blank" title="Download source file">
+<span class="btn__icon-container">
+<i class="fas fa-file"></i>
+</span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+<li>
+<button class="btn btn-sm btn-download-pdf-button dropdown-item" data-bs-placement="left" data-bs-toggle="tooltip" onclick="window.print()" title="Print to PDF">
+<span class="btn__icon-container">
+<i class="fas fa-file-pdf"></i>
+</span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+</ul>
+</div>
+<button class="btn btn-sm btn-fullscreen-button" data-bs-placement="bottom" data-bs-toggle="tooltip" onclick="toggleFullScreen()" title="Fullscreen mode">
+<span class="btn__icon-container">
+<i class="fas fa-expand"></i>
+</span>
+</button>
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" data-bs-placement="bottom" data-bs-toggle="tooltip" for="__secondary" title="Toggle secondary sidebar">
+<span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+</div>
+</div>
+</div>
+<div class="onlyprint" id="jb-print-docs-body">
+<h1>6. String</h1>
+<!-- Table of contents -->
+<div id="print-main-content">
+<div id="jb-print-toc">
+<div>
+<h2> Contents </h2>
+</div>
+<nav aria-label="Page">
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-1">Problem 1:</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#output">Output:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-2">Problem 2:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Output:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-3">Problem 3:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Output:</a></li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div id="searchbox"></div>
+<article class="bd-article" role="main">
+<p><a href="https://colab.research.google.com/github/byambaa1982/python_cources_for_beginers/blob/main/6_string_formating/working_with_strings.ipynb" target="_parent"><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg"/></a></p>
+<section class="tex2jax_ignore mathjax_ignore" id="string">
+<h1>6. String<a class="headerlink" href="#string" title="Permalink to this heading">#</a></h1>
+<p>Python strings are sequences of characters enclosed in quotes (either single quotes ‘ or double quotes “). They are used to represent text data in Python programs. Strings are an example of a built-in data type in Python.</p>
+<p>Here’s a brief explanation of Python strings and some simple examples:</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Creating</span> <span class="pre">strings</span></code>: Strings can be created using single quotes or double quotes. You can also use triple quotes (‘’’ or “””) to create multiline strings.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Creating strings</span>
+<span class="n">string1</span> <span class="o">=</span> <span class="s1">'Hello, World!'</span>
+<span class="n">string2</span> <span class="o">=</span> <span class="s2">"Python is fun!"</span>
+<span class="n">string3</span> <span class="o">=</span> <span class="s1">'''This is a</span>
+<span class="s1">multiline</span>
+<span class="s1">string.'''</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p><code class="docutils literal notranslate"><span class="pre">Accessing</span> <span class="pre">characters</span></code>: You can access individual characters in a string using indexing, with the index starting from 0.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s1">'Alice'</span>
+<span class="n">first_char</span> <span class="o">=</span> <span class="n">name</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="c1"># 'A'</span>
+<span class="n">second_char</span> <span class="o">=</span> <span class="n">name</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>  <span class="c1"># 'l'</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p><code class="docutils literal notranslate"><span class="pre">String</span> <span class="pre">slicin</span></code>g: You can extract a substring from a string using slicing. The syntax for slicing is <code class="docutils literal notranslate"><span class="pre">string[start:stop:step]</span></code>, where <code class="docutils literal notranslate"><span class="pre">start</span></code> is the starting index, <code class="docutils literal notranslate"><span class="pre">stop</span></code> is the ending index (exclusive), and <code class="docutils literal notranslate"><span class="pre">step</span></code> is the interval between characters.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="s1">'Python strings'</span>
+<span class="n">substring</span> <span class="o">=</span> <span class="n">text</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">6</span><span class="p">]</span>  <span class="c1"># 'Python'</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p><code class="docutils literal notranslate"><span class="pre">String</span> <span class="pre">length</span></code>: You can find the length of a string using the built-in <code class="docutils literal notranslate"><span class="pre">len()</span></code> function.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">message</span> <span class="o">=</span> <span class="s1">'Hello, World!'</span>
+<span class="n">length</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>  <span class="c1"># 13</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="arabic simple" start="5">
+<li><p><code class="docutils literal notranslate"><span class="pre">String</span> <span class="pre">concatenation</span></code>: You can join two strings together using the <code class="docutils literal notranslate"><span class="pre">+</span></code> operator.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">greeting</span> <span class="o">=</span> <span class="s1">'Hello'</span>
+<span class="n">name</span> <span class="o">=</span> <span class="s1">'Alice'</span>
+<span class="n">message</span> <span class="o">=</span> <span class="n">greeting</span> <span class="o">+</span> <span class="s1">', '</span> <span class="o">+</span> <span class="n">name</span>  <span class="c1"># 'Hello, Alice'</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="arabic simple" start="6">
+<li><p><code class="docutils literal notranslate"><span class="pre">String</span> <span class="pre">methods</span></code>: Strings have many built-in methods that you can use to perform various operations, such as converting to uppercase, replacing characters, splitting strings, etc.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="s1">'python programming'</span>
+
+<span class="c1"># Convert to uppercase</span>
+<span class="n">uppercase_text</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>  <span class="c1"># 'PYTHON PROGRAMMING'</span>
+
+<span class="c1"># Replace characters</span>
+<span class="n">replaced_text</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">'python'</span><span class="p">,</span> <span class="s1">'Java'</span><span class="p">)</span>  <span class="c1"># 'Java programming'</span>
+
+<span class="c1"># Split string</span>
+<span class="n">words</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">' '</span><span class="p">)</span>  <span class="c1"># ['python', 'programming']</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="problem-1">
+<h2>Problem 1:<a class="headerlink" href="#problem-1" title="Permalink to this heading">#</a></h2>
+<p>You are given a list of dictionaries, each containing a user’s information: first name, last name, age, and country. Your task is to write a Python script that iterates through the list and prints out the user’s information in a formatted string as follows:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">First</span> <span class="n">Name</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">Last</span> <span class="n">Name</span><span class="o">&gt;</span> <span class="ow">is</span> <span class="o">&lt;</span><span class="n">Age</span><span class="o">&gt;</span> <span class="n">years</span> <span class="n">old</span> <span class="ow">and</span> <span class="n">comes</span> <span class="kn">from</span> <span class="o">&lt;</span><span class="n">Country</span><span class="o">&gt;.</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">7</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+    <span class="o">&lt;</span><span class="n">First</span> <span class="n">Name</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">Last</span> <span class="n">Name</span><span class="o">&gt;</span> <span class="ow">is</span> <span class="o">&lt;</span><span class="n">Age</span><span class="o">&gt;</span> <span class="n">years</span> <span class="n">old</span> <span class="ow">and</span> <span class="n">comes</span> <span class="kn">from</span> <span class="o">&lt;</span><span class="n">Country</span><span class="o">&gt;.</span>
+    <span class="o">^</span>
+<span class="ne">SyntaxError</span>: invalid syntax
+</pre></div>
+</div>
+</div>
+</div>
+<p>Here’s the list of dictionaries:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">users</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span><span class="s1">'first_name'</span><span class="p">:</span> <span class="s1">'John'</span><span class="p">,</span> <span class="s1">'last_name'</span><span class="p">:</span> <span class="s1">'Doe'</span><span class="p">,</span> <span class="s1">'age'</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span> <span class="s1">'country'</span><span class="p">:</span> <span class="s1">'USA'</span><span class="p">},</span>
+    <span class="p">{</span><span class="s1">'first_name'</span><span class="p">:</span> <span class="s1">'Jane'</span><span class="p">,</span> <span class="s1">'last_name'</span><span class="p">:</span> <span class="s1">'Doe'</span><span class="p">,</span> <span class="s1">'age'</span><span class="p">:</span> <span class="mi">28</span><span class="p">,</span> <span class="s1">'country'</span><span class="p">:</span> <span class="s1">'Canada'</span><span class="p">},</span>
+    <span class="p">{</span><span class="s1">'first_name'</span><span class="p">:</span> <span class="s1">'Alice'</span><span class="p">,</span> <span class="s1">'last_name'</span><span class="p">:</span> <span class="s1">'Johnson'</span><span class="p">,</span> <span class="s1">'age'</span><span class="p">:</span> <span class="mi">25</span><span class="p">,</span> <span class="s1">'country'</span><span class="p">:</span> <span class="s1">'UK'</span><span class="p">},</span>
+    <span class="p">{</span><span class="s1">'first_name'</span><span class="p">:</span> <span class="s1">'Bob'</span><span class="p">,</span> <span class="s1">'last_name'</span><span class="p">:</span> <span class="s1">'Smith'</span><span class="p">,</span> <span class="s1">'age'</span><span class="p">:</span> <span class="mi">32</span><span class="p">,</span> <span class="s1">'country'</span><span class="p">:</span> <span class="s1">'Australia'</span><span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="output">
+<h3>Output:<a class="headerlink" href="#output" title="Permalink to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">John</span> <span class="n">Doe</span> <span class="ow">is</span> <span class="mi">30</span> <span class="n">years</span> <span class="n">old</span> <span class="ow">and</span> <span class="n">comes</span> <span class="kn">from</span> <span class="nn">USA.</span>
+<span class="n">Jane</span> <span class="n">Doe</span> <span class="ow">is</span> <span class="mi">28</span> <span class="n">years</span> <span class="n">old</span> <span class="ow">and</span> <span class="n">comes</span> <span class="kn">from</span> <span class="nn">Canada.</span>
+<span class="n">Alice</span> <span class="n">Johnson</span> <span class="ow">is</span> <span class="mi">25</span> <span class="n">years</span> <span class="n">old</span> <span class="ow">and</span> <span class="n">comes</span> <span class="kn">from</span> <span class="nn">UK.</span>
+<span class="n">Bob</span> <span class="n">Smith</span> <span class="ow">is</span> <span class="mi">32</span> <span class="n">years</span> <span class="n">old</span> <span class="ow">and</span> <span class="n">comes</span> <span class="kn">from</span> <span class="nn">Australia.</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="problem-2">
+<h2>Problem 2:<a class="headerlink" href="#problem-2" title="Permalink to this heading">#</a></h2>
+<p>You are given a list of products, where each product is represented as a tuple containing the product’s name, price, and quantity. Your task is to write a Python script that iterates through the list and prints out the product information in a formatted string as follows:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">Product</span> <span class="na">Name</span><span class="p">&gt;</span> - Price: $<span class="p">&lt;</span><span class="nt">Price</span><span class="p">&gt;</span> - Quantity: <span class="p">&lt;</span><span class="nt">Quantity</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>Here’s the list of products:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">products</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">(</span><span class="s1">'Laptop'</span><span class="p">,</span> <span class="mf">999.99</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">'Smartphone'</span><span class="p">,</span> <span class="mf">799.99</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">'Tablet'</span><span class="p">,</span> <span class="mf">399.99</span><span class="p">,</span> <span class="mi">7</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">'Headphones'</span><span class="p">,</span> <span class="mf">149.99</span><span class="p">,</span> <span class="mi">25</span><span class="p">)</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</section>
+<section id="id1">
+<h2>Output:<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>Laptop - Price: $999.99 - Quantity: 5
+Smartphone - Price: $799.99 - Quantity: 10
+Tablet - Price: $399.99 - Quantity: 7
+Headphones - Price: $149.99 - Quantity: 25
+</pre></div>
+</div>
+</section>
+<section id="problem-3">
+<h2>Problem 3:<a class="headerlink" href="#problem-3" title="Permalink to this heading">#</a></h2>
+<p>You are given a list of students, where each student is represented as a dictionary containing the student’s name and a list of their test scores. Your task is to write a Python script that calculates the average score for each student and prints out the student’s name along with their average score, formatted as follows:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">Student</span> <span class="n">Name</span><span class="o">&gt;</span><span class="p">:</span> <span class="n">Average</span> <span class="n">Score</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">Average</span> <span class="n">Score</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>Here’s the list of students:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">students</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span><span class="s1">'name'</span><span class="p">:</span> <span class="s1">'John'</span><span class="p">,</span> <span class="s1">'scores'</span><span class="p">:</span> <span class="p">[</span><span class="mi">85</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">78</span><span class="p">,</span> <span class="mi">92</span><span class="p">,</span> <span class="mi">88</span><span class="p">]},</span>
+    <span class="p">{</span><span class="s1">'name'</span><span class="p">:</span> <span class="s1">'Jane'</span><span class="p">,</span> <span class="s1">'scores'</span><span class="p">:</span> <span class="p">[</span><span class="mi">80</span><span class="p">,</span> <span class="mi">85</span><span class="p">,</span> <span class="mi">91</span><span class="p">,</span> <span class="mi">89</span><span class="p">,</span> <span class="mi">93</span><span class="p">]},</span>
+    <span class="p">{</span><span class="s1">'name'</span><span class="p">:</span> <span class="s1">'Alice'</span><span class="p">,</span> <span class="s1">'scores'</span><span class="p">:</span> <span class="p">[</span><span class="mi">92</span><span class="p">,</span> <span class="mi">96</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">81</span><span class="p">,</span> <span class="mi">85</span><span class="p">]},</span>
+    <span class="p">{</span><span class="s1">'name'</span><span class="p">:</span> <span class="s1">'Bob'</span><span class="p">,</span> <span class="s1">'scores'</span><span class="p">:</span> <span class="p">[</span><span class="mi">82</span><span class="p">,</span> <span class="mi">84</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">78</span><span class="p">,</span> <span class="mi">79</span><span class="p">]}</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</section>
+<section id="id2">
+<h2>Output:<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">John</span><span class="p">:</span> <span class="n">Average</span> <span class="n">Score</span><span class="p">:</span> <span class="mf">86.60</span>
+<span class="n">Jane</span><span class="p">:</span> <span class="n">Average</span> <span class="n">Score</span><span class="p">:</span> <span class="mf">87.60</span>
+<span class="n">Alice</span><span class="p">:</span> <span class="n">Average</span> <span class="n">Score</span><span class="p">:</span> <span class="mf">86.80</span>
+<span class="n">Bob</span><span class="p">:</span> <span class="n">Average</span> <span class="n">Score</span><span class="p">:</span> <span class="mf">82.60</span>
+</pre></div>
+</div>
+</section>
+</section>
+<script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./courses\python"
+        },
+        predefinedOutput: true
+    }
+    </script>
+<script>kernelName = 'python3'</script>
+</article>
+<footer class="bd-footer-article">
+<div class="footer-article-items footer-article__inner">
+<div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+</div>
+</footer>
+</div>
+<div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+<div class="sidebar-secondary-item">
+<div class="page-toc tocsection onthispage">
+<i class="fa-solid fa-list"></i> Contents
+  </div>
+<nav class="bd-toc-nav page-toc">
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-1">Problem 1:</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#output">Output:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-2">Problem 2:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Output:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-3">Problem 3:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Output:</a></li>
+</ul>
+</nav></div>
+</div></div>
+</div>
+<footer class="bd-footer-content">
+<div class="bd-footer-content__inner container">
+<div class="footer-item">
+<p class="component-author">
+By Byamba Enkhbat
+</p>
+</div>
+<div class="footer-item">
+<p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+</p>
+</div>
+<div class="footer-item">
+</div>
+<div class="footer-item">
+</div>
+</div>
+</footer>
+</main>
+</div>
+</div>
+<!-- Scripts loaded after <body> so the DOM is not blocked -->
+<script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+<footer class="bd-footer">
+</footer>
+</body>
+</html>

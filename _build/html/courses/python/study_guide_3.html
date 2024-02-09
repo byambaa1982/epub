@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-6R7KD1FNMR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6R7KD1FNMR');
+</script>
+
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="Docutils 0.18.1: http://docutils.sourceforge.net/" name="generator"/>
+<title>3. Control Flow — Byambalogy</title>
+<script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+<!-- Loaded before other Sphinx assets -->
+<link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet"/>
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet"/>
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet"/>
+<link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet"/>
+<link as="font" crossorigin="" href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" rel="preload" type="font/woff2"/>
+<link as="font" crossorigin="" href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" rel="preload" type="font/woff2"/>
+<link as="font" crossorigin="" href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" rel="preload" type="font/woff2"/>
+<link href="../../_static/pygments.css" rel="stylesheet" type="text/css"/>
+<link href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" rel="stylesheet" type="text/css"/>
+<link href="../../_static/togglebutton.css" rel="stylesheet" type="text/css"/>
+<link href="../../_static/copybutton.css" rel="stylesheet" type="text/css"/>
+<link href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" rel="stylesheet" type="text/css"/>
+<link href="../../_static/sphinx-thebe.css" rel="stylesheet" type="text/css"/>
+<link href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" rel="stylesheet" type="text/css"/>
+<!-- Pre-loaded scripts that we'll load fully later -->
+<link as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" rel="preload"/>
+<link as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" rel="preload"/>
+<script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+<script src="../../_static/jquery.js"></script>
+<script src="../../_static/underscore.js"></script>
+<script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+<script src="../../_static/doctools.js"></script>
+<script src="../../_static/clipboard.min.js"></script>
+<script src="../../_static/copybutton.js"></script>
+<script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+<script>let toggleHintShow = 'Click to show';</script>
+<script>let toggleHintHide = 'Click to hide';</script>
+<script>let toggleOpenOnPrint = 'true';</script>
+<script src="../../_static/togglebutton.js"></script>
+<script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+<script src="../../_static/design-tabs.js"></script>
+<script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+<script async="async" src="../../_static/sphinx-thebe.js"></script>
+<script>DOCUMENTATION_OPTIONS.pagename = 'courses/python/study_guide_3';</script>
+<link href="../../genindex.html" rel="index" title="Index"/>
+<link href="../../search.html" rel="search" title="Search"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="en" name="docsearch:language"/>
+</head>
+<body data-bs-root-margin="0px 0px -60%" data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-default-mode="" data-offset="180">
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<input class="sidebar-toggle" id="__primary" name="__primary" type="checkbox"/>
+<label class="overlay overlay-primary" for="__primary"></label>
+<input class="sidebar-toggle" id="__secondary" name="__secondary" type="checkbox"/>
+<label class="overlay overlay-secondary" for="__secondary"></label>
+<div class="search-button__wrapper">
+<div class="search-button__overlay"></div>
+<div class="search-button__search-container">
+<form action="../../search.html" class="bd-search d-flex align-items-center" method="get">
+<i class="fa-solid fa-magnifying-glass"></i>
+<input aria-label="Search this book..." autocapitalize="off" autocomplete="off" autocorrect="off" class="form-control" id="search-input" name="q" placeholder="Search this book..." spellcheck="false" type="search"/>
+<span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+</div>
+<nav class="bd-header navbar navbar-expand-lg bd-navbar">
+</nav>
+<div class="bd-container">
+<div class="bd-container__inner bd-page-width">
+<div class="bd-sidebar-primary bd-sidebar">
+<div class="sidebar-header-items sidebar-primary__section">
+</div>
+<div class="sidebar-primary-items__start sidebar-primary__section">
+<div class="sidebar-primary-item">
+<a class="navbar-brand logo" href="../../landing.html">
+<img alt="Logo image" class="logo__image only-light" src="../../_static/logo.png"/>
+<script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+</a></div>
+<div class="sidebar-primary-item"><nav aria-label="Main" class="bd-links" id="bd-docs-nav">
+<div class="bd-toc-item navbar-nav active">
+<ul class="nav bd-sidenav bd-sidenav__home-link">
+<li class="toctree-l1">
+<a class="reference internal" href="../../landing.html">
+                    About this web
+                </a>
+</li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../courses.html">Courses</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Python Courses for beginners</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../table_content.html">1. Introduction to Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../study_guide_2.html">2. Python Data Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../study_guide_3.html">3. Control Flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../study_guide_4.html">4. Python Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../study_guide_5.html">5. Lists, Tuples, Dictionary, and Sets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../study_guide_6.html">6. String</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../simple_flask_app.html">7. Create a Simple Flask App</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../update_simple_flask_app.html">Update Flask App with more functions</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../blogs/blogs.html">Blogs</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../blogs/azure_synapse_bq.html">Azure Synapse vs Google Big Query</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../blogs/file_and_dir_path.html">Understanding File and Directory Paths in Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../blogs/Chart.html">Creating Dynamic Bar Charts with Python’s Matplotlib</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../blogs/turn_sheets_to_db.html">Mastering Data Flow: Google Sheets to SQLite via Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../blogs/wealth.html">The Art of Leveraging Specific Knowledge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../blogs/delta_table.html">Exploring Delta Lake’s Powerful Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../blogs/big_data.html">Big Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../blogs/cloud_services.html">A Overview of Azure, Google Cloud, and AWS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../blogs/memory_trick.html">Artful Memory Hacks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../blogs/managed_unmanaged.html">Memorizing Complex Documentation: A Tale of Databricks Tables and Storytelling</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../ebook/tests.html">Databricks</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../ebook/test_3.html">Test 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ebook/test_1.html">Test 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ebook/answers_1.html">Correct Answers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ebook/explaination_1.html">Explanations</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../mongol/main.html">Монгол</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../mongol/blog_1.html">Databricks гэж юу?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../mongol/blog_2.html">Дата дата л гэнэ яг юу юм бэ?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../mongol/sentiment.html">ChatGPT API ашиглан жиргээнд хэрхэн sentiment анализ хийх вэ?</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav></div>
+</div>
+<div class="sidebar-primary-items__end sidebar-primary__section">
+</div>
+<div id="rtd-footer-container"></div>
+</div>
+<main class="bd-main" id="main-content">
+<div class="sbt-scroll-pixel-helper"></div>
+<div class="bd-content">
+<div class="bd-article-container">
+<div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+<div class="header-article-items__start">
+<div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" data-bs-placement="bottom" data-bs-toggle="tooltip" for="__primary" title="Toggle primary sidebar">
+<span class="fa-solid fa-bars"></span>
+</label></div>
+</div>
+<div class="header-article-items__end">
+<div class="header-article-item">
+<div class="article-header-buttons">
+<div class="dropdown dropdown-launch-buttons">
+<button aria-expanded="false" aria-label="Launch interactive content" class="btn dropdown-toggle" data-bs-toggle="dropdown" type="button">
+<i class="fas fa-rocket"></i>
+</button>
+<ul class="dropdown-menu">
+<li><a class="btn btn-sm dropdown-item" data-bs-placement="left" data-bs-toggle="tooltip" href="https://colab.research.google.com/github/byambaa1982/python_cources_for_beginers/blob/main/courses/python/study_guide_3.ipynb" target="_blank" title="Launch onColab">
+<span class="btn__icon-container">
+<img src="../../_static/images/logo_colab.png"/>
+</span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+</ul>
+</div>
+<div class="dropdown dropdown-source-buttons">
+<button aria-expanded="false" aria-label="Source repositories" class="btn dropdown-toggle" data-bs-toggle="dropdown" type="button">
+<i class="fab fa-github"></i>
+</button>
+<ul class="dropdown-menu">
+<li><a class="btn btn-sm btn-source-repository-button dropdown-item" data-bs-placement="left" data-bs-toggle="tooltip" href="https://github.com/byambaa1982/python_cources_for_beginers" target="_blank" title="Source repository">
+<span class="btn__icon-container">
+<i class="fab fa-github"></i>
+</span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+<li><a class="btn btn-sm btn-source-issues-button dropdown-item" data-bs-placement="left" data-bs-toggle="tooltip" href="https://github.com/byambaa1982/python_cources_for_beginers/issues/new?title=Issue%20on%20page%20%2Fcourses/python/study_guide_3.html&amp;body=Your%20issue%20content%20here." target="_blank" title="Open an issue">
+<span class="btn__icon-container">
+<i class="fas fa-lightbulb"></i>
+</span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+</ul>
+</div>
+<div class="dropdown dropdown-download-buttons">
+<button aria-expanded="false" aria-label="Download this page" class="btn dropdown-toggle" data-bs-toggle="dropdown" type="button">
+<i class="fas fa-download"></i>
+</button>
+<ul class="dropdown-menu">
+<li><a class="btn btn-sm btn-download-source-button dropdown-item" data-bs-placement="left" data-bs-toggle="tooltip" href="../../_sources/courses/python/study_guide_3.ipynb" target="_blank" title="Download source file">
+<span class="btn__icon-container">
+<i class="fas fa-file"></i>
+</span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+<li>
+<button class="btn btn-sm btn-download-pdf-button dropdown-item" data-bs-placement="left" data-bs-toggle="tooltip" onclick="window.print()" title="Print to PDF">
+<span class="btn__icon-container">
+<i class="fas fa-file-pdf"></i>
+</span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+</ul>
+</div>
+<button class="btn btn-sm btn-fullscreen-button" data-bs-placement="bottom" data-bs-toggle="tooltip" onclick="toggleFullScreen()" title="Fullscreen mode">
+<span class="btn__icon-container">
+<i class="fas fa-expand"></i>
+</span>
+</button>
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" data-bs-placement="bottom" data-bs-toggle="tooltip" for="__secondary" title="Toggle secondary sidebar">
+<span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+</div>
+</div>
+</div>
+<div class="onlyprint" id="jb-print-docs-body">
+<h1>3. Control Flow</h1>
+<!-- Table of contents -->
+<div id="print-main-content">
+<div id="jb-print-toc">
+<div>
+<h2> Contents </h2>
+</div>
+<nav aria-label="Page">
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#practices-and-solution-code">Practices and Solution Code</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Practices and <span class="xref myst">Solution Code</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions">Instructions:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-output">Example output:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#in-statement"><code class="docutils literal notranslate"><span class="pre">in</span></code> statement</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Practices and Solution Code</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Instructions:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-list-of-animals">Example list of animals:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Example output:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Practices and Solution Code</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Instructions:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-list-of-cities">Example list of cities:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Example output:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Practices and Solution Code</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#concept-of-len-and-enumerate">Concept of len() and enumerate()</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Practices and Solution Code</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Instructions:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-list-of-programming-languages">Example list of programming languages:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Example output:</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div id="searchbox"></div>
+<article class="bd-article" role="main">
+<p><a href="https://colab.research.google.com/github/byambaa1982/python_cources_for_beginers/blob/main/3_control%20flow/study_guide_3.ipynb" target="_parent"><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg"/></a></p>
+<section class="tex2jax_ignore mathjax_ignore" id="control-flow">
+<h1>3. Control Flow<a class="headerlink" href="#control-flow" title="Permalink to this heading">#</a></h1>
+<p>At the most basic level, “control flow” refers to the order in which the statements, instructions, or function calls of a program are executed or evaluated. In Python and most other programming languages, control flow is a fundamental concept that allows a program to be more than just a simple, linear sequence of commands.</p>
+<p>Here are the main types of control flow mechanisms in Python:</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Sequential</span></code>: This is the most basic and common type. The computer executes Python commands one after the other in the order they’re given.</p></li>
+</ol>
+<p>Example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"Hello,"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"world!"</span><span class="p">)</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p><code class="docutils literal notranslate"><span class="pre">Conditional</span> <span class="pre">statements</span> <span class="pre">(if,</span> <span class="pre">elif,</span> <span class="pre">else)</span></code>: These are used when you want some blocks of code to only run when certain conditions are met.</p></li>
+</ol>
+<p>Example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"x is positive"</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"x is negative"</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"x is zero"</span><span class="p">)</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p><code class="docutils literal notranslate"><span class="pre">Loops</span> <span class="pre">(for,</span> <span class="pre">while)</span></code>: Loops are used when you want to repeat a block of code multiple times.</p></li>
+</ol>
+<p>Example of a for loop:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+
+</pre></div>
+</div>
+<p>Example of a while loop:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p><code class="docutils literal notranslate"><span class="pre">Flow</span> <span class="pre">control</span> <span class="pre">statements</span> <span class="pre">(break,</span> <span class="pre">continue,</span> <span class="pre">pass,</span> <span class="pre">return)</span></code>: These are used to influence the flow of execution inside loops and functions.</p></li>
+</ol>
+<p>Example with break and continue:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="k">continue</span>  <span class="c1"># this skips the rest of the loop for this iteration</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span>
+        <span class="k">break</span>  <span class="c1"># this stops the loop entirely</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">number</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">number</span><span class="si">}</span><span class="s2"> is even."</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">number</span><span class="si">}</span><span class="s2"> is odd."</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 is odd.
+2 is even.
+3 is odd.
+4 is even.
+5 is odd.
+</pre></div>
+</div>
+</div>
+</div>
+<section id="practices-and-solution-code">
+<h2>Practices and <a class="reference external" href="https://github.com/byambaa1982/python_cources_for_beginers/blob/main/3_control%20flow/solution_code_3.ipynb">Solution Code</a><a class="headerlink" href="#practices-and-solution-code" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Write a Python program that iterates through the numbers from 1 to 10 and prints whether each number is a multiple of 3 or not.</p></li>
+</ol>
+<p>Instructions:</p>
+<ol class="arabic simple">
+<li><p>Use a for loop to iterate through the numbers from 1 to 10.</p></li>
+<li><p>Inside the loop, use an if statement to check if the current number is a multiple of 3.</p></li>
+<li><p>f the number is a multiple of 3, print a message stating that the number is a multiple of 3.</p></li>
+<li><p>If the number is not a multiple of 3, print a message stating that the number is not a multiple of 3.</p></li>
+</ol>
+<p>Example output:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">a</span> <span class="n">multiple</span> <span class="n">of</span> <span class="mf">3.</span>
+<span class="mi">2</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">a</span> <span class="n">multiple</span> <span class="n">of</span> <span class="mf">3.</span>
+<span class="mi">3</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">multiple</span> <span class="n">of</span> <span class="mf">3.</span>
+<span class="mi">4</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">a</span> <span class="n">multiple</span> <span class="n">of</span> <span class="mf">3.</span>
+<span class="mi">5</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">a</span> <span class="n">multiple</span> <span class="n">of</span> <span class="mf">3.</span>
+<span class="mi">6</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">multiple</span> <span class="n">of</span> <span class="mf">3.</span>
+<span class="mi">7</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">a</span> <span class="n">multiple</span> <span class="n">of</span> <span class="mf">3.</span>
+<span class="mi">8</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">a</span> <span class="n">multiple</span> <span class="n">of</span> <span class="mf">3.</span>
+<span class="mi">9</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">multiple</span> <span class="n">of</span> <span class="mf">3.</span>
+<span class="mi">10</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">a</span> <span class="n">multiple</span> <span class="n">of</span> <span class="mf">3.</span>
+</pre></div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<ul class="simple">
+<li><p>Use the range() function to generate a sequence of numbers from 1 to 10.</p></li>
+<li><p>Use the modulo operator % to check if a number is a multiple of another number. If the remainder of the division is 0, the number is a multiple of the other number.</p></li>
+<li><p>Use f-strings or string concatenation to format the output message.</p></li>
+</ul>
+</div>
+</section>
+<section id="id1">
+<h2>Practices and <span class="xref myst">Solution Code</span><a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple" start="2">
+<li><p>Write a Python program that iterates through the numbers from 1 to 15 and prints whether each number is divisible by 4 or not.</p></li>
+</ol>
+<section id="instructions">
+<h3>Instructions:<a class="headerlink" href="#instructions" title="Permalink to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Use a for loop to iterate through the numbers from 1 to 15.</p></li>
+<li><p>Inside the loop, use an if statement to check if the current number is divisible by 4.</p></li>
+<li><p>If the number is divisible by 4, print a message stating that the number is divisible by 4.</p></li>
+<li><p>If the number is not divisible by 4, print a message stating that the number is not divisible by 4.</p></li>
+</ol>
+</section>
+<section id="example-output">
+<h3>Example output:<a class="headerlink" href="#example-output" title="Permalink to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">divisible</span> <span class="n">by</span> <span class="mf">4.</span>
+<span class="mi">2</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">divisible</span> <span class="n">by</span> <span class="mf">4.</span>
+<span class="mi">3</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">divisible</span> <span class="n">by</span> <span class="mf">4.</span>
+<span class="mi">4</span> <span class="ow">is</span> <span class="n">divisible</span> <span class="n">by</span> <span class="mf">4.</span>
+<span class="mi">5</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">divisible</span> <span class="n">by</span> <span class="mf">4.</span>
+<span class="mi">6</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">divisible</span> <span class="n">by</span> <span class="mf">4.</span>
+<span class="mi">7</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">divisible</span> <span class="n">by</span> <span class="mf">4.</span>
+<span class="mi">8</span> <span class="ow">is</span> <span class="n">divisible</span> <span class="n">by</span> <span class="mf">4.</span>
+<span class="mi">9</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">divisible</span> <span class="n">by</span> <span class="mf">4.</span>
+<span class="mi">10</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">divisible</span> <span class="n">by</span> <span class="mf">4.</span>
+<span class="mi">11</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">divisible</span> <span class="n">by</span> <span class="mf">4.</span>
+<span class="mi">12</span> <span class="ow">is</span> <span class="n">divisible</span> <span class="n">by</span> <span class="mf">4.</span>
+<span class="mi">13</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">divisible</span> <span class="n">by</span> <span class="mf">4.</span>
+<span class="mi">14</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">divisible</span> <span class="n">by</span> <span class="mf">4.</span>
+<span class="mi">15</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">divisible</span> <span class="n">by</span> <span class="mf">4.</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Use the range() function to generate a sequence of numbers from 1 to 15.</p></li>
+<li><p>Use the modulo operator % to check if a number is divisible by another number. If the remainder of the division is 0, the number is divisible by the other number.</p></li>
+<li><p>Use f-strings or string concatenation to format the output message.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Start your code here...</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="in-statement">
+<h2><code class="docutils literal notranslate"><span class="pre">in</span></code> statement<a class="headerlink" href="#in-statement" title="Permalink to this heading">#</a></h2>
+<p>In Python, the <code class="docutils literal notranslate"><span class="pre">in</span></code> keyword is part of the control flow tools, especially when combined with if statements or loops. It’s commonly used for checking if an item exists in a collection like a list or a dictionary, or if a substring exists in a string.</p>
+<p>Here’s how it works:</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Checking</span> <span class="pre">for</span> <span class="pre">membership</span> <span class="pre">in</span> <span class="pre">a</span> <span class="pre">collection</span></code>:</p></li>
+</ol>
+<p>In this case, it can be used with the <code class="docutils literal notranslate"><span class="pre">if</span></code> keyword to check if a specific value exists in a collection (like a list, tuple, or dictionary).</p>
+<p>Example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="k">if</span> <span class="mi">3</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"3 is in the list!"</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>If you run this code with the same list as before, it will print each number on a separate line.</p>
+<ol class="arabic simple" start="2">
+<li><p><code class="docutils literal notranslate"><span class="pre">Iterating</span> <span class="pre">over</span> <span class="pre">a</span> <span class="pre">collection</span> <span class="pre">with</span> <span class="pre">a</span> <span class="pre">for</span> <span class="pre">loop</span></code>:</p></li>
+</ol>
+<p>The in keyword can also be used in a for loop to iterate over each item in a collection.</p>
+<p>Example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">number</span><span class="p">)</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p><code class="docutils literal notranslate"><span class="pre">Checking</span> <span class="pre">for</span> <span class="pre">a</span> <span class="pre">substring</span> <span class="pre">within</span> <span class="pre">a</span> <span class="pre">string</span></code>:</p></li>
+</ol>
+<p>The in keyword can be used to check if a certain sequence of characters (substring) is part of a larger string.</p>
+<p>Example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sentence</span> <span class="o">=</span> <span class="s2">"Hello, world!"</span>
+<span class="k">if</span> <span class="s2">"world"</span> <span class="ow">in</span> <span class="n">sentence</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"The word 'world' is in the sentence."</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>If you run this code, it will print “The word ‘world’ is in the sentence.” because “world” is indeed a substring of “Hello, world!”.</p>
+<p>Overall, the in keyword is a very useful tool for controlling the flow of your Python programs, especially when you need to work with collections of items or strings.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"apple"</span><span class="p">,</span> <span class="s2">"banana"</span><span class="p">,</span> <span class="s2">"orange"</span><span class="p">,</span> <span class="s2">"grape"</span><span class="p">,</span> <span class="s2">"kiwi"</span><span class="p">]</span>
+
+<span class="c1"># Check if "banana" exists in the list</span>
+<span class="k">if</span> <span class="s2">"banana"</span> <span class="ow">in</span> <span class="n">fruits</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Banana is in the list of fruits."</span><span class="p">)</span>
+
+<span class="c1"># Check if "mango" exists in the list</span>
+<span class="k">if</span> <span class="s2">"mango"</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">fruits</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Mango is not in the list of fruits."</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Banana is in the list of fruits.
+Mango is not in the list of fruits.
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id2">
+<h2>Practices and <a class="reference external" href="https://github.com/byambaa1982/python_cources_for_beginers/blob/main/3_control%20flow/solution_code_3.ipynb">Solution Code</a><a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple" start="3">
+<li><p>Write a Python program that iterates through a list of animals and prints whether each animal is a mammal or not.</p></li>
+</ol>
+<section id="id3">
+<h3>Instructions:<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Create a list of animals including mammals and non-mammals.</p></li>
+<li><p>Use a for loop to iterate through the list of animals.</p></li>
+<li><p>Inside the loop, use an if statement to check if the current animal is a mammal.</p></li>
+<li><p>If the animal is a mammal, print a message stating that the animal is a mammal.</p></li>
+<li><p>If the animal is not a mammal, print a message stating that the animal is not a mammal.</p></li>
+</ol>
+</section>
+<section id="example-list-of-animals">
+<h3>Example list of animals:<a class="headerlink" href="#example-list-of-animals" title="Permalink to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">animals</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"dog"</span><span class="p">,</span> <span class="s2">"cat"</span><span class="p">,</span> <span class="s2">"crocodile"</span><span class="p">,</span> <span class="s2">"parrot"</span><span class="p">,</span> <span class="s2">"elephant"</span><span class="p">]</span>
+</pre></div>
+</div>
+</section>
+<section id="id4">
+<h3>Example output:<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">dog</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">mammal</span><span class="o">.</span>
+<span class="n">cat</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">mammal</span><span class="o">.</span>
+<span class="n">crocodile</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">a</span> <span class="n">mammal</span><span class="o">.</span>
+<span class="n">parrot</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">a</span> <span class="n">mammal</span><span class="o">.</span>
+<span class="n">elephant</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">mammal</span><span class="o">.</span>
+</pre></div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<ul class="simple">
+<li><p>Create a list of mammals that you can use to check if an animal is a mammal or not.</p></li>
+<li><p>Use the in keyword to check if an item exists in a list.</p></li>
+<li><p>Use f-strings or string concatenation to format the output message.</p></li>
+</ul>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Start you code here ....</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="id5">
+<h2>Practices and <a class="reference external" href="https://github.com/byambaa1982/python_cources_for_beginers/blob/main/3_control%20flow/solution_code_3.ipynb">Solution Code</a><a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple" start="4">
+<li><p>Write a Python program that iterates through a list of cities and prints whether each city is a capital city or not.</p></li>
+</ol>
+<section id="id6">
+<h3>Instructions:<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Create a list of cities including capital and non-capital cities.
+Use a for loop to iterate through the list of cities.</p></li>
+<li><p>Inside the loop, use an if statement to check if the current city is a capital city.</p></li>
+<li><p>If the city is a capital city, print a message stating that the city is a capital city.</p></li>
+<li><p>If the city is not a capital city, print a message stating that the city is not a capital city.</p></li>
+</ol>
+</section>
+<section id="example-list-of-cities">
+<h3>Example list of cities:<a class="headerlink" href="#example-list-of-cities" title="Permalink to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cities</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"Paris"</span><span class="p">,</span> <span class="s2">"Tokyo"</span><span class="p">,</span> <span class="s2">"New York"</span><span class="p">,</span> <span class="s2">"Berlin"</span><span class="p">,</span> <span class="s2">"Madrid"</span><span class="p">,</span> <span class="s2">"London"</span><span class="p">,</span> <span class="s2">"Sydney"</span><span class="p">]</span>
+
+</pre></div>
+</div>
+</section>
+<section id="id7">
+<h3>Example output:<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Paris</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">capital</span> <span class="n">city</span><span class="o">.</span>
+<span class="n">Tokyo</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">capital</span> <span class="n">city</span><span class="o">.</span>
+<span class="n">New</span> <span class="n">York</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">a</span> <span class="n">capital</span> <span class="n">city</span><span class="o">.</span>
+<span class="n">Berlin</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">capital</span> <span class="n">city</span><span class="o">.</span>
+<span class="n">Madrid</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">capital</span> <span class="n">city</span><span class="o">.</span>
+<span class="n">London</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">capital</span> <span class="n">city</span><span class="o">.</span>
+<span class="n">Sydney</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">a</span> <span class="n">capital</span> <span class="n">city</span><span class="o">.</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># start you code here ...</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="id8">
+<h2>Practices and <a class="reference external" href="https://github.com/byambaa1982/python_cources_for_beginers/blob/main/3_control%20flow/solution_code_3.ipynb">Solution Code</a><a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple" start="5">
+<li><p>Write a Python program that iterates through a list of cars and prints whether each car is a electric or not</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Tesla</span> <span class="n">Model</span> <span class="mi">3</span> <span class="ow">is</span> <span class="n">an</span> <span class="n">electric</span> <span class="n">vehicle</span><span class="o">.</span>
+<span class="n">Nissan</span> <span class="n">Leaf</span> <span class="ow">is</span> <span class="n">an</span> <span class="n">electric</span> <span class="n">vehicle</span><span class="o">.</span>
+<span class="n">Toyota</span> <span class="n">Corolla</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">an</span> <span class="n">electric</span> <span class="n">vehicle</span><span class="o">.</span>
+<span class="n">Ford</span> <span class="n">Mustang</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">an</span> <span class="n">electric</span> <span class="n">vehicle</span><span class="o">.</span>
+<span class="n">Chevrolet</span> <span class="n">Bolt</span> <span class="ow">is</span> <span class="n">an</span> <span class="n">electric</span> <span class="n">vehicle</span><span class="o">.</span>
+<span class="n">BMW</span> <span class="n">i3</span> <span class="ow">is</span> <span class="n">an</span> <span class="n">electric</span> <span class="n">vehicle</span><span class="o">.</span>
+</pre></div>
+</div>
+</section>
+<section id="concept-of-len-and-enumerate">
+<h2>Concept of len() and enumerate()<a class="headerlink" href="#concept-of-len-and-enumerate" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a list of fruits</span>
+<span class="n">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"apple"</span><span class="p">,</span> <span class="s2">"banana"</span><span class="p">,</span> <span class="s2">"orange"</span><span class="p">,</span> <span class="s2">"grape"</span><span class="p">,</span> <span class="s2">"kiwi"</span><span class="p">]</span>
+
+<span class="c1"># Print the length of the list using len()b</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Total number of fruits: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">fruits</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total number of fruits: 5
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Use enumerate() to iterate through the list along with the index</span>
+<span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">fruit</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">fruits</span><span class="p">):</span>
+    <span class="c1"># The index starts at 0, so we add 1 to get the correct position</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">index</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="si">}</span><span class="s2">. </span><span class="si">{</span><span class="n">fruit</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1. apple
+2. banana
+3. orange
+4. grape
+5. kiwi
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Access an item from the list using its index</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"The first fruit in the list is:"</span><span class="p">,</span> <span class="n">fruits</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"The last fruit in the list is:"</span><span class="p">,</span> <span class="n">fruits</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The first fruit in the list is: apple
+The last fruit in the list is: kiwi
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id9">
+<h2>Practices and <a class="reference external" href="https://github.com/byambaa1982/python_cources_for_beginers/blob/main/3_control%20flow/solution_code_3.ipynb">Solution Code</a><a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple" start="6">
+<li><p>Write a Python program that iterates through a list of programming languages and prints whether each language is a compiled or interpreted language, along with its position in the list.</p></li>
+</ol>
+<section id="id10">
+<h3>Instructions:<a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Create a list of programming languages including both compiled and interpreted languages.</p></li>
+<li><p>Use a for loop with the enumerate() function to iterate through the list of programming languages along with their index.</p></li>
+<li><p>Inside the loop, use an if statement to check if the current language is a compiled language.</p></li>
+<li><p>If the language is a compiled language, print a message stating that the language is a compiled language and its position in the list.</p></li>
+<li><p>If the language is not a compiled language, print a message stating that the language is an interpreted language and its position in the list.</p></li>
+<li><p>Use the len() function to print the total number of programming languages in the list.</p></li>
+</ol>
+</section>
+<section id="example-list-of-programming-languages">
+<h3>Example list of programming languages:<a class="headerlink" href="#example-list-of-programming-languages" title="Permalink to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">languages</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"C"</span><span class="p">,</span> <span class="s2">"Java"</span><span class="p">,</span> <span class="s2">"Python"</span><span class="p">,</span> <span class="s2">"Ruby"</span><span class="p">,</span> <span class="s2">"C#"</span><span class="p">,</span> <span class="s2">"JavaScript"</span><span class="p">,</span> <span class="s2">"Swift"</span><span class="p">]</span>
+</pre></div>
+</div>
+</section>
+<section id="id11">
+<h3>Example output:<a class="headerlink" href="#id11" title="Permalink to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="mf">1.</span> <span class="n">C</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">compiled</span> <span class="n">language</span><span class="o">.</span>
+<span class="mf">2.</span> <span class="n">Java</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">compiled</span> <span class="n">language</span><span class="o">.</span>
+<span class="mf">3.</span> <span class="n">Python</span> <span class="ow">is</span> <span class="n">an</span> <span class="n">interpreted</span> <span class="n">language</span><span class="o">.</span>
+<span class="mf">4.</span> <span class="n">Ruby</span> <span class="ow">is</span> <span class="n">an</span> <span class="n">interpreted</span> <span class="n">language</span><span class="o">.</span>
+<span class="mf">5.</span> <span class="n">C</span><span class="c1"># is a compiled language.</span>
+<span class="mf">6.</span> <span class="n">JavaScript</span> <span class="ow">is</span> <span class="n">an</span> <span class="n">interpreted</span> <span class="n">language</span><span class="o">.</span>
+<span class="mf">7.</span> <span class="n">Swift</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">compiled</span> <span class="n">language</span><span class="o">.</span>
+<span class="n">Total</span> <span class="n">number</span> <span class="n">of</span> <span class="n">programming</span> <span class="n">languages</span><span class="p">:</span> <span class="mi">7</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Start you code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+<script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./courses\python"
+        },
+        predefinedOutput: true
+    }
+    </script>
+<script>kernelName = 'python3'</script>
+</article>
+<footer class="bd-footer-article">
+<div class="footer-article-items footer-article__inner">
+<div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+</div>
+</footer>
+</div>
+<div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+<div class="sidebar-secondary-item">
+<div class="page-toc tocsection onthispage">
+<i class="fa-solid fa-list"></i> Contents
+  </div>
+<nav class="bd-toc-nav page-toc">
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#practices-and-solution-code">Practices and Solution Code</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Practices and <span class="xref myst">Solution Code</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions">Instructions:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-output">Example output:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#in-statement"><code class="docutils literal notranslate"><span class="pre">in</span></code> statement</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Practices and Solution Code</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Instructions:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-list-of-animals">Example list of animals:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Example output:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Practices and Solution Code</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Instructions:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-list-of-cities">Example list of cities:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Example output:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Practices and Solution Code</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#concept-of-len-and-enumerate">Concept of len() and enumerate()</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Practices and Solution Code</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Instructions:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-list-of-programming-languages">Example list of programming languages:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Example output:</a></li>
+</ul>
+</li>
+</ul>
+</nav></div>
+</div></div>
+</div>
+<footer class="bd-footer-content">
+<div class="bd-footer-content__inner container">
+<div class="footer-item">
+<p class="component-author">
+By Byamba Enkhbat
+</p>
+</div>
+<div class="footer-item">
+<p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+</p>
+</div>
+<div class="footer-item">
+</div>
+<div class="footer-item">
+</div>
+</div>
+</footer>
+</main>
+</div>
+</div>
+<!-- Scripts loaded after <body> so the DOM is not blocked -->
+<script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+<footer class="bd-footer">
+</footer>
+</body>
+</html>

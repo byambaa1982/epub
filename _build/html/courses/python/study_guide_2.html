@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-6R7KD1FNMR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6R7KD1FNMR');
+</script>
+
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="Docutils 0.18.1: http://docutils.sourceforge.net/" name="generator"/>
+<title>2. Python Data Types — Byambalogy</title>
+<script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+<!-- Loaded before other Sphinx assets -->
+<link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet"/>
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet"/>
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet"/>
+<link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet"/>
+<link as="font" crossorigin="" href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" rel="preload" type="font/woff2"/>
+<link as="font" crossorigin="" href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" rel="preload" type="font/woff2"/>
+<link as="font" crossorigin="" href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" rel="preload" type="font/woff2"/>
+<link href="../../_static/pygments.css" rel="stylesheet" type="text/css"/>
+<link href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" rel="stylesheet" type="text/css"/>
+<link href="../../_static/togglebutton.css" rel="stylesheet" type="text/css"/>
+<link href="../../_static/copybutton.css" rel="stylesheet" type="text/css"/>
+<link href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" rel="stylesheet" type="text/css"/>
+<link href="../../_static/sphinx-thebe.css" rel="stylesheet" type="text/css"/>
+<link href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" rel="stylesheet" type="text/css"/>
+<!-- Pre-loaded scripts that we'll load fully later -->
+<link as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" rel="preload"/>
+<link as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" rel="preload"/>
+<script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+<script src="../../_static/jquery.js"></script>
+<script src="../../_static/underscore.js"></script>
+<script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+<script src="../../_static/doctools.js"></script>
+<script src="../../_static/clipboard.min.js"></script>
+<script src="../../_static/copybutton.js"></script>
+<script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+<script>let toggleHintShow = 'Click to show';</script>
+<script>let toggleHintHide = 'Click to hide';</script>
+<script>let toggleOpenOnPrint = 'true';</script>
+<script src="../../_static/togglebutton.js"></script>
+<script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+<script src="../../_static/design-tabs.js"></script>
+<script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+<script async="async" src="../../_static/sphinx-thebe.js"></script>
+<script>DOCUMENTATION_OPTIONS.pagename = 'courses/python/study_guide_2';</script>
+<link href="../../genindex.html" rel="index" title="Index"/>
+<link href="../../search.html" rel="search" title="Search"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="en" name="docsearch:language"/>
+</head>
+<body data-bs-root-margin="0px 0px -60%" data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-default-mode="" data-offset="180">
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<input class="sidebar-toggle" id="__primary" name="__primary" type="checkbox"/>
+<label class="overlay overlay-primary" for="__primary"></label>
+<input class="sidebar-toggle" id="__secondary" name="__secondary" type="checkbox"/>
+<label class="overlay overlay-secondary" for="__secondary"></label>
+<div class="search-button__wrapper">
+<div class="search-button__overlay"></div>
+<div class="search-button__search-container">
+<form action="../../search.html" class="bd-search d-flex align-items-center" method="get">
+<i class="fa-solid fa-magnifying-glass"></i>
+<input aria-label="Search this book..." autocapitalize="off" autocomplete="off" autocorrect="off" class="form-control" id="search-input" name="q" placeholder="Search this book..." spellcheck="false" type="search"/>
+<span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+</div>
+<nav class="bd-header navbar navbar-expand-lg bd-navbar">
+</nav>
+<div class="bd-container">
+<div class="bd-container__inner bd-page-width">
+<div class="bd-sidebar-primary bd-sidebar">
+<div class="sidebar-header-items sidebar-primary__section">
+</div>
+<div class="sidebar-primary-items__start sidebar-primary__section">
+<div class="sidebar-primary-item">
+<a class="navbar-brand logo" href="../../landing.html">
+<img alt="Logo image" class="logo__image only-light" src="../../_static/logo.png"/>
+<script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+</a></div>
+<div class="sidebar-primary-item"><nav aria-label="Main" class="bd-links" id="bd-docs-nav">
+<div class="bd-toc-item navbar-nav active">
+<ul class="nav bd-sidenav bd-sidenav__home-link">
+<li class="toctree-l1">
+<a class="reference internal" href="../../landing.html">
+                    About this web
+                </a>
+</li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../courses.html">Courses</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">Python Courses for beginners</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../table_content.html">1. Introduction to Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../study_guide_2.html">2. Python Data Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../study_guide_3.html">3. Control Flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../study_guide_4.html">4. Python Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../study_guide_5.html">5. Lists, Tuples, Dictionary, and Sets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../study_guide_6.html">6. String</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../simple_flask_app.html">7. Create a Simple Flask App</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../update_simple_flask_app.html">Update Flask App with more functions</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../blogs/blogs.html">Blogs</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../blogs/azure_synapse_bq.html">Azure Synapse vs Google Big Query</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../blogs/file_and_dir_path.html">Understanding File and Directory Paths in Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../blogs/Chart.html">Creating Dynamic Bar Charts with Python’s Matplotlib</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../blogs/turn_sheets_to_db.html">Mastering Data Flow: Google Sheets to SQLite via Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../blogs/wealth.html">The Art of Leveraging Specific Knowledge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../blogs/delta_table.html">Exploring Delta Lake’s Powerful Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../blogs/big_data.html">Big Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../blogs/cloud_services.html">A Overview of Azure, Google Cloud, and AWS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../blogs/memory_trick.html">Artful Memory Hacks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../blogs/managed_unmanaged.html">Memorizing Complex Documentation: A Tale of Databricks Tables and Storytelling</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../ebook/tests.html">Databricks</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../ebook/test_3.html">Test 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ebook/test_1.html">Test 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ebook/answers_1.html">Correct Answers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ebook/explaination_1.html">Explanations</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../mongol/main.html">Монгол</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../mongol/blog_1.html">Databricks гэж юу?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../mongol/blog_2.html">Дата дата л гэнэ яг юу юм бэ?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../mongol/sentiment.html">ChatGPT API ашиглан жиргээнд хэрхэн sentiment анализ хийх вэ?</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav></div>
+</div>
+<div class="sidebar-primary-items__end sidebar-primary__section">
+</div>
+<div id="rtd-footer-container"></div>
+</div>
+<main class="bd-main" id="main-content">
+<div class="sbt-scroll-pixel-helper"></div>
+<div class="bd-content">
+<div class="bd-article-container">
+<div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+<div class="header-article-items__start">
+<div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" data-bs-placement="bottom" data-bs-toggle="tooltip" for="__primary" title="Toggle primary sidebar">
+<span class="fa-solid fa-bars"></span>
+</label></div>
+</div>
+<div class="header-article-items__end">
+<div class="header-article-item">
+<div class="article-header-buttons">
+<div class="dropdown dropdown-launch-buttons">
+<button aria-expanded="false" aria-label="Launch interactive content" class="btn dropdown-toggle" data-bs-toggle="dropdown" type="button">
+<i class="fas fa-rocket"></i>
+</button>
+<ul class="dropdown-menu">
+<li><a class="btn btn-sm dropdown-item" data-bs-placement="left" data-bs-toggle="tooltip" href="https://colab.research.google.com/github/byambaa1982/python_cources_for_beginers/blob/main/courses/python/study_guide_2.ipynb" target="_blank" title="Launch onColab">
+<span class="btn__icon-container">
+<img src="../../_static/images/logo_colab.png"/>
+</span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+</ul>
+</div>
+<div class="dropdown dropdown-source-buttons">
+<button aria-expanded="false" aria-label="Source repositories" class="btn dropdown-toggle" data-bs-toggle="dropdown" type="button">
+<i class="fab fa-github"></i>
+</button>
+<ul class="dropdown-menu">
+<li><a class="btn btn-sm btn-source-repository-button dropdown-item" data-bs-placement="left" data-bs-toggle="tooltip" href="https://github.com/byambaa1982/python_cources_for_beginers" target="_blank" title="Source repository">
+<span class="btn__icon-container">
+<i class="fab fa-github"></i>
+</span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+<li><a class="btn btn-sm btn-source-issues-button dropdown-item" data-bs-placement="left" data-bs-toggle="tooltip" href="https://github.com/byambaa1982/python_cources_for_beginers/issues/new?title=Issue%20on%20page%20%2Fcourses/python/study_guide_2.html&amp;body=Your%20issue%20content%20here." target="_blank" title="Open an issue">
+<span class="btn__icon-container">
+<i class="fas fa-lightbulb"></i>
+</span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+</ul>
+</div>
+<div class="dropdown dropdown-download-buttons">
+<button aria-expanded="false" aria-label="Download this page" class="btn dropdown-toggle" data-bs-toggle="dropdown" type="button">
+<i class="fas fa-download"></i>
+</button>
+<ul class="dropdown-menu">
+<li><a class="btn btn-sm btn-download-source-button dropdown-item" data-bs-placement="left" data-bs-toggle="tooltip" href="../../_sources/courses/python/study_guide_2.ipynb" target="_blank" title="Download source file">
+<span class="btn__icon-container">
+<i class="fas fa-file"></i>
+</span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+<li>
+<button class="btn btn-sm btn-download-pdf-button dropdown-item" data-bs-placement="left" data-bs-toggle="tooltip" onclick="window.print()" title="Print to PDF">
+<span class="btn__icon-container">
+<i class="fas fa-file-pdf"></i>
+</span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+</ul>
+</div>
+<button class="btn btn-sm btn-fullscreen-button" data-bs-placement="bottom" data-bs-toggle="tooltip" onclick="toggleFullScreen()" title="Fullscreen mode">
+<span class="btn__icon-container">
+<i class="fas fa-expand"></i>
+</span>
+</button>
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" data-bs-placement="bottom" data-bs-toggle="tooltip" for="__secondary" title="Toggle secondary sidebar">
+<span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+</div>
+</div>
+</div>
+<div class="onlyprint" id="jb-print-docs-body">
+<h1>2. Python Data Types</h1>
+<!-- Table of contents -->
+<div id="print-main-content">
+<div id="jb-print-toc">
+<div>
+<h2> Contents </h2>
+</div>
+<nav aria-label="Page">
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integer">1. Integer</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#practices-and-solution-code">Practices and <span class="xref myst">Solution Code</span></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#floats">2. Floats</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Practices and <span class="xref myst">Solution Code</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#string">3. String</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Practices and <span class="xref myst">Solution Code</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lists">4. Lists</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Practices and <span class="xref myst">Solution Code</span></a></li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div id="searchbox"></div>
+<article class="bd-article" role="main">
+<p><a href="https://colab.research.google.com/github/byambaa1982/python_cources_for_beginers/blob/main/2_variables_and_operations/study_guide_2.ipynb" target="_parent"><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg"/></a></p>
+<section class="tex2jax_ignore mathjax_ignore" id="python-data-types">
+<h1>2. <a class="reference external" href="https://github.com/byambaa1982/python_cources_for_beginers/blob/main/2_variables_and_operations/study_guide_2.ipynb">Python Data Types</a><a class="headerlink" href="#python-data-types" title="Permalink to this heading">#</a></h1>
+<section id="integer">
+<h2>1. Integer<a class="headerlink" href="#integer" title="Permalink to this heading">#</a></h2>
+<p>Let’s start by understanding what Python and integers are. Python is a high-level, general-purpose programming language. It is often praised for its clear and readable syntax, which makes it an excellent choice for beginners learning to code.</p>
+<p>An integer in Python, as in mathematics, is a whole number that could be either positive or negative. It doesn’t include fractions or decimals.</p>
+<p>In Python, you can assign an integer to a variable directly. Let’s look at a simple example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>
+
+</pre></div>
+</div>
+<p>Here, <code class="docutils literal notranslate"><span class="pre">x</span></code> is a variable and we have assigned the integer value <code class="docutils literal notranslate"><span class="pre">10</span></code> to it. You don’t have to explicitly declare the type of the variable in Python (like in some other programming languages), Python is smart enough to understand that <code class="docutils literal notranslate"><span class="pre">x</span></code> is an integer.</p>
+<p>If you want to know the type of a variable, you can use the <code class="docutils literal notranslate"><span class="pre">type()</span></code> function. In our example, you could do the following:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>This will output: <code class="docutils literal notranslate"><span class="pre">&lt;class</span> <span class="pre">'int'&gt;</span></code>, indicating that <code class="docutils literal notranslate"><span class="pre">x</span></code> is indeed an integer.</p>
+<p>You can do various operations with integers, such as addition <code class="docutils literal notranslate"><span class="pre">(+)</span></code>, subtraction <code class="docutils literal notranslate"><span class="pre">(-)</span></code>, multiplication <code class="docutils literal notranslate"><span class="pre">(*)</span></code>, division <code class="docutils literal notranslate"><span class="pre">(/)</span></code>, and others. Here’s an example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">2</span>
+
+<span class="c1"># Addition</span>
+<span class="n">z</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>  <span class="c1"># Outputs: 12</span>
+
+<span class="c1"># Subtraction</span>
+<span class="n">z</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="n">y</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>  <span class="c1"># Outputs: 8</span>
+
+<span class="c1"># Multiplication</span>
+<span class="n">z</span> <span class="o">=</span> <span class="n">x</span> <span class="o">*</span> <span class="n">y</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>  <span class="c1"># Outputs: 20</span>
+
+<span class="c1"># Division</span>
+<span class="n">z</span> <span class="o">=</span> <span class="n">x</span> <span class="o">/</span> <span class="n">y</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>  <span class="c1"># Outputs: 5.0</span>
+
+</pre></div>
+</div>
+<p>Notice that division of two integers results in a float, not an integer. If you want the result to be an integer, you can use the floor division operator <code class="docutils literal notranslate"><span class="pre">(//)</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">z</span> <span class="o">=</span> <span class="n">x</span> <span class="o">//</span> <span class="n">y</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>  <span class="c1"># Outputs: 5</span>
+
+</pre></div>
+</div>
+<p>This is a basic introduction to integers in Python. As you continue learning Python, you’ll encounter more complex operations and concepts.</p>
+<section id="practices-and-solution-code">
+<h3>Practices and <span class="xref myst">Solution Code</span><a class="headerlink" href="#practices-and-solution-code" title="Permalink to this heading">#</a></h3>
+<p>1 . <code class="docutils literal notranslate"><span class="pre">Basic</span> <span class="pre">Arithmetic</span> <span class="pre">Task</span></code>: Create a Python program that asks the user to input two integers, performs addition, subtraction, multiplication, and division operations on them, and then prints the results.</p>
+<p>Example Output:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">Enter the first number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+<span class="nt">Enter the second number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span>
+<span class="nt">Addition</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">15</span>
+<span class="nt">Subtraction</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span>
+<span class="nt">Multiplication</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">50</span>
+<span class="nt">Division</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2.0</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The solution code is <a class="reference external" href="https://github.com/byambaa1982/python_cources_for_beginers/blob/main/2_variables_and_operations/solution_code_2.ipynb">here</a>.</p>
+</div>
+<p>2 . <code class="docutils literal notranslate"><span class="pre">Odd</span> <span class="pre">or</span> <span class="pre">Even</span></code>: Write a Python program that asks the user for a number and then prints whether the number is odd or even.</p>
+<p>Example Output:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">Enter a number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">7</span>
+<span class="l l-Scalar l-Scalar-Plain">The number is odd.</span>
+</pre></div>
+</div>
+<p>3 . <code class="docutils literal notranslate"><span class="pre">Prime</span> <span class="pre">Number</span> <span class="pre">Checker</span></code>: Write a Python program that asks the user for a number and determines whether or not it is a prime number.</p>
+<p>Example Output:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">Enter a number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">11</span>
+<span class="l l-Scalar l-Scalar-Plain">The number is prime.</span>
+</pre></div>
+</div>
+<p>4 . <code class="docutils literal notranslate"><span class="pre">Factorial</span> <span class="pre">Calculator</span></code>: Write a Python program that calculates the factorial of a number. The factorial of n is the product of all positive integers less than or equal to n.</p>
+<p>Example Output:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">Enter a number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span>
+<span class="l l-Scalar l-Scalar-Plain">The factorial of 5 is 120.</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># copy any of code here and run. </span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="floats">
+<h2>2. Floats<a class="headerlink" href="#floats" title="Permalink to this heading">#</a></h2>
+<p>A floating-point number, or simply a “float”, in Python (or in programming generally), is a numerical value with a decimal point. Floats are used when more precision is needed. For instance, when you are working with data that requires decimal values, such as measurements or calculations in mathematics or physics.</p>
+<p>Here is an example of a floating-point number in Python:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mf">10.5</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10.5
+</pre></div>
+</div>
+</div>
+</div>
+<p>This will output <code class="docutils literal notranslate"><span class="pre">10.5</span></code>.</p>
+<p>If you want to know the type of a variable, you can use the <code class="docutils literal notranslate"><span class="pre">type()</span></code> function. In our example, you could do the following:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class 'float'&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p>This will output: <code class="docutils literal notranslate"><span class="pre">&lt;class</span> <span class="pre">'float'&gt;</span></code>, indicating that x is indeed a floating-point number.</p>
+<p>The primary difference between an integer and a float is that integers are whole numbers without a decimal point, while floats can represent both whole numbers and real numbers that include a decimal point. So if you’re dealing with numbers that include fractions or decimals, you’d use a float, but if you’re counting whole things that can’t be broken up, you’d use an integer.</p>
+<p>For example, if you’re counting the number of people in a room, you would use an integer, because you can’t have a fraction of a person. But if you’re measuring the length of something and it’s not a whole number, you’d use a float.</p>
+<p>In Python, you can perform similar operations with floats as with integers, like addition, subtraction, multiplication, and division. Python will also automatically convert integers to floats in expressions if the result is a fractional value.</p>
+<p>Here’s an example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>  <span class="c1"># This is an integer</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">3</span>   <span class="c1"># This is another integer</span>
+
+<span class="n">z</span> <span class="o">=</span> <span class="n">x</span> <span class="o">/</span> <span class="n">y</span>  <span class="c1"># Division of two integers</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>  <span class="c1"># Outputs: 3.3333333333333335</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.3333333333333335
+</pre></div>
+</div>
+</div>
+</div>
+<p>Although <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> are both integers, the division results in a <code class="docutils literal notranslate"><span class="pre">float</span></code>, because the result is a fractional value.</p>
+</section>
+<section id="id1">
+<h2>Practices and <span class="xref myst">Solution Code</span><a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
+<p>1 . <code class="docutils literal notranslate"><span class="pre">Area</span> <span class="pre">of</span> <span class="pre">Circle</span></code>: Write a Python program that asks the user for the radius of a circle (a floating-point number) and calculates and prints the area of the circle. The formula to calculate the area of a circle is πr^2, where r is the radius of the circle.</p>
+<p>Example Output:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">Enter the radius of the circle</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5.5</span>
+<span class="l l-Scalar l-Scalar-Plain">The area of the circle is 95.03317891.</span>
+</pre></div>
+</div>
+<p>2 . <code class="docutils literal notranslate"><span class="pre">Distance</span> <span class="pre">Between</span> <span class="pre">Points</span></code>: Write a Python program that asks the user for the coordinates of two points in the format (x1, y1) and (x2, y2), and calculates the distance between them. The formula to calculate the distance between two points is sqrt((x2 - x1)^2 + (y2 - y1)^2).</p>
+<p>Example Output:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">Enter x1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2.5</span>
+<span class="nt">Enter y1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4.3</span>
+<span class="nt">Enter x2</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5.1</span>
+<span class="nt">Enter y2</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">7.8</span>
+<span class="l l-Scalar l-Scalar-Plain">The distance between the points is 4.6010860639.</span>
+</pre></div>
+</div>
+<p>3 . <code class="docutils literal notranslate"><span class="pre">Body</span> <span class="pre">Mass</span> <span class="pre">Index</span> <span class="pre">(BMI)</span> <span class="pre">Calculator</span></code>: Write a Python program that calculates the BMI from the user’s weight (in kilograms) and height (in meters). The formula to calculate BMI is weight / height^2.</p>
+<p>Example Output:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">Enter your weight in kg</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">70.5</span>
+<span class="nt">Enter your height in m</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.75</span>
+<span class="l l-Scalar l-Scalar-Plain">Your BMI is 23.02.</span>
+</pre></div>
+</div>
+</section>
+<section id="string">
+<h2>3. String<a class="headerlink" href="#string" title="Permalink to this heading">#</a></h2>
+<p>A string in Python is a sequence of characters. Strings in Python are amongst the commonly used data types. They can be defined by enclosing a sequence of characters within single quotes (’ ‘), double quotes (” “), or triple quotes (‘’’ ‘’’ or “”” “””).</p>
+<p>Here’s an example of a string in Python:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="s2">"Hello, World!"</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hello, World!
+</pre></div>
+</div>
+</div>
+</div>
+<p>This will output <code class="docutils literal notranslate"><span class="pre">Hello,</span> <span class="pre">World!</span></code>.</p>
+<p>If you want to know the type of a variable, you can use the type() function. In our example, you could do the following:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class 'str'&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p>This will output <code class="docutils literal notranslate"><span class="pre">&lt;class</span> <span class="pre">'str'&gt;</span></code>, indicating that x is indeed a string.</p>
+<p>The main difference between a string and other data types such as integer or float is that strings are used to represent text or characters, whereas integers and floats represent numerical values. You can’t perform mathematical operations on strings like you can with integers or floats, but there are many other operations you can perform with strings.</p>
+<p>You can concatenate strings using the plus <code class="docutils literal notranslate"><span class="pre">(+)</span></code> operator, repeat strings using the asterisk <code class="docutils literal notranslate"><span class="pre">(*)</span></code> operator, and access individual characters in a string using indexing and slicing.</p>
+<p>Here are some examples:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># String Concatenation</span>
+<span class="n">str1</span> <span class="o">=</span> <span class="s2">"Hello"</span>
+<span class="n">str2</span> <span class="o">=</span> <span class="s2">"World"</span>
+<span class="n">str3</span> <span class="o">=</span> <span class="n">str1</span> <span class="o">+</span> <span class="s2">" "</span> <span class="o">+</span> <span class="n">str2</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">str3</span><span class="p">)</span>  <span class="c1"># Outputs: Hello World</span>
+
+<span class="c1"># String Repetition</span>
+<span class="n">str4</span> <span class="o">=</span> <span class="s2">"Python "</span>
+<span class="n">str5</span> <span class="o">=</span> <span class="n">str4</span> <span class="o">*</span> <span class="mi">3</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">str5</span><span class="p">)</span>  <span class="c1"># Outputs: Python Python Python </span>
+
+<span class="c1"># String Indexing</span>
+<span class="n">str6</span> <span class="o">=</span> <span class="s2">"OpenAI"</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">str6</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span>  <span class="c1"># Outputs: n</span>
+
+<span class="c1"># String Slicing</span>
+<span class="n">str7</span> <span class="o">=</span> <span class="s2">"ChatGPT"</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">str7</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">4</span><span class="p">])</span>  <span class="c1"># Outputs: hat</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hello World
+Python Python Python 
+A
+hat
+</pre></div>
+</div>
+</div>
+</div>
+<p>In Python, strings are also “immutable”, which means they cannot be changed after they are created. If you try to reassign a value to a specific position in a string, Python will throw an error. However, you can create a new string based on an old one with some alterations, and that’s how we usually modify strings in Python.</p>
+</section>
+<section id="id2">
+<h2>Practices and <span class="xref myst">Solution Code</span><a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
+<p>1 . <code class="docutils literal notranslate"><span class="pre">String</span> <span class="pre">Length</span> <span class="pre">Calculation</span></code>: Write a Python program that asks the user to enter a string, and then it calculates and prints the length of the string.</p>
+<p>Example Output:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">Enter a string</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Hello, World!</span>
+<span class="l l-Scalar l-Scalar-Plain">The length of the string is 13.</span>
+</pre></div>
+</div>
+<p>2 . <code class="docutils literal notranslate"><span class="pre">Word</span> <span class="pre">Count</span></code>: Write a Python program that asks the user to enter a sentence, and then it counts and prints the number of words in that sentence.</p>
+<p>Example Output:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">Enter a sentence</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Python is a popular programming language.</span>
+<span class="l l-Scalar l-Scalar-Plain">The number of words in the sentence is 6.</span>
+</pre></div>
+</div>
+<p>3 . <code class="docutils literal notranslate"><span class="pre">Palindrome</span> <span class="pre">Checker</span></code>: Write a Python program that asks the user to enter a word, and then it checks and prints whether the word is a palindrome or not. A palindrome is a word that reads the same forwards and backwards.</p>
+<p>Example Output:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">Enter a word</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">radar</span>
+<span class="l l-Scalar l-Scalar-Plain">The word is a palindrome.</span>
+</pre></div>
+</div>
+<p>In the first two tasks, the <code class="docutils literal notranslate"><span class="pre">input()</span></code> function is used to get the user’s input as a string, and the <code class="docutils literal notranslate"><span class="pre">len()</span></code> function is used to calculate the length of the string or the number of words in the sentence.</p>
+<p>In the third task, Python’s slicing functionality is used to reverse the string. If the original string is the same as the reversed string, then it’s a palindrome.</p>
+</section>
+<section id="lists">
+<h2>4. Lists<a class="headerlink" href="#lists" title="Permalink to this heading">#</a></h2>
+<p>In Python, a list is an ordered collection of items that are changeable (mutable), and it allows duplicate members. Lists are defined by enclosing a comma-separated sequence of objects in square brackets <code class="docutils literal notranslate"><span class="pre">[]</span></code>.</p>
+<p>Here’s an example of a list in Python:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 2, 3, 4, 5]
+</pre></div>
+</div>
+</div>
+</div>
+<p>This will output: <code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4,</span> <span class="pre">5]</span></code>.</p>
+<p>If you want to know the type of a variable, you can use the type() function:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class 'list'&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p>This will output: <code class="docutils literal notranslate"><span class="pre">&lt;class</span> <span class="pre">'list'&gt;</span></code>, indicating that <code class="docutils literal notranslate"><span class="pre">x</span></code> is indeed a list.</p>
+<p>The main difference between a list and other data types like <code class="docutils literal notranslate"><span class="pre">strings</span></code>, <code class="docutils literal notranslate"><span class="pre">integers</span></code>, or <code class="docutils literal notranslate"><span class="pre">floats</span></code> is that a list can contain multiple items, which can be of different types. A list can contain a combination of strings, integers, floats, or even other lists.</p>
+<p>You can access individual items in a list using indexing, and you can change the value of items in a list, which you can’t do with strings. You can also add new items to a list, remove items from a list, and do other operations such as sorting and reversing a list.</p>
+</section>
+<section id="id3">
+<h2>Practices and <span class="xref myst">Solution Code</span><a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h2>
+<p>1 . <code class="docutils literal notranslate"><span class="pre">Sum</span> <span class="pre">of</span> <span class="pre">Numbers</span> <span class="pre">in</span> <span class="pre">a</span> <span class="pre">List</span></code>: Write a Python program that calculates and prints the sum of all numbers in a given list.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Example</span> <span class="pre">Output</span></code>:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">The list is</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">1</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">2</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">3</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">4</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">5</span><span class="p p-Indicator">]</span>
+<span class="l l-Scalar l-Scalar-Plain">The sum of numbers in the list is 15.</span>
+</pre></div>
+</div>
+<p>2 . <code class="docutils literal notranslate"><span class="pre">List</span> <span class="pre">Sorting</span></code>: Write a Python program that sorts a given list in ascending order.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Example</span> <span class="pre">Output</span></code>:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">The original list is</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">2</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">5</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">1</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">8</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">7</span><span class="p p-Indicator">]</span>
+<span class="nt">The sorted list is</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">1</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">2</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">5</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">7</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">8</span><span class="p p-Indicator">]</span>
+</pre></div>
+</div>
+<p>3 . <code class="docutils literal notranslate"><span class="pre">List</span> <span class="pre">Reverse</span></code>:
+Write a Python program that reverses the order of items in a given list.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Example</span> <span class="pre">Output</span></code>:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">The original list is</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">'Python'</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">'Java'</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">'C++'</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">'JavaScript'</span><span class="p p-Indicator">]</span>
+<span class="nt">The reversed list is</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">'JavaScript'</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">'C++'</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">'Java'</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">'Python'</span><span class="p p-Indicator">]</span>
+</pre></div>
+</div>
+<p>In each of these tasks, the <code class="docutils literal notranslate"><span class="pre">sum()</span></code>, <code class="docutils literal notranslate"><span class="pre">sort()</span></code>, and <code class="docutils literal notranslate"><span class="pre">reverse()</span></code> functions are used to perform operations on the lists.</p>
+<p>While we’ve covered integers, floats, strings, and lists, it’s important to note that Python also offers other powerful data structures such as sets, dictionaries, and tuples. These data structures provide additional methods to store and organize data in different ways, depending on your specific needs.</p>
+<ul class="simple">
+<li><p>Sets are unordered collections of unique elements. They are ideal when you want to eliminate duplicates or check membership efficiently.</p></li>
+<li><p>Dictionaries (or dicts) are key-value pairs, a bit like hash tables in other languages. They are perfect for scenarios where you want to associate items with a unique key.</p></li>
+<li><p>Tuples are similar to lists in that they can hold multiple items, but unlike lists, they are immutable, meaning they can’t be changed after they are created.</p></li>
+</ul>
+<p>Each of these data structures has its own strengths and specific use cases, and learning to use them effectively is a key part of mastering Python. We’ll explore these data structures in more detail later in this course, so stay tuned!</p>
+</section>
+</section>
+<script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./courses\python"
+        },
+        predefinedOutput: true
+    }
+    </script>
+<script>kernelName = 'python3'</script>
+</article>
+<footer class="bd-footer-article">
+<div class="footer-article-items footer-article__inner">
+<div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+</div>
+</footer>
+</div>
+<div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+<div class="sidebar-secondary-item">
+<div class="page-toc tocsection onthispage">
+<i class="fa-solid fa-list"></i> Contents
+  </div>
+<nav class="bd-toc-nav page-toc">
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integer">1. Integer</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#practices-and-solution-code">Practices and <span class="xref myst">Solution Code</span></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#floats">2. Floats</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Practices and <span class="xref myst">Solution Code</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#string">3. String</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Practices and <span class="xref myst">Solution Code</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lists">4. Lists</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Practices and <span class="xref myst">Solution Code</span></a></li>
+</ul>
+</nav></div>
+</div></div>
+</div>
+<footer class="bd-footer-content">
+<div class="bd-footer-content__inner container">
+<div class="footer-item">
+<p class="component-author">
+By Byamba Enkhbat
+</p>
+</div>
+<div class="footer-item">
+<p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+</p>
+</div>
+<div class="footer-item">
+</div>
+<div class="footer-item">
+</div>
+</div>
+</footer>
+</main>
+</div>
+</div>
+<!-- Scripts loaded after <body> so the DOM is not blocked -->
+<script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+<footer class="bd-footer">
+</footer>
+</body>
+</html>

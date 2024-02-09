@@ -280,11 +280,11 @@ A junior data engineer is tasked with creating a managed table named `employee_d
 - E. CREATE TABLE employee_data (id INT, name STRING);
 
 ```{toggle}
-Correct Answer: C. CREATE MANAGED TABLE employee_data (id INT, name STRING);
+Correct Answer: E
 
 Exam Topic: ELT with Spark SQL and Python
 
-Explanation: The `CREATE MANAGED TABLE` command creates a table where Spark manages both the data and metadata. There is no need to specify the storage path as Spark will handle it internally.
+Explanation: The `CREATE TABLE` command creates a table where Spark manages both the data and metadata. There is no need to specify the storage path as Spark will handle it internally.
 
 ```
 
@@ -292,18 +292,18 @@ Explanation: The `CREATE MANAGED TABLE` command creates a table where Spark mana
 
 A data engineer needs to define a logical structure that can be used to query data from multiple tables without physically storing the combined data. This structure should be accessible across different sessions. What should the data engineer create?
 
-- A. Global temporary view
+- A. View
 - B. Temporary view
 - C. Delta Table
 - D. Database
 - E. Spark SQL Table
 
 ```{toggle}
-Correct Answer: A. Global temporary view
+Correct Answer: A. view
 
-Exam Topic: Production Pipelines
+Exam Topic: ELT with Spark SQL and Python
 
-Explanation: A global temporary view is a logical structure that can be used to query data across multiple sessions without physically storing the data. It is session-scoped and will be dropped when the session ends.
+Explanation: A view is a logical structure that can be used to query data across multiple sessions without physically storing the data. It is session-scoped and will be dropped when the session ends.
 
 ```
 
