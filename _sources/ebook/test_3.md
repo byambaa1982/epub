@@ -799,17 +799,17 @@ What happens when a batch of data containing records with invalid email formats 
 - A. Records with invalid email formats are dropped and recorded as invalid in the event log.
 - B. Records with invalid email formats are added to the dataset and marked as invalid in the event log.
 - C. The entire batch fails and no records are added to the dataset.
-- D. Records with invalid email formats are added to the dataset with a warning in the event log.
+- D. Records with invalid email formats are added to the dataset without a warning in the event log.
 - E. Records with invalid email formats are sent to a quarantine table for further investigation.
 
 ```{toggle}
-Correct Answer: A
+Correct Answer: B
 
-Exam Topic: Data Governance
+Exam Topic: Incremental Data Processing
 
 Explanation:
 
-When a batch of data violates the defined data quality expectation in a Delta Live Tables pipeline, the records that violate the expectation are dropped from the target dataset and recorded as invalid in the event log. This ensures that only data meeting the quality constraints is added to the dataset.
+This answer reflects the default action of warn where invalid records (in this case, records with invalid email formats) are written to the target dataset, and the failure (non-compliance with the expectation) is reported as a metric for the dataset, allowing users to track and address data quality issues without preventing the ingestion of data into the dataset.
 ```
 
 ## Question 36

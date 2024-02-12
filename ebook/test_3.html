@@ -1013,14 +1013,14 @@ Option A is the correct answer because it reads from a stream (<code class="docu
 <li><p>A. Records with invalid email formats are dropped and recorded as invalid in the event log.</p></li>
 <li><p>B. Records with invalid email formats are added to the dataset and marked as invalid in the event log.</p></li>
 <li><p>C. The entire batch fails and no records are added to the dataset.</p></li>
-<li><p>D. Records with invalid email formats are added to the dataset with a warning in the event log.</p></li>
+<li><p>D. Records with invalid email formats are added to the dataset without a warning in the event log.</p></li>
 <li><p>E. Records with invalid email formats are sent to a quarantine table for further investigation.</p></li>
 </ul>
 <div class="toggle docutils container">
-<p>Correct Answer: A</p>
-<p>Exam Topic: Data Governance</p>
+<p>Correct Answer: B</p>
+<p>Exam Topic: Incremental Data Processing</p>
 <p>Explanation:</p>
-<p>When a batch of data violates the defined data quality expectation in a Delta Live Tables pipeline, the records that violate the expectation are dropped from the target dataset and recorded as invalid in the event log. This ensures that only data meeting the quality constraints is added to the dataset.</p>
+<p>This answer reflects the default action of warn where invalid records (in this case, records with invalid email formats) are written to the target dataset, and the failure (non-compliance with the expectation) is reported as a metric for the dataset, allowing users to track and address data quality issues without preventing the ingestion of data into the dataset.</p>
 </div>
 </section>
 <section id="question-36">
