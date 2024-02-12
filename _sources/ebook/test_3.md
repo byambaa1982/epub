@@ -904,7 +904,7 @@ What action can the data engineering team take to improve the latency of a data 
 ```{toggle}
 Correct Answer: D
 
-Exam Topic: Databricks Lakehouse Platform
+Exam Topic: Production Pipelines
 
 Explanation:
 Increasing the maximum bound of the SQL endpoint's auto-scaling range allows the endpoint to scale up to a larger size when needed, which can improve the performance and reduce the latency of the queries.
@@ -925,7 +925,7 @@ How can a manager automate the daily update of the results of a Databricks SQL q
 ```{toggle}
 Correct Answer: B
 
-Exam Topic: Databricks Lakehouse Platform
+Exam Topic: Production Pipelines
 
 Explanation:
 Scheduling the query to refresh daily from the query's page in Databricks SQL allows the manager to automate the query execution and ensure that the results are updated each day without manual rerunning.
@@ -944,7 +944,7 @@ What can the data engineering team do to be notified if an ELT job has not run i
 ```{toggle}
 Correct Answer: C
 
-Exam Topic: Databricks Lakehouse Platform
+Exam Topic: Production Pipelines
 
 Explanation:
 
@@ -964,7 +964,7 @@ Which of the following is NOT a reason why a Databricks SQL dashboard might take
 ```{toggle}
 Correct Answer: E
 
-Exam Topic: Databricks Lakehouse Platform
+Exam Topic: Data Governance
 
 Explanation:
 The reason that the dashboard is configured to check for new data before updating does not explain a delay in the dashboard update. The other options are valid reasons for a delay, such as startup time for endpoints or clusters, or the inherent runtime of the queries.
