@@ -987,19 +987,19 @@ Option A is the correct answer because it reads from a stream (<code class="docu
 </section>
 <section id="question-34">
 <h2>Question 34<a class="headerlink" href="#question-34" title="Permalink to this heading">#</a></h2>
-<p>When converting a batch query to a Delta Live Tables (DLT) pipeline, what is the correct syntax to create a live table from a CSV file?</p>
+<p>When defining a Delta Live Tables (DLT) pipeline, how do you correctly specify the creation of a live table based on data ingested from a CSV file?</p>
 <ul class="simple">
-<li><p>A. Use <code class="docutils literal notranslate"><span class="pre">CREATE</span> <span class="pre">OR</span> <span class="pre">REPLACE</span> <span class="pre">LIVE</span> <span class="pre">TABLE</span> <span class="pre">csv_table</span> <span class="pre">AS</span></code> at the beginning of the query</p></li>
-<li><p>B. Prefix the CSV file path with <code class="docutils literal notranslate"><span class="pre">dlt.</span></code></p></li>
-<li><p>C. Replace the CSV file path with a Delta table reference</p></li>
-<li><p>D. Wrap the CSV file path with <code class="docutils literal notranslate"><span class="pre">dlt.read_csv(...)</span></code></p></li>
-<li><p>E. Add <code class="docutils literal notranslate"><span class="pre">CREATE</span> <span class="pre">LIVE</span> <span class="pre">TABLE</span> <span class="pre">csv_table</span> <span class="pre">AS</span></code> at the beginning of the query</p></li>
+<li><p>A. Utilize the <code class="docutils literal notranslate"><span class="pre">CREATE</span> <span class="pre">TABLE</span></code> statement in DLT SQL with the CSV file as the source.</p></li>
+<li><p>B. Use the DLT Python API to read the CSV file and declare the output as a live table.</p></li>
+<li><p>C. Directly reference the CSV file path in the TABLE definition without any specific API or function.</p></li>
+<li><p>D. Implement a custom DLT function <code class="docutils literal notranslate"><span class="pre">dlt.read_csv("path/to/csv")</span></code> for reading CSV files and creating live tables.</p></li>
+<li><p>E. Configure the CSV file as a streaming source using DLT’s built-in connectors.</p></li>
 </ul>
 <div class="toggle docutils container">
-<p>Correct Answer: E</p>
-<p>Exam Topic: ELT with Spark SQL and Python</p>
+<p>Correct Answer: B</p>
+<p>Exam Topic: Incremental Data Processing</p>
 <p>Explanation:</p>
-<p>To convert a batch query to a Delta Live Tables pipeline, the data engineer should add <code class="docutils literal notranslate"><span class="pre">CREATE</span> <span class="pre">LIVE</span> <span class="pre">TABLE</span> <span class="pre">csv_table</span> <span class="pre">AS</span></code> at the beginning of the query. This will define a new live table within the DLT pipeline based on the data read from the CSV file.</p>
+<p>DLT does not directly expose a function like dlt.read_csv(…) for ingesting CSV files into live tables nor does it allow prefixing paths with dlt. or using specific SQL syntax like CREATE OR REPLACE LIVE TABLE within its framework for this purpose.</p>
 </div>
 </section>
 <section id="question-35">

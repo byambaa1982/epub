@@ -770,22 +770,22 @@ Defining priority levels in the DLT pipeline's configuration file allows the dat
 
 ## Question 34
 
-When converting a batch query to a Delta Live Tables (DLT) pipeline, what is the correct syntax to create a live table from a CSV file?
+When defining a Delta Live Tables (DLT) pipeline, how do you correctly specify the creation of a live table based on data ingested from a CSV file?
 
-- A. Use `CREATE OR REPLACE LIVE TABLE csv_table AS` at the beginning of the query
-- B. Prefix the CSV file path with `dlt.`
-- C. Replace the CSV file path with a Delta table reference
-- D. Wrap the CSV file path with `dlt.read_csv(...)`
-- E. Add `CREATE LIVE TABLE csv_table AS` at the beginning of the query
+- A. Utilize the `CREATE TABLE` statement in DLT SQL with the CSV file as the source.
+- B. Use the DLT Python API to read the CSV file and declare the output as a live table.
+- C. Directly reference the CSV file path in the TABLE definition without any specific API or function.
+- D. Implement a custom DLT function `dlt.read_csv("path/to/csv")` for reading CSV files and creating live tables.
+- E. Configure the CSV file as a streaming source using DLT's built-in connectors.
 
 ```{toggle}
-Correct Answer: E
+Correct Answer: B
 
-Exam Topic: ELT with Spark SQL and Python
+Exam Topic: Incremental Data Processing
 
 Explanation:
 
-To convert a batch query to a Delta Live Tables pipeline, the data engineer should add `CREATE LIVE TABLE csv_table AS` at the beginning of the query. This will define a new live table within the DLT pipeline based on the data read from the CSV file.
+DLT does not directly expose a function like dlt.read_csv(...) for ingesting CSV files into live tables nor does it allow prefixing paths with dlt. or using specific SQL syntax like CREATE OR REPLACE LIVE TABLE within its framework for this purpose. 
 ```
 
 ## Question 35
