@@ -730,22 +730,22 @@ Option A is the correct answer because it reads from a stream (`readStream`), gr
 
 ## Question 32
 
-What feature does Delta Lake provide to ensure data quality and reliability in ELT pipelines?
+What feature does Delta Lake not provide to ensure data quality and reliability in ELT pipelines?"
 
 - A. Support for ACID transactions
-- B. Real-time streaming data ingestion
-- C. In-memory data caching for faster processing
-- D. Built-in data quality constraints
-- E. Automatic handling of schema evolution
+- B. Built-in data quality constraints
+- C. Automatic handling of schema evolution
+- D. Real-time anomaly detection in data streams
+- E. In-memory data caching for faster processing
 
 ```{toggle}
 Correct Answer: D
 
-Exam Topic: Data Governance
+Exam Topic: Incremental Data Processing
 
 Explanation:
 
-Delta Lake provides built-in data quality constraints, which is a feature for ensuring data quality and reliability in ELT pipelines. These constraints can be used to enforce data quality rules, such as ensuring that certain columns are not null or that the values in a column meet specific criteria.
+Real-time anomaly detection in data streams - This feature is typically not a direct capability of Delta Lake. While Delta Lake provides robust support for ACID transactions, built-in data quality constraints, and automatic handling of schema evolution to ensure data quality and reliability, real-time anomaly detection in data streams generally requires additional analytics or machine learning tools integrated into the data pipeline. Delta Lake focuses on storage, transactional integrity, schema management, and other aspects of data reliability and quality rather than real-time data stream analysis.
 ```
 
 ## Question 33
