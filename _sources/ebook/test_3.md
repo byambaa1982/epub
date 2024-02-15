@@ -981,12 +981,12 @@ To grant a new data engineer the ability to query a specific table, which SQL co
 - E. GRANT READ ON TABLE sales TO 'new.engineer@company.com';
 
 ```{toggle}
-Correct Answer: D
+Correct Answer: A
 
 Exam Topic: Data Governance
 
 Explanation:
-The correct SQL command to grant a user the ability to query a specific table is `GRANT SELECT ON TABLE sales TO USER 'new.engineer@company.com';`. This grants the SELECT permission on the table `sales` to the user with the specified email address.
+The correct SQL command to grant a user the ability to query a specific table is `GRANT SELECT ON TABLE sales TO 'new.engineer@company.com';`. This grants the SELECT permission on the table `sales` to the user with the specified email address.
 ```
 
 ## Question 45
