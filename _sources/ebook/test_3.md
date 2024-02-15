@@ -902,12 +902,12 @@ What action can the data engineering team take to improve the latency of a data 
 - E. Enable the Serverless feature and adjust the Spot Instance Policy to "Cost Optimized."
 
 ```{toggle}
-Correct Answer: D
+Correct Answer: C
 
 Exam Topic: Production Pipelines
 
 Explanation:
-Increasing the maximum bound of the SQL endpoint's auto-scaling range allows the endpoint to scale up to a larger size when needed, which can improve the performance and reduce the latency of the queries.
+Increasing the size of the SQL endpoint’s cluster directly impacts the compute resources available for processing queries. By allocating more or larger nodes (i.e., more CPU, memory), you can reduce the time it takes to execute queries. This is because with more resources, the cluster can handle larger datasets more efficiently and perform computations faster, directly contributing to lower query latency.
 
 ```
 
@@ -964,7 +964,7 @@ Which of the following is NOT a reason why a Databricks SQL dashboard might take
 ```{toggle}
 Correct Answer: E
 
-Exam Topic: Data Governance
+Exam Topic: Production Pipeline
 
 Explanation:
 The reason that the dashboard is configured to check for new data before updating does not explain a delay in the dashboard update. The other options are valid reasons for a delay, such as startup time for endpoints or clusters, or the inherent runtime of the queries.
