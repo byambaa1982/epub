@@ -59,6 +59,7 @@ const thebe_selector_output = ".output, .cell_output"
 <script>DOCUMENTATION_OPTIONS.pagename = 'mongol/sentiment2';</script>
 <link href="../genindex.html" rel="index" title="Index"/>
 <link href="../search.html" rel="search" title="Search"/>
+<link href="sentiment.html" rel="prev" title="ChatGPT API ашиглан жиргээнд хэрхэн sentiment анализ хийх вэ?"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="en" name="docsearch:language"/>
 </head>
@@ -99,7 +100,7 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
 </li>
 </ul>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../courses/courses.html">Courses</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../courses/introduction.html">Python Courses for beginners</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../courses/table_content.html">1. Introduction to Python</a></li>
@@ -133,10 +134,11 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../ebook/explaination_1.html">Explanations</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="main.html">Монгол</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="main.html">Монгол</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="blog_1.html">Databricks гэж юу?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="blog_2.html">Дата дата л гэнэ яг юу юм бэ?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sentiment.html">ChatGPT API ашиглан жиргээнд хэрхэн sentiment анализ хийх вэ?</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Намуудын талаарх жиргээнүүд?</a></li>
 </ul>
 </li>
 </ul>
@@ -274,8 +276,8 @@ document.write(`
 <section class="tex2jax_ignore mathjax_ignore" id="id1">
 <h1>Намуудын талаарх жиргээнүүд?<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
 <p>Twitter API ашиглан МАН АН гэсэн түлхүүр үгээр хайлт хийж тэрхүү датан дээр ChatGPT API ашиглан sentiment анализ хийв.
-LLModel нь өгүүлбэр тус бүрээр оноо өгөөд (-1, 1 хооронд) нийлбэрээр нь classification хийдэг болохоор монголоос англи хэлрүү орчуулсан текстэн дээр нилээд алдаж байна. Жишээ нь “АН байгаач МАН ялна” гэсэн жиргээг эерэг жиргээ гэхэд хэцүү юм. Гэхдээ нийж 136 жиргээг ерөнхийд нь үзвэл бас ч баримжаатай байна.
-Графикийн доор ашигласан пайтон код мөн хүмүүсийн жиргээнүүдийг хамгийн доод талд орууллаа. Бүрэн кодыг өмнөх постноос үзэж болно.
+LLModel нь өгүүлбэр тус бүрээр оноо өгөөд (-1, 1 хооронд) нийлбэрээр нь classification хийдэг болохоор монголоос англи хэлрүү орчуулсан текстэн дээр нилээд алдаж байна. Жишээ нь “АН байгаач МАН ялна” гэсэн жиргээг эерэг жиргээ гэхэд хэцүү юм. Гэхдээ нийт 136 жиргээг ерөнхийд нь үзвэл бас ч баримжаатай байна.
+Графикийн доор ашигласан пайтон код мөн хүмүүсийн жиргээнүүдийг хамгийн доод талд орууллаа. Бүрэн кодыг өмнөх постноос үзэж болно. Хамгийн хэцүү нь түлхүүр үг сонгох. Ганцхан МАН гэхээр манай мань мангас гэсэн үгтэй шал өөр өөр утгатай жиргээ татчихаад байгаа болохоор заавал МАН АН ХҮН гэж байж намуудын талаарх жиргээ орж ирж байна.
 Жишээ нь:</p>
 <section id="id2">
 <h2>Сөрөг жиргээ<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
@@ -1728,6 +1730,13 @@ https://t.co/mWqS3zqFUS https://t.co/DmR70KHyNe
 <div class="footer-article-items footer-article__inner">
 <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
+<a class="left-prev" href="sentiment.html" title="previous page">
+<i class="fa-solid fa-angle-left"></i>
+<div class="prev-next-info">
+<p class="prev-next-subtitle">previous</p>
+<p class="prev-next-title">ChatGPT API ашиглан жиргээнд хэрхэн sentiment анализ хийх вэ?</p>
+</div>
+</a>
 </div></div>
 </div>
 </footer>
